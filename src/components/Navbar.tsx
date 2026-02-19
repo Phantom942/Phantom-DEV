@@ -1,8 +1,9 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
-import { Ghost } from "lucide-react";
+import { Ghost, Menu, X } from "lucide-react";
 
 const navLinks = [
   { href: "#expertise", label: "Expertise" },
@@ -11,45 +12,86 @@ const navLinks = [
 ] as const;
 
 export function Navbar() {
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
+  const closeMobileMenu = () => setMobileMenuOpen(false);
+
   return (
+    <>
     <motion.header
       initial={{ opacity: 0, y: -20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
-      className="fixed left-0 right-0 top-0 z-50 flex items-center justify-between px-5 py-5 sm:px-8 sm:py-6 md:px-16"
+      className="fixed left-0 right-0 top-0 z-50 flex w-full items-center justify-between border-b border-[#f5f5f0]/5 bg-[#000000] px-4 py-4 md:px-16 md:py-6"
       role="banner"
     >
       <Link
         href="/"
-        className="flex items-center gap-1.5 text-[#f5f5f0] transition-opacity hover:opacity-80 sm:gap-2"
+        className="flex shrink-0 items-center gap-2 text-[#f5f5f0] transition-opacity hover:opacity-80"
         aria-label="PhantomDev - Accueil"
+        onClick={closeMobileMenu}
       >
-        <Ghost className="h-6 w-6" strokeWidth={1.5} />
-        <span className="text-xs font-light tracking-[0.15em] uppercase leading-tight sm:text-sm sm:tracking-[0.2em]">
+        <Ghost className="h-5 w-5 shrink-0 md:h-6 md:w-6" strokeWidth={1.5} />
+        <span className="text-xl font-light tracking-[0.1em] uppercase leading-tight sm:text-3xl sm:tracking-[0.15em] md:tracking-[0.2em]">
           PhantomDev
         </span>
       </Link>
+
       <nav
-        className="flex items-center gap-6 sm:gap-10 md:gap-12"
+        className="hidden items-center gap-6 md:flex md:gap-12"
         role="navigation"
         aria-label="Navigation principale"
       >
-        {navLinks.map((link, index) => (
-          <motion.div
+        {navLinks.map((link) => (
+          <Link
             key={link.href}
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.2 + index * 0.1, duration: 0.5 }}
+            href={link.href}
+            className="text-sm font-light tracking-[0.15em] leading-tight text-[#f5f5f0]/85 transition-colors hover:text-[#f5f5f0]"
           >
-            <Link
-              href={link.href}
-              className="text-xs font-light tracking-[0.1em] leading-tight text-[#f5f5f0]/85 transition-colors hover:text-[#f5f5f0] sm:text-sm sm:tracking-[0.15em]"
-            >
-              {link.label}
-            </Link>
-          </motion.div>
+            {link.label}
+          </Link>
         ))}
       </nav>
+
+      <button
+        type="button"
+        onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+        className="flex h-10 w-10 shrink-0 items-center justify-center rounded-md text-[#f5f5f0] transition-colors hover:bg-[#f5f5f0]/10 md:hidden"
+        aria-label={mobileMenuOpen ? "Fermer le menu" : "Ouvrir le menu"}
+        aria-expanded={mobileMenuOpen}
+      >
+        {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+      </button>
     </motion.header>
+
+      <AnimatePresence>
+        {mobileMenuOpen && (
+          <motion.div
+            initial={{ opacity: 0, height: 0 }}
+            animate={{ opacity: 1, height: "auto" }}
+            exit={{ opacity: 0, height: 0 }}
+            transition={{ duration: 0.2 }}
+            className="fixed inset-x-0 top-14 z-40 overflow-hidden bg-[#0a0a0a] md:hidden"
+          >
+            <nav
+              className="flex flex-col gap-0 border-t border-[#f5f5f0]/10 px-4 py-4"
+              role="navigation"
+              aria-label="Menu mobile"
+            >
+              {navLinks.map((link) => (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  onClick={closeMobileMenu}
+                  className="border-b border-[#f5f5f0]/5 py-4 text-base font-light tracking-[0.1em] text-[#f5f5f0]/90 transition-colors last:border-0 hover:text-[#f5f5f0]"
+                >
+                  {link.label}
+                </Link>
+              ))}
+            </nav>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </>
   );
 }

@@ -6,7 +6,7 @@ import { Sections } from "@/components/Sections";
 
 export default function Home() {
   return (
-    <div className="relative min-h-screen bg-[#000000]" id="home">
+    <div className="relative min-h-screen overflow-x-hidden bg-[#000000]" id="home">
       <CustomCursor />
       <MouseGlow />
       <Navbar />
