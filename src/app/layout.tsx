@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "PhantomDev | L'Excellence Numérique",
+  title: `PhantomDev | L'Excellence Numérique`,
   description:
     "Architecte digital spécialisé dans les solutions Next.js de haute performance.",
   keywords: [
@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     "Next.js",
   ],
   openGraph: {
-    title: "PhantomDev | L'Excellence Numérique",
+    title: `PhantomDev | L'Excellence Numérique`,
     description:
       "Architecte digital spécialisé dans les solutions Next.js de haute performance.",
   },
