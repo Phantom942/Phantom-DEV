@@ -49,12 +49,12 @@ const subtitleVariants = {
 export function HeroSection() {
   return (
     <section
-      className="relative flex min-h-screen flex-col items-center justify-center px-8 pt-24 md:px-16"
+      className="relative flex min-h-screen flex-col items-center justify-center px-6 pt-24 sm:px-8 md:px-16"
       aria-labelledby="hero-title"
     >
       <motion.h1
         id="hero-title"
-        className="flex flex-wrap justify-center gap-1 font-extralight leading-[1.1] tracking-[0.2em] text-[#f5f5f0] md:gap-2"
+        className="flex flex-wrap justify-center gap-0.5 font-extralight leading-[1.1] tracking-[0.1em] text-[#f5f5f0] sm:gap-1 sm:tracking-[0.15em] md:gap-2 md:tracking-[0.2em]"
         variants={containerVariants}
         initial="hidden"
         animate="visible"
@@ -63,7 +63,7 @@ export function HeroSection() {
           <motion.span
             key={`${letter}-${index}`}
             variants={letterVariants}
-            className="font-extralight tracking-[0.2em] text-7xl md:text-8xl lg:text-9xl xl:text-[10rem]"
+            className="font-extralight text-[2rem] tracking-[0.06em] min-[375px]:text-[2.25rem] sm:text-5xl sm:tracking-[0.1em] md:text-7xl md:tracking-[0.15em] lg:text-8xl xl:text-9xl 2xl:text-[10rem] 2xl:tracking-[0.2em]"
             style={{ fontFamily: "'Cormorant Garamond', Georgia, serif" }}
           >
             {letter}
@@ -74,7 +74,7 @@ export function HeroSection() {
         variants={subtitleVariants}
         initial="hidden"
         animate="visible"
-        className="mt-12 max-w-2xl text-center text-base font-light leading-[1.85] tracking-[0.08em] text-[#f5f5f0]/90 md:text-lg md:leading-[1.9] md:tracking-[0.1em]"
+        className="mt-8 max-w-2xl px-2 text-center text-sm font-light leading-[1.85] tracking-[0.06em] text-[#f5f5f0]/90 sm:mt-10 sm:text-base sm:tracking-[0.08em] md:mt-12 md:text-lg md:leading-[1.9] md:tracking-[0.1em]"
       >
         L'excellence numérique, à votre service.
       </motion.p>

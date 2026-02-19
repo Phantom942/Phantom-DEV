@@ -42,7 +42,7 @@ export function SelectedWorks() {
   return (
     <section
       id="selected-works"
-      className="px-6 py-24 md:px-16 md:py-32"
+      className="px-5 py-20 sm:px-8 sm:py-24 md:px-16 md:py-32"
       aria-labelledby="selected-works-title"
     >
       <ScrollReveal>
@@ -51,14 +51,14 @@ export function SelectedWorks() {
           className="mb-6 font-extralight tracking-[0.2em] text-[#f5f5f0]"
           style={{ fontFamily: "'Cormorant Garamond', Georgia, serif" }}
         >
-          <span className="text-4xl md:text-5xl">Selected Works</span>
+          <span className="text-3xl sm:text-4xl md:text-5xl">Selected Works</span>
         </h2>
-        <p className="mb-12 max-w-2xl text-lg leading-[1.85] tracking-[0.02em] text-[#f5f5f0]/85 md:mb-20">
+        <p className="mb-10 max-w-2xl text-base leading-[1.85] tracking-[0.02em] text-[#f5f5f0]/85 sm:text-lg md:mb-20">
           L'excellence technique au service de l'élégance.
         </p>
       </ScrollReveal>
 
-      <ul className="grid grid-cols-1 gap-12 sm:gap-16 md:gap-24">
+      <ul className="grid grid-cols-1 grid-rows-auto gap-10 sm:gap-16 md:gap-24">
         {projects.map((project, index) => (
           <ScrollReveal key={project.id} delay={index * 0.12}>
             <li>
@@ -67,11 +67,11 @@ export function SelectedWorks() {
                   href={project.href}
                   className="block outline-none focus-visible:ring-2 focus-visible:ring-[#f5f5f0]/30 focus-visible:ring-offset-2 focus-visible:ring-offset-black"
                 >
-                  <div className="relative mb-6 overflow-hidden md:mb-8">
+                  <div className="relative mb-5 overflow-hidden sm:mb-6 md:mb-8">
                     <motion.div
                       className="aspect-[16/10] w-full"
-                      whileHover={{ scale: 1.03 }}
-                      transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
+                      whileHover={{ scale: 1.02 }}
+                      transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
                     >
                       <Image
                         src={project.image}
@@ -96,11 +96,11 @@ export function SelectedWorks() {
                           fontFamily: "'Cormorant Garamond', Georgia, serif",
                         }}
                       >
-                        <span className="text-2xl md:text-3xl">
+                        <span className="text-xl sm:text-2xl md:text-3xl">
                           {project.title}
                         </span>
                       </h3>
-                      <p className="mb-4 max-w-xl text-base leading-[1.85] tracking-[0.02em] text-[#f5f5f0]/80">
+                      <p className="mb-4 max-w-xl text-sm leading-[1.85] tracking-[0.02em] text-[#f5f5f0]/80 sm:text-base">
                         {project.description}
                       </p>
                       <div className="flex flex-wrap gap-3">

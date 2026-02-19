@@ -24,13 +24,13 @@ const cards = [
 
 export function ExpertiseCards() {
   return (
-    <div className="grid gap-6 md:grid-cols-3">
+    <div className="grid grid-cols-1 gap-4 sm:gap-6 md:grid-cols-3">
       {cards.map((card, index) => {
         const Icon = card.icon;
         return (
           <ScrollReveal key={card.id} delay={index * 0.1}>
             <motion.article
-              className="group relative overflow-hidden rounded-sm border border-[#f5f5f0]/10 bg-[#0a0a0a]/50 px-8 py-12 backdrop-blur-[1px] transition-all duration-500 hover:border-[#f5f5f0]/25 hover:shadow-[0_0_50px_rgba(212,175,55,0.18)]"
+              className="group relative overflow-hidden rounded-sm border border-[#f5f5f0]/10 bg-[#0a0a0a]/50 px-6 py-10 backdrop-blur-[1px] transition-all duration-500 hover:border-[#f5f5f0]/25 hover:shadow-[0_0_50px_rgba(212,175,55,0.18)] sm:px-8 sm:py-12"
               whileHover={{ y: -2 }}
               transition={{ duration: 0.3 }}
             >
@@ -48,7 +48,7 @@ export function ExpertiseCards() {
                   size={28}
                   strokeWidth={1.25}
                 />
-                <h3 className="font-light tracking-[0.08em] text-[#f5f5f0] transition-colors duration-300 group-hover:text-[#f5f5f0]">
+                <h3 className="text-sm font-light tracking-[0.08em] text-[#f5f5f0] transition-colors duration-300 group-hover:text-[#f5f5f0] sm:text-base">
                   {card.title}
                 </h3>
               </div>
