@@ -6,7 +6,11 @@ import { Sections } from "@/components/Sections";
 
 export default function Home() {
   return (
-    <div className="relative min-h-screen w-full max-w-[100vw] overflow-x-hidden bg-[#000000]" id="home">
+    <div
+      className="relative min-h-screen min-h-[100dvh] w-full max-w-[100vw] overflow-x-hidden bg-[#000000]"
+      id="home"
+      style={{ overflowX: "hidden" }}
+    >
       <CustomCursor />
       <MouseGlow />
       <Navbar />

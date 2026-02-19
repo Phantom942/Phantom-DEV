@@ -18,28 +18,30 @@ export function Navbar() {
 
   return (
     <>
-      <motion.header
-        initial={{ opacity: 0, y: -20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
-        className="fixed left-0 right-0 top-0 z-50 flex w-full flex-row items-center justify-between overflow-x-hidden border-b border-[#f5f5f0]/5 bg-[#000000] px-4 py-4 md:px-16 md:py-6"
+      <header
+        className="fixed left-0 right-0 top-0 z-50 flex w-full max-w-[100vw] flex-row items-center justify-between gap-2 overflow-hidden border-b border-[#f5f5f0]/5 bg-[#000000] px-4 py-3 md:px-16 md:py-6"
+        style={{
+          paddingTop: "max(0.75rem, env(safe-area-inset-top))",
+        }}
         role="banner"
-        style={{ maxWidth: "100vw" }}
       >
         <Link
           href="/"
-          className="flex shrink-0 items-center gap-1.5 text-[#f5f5f0] transition-opacity hover:opacity-80"
+          className="flex min-w-0 shrink-0 items-center gap-1.5 overflow-hidden text-[#f5f5f0] transition-opacity hover:opacity-80"
           aria-label="PhantomDev - Accueil"
           onClick={closeMobileMenu}
         >
-          <Ghost className="h-4 w-4 shrink-0 md:h-6 md:w-6" strokeWidth={1.5} />
-          <span className="shrink-0 text-sm font-light uppercase tracking-wide md:text-base md:tracking-[0.15em] lg:text-lg lg:tracking-[0.2em]">
+          <Ghost
+            className="h-4 w-4 shrink-0 md:h-5 md:w-5"
+            strokeWidth={1.5}
+          />
+          <span className="truncate text-xs font-light uppercase tracking-wide md:text-base md:tracking-[0.15em] lg:text-lg lg:tracking-[0.2em]">
             PhantomDev
           </span>
         </Link>
 
         <nav
-          className="hidden shrink-0 items-center gap-6 md:flex md:gap-12"
+          className="hidden shrink-0 items-center gap-4 md:flex md:gap-12"
           role="navigation"
           aria-label="Navigation principale"
         >
@@ -47,7 +49,7 @@ export function Navbar() {
             <Link
               key={link.href}
               href={link.href}
-              className="text-sm font-light tracking-[0.15em] leading-tight text-[#f5f5f0]/85 transition-colors hover:text-[#f5f5f0]"
+              className="whitespace-nowrap text-sm font-light tracking-[0.15em] leading-tight text-[#f5f5f0]/85 transition-colors hover:text-[#f5f5f0]"
             >
               {link.label}
             </Link>
@@ -57,13 +59,13 @@ export function Navbar() {
         <button
           type="button"
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-          className="flex h-10 w-10 shrink-0 items-center justify-center rounded-md text-[#f5f5f0] transition-colors hover:bg-[#f5f5f0]/10 md:hidden"
+          className="flex h-9 w-9 shrink-0 items-center justify-center rounded-md text-[#f5f5f0] transition-colors active:bg-[#f5f5f0]/10 md:hidden"
           aria-label={mobileMenuOpen ? "Fermer le menu" : "Ouvrir le menu"}
           aria-expanded={mobileMenuOpen}
         >
-          {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+          {mobileMenuOpen ? <X size={22} /> : <Menu size={22} />}
         </button>
-      </motion.header>
+      </header>
 
       <AnimatePresence>
         {mobileMenuOpen && (
@@ -72,10 +74,13 @@ export function Navbar() {
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.2 }}
-            className="fixed inset-x-0 top-14 z-40 overflow-hidden bg-[#0a0a0a] md:hidden"
+            className="fixed inset-x-0 z-40 overflow-hidden bg-[#0a0a0a] md:hidden"
+            style={{
+              top: "calc(3rem + env(safe-area-inset-top))",
+            }}
           >
             <nav
-              className="flex flex-col gap-0 border-t border-[#f5f5f0]/10 px-4 py-4"
+              className="flex flex-col border-t border-[#f5f5f0]/10 px-4 py-2"
               role="navigation"
               aria-label="Menu mobile"
             >
@@ -84,7 +89,7 @@ export function Navbar() {
                   key={link.href}
                   href={link.href}
                   onClick={closeMobileMenu}
-                  className="border-b border-[#f5f5f0]/5 py-4 text-base font-light tracking-[0.1em] text-[#f5f5f0]/90 transition-colors last:border-0 hover:text-[#f5f5f0]"
+                  className="border-b border-[#f5f5f0]/5 py-3 text-base font-light tracking-[0.1em] text-[#f5f5f0]/90 transition-colors last:border-0 active:text-[#f5f5f0]"
                 >
                   {link.label}
                 </Link>

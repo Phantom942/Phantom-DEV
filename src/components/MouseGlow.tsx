@@ -5,8 +5,16 @@ import { useEffect, useState } from "react";
 export function MouseGlow() {
   const [position, setPosition] = useState({ x: 0, y: 0 });
   const [isVisible, setIsVisible] = useState(false);
+  const [isTouch, setIsTouch] = useState(true);
 
   useEffect(() => {
+    if (typeof window === "undefined") return;
+    if (window.matchMedia("(pointer: coarse)").matches) {
+      setIsTouch(true);
+      return;
+    }
+    setIsTouch(false);
+
     const handleMouseMove = (e: MouseEvent) => {
       setPosition({ x: e.clientX, y: e.clientY });
       setIsVisible(true);
@@ -27,6 +35,8 @@ export function MouseGlow() {
       );
     };
   }, []);
+
+  if (isTouch) return null;
 
   return (
     <div

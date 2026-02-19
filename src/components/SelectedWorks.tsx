@@ -42,7 +42,7 @@ export function SelectedWorks() {
   return (
     <section
       id="selected-works"
-      className="px-5 py-20 sm:px-8 sm:py-24 md:px-16 md:py-32"
+      className="w-full max-w-[100vw] overflow-x-hidden px-4 py-16 sm:px-8 sm:py-24 md:px-16 md:py-32"
       aria-labelledby="selected-works-title"
     >
       <ScrollReveal>
@@ -51,14 +51,14 @@ export function SelectedWorks() {
           className="mb-6 font-extralight tracking-[0.2em] text-[#f5f5f0]"
           style={{ fontFamily: "'Cormorant Garamond', Georgia, serif" }}
         >
-          <span className="text-3xl sm:text-4xl md:text-5xl">Selected Works</span>
+          <span className="text-2xl sm:text-4xl md:text-5xl">Selected Works</span>
         </h2>
-        <p className="mb-10 max-w-2xl text-base leading-[1.85] tracking-[0.02em] text-[#f5f5f0]/85 sm:text-lg md:mb-20">
+        <p className="mb-8 max-w-[95vw] text-sm leading-[1.8] tracking-[0.02em] text-[#f5f5f0]/85 sm:mb-10 sm:max-w-2xl sm:text-base md:mb-20 md:text-lg">
           {"L'excellence technique au service de l'élégance."}
         </p>
       </ScrollReveal>
 
-      <ul className="grid grid-cols-1 grid-rows-auto gap-10 sm:gap-16 md:gap-24">
+      <ul className="grid w-full max-w-[100vw] grid-cols-1 gap-8 sm:gap-16 md:gap-24">
         {projects.map((project, index) => (
           <ScrollReveal key={project.id} delay={index * 0.12}>
             <li>
@@ -67,7 +67,7 @@ export function SelectedWorks() {
                   href={project.href}
                   className="block outline-none focus-visible:ring-2 focus-visible:ring-[#f5f5f0]/30 focus-visible:ring-offset-2 focus-visible:ring-offset-black"
                 >
-                  <div className="relative mb-5 overflow-hidden sm:mb-6 md:mb-8">
+                  <div className="relative mb-4 w-full max-w-[100%] overflow-hidden sm:mb-6 md:mb-8">
                     <motion.div
                       className="aspect-[16/10] w-full"
                       whileHover={{ scale: 1.02 }}
@@ -96,11 +96,11 @@ export function SelectedWorks() {
                           fontFamily: "'Cormorant Garamond', Georgia, serif",
                         }}
                       >
-                        <span className="text-xl sm:text-2xl md:text-3xl">
+                        <span className="text-lg sm:text-2xl md:text-3xl">
                           {project.title}
                         </span>
                       </h3>
-                      <p className="mb-4 max-w-xl text-sm leading-[1.85] tracking-[0.02em] text-[#f5f5f0]/80 sm:text-base">
+                      <p className="mb-3 max-w-[95vw] text-sm leading-[1.8] tracking-[0.02em] text-[#f5f5f0]/80 sm:max-w-xl sm:text-base">
                         {project.description}
                       </p>
                       <div className="flex flex-wrap gap-3">
