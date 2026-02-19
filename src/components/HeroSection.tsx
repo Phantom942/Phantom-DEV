@@ -63,7 +63,7 @@ export function HeroSection() {
           <motion.span
             key={`${letter}-${index}`}
             variants={letterVariants}
-            className="font-extralight text-4xl tracking-[0.05em] min-[375px]:text-5xl sm:text-7xl sm:tracking-[0.1em] md:text-9xl md:tracking-[0.15em]"
+            className="font-extralight text-[11vw] tracking-[0.05em] sm:text-7xl sm:tracking-[0.1em] md:text-9xl md:tracking-[0.15em]"
             style={{ fontFamily: "'Cormorant Garamond', Georgia, serif" }}
           >
             {letter}
@@ -76,7 +76,7 @@ export function HeroSection() {
         animate="visible"
         className="mt-8 max-w-2xl px-2 text-center text-sm font-light leading-[1.85] tracking-[0.06em] text-[#f5f5f0]/90 sm:mt-10 sm:text-base sm:tracking-[0.08em] md:mt-12 md:text-lg md:leading-[1.9] md:tracking-[0.1em]"
       >
-        {`L'excellence numérique, à votre service.`}
+        {"L'excellence numérique, à votre service."}
       </motion.p>
     </section>
   );

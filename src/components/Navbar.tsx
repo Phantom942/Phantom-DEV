@@ -18,51 +18,52 @@ export function Navbar() {
 
   return (
     <>
-    <motion.header
-      initial={{ opacity: 0, y: -20 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
-      className="fixed left-0 right-0 top-0 z-50 flex w-full max-w-full items-center justify-between border-b border-[#f5f5f0]/5 bg-[#000000] px-4 py-4 md:px-16 md:py-6"
-      role="banner"
-    >
-      <Link
-        href="/"
-        className="flex min-w-0 shrink-0 items-center gap-2 text-[#f5f5f0] transition-opacity hover:opacity-80"
-        aria-label="PhantomDev - Accueil"
-        onClick={closeMobileMenu}
+      <motion.header
+        initial={{ opacity: 0, y: -20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
+        className="fixed left-0 right-0 top-0 z-50 flex w-full min-w-0 max-w-full flex-row items-center justify-between overflow-hidden border-b border-[#f5f5f0]/5 bg-[#000000] px-4 py-4 md:px-16 md:py-6"
+        role="banner"
       >
-        <Ghost className="h-4 w-4 shrink-0 md:h-6 md:w-6" strokeWidth={1.5} />
-        <span className="whitespace-nowrap text-sm font-light tracking-[0.08em] uppercase leading-tight md:text-base md:tracking-[0.15em] lg:text-lg lg:tracking-[0.2em]">
-          PhantomDev
-        </span>
-      </Link>
+        <Link
+          href="/"
+          className="flex shrink-0 items-center gap-1.5 text-[#f5f5f0] transition-opacity hover:opacity-80 md:gap-2"
+          aria-label="PhantomDev - Accueil"
+          onClick={closeMobileMenu}
+        >
+          <Ghost className="h-4 w-4 shrink-0 md:h-6 md:w-6" strokeWidth={1.5} />
+          <span className="shrink-0 text-xs font-light uppercase tracking-wide sm:text-sm md:text-base md:tracking-[0.15em] lg:text-lg lg:tracking-[0.2em]">
+            <span className="sm:hidden">PHANTOM</span>
+            <span className="hidden sm:inline">PhantomDev</span>
+          </span>
+        </Link>
 
-      <nav
-        className="hidden items-center gap-6 md:flex md:gap-12"
-        role="navigation"
-        aria-label="Navigation principale"
-      >
-        {navLinks.map((link) => (
-          <Link
-            key={link.href}
-            href={link.href}
-            className="text-sm font-light tracking-[0.15em] leading-tight text-[#f5f5f0]/85 transition-colors hover:text-[#f5f5f0]"
-          >
-            {link.label}
-          </Link>
-        ))}
-      </nav>
+        <nav
+          className="hidden shrink-0 items-center gap-6 md:flex md:gap-12"
+          role="navigation"
+          aria-label="Navigation principale"
+        >
+          {navLinks.map((link) => (
+            <Link
+              key={link.href}
+              href={link.href}
+              className="text-sm font-light tracking-[0.15em] leading-tight text-[#f5f5f0]/85 transition-colors hover:text-[#f5f5f0]"
+            >
+              {link.label}
+            </Link>
+          ))}
+        </nav>
 
-      <button
-        type="button"
-        onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-        className="flex h-10 w-10 shrink-0 items-center justify-center rounded-md text-[#f5f5f0] transition-colors hover:bg-[#f5f5f0]/10 md:hidden"
-        aria-label={mobileMenuOpen ? "Fermer le menu" : "Ouvrir le menu"}
-        aria-expanded={mobileMenuOpen}
-      >
-        {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
-      </button>
-    </motion.header>
+        <button
+          type="button"
+          onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+          className="flex h-10 w-10 shrink-0 items-center justify-center rounded-md text-[#f5f5f0] transition-colors hover:bg-[#f5f5f0]/10 md:hidden"
+          aria-label={mobileMenuOpen ? "Fermer le menu" : "Ouvrir le menu"}
+          aria-expanded={mobileMenuOpen}
+        >
+          {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+        </button>
+      </motion.header>
 
       <AnimatePresence>
         {mobileMenuOpen && (

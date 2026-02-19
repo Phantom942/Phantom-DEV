@@ -10,7 +10,7 @@ export default function Home() {
       <CustomCursor />
       <MouseGlow />
       <Navbar />
-      <main role="main">
+      <main role="main" className="overflow-x-hidden">
         <HeroSection />
         <Sections />
       </main>
