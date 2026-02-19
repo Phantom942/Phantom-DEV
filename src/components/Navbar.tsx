@@ -22,17 +22,17 @@ export function Navbar() {
       initial={{ opacity: 0, y: -20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
-      className="fixed left-0 right-0 top-0 z-50 flex w-full items-center justify-between border-b border-[#f5f5f0]/5 bg-[#000000] px-4 py-4 md:px-16 md:py-6"
+      className="fixed left-0 right-0 top-0 z-50 flex w-full max-w-full items-center justify-between border-b border-[#f5f5f0]/5 bg-[#000000] px-4 py-4 md:px-16 md:py-6"
       role="banner"
     >
       <Link
         href="/"
-        className="flex shrink-0 items-center gap-2 text-[#f5f5f0] transition-opacity hover:opacity-80"
+        className="flex min-w-0 shrink-0 items-center gap-2 text-[#f5f5f0] transition-opacity hover:opacity-80"
         aria-label="PhantomDev - Accueil"
         onClick={closeMobileMenu}
       >
-        <Ghost className="h-5 w-5 shrink-0 md:h-6 md:w-6" strokeWidth={1.5} />
-        <span className="text-xl font-light tracking-[0.1em] uppercase leading-tight sm:text-3xl sm:tracking-[0.15em] md:tracking-[0.2em]">
+        <Ghost className="h-4 w-4 shrink-0 md:h-6 md:w-6" strokeWidth={1.5} />
+        <span className="whitespace-nowrap text-sm font-light tracking-[0.08em] uppercase leading-tight md:text-base md:tracking-[0.15em] lg:text-lg lg:tracking-[0.2em]">
           PhantomDev
         </span>
       </Link>

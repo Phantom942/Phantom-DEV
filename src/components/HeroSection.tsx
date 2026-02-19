@@ -49,12 +49,12 @@ const subtitleVariants = {
 export function HeroSection() {
   return (
     <section
-      className="relative flex min-h-screen flex-col items-center justify-center px-6 pt-24 sm:px-8 md:px-16"
+      className="relative flex min-h-screen max-w-full flex-col items-center justify-center overflow-x-hidden px-4 pt-24 sm:px-8 md:px-16"
       aria-labelledby="hero-title"
     >
       <motion.h1
         id="hero-title"
-        className="flex flex-wrap justify-center gap-0.5 font-extralight leading-[1.1] tracking-[0.1em] text-[#f5f5f0] sm:gap-1 sm:tracking-[0.15em] md:gap-2 md:tracking-[0.2em]"
+        className="flex flex-nowrap justify-center gap-0.5 font-extralight leading-[1.1] tracking-[0.08em] text-[#f5f5f0] sm:gap-1 sm:tracking-[0.12em] md:gap-2 md:tracking-[0.2em]"
         variants={containerVariants}
         initial="hidden"
         animate="visible"
@@ -63,7 +63,7 @@ export function HeroSection() {
           <motion.span
             key={`${letter}-${index}`}
             variants={letterVariants}
-            className="font-extralight text-[2rem] tracking-[0.06em] min-[375px]:text-[2.25rem] sm:text-5xl sm:tracking-[0.1em] md:text-7xl md:tracking-[0.15em] lg:text-8xl xl:text-9xl 2xl:text-[10rem] 2xl:tracking-[0.2em]"
+            className="font-extralight text-4xl tracking-[0.05em] min-[375px]:text-5xl sm:text-7xl sm:tracking-[0.1em] md:text-9xl md:tracking-[0.15em]"
             style={{ fontFamily: "'Cormorant Garamond', Georgia, serif" }}
           >
             {letter}
