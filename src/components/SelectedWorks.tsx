@@ -7,34 +7,34 @@ import { ScrollReveal } from "./ScrollReveal";
 
 const projects = [
   {
-    id: "nexus",
-    title: "Nexus Platform",
+    id: "phantom-art",
+    title: "Phantom Art",
     description:
-      "Plateforme SaaS pour équipes distribuées. Interface épurée, expérience fluide.",
-    techs: ["Next.js", "Tailwind", "PostgreSQL"],
+      "E-commerce de luxe dédié à l'art numérique. Expérience utilisateur immersive avec un focus sur le minimalisme et la haute performance.",
+    techs: ["Next.js", "E-commerce", "Tailwind"],
     image:
-      "https://images.unsplash.com/photo-1550745165-9bc0b252726f?w=1200&q=80",
-    href: "#",
+      "https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5?w=1200&q=80",
+    href: "https://www.phantomart.fr/",
   },
   {
-    id: "aurora",
-    title: "Aurora AI",
+    id: "redk-motors",
+    title: "REDK Motors",
     description:
-      "Assistant intelligent et modèles de langage. Automatisation des workflows créatifs.",
-    techs: ["Next.js", "Gemini API", "Tailwind"],
+      "Plateforme vitrine pour spécialiste automobile. Design agressif et élégant pour la mise en valeur de véhicules de prestige.",
+    techs: ["React", "Framer Motion", "Auto-Focus"],
     image:
-      "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=1200&q=80",
-    href: "#",
+      "https://images.unsplash.com/photo-1494976388531-d1058494cdd8?w=1200&q=80",
+    href: "https://redk-motors.me/",
   },
   {
-    id: "velvet",
-    title: "Velvet Studio",
+    id: "moove-city",
+    title: "Moove City",
     description:
-      "Site vitrine premium. Animations subtiles, typographie raffinée.",
-    techs: ["Next.js", "Framer Motion", "Tailwind"],
+      "Solution de mobilité urbaine. Interface dynamique axée sur la conversion et la clarté des services de transport.",
+    techs: ["UX/UI", "Next.js", "Mobile-First"],
     image:
-      "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=1200&q=80",
-    href: "#",
+      "https://images.unsplash.com/photo-1480714378408-67cf0d13bc1b?w=1200&q=80",
+    href: "https://www.moovecity.fr/",
   },
 ] as const;
 
@@ -61,10 +61,12 @@ export function SelectedWorks() {
       <ul className="grid w-full max-w-[100vw] grid-cols-1 gap-8 sm:gap-16 md:gap-24">
         {projects.map((project, index) => (
           <ScrollReveal key={project.id} delay={index * 0.12}>
-            <li>
+            <li className="min-w-0 w-full">
               <article className="group">
                 <a
                   href={project.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="block outline-none focus-visible:ring-2 focus-visible:ring-[#f5f5f0]/30 focus-visible:ring-offset-2 focus-visible:ring-offset-black"
                 >
                   <div className="relative mb-4 w-full max-w-[100%] overflow-hidden sm:mb-6 md:mb-8">
@@ -75,7 +77,7 @@ export function SelectedWorks() {
                     >
                       <Image
                         src={project.image}
-                        alt=""
+                        alt={`${project.title} - visuel du projet`}
                         fill
                         sizes="(max-width: 768px) 100vw, 80vw"
                         className="object-cover"
