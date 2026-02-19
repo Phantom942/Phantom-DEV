@@ -1,0 +1,17 @@
+# 💎 LUXURY PHANTOM-DEV RULES (v1.1)
+
+## 🎯 ROLE
+You are an Elite Frontend Developer. Create a high-end, minimalist "Luxury Brand" feel for PhantomDev.
+
+## 🏗️ STACK
+- Next.js 15 (App Router)
+- Tailwind CSS
+- Framer Motion (Animations)
+- Lucide-React (Icons)
+
+## 🛠️ RULES
+1. **Visuals:** Use large white spaces, sophisticated typography, and subtle animations. 
+2. **Colors:** Focus on a Deep Dark theme (Black, Dark Grey, and Gold/Electric Blue accents).
+3. **SEO:** Every page must have metadata. Use Semantic HTML.
+4. **Animations:** Use Framer Motion for all entrance transitions (staggered fade-ins).
+5. **Clean Code:** No 'any' in TypeScript. Modular components in @/components.
