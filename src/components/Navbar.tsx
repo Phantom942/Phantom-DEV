@@ -22,19 +22,19 @@ export function Navbar() {
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
-        className="fixed left-0 right-0 top-0 z-50 flex w-full min-w-0 max-w-full flex-row items-center justify-between overflow-hidden border-b border-[#f5f5f0]/5 bg-[#000000] px-4 py-4 md:px-16 md:py-6"
+        className="fixed left-0 right-0 top-0 z-50 flex w-full flex-row items-center justify-between overflow-x-hidden border-b border-[#f5f5f0]/5 bg-[#000000] px-4 py-4 md:px-16 md:py-6"
         role="banner"
+        style={{ maxWidth: "100vw" }}
       >
         <Link
           href="/"
-          className="flex shrink-0 items-center gap-1.5 text-[#f5f5f0] transition-opacity hover:opacity-80 md:gap-2"
+          className="flex shrink-0 items-center gap-1.5 text-[#f5f5f0] transition-opacity hover:opacity-80"
           aria-label="PhantomDev - Accueil"
           onClick={closeMobileMenu}
         >
           <Ghost className="h-4 w-4 shrink-0 md:h-6 md:w-6" strokeWidth={1.5} />
-          <span className="shrink-0 text-xs font-light uppercase tracking-wide sm:text-sm md:text-base md:tracking-[0.15em] lg:text-lg lg:tracking-[0.2em]">
-            <span className="sm:hidden">PHANTOM</span>
-            <span className="hidden sm:inline">PhantomDev</span>
+          <span className="shrink-0 text-sm font-light uppercase tracking-wide md:text-base md:tracking-[0.15em] lg:text-lg lg:tracking-[0.2em]">
+            PhantomDev
           </span>
         </Link>
 

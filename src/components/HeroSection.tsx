@@ -51,10 +51,11 @@ export function HeroSection() {
     <section
       className="relative flex min-h-screen max-w-full flex-col items-center justify-center overflow-x-hidden px-4 pt-24 sm:px-8 md:px-16"
       aria-labelledby="hero-title"
+      style={{ overflowX: "hidden" }}
     >
       <motion.h1
         id="hero-title"
-        className="flex flex-nowrap justify-center gap-0.5 font-extralight leading-[1.1] tracking-[0.08em] text-[#f5f5f0] sm:gap-1 sm:tracking-[0.12em] md:gap-2 md:tracking-[0.2em]"
+        className="flex min-w-0 max-w-full flex-nowrap justify-center gap-0.5 overflow-hidden px-2 font-extralight leading-[1.1] tracking-[0.08em] text-[#f5f5f0] sm:gap-1 sm:tracking-[0.12em] md:gap-2 md:tracking-[0.2em]"
         variants={containerVariants}
         initial="hidden"
         animate="visible"
@@ -63,7 +64,7 @@ export function HeroSection() {
           <motion.span
             key={`${letter}-${index}`}
             variants={letterVariants}
-            className="font-extralight text-[11vw] tracking-[0.05em] sm:text-7xl sm:tracking-[0.1em] md:text-9xl md:tracking-[0.15em]"
+            className="font-extralight text-4xl tracking-[0.05em] sm:text-7xl sm:tracking-[0.1em] md:text-9xl md:tracking-[0.15em]"
             style={{ fontFamily: "'Cormorant Garamond', Georgia, serif" }}
           >
             {letter}
