@@ -76,7 +76,7 @@ export function HeroSection() {
         animate="visible"
         className="mt-12 max-w-2xl text-center text-base font-light leading-[1.85] tracking-[0.08em] text-[#f5f5f0]/90 md:text-lg md:leading-[1.9] md:tracking-[0.1em]"
       >
-        L&apos;excellence numérique, à votre service.
+        L'excellence numérique, à votre service.
       </motion.p>
     </section>
   );

@@ -54,7 +54,7 @@ export function SelectedWorks() {
           <span className="text-4xl md:text-5xl">Selected Works</span>
         </h2>
         <p className="mb-12 max-w-2xl text-lg leading-[1.85] tracking-[0.02em] text-[#f5f5f0]/85 md:mb-20">
-          L&apos;excellence technique au service de l&apos;élégance.
+          L'excellence technique au service de l'élégance.
         </p>
       </ScrollReveal>
 
