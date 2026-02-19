@@ -21,9 +21,8 @@ export function Sections() {
             <span className="text-4xl md:text-5xl">Expertise</span>
           </h2>
           <p className="mb-16 max-w-2xl text-lg leading-[1.85] tracking-[0.02em] text-[#f5f5f0]/85">
-            Développement web sur mesure, architecture logicielle et interfaces
-            haut de gamme. Une approche discrète pour des résultats qui parlent
-            d&apos;eux-mêmes.
+            Architecture web, interfaces raffinées. Des solutions qui font la
+            différence.
           </p>
         </ScrollReveal>
         <ExpertiseCards />
@@ -45,8 +44,7 @@ export function Sections() {
             <span className="text-4xl md:text-5xl">Projets</span>
           </h2>
           <p className="max-w-2xl text-lg leading-[1.85] tracking-[0.02em] text-[#f5f5f0]/85">
-            Une sélection de réalisations où l&apos;excellence technique rencontre
-            l&apos;élégance. À découvrir prochainement.
+            Réalisations à venir.
           </p>
         </ScrollReveal>
       </section>
@@ -65,7 +63,7 @@ export function Sections() {
             <span className="text-4xl md:text-5xl">Contact</span>
           </h2>
           <p className="max-w-2xl text-lg leading-[1.85] tracking-[0.02em] text-[#f5f5f0]/85">
-            Un projet en tête ? Discutons de la meilleure façon de le concrétiser.
+            Discutons de votre projet.
           </p>
         </ScrollReveal>
       </section>

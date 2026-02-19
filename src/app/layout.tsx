@@ -13,19 +13,20 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "PhantomDev | L'ingénierie invisible au service de votre visibilité",
+  title: "PhantomDev | L'Excellence Numérique",
   description:
-    "PhantomDev - Expertise en développement web et ingénierie logicielle. Des solutions invisibles qui font la différence.",
+    "Architecte digital spécialisé dans les solutions Next.js de haute performance.",
   keywords: [
     "développement web",
     "ingénierie logicielle",
     "PhantomDev",
     "portfolio",
+    "Next.js",
   ],
   openGraph: {
-    title: "PhantomDev | L'ingénierie invisible au service de votre visibilité",
+    title: "PhantomDev | L'Excellence Numérique",
     description:
-      "PhantomDev - Expertise en développement web et ingénierie logicielle.",
+      "Architecte digital spécialisé dans les solutions Next.js de haute performance.",
   },
 };
 
