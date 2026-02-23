@@ -1,6 +1,5 @@
 "use client";
 
-import { motion } from "framer-motion";
 import Image from "next/image";
 import { ScrollReveal } from "./ScrollReveal";
 import { projects } from "@/data/projects";

@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   alternates: { canonical: "https://phantomdev.fr/services" },
   title: "Services | PhantomDev — Création de sites web premium sur-mesure",
   description:
-    "PhantomDev propose des services de création web : sites vitrines, e-commerce, applications sur-mesure, intégration IA. Devis gratuit pour votre projet.",
+    "PhantomDev propose des services de création web : sites vitrines à partir de 4 500€, e-commerce à partir de 8 000€, applications sur-mesure, intégration IA. Tarifs marché FR/Europe. Devis gratuit sous 48h.",
   keywords: [
     "création site web",
     "développement web sur-mesure",
@@ -33,6 +33,7 @@ const services = [
     id: "conception",
     title: "Conception Web Premium",
     icon: Palette,
+    price: "à partir de 4 500€",
     description:
       "Un site qui reflète l'excellence de votre marque. Chaque interface est conçue pour captiver, guider et convertir.",
     benefits: [
@@ -48,6 +49,7 @@ const services = [
     id: "applications",
     title: "Applications Sur-Mesure",
     icon: Box,
+    price: "à partir de 8 000€",
     description:
       "Des plateformes robustes, scalables et performantes. E-commerce, SaaS, outils métier : l'architecture s'adapte à vos besoins.",
     benefits: [
@@ -63,6 +65,7 @@ const services = [
     id: "ia",
     title: "Intégration IA Stratégique",
     icon: Brain,
+    price: "sur devis",
     description:
       "L'intelligence artificielle au service de votre business. Chatbots, recommandations personnalisées, automatisation intelligente.",
     benefits: [
@@ -97,9 +100,12 @@ export default function ServicesPage() {
           >
             <span className="text-3xl sm:text-4xl md:text-5xl">Services</span>
           </h1>
-          <p className="mb-16 max-w-2xl text-sm leading-[1.8] tracking-[0.02em] text-[#f5f5f0]/85 sm:text-base md:text-lg">
+          <p className="mb-8 max-w-2xl text-sm leading-[1.8] tracking-[0.02em] text-[#f5f5f0]/85 sm:text-base md:text-lg">
             Des solutions web sur-mesure, de la conception à la mise en
             production. Performance, élégance et résultats mesurables.
+          </p>
+          <p className="mb-16 text-xs font-light tracking-[0.1em] text-[#f5f5f0]/60">
+            Tarifs alignés marché FR / Europe. Devis personnalisé sous 48h.
           </p>
 
           <div className="space-y-24">
@@ -120,16 +126,21 @@ export default function ServicesPage() {
                       />
                     </div>
                     <div>
-                      <h2
-                        className="mb-4 font-extralight tracking-[0.1em] text-[#f5f5f0]"
-                        style={{
-                          fontFamily: "var(--font-cormorant), Georgia, serif",
-                        }}
-                      >
-                        <span className="text-2xl sm:text-3xl">
-                          {service.title}
+                      <div className="mb-4 flex flex-wrap items-baseline justify-between gap-4">
+                        <h2
+                          className="font-extralight tracking-[0.1em] text-[#f5f5f0]"
+                          style={{
+                            fontFamily: "var(--font-cormorant), Georgia, serif",
+                          }}
+                        >
+                          <span className="text-2xl sm:text-3xl">
+                            {service.title}
+                          </span>
+                        </h2>
+                        <span className="text-sm font-light tracking-[0.08em] text-[#d4af37]/90">
+                          {service.price}
                         </span>
-                      </h2>
+                      </div>
                       <p className="mb-8 max-w-2xl text-sm leading-[1.8] text-[#f5f5f0]/80 sm:text-base">
                         {service.description}
                       </p>

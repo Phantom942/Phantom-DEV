@@ -9,11 +9,9 @@ export function MouseGlow() {
 
   useEffect(() => {
     if (typeof window === "undefined") return;
-    if (window.matchMedia("(pointer: coarse)").matches) {
-      setIsTouch(true);
-      return;
-    }
-    setIsTouch(false);
+    const isCoarse = window.matchMedia("(pointer: coarse)").matches;
+    queueMicrotask(() => setIsTouch(isCoarse));
+    if (isCoarse) return;
 
     const handleMouseMove = (e: MouseEvent) => {
       setPosition({ x: e.clientX, y: e.clientY });

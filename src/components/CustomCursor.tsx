@@ -15,7 +15,7 @@ export function CustomCursor() {
 
   useEffect(() => {
     if (window.matchMedia("(pointer: coarse)").matches) return;
-    setShouldRender(true);
+    queueMicrotask(() => setShouldRender(true));
     mountedRef.current = true;
     document.body.style.cursor = "none";
 
