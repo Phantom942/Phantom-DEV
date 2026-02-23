@@ -41,20 +41,30 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
-  title: "PhantomDev | L'Excellence Numérique",
+  title: "PhantomDev | Création de sites web premium sur-mesure",
   description:
-    "Architecte digital spécialisé dans les solutions Next.js de haute performance.",
+    "PhantomDev : création de sites web sur-mesure avec Next.js. E-commerce, plateformes SaaS, sites vitrines. Performance et design premium. Devis gratuit.",
   keywords: [
+    "création site web",
     "développement web",
-    "ingénierie logicielle",
-    "PhantomDev",
-    "portfolio",
     "Next.js",
+    "e-commerce",
+    "site vitrine",
+    "PhantomDev",
+    "agence web",
+    "site sur-mesure",
   ],
   openGraph: {
-    title: "PhantomDev | L'Excellence Numérique",
+    title: "PhantomDev | Création de sites web premium sur-mesure",
     description:
-      "Architecte digital spécialisé dans les solutions Next.js de haute performance.",
+      "Sites web sur-mesure qui convertissent. E-commerce, vitrines, applications premium. Devis gratuit.",
+    url: "https://phantomdev.fr",
+    siteName: "PhantomDev",
+    locale: "fr_FR",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "PhantomDev | Création de sites web premium",
   },
 };
 
@@ -63,12 +73,27 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  return (
+  const schemaOrg = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  name: "PhantomDev",
+  url: "https://phantomdev.fr",
+  jobTitle: "Architecte digital",
+  description:
+    "Création de sites web sur-mesure : e-commerce, vitrines, applications premium.",
+  knowsAbout: ["Next.js", "React", "E-commerce", "Développement web"],
+};
+
+return (
     <html
       lang="fr"
       className={`${geist.variable} ${geistMono.variable} ${cormorant.variable} ${sourceSans.variable} overflow-x-hidden`}
     >
       <body className="overflow-x-hidden font-sans antialiased">
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaOrg) }}
+        />
         {children}
       </body>
     </html>

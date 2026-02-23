@@ -1,6 +1,8 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Link from "next/link";
+import { ArrowDown, Mail } from "lucide-react";
 
 const titleLetters = "PHANTOM".split("");
 
@@ -40,6 +42,19 @@ const subtitleVariants = {
   },
 };
 
+const ctaVariants = {
+  hidden: { opacity: 0, y: 16 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.5,
+      delay: 1.1,
+      ease: [0.22, 1, 0.36, 1] as const,
+    },
+  },
+};
+
 export function HeroSection() {
   return (
     <section
@@ -49,12 +64,15 @@ export function HeroSection() {
         paddingTop: "max(6rem, calc(5rem + env(safe-area-inset-top)))",
       }}
     >
-      <motion.h1
-        id="hero-title"
+      <h1 id="hero-title" className="sr-only">
+        PhantomDev — Création de sites web premium sur-mesure
+      </h1>
+      <motion.div
         className="flex w-full max-w-[100%] flex-wrap justify-center gap-0.5 overflow-hidden px-1 font-extralight leading-[1.05] tracking-tight text-[#f5f5f0] sm:gap-1 sm:tracking-[0.08em] md:gap-2 md:tracking-[0.15em]"
         variants={containerVariants}
         initial="hidden"
         animate="visible"
+        aria-hidden
       >
         {titleLetters.map((letter, index) => (
           <motion.span
@@ -69,15 +87,37 @@ export function HeroSection() {
             {letter}
           </motion.span>
         ))}
-      </motion.h1>
+      </motion.div>
       <motion.p
         variants={subtitleVariants}
         initial="hidden"
         animate="visible"
         className="mt-6 max-w-[90vw] px-2 text-center text-sm font-light leading-[1.8] tracking-wide text-[#f5f5f0]/90 sm:mt-8 sm:max-w-2xl sm:text-base md:mt-12 md:text-lg md:tracking-[0.05em]"
       >
-        {"L'excellence numérique, à votre service."}
+        Sites web sur-mesure qui convertissent. E-commerce, vitrines,
+        applications premium.
       </motion.p>
+      <motion.div
+        variants={ctaVariants}
+        initial="hidden"
+        animate="visible"
+        className="mt-10 flex flex-col items-center gap-4 sm:mt-12 sm:flex-row sm:gap-6"
+      >
+        <Link
+          href="#projets"
+          className="flex items-center gap-2 border border-[#f5f5f0]/30 bg-transparent px-6 py-3 text-sm font-light tracking-[0.15em] text-[#f5f5f0] transition-all hover:border-[#f5f5f0]/60 hover:bg-[#f5f5f0]/5"
+        >
+          Voir mes réalisations
+          <ArrowDown size={16} className="rotate-[-90deg]" strokeWidth={1.5} />
+        </Link>
+        <Link
+          href="#contact"
+          className="flex items-center gap-2 border border-[#d4af37]/50 bg-[#d4af37]/10 px-6 py-3 text-sm font-light tracking-[0.15em] text-[#f5f5f0] transition-all hover:bg-[#d4af37]/20"
+        >
+          Demander un devis
+          <Mail size={16} strokeWidth={1.5} />
+        </Link>
+      </motion.div>
     </section>
   );
 }

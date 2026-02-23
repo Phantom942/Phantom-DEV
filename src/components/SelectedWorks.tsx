@@ -7,34 +7,34 @@ import { ScrollReveal } from "./ScrollReveal";
 
 const projects = [
   {
-    id: "nexus",
-    title: "Nexus Platform",
+    id: "phantom-art",
+    title: "Phantom Art",
     description:
-      "Plateforme SaaS pour équipes distribuées. Interface épurée, expérience fluide.",
-    techs: ["Next.js", "Tailwind", "PostgreSQL"],
+      "E-commerce de luxe dédié à l'art numérique. Expérience immersive, minimalisme et haute performance.",
+    techs: ["Next.js", "E-commerce", "Tailwind"],
     image:
-      "https://images.unsplash.com/photo-1550745165-9bc0b252726f?w=1200&q=80",
-    href: "#",
+      "https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5?w=1200&q=80",
+    href: "https://www.phantomart.fr/",
   },
   {
-    id: "aurora",
-    title: "Aurora AI",
+    id: "redk-motors",
+    title: "REDK Motors",
     description:
-      "Assistant intelligent et modèles de langage. Automatisation des workflows créatifs.",
-    techs: ["Next.js", "Gemini API", "Tailwind"],
+      "Plateforme vitrine pour spécialiste automobile. Design agressif et élégant pour véhicules de prestige.",
+    techs: ["React", "Framer Motion", "Auto-Focus"],
     image:
-      "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=1200&q=80",
-    href: "#",
+      "https://images.unsplash.com/photo-1494976388531-d1058494cdd8?w=1200&q=80",
+    href: "https://redk-motors.me/",
   },
   {
-    id: "velvet",
-    title: "Velvet Studio",
+    id: "moove-city",
+    title: "Moove City",
     description:
-      "Site vitrine premium. Animations subtiles, typographie raffinée.",
-    techs: ["Next.js", "Framer Motion", "Tailwind"],
+      "Solution de mobilité urbaine. Interface dynamique axée sur la conversion et la clarté des services.",
+    techs: ["UX/UI", "Next.js", "Mobile-First"],
     image:
-      "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=1200&q=80",
-    href: "#",
+      "https://images.unsplash.com/photo-1480714378408-67cf0d13bc1b?w=1200&q=80",
+    href: "https://www.moovecity.fr/",
   },
 ] as const;
 
@@ -43,15 +43,15 @@ export function SelectedWorks() {
     <section
       id="projets"
       className="w-full max-w-[100vw] overflow-x-hidden px-4 py-16 sm:px-8 sm:py-24 md:px-16 md:py-32"
-      aria-labelledby="selected-works-title"
+      aria-labelledby="realisations-title"
     >
       <ScrollReveal>
         <h2
-          id="selected-works-title"
+          id="realisations-title"
           className="mb-6 font-extralight tracking-[0.2em] text-[#f5f5f0]"
           style={{ fontFamily: "var(--font-cormorant), Georgia, serif" }}
         >
-          <span className="text-2xl sm:text-4xl md:text-5xl">Selected Works</span>
+          <span className="text-2xl sm:text-4xl md:text-5xl">Réalisations</span>
         </h2>
         <p className="mb-8 max-w-[95vw] text-sm leading-[1.8] tracking-[0.02em] text-[#f5f5f0]/85 sm:mb-10 sm:max-w-2xl sm:text-base md:mb-20 md:text-lg">
           {"L'excellence technique au service de l'élégance."}
@@ -65,6 +65,8 @@ export function SelectedWorks() {
               <article className="group">
                 <a
                   href={project.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="block outline-none focus-visible:ring-2 focus-visible:ring-[#f5f5f0]/30 focus-visible:ring-offset-2 focus-visible:ring-offset-black"
                 >
                   <div className="relative mb-4 w-full max-w-[100%] overflow-hidden sm:mb-6 md:mb-8">
@@ -115,7 +117,7 @@ export function SelectedWorks() {
                       </div>
                     </div>
                     <span className="mt-4 flex items-center gap-2 text-sm font-light tracking-[0.15em] text-[#f5f5f0]/90 transition-colors duration-300 group-hover:text-[#f5f5f0] md:mt-0">
-                      View Case Study
+                      Voir le site
                       <ArrowUpRight
                         size={16}
                         strokeWidth={1.5}

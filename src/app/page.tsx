@@ -3,6 +3,7 @@ import { HeroSection } from "@/components/HeroSection";
 import { MouseGlow } from "@/components/MouseGlow";
 import { CustomCursor } from "@/components/CustomCursor";
 import { Sections } from "@/components/Sections";
+import { Footer } from "@/components/Footer";
 
 export default function Home() {
   return (
@@ -17,6 +18,7 @@ export default function Home() {
         <HeroSection />
         <Sections />
       </main>
+      <Footer />
     </div>
   );
 }
