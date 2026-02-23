@@ -1,9 +1,9 @@
 import { Navbar } from "@/components/Navbar";
 import { HeroSection } from "@/components/HeroSection";
-import { MouseGlow } from "@/components/MouseGlow";
-import { CustomCursor } from "@/components/CustomCursor";
+import { CursorAndGlow } from "@/components/CursorAndGlow";
 import { Sections } from "@/components/Sections";
 import { Footer } from "@/components/Footer";
+import { creativeWorkSchema } from "@/data/projects";
 
 export default function Home() {
   return (
@@ -11,8 +11,11 @@ export default function Home() {
       className="relative min-h-screen min-h-[100dvh] w-full max-w-[100vw] overflow-x-hidden bg-[#000000]"
       id="home"
     >
-      <CustomCursor />
-      <MouseGlow />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(creativeWorkSchema) }}
+      />
+      <CursorAndGlow />
       <Navbar />
       <main role="main" className="w-full max-w-[100vw] overflow-x-hidden">
         <HeroSection />

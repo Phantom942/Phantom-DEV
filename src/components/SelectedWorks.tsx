@@ -4,39 +4,7 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import { ArrowUpRight } from "lucide-react";
 import { ScrollReveal } from "./ScrollReveal";
-
-const projects = [
-  {
-    id: "phantom-art",
-    title: "Phantom Art",
-    description:
-      "E-commerce de luxe dédié à l'art numérique. Expérience immersive, minimalisme et haute performance.",
-    techs: ["Next.js", "E-commerce", "Tailwind"],
-    image:
-      "https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5?w=1200&q=80",
-    href: "https://www.phantomart.fr/",
-  },
-  {
-    id: "redk-motors",
-    title: "REDK Motors",
-    description:
-      "Plateforme vitrine pour spécialiste automobile. Design agressif et élégant pour véhicules de prestige.",
-    techs: ["React", "Framer Motion", "Auto-Focus"],
-    image:
-      "https://images.unsplash.com/photo-1494976388531-d1058494cdd8?w=1200&q=80",
-    href: "https://redk-motors.me/",
-  },
-  {
-    id: "moove-city",
-    title: "Moove City",
-    description:
-      "Solution de mobilité urbaine. Interface dynamique axée sur la conversion et la clarté des services.",
-    techs: ["UX/UI", "Next.js", "Mobile-First"],
-    image:
-      "https://images.unsplash.com/photo-1480714378408-67cf0d13bc1b?w=1200&q=80",
-    href: "https://www.moovecity.fr/",
-  },
-] as const;
+import { projects } from "@/data/projects";
 
 export function SelectedWorks() {
   return (
@@ -69,27 +37,20 @@ export function SelectedWorks() {
                   rel="noopener noreferrer"
                   className="block outline-none focus-visible:ring-2 focus-visible:ring-[#f5f5f0]/30 focus-visible:ring-offset-2 focus-visible:ring-offset-black"
                 >
-                  <div className="relative mb-4 w-full max-w-[100%] overflow-hidden sm:mb-6 md:mb-8">
-                    <motion.div
-                      className="aspect-[16/10] w-full"
-                      whileHover={{ scale: 1.02 }}
-                      transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
-                    >
-                      <Image
-                        src={project.image}
-                        alt={`${project.title} - visuel du projet`}
-                        fill
-                        sizes="(max-width: 768px) 100vw, 80vw"
-                        className="object-cover"
-                        priority={index === 0}
-                      />
-                      <div
-                        className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100"
-                        aria-hidden
-                      />
-                    </motion.div>
+                  <div className="relative mb-6 flex aspect-[16/10] w-full items-center justify-center overflow-hidden rounded-sm border border-[#f5f5f0]/10 bg-[#0a0a0a] px-8 py-12 sm:mb-8 sm:px-12 sm:py-16">
+                    <Image
+                      src={project.image}
+                      alt={`${project.title} - logo`}
+                      fill
+                      sizes="(max-width: 768px) 100vw, 80vw"
+                      className="object-contain p-4 transition-transform duration-300 group-hover:scale-[1.02]"
+                      priority={index === 0}
+                    />
+                    <div
+                      className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+                      aria-hidden
+                    />
                   </div>
-
                   <div className="flex flex-col gap-4 sm:gap-6 md:flex-row md:items-end md:justify-between md:gap-12">
                     <div>
                       <h3

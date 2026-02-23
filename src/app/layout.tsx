@@ -41,6 +41,7 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://phantomdev.fr"),
   title: "PhantomDev | Création de sites web premium sur-mesure",
   description:
     "PhantomDev : création de sites web sur-mesure avec Next.js. E-commerce, plateformes SaaS, sites vitrines. Performance et design premium. Devis gratuit.",
@@ -54,6 +55,9 @@ export const metadata: Metadata = {
     "agence web",
     "site sur-mesure",
   ],
+  alternates: {
+    canonical: "https://phantomdev.fr",
+  },
   openGraph: {
     title: "PhantomDev | Création de sites web premium sur-mesure",
     description:
@@ -61,6 +65,7 @@ export const metadata: Metadata = {
     url: "https://phantomdev.fr",
     siteName: "PhantomDev",
     locale: "fr_FR",
+    images: [{ url: "/opengraph-image", width: 1200, height: 630 }],
   },
   twitter: {
     card: "summary_large_image",

@@ -3,6 +3,8 @@
 import { ScrollReveal } from "./ScrollReveal";
 import { ExpertiseCards } from "./ExpertiseCards";
 import { SelectedWorks } from "./SelectedWorks";
+import { TrustSection } from "./TrustSection";
+import { Mail } from "lucide-react";
 
 export function Sections() {
   return (
@@ -21,14 +23,15 @@ export function Sections() {
             <span className="text-2xl sm:text-4xl md:text-5xl">Expertise</span>
           </h2>
           <p className="mb-8 max-w-[95vw] text-sm leading-[1.8] tracking-[0.02em] text-[#f5f5f0]/85 sm:mb-12 sm:max-w-2xl sm:text-base md:mb-16 md:text-lg">
-            Architecture web, interfaces raffinées. Des solutions qui font la
-            différence.
+            Architecture web premium, interfaces raffinées. Des solutions sur-mesure
+            qui convertissent et renforcent votre image.
           </p>
         </ScrollReveal>
         <ExpertiseCards />
       </section>
 
       <SelectedWorks />
+      <TrustSection />
 
       <section
         id="contact"
@@ -44,12 +47,13 @@ export function Sections() {
             <span className="text-2xl sm:text-4xl md:text-5xl">Contact</span>
           </h2>
           <p className="mb-10 max-w-[95vw] text-sm leading-[1.8] tracking-[0.02em] text-[#f5f5f0]/85 sm:max-w-2xl sm:text-base md:mb-12 md:text-lg">
-            Discutons de votre projet. Devis gratuit et sans engagement.
+            Un projet en tête ? Parlons-en. Devis gratuit sous 48h, sans engagement.
           </p>
           <a
             href="mailto:contact@phantomdev.fr?subject=Devis%20PhantomDev%20-%20Demande%20de%20devis"
-            className="inline-flex items-center gap-2 border border-[#d4af37]/50 bg-[#d4af37]/10 px-8 py-4 text-sm font-light tracking-[0.15em] text-[#f5f5f0] transition-all hover:bg-[#d4af37]/20"
+            className="inline-flex items-center gap-2 border border-[#d4af37]/50 bg-[#d4af37]/10 px-8 py-4 text-sm font-light tracking-[0.15em] text-[#f5f5f0] transition-all hover:bg-[#d4af37]/20 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#d4af37]/50 focus-visible:ring-offset-2 focus-visible:ring-offset-black"
           >
+            <Mail size={18} strokeWidth={1.5} />
             Demander un devis gratuit
           </a>
         </ScrollReveal>

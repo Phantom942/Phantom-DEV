@@ -95,7 +95,7 @@ export function HeroSection() {
         className="mt-6 max-w-[90vw] px-2 text-center text-sm font-light leading-[1.8] tracking-wide text-[#f5f5f0]/90 sm:mt-8 sm:max-w-2xl sm:text-base md:mt-12 md:text-lg md:tracking-[0.05em]"
       >
         Sites web sur-mesure qui convertissent. E-commerce, vitrines,
-        applications premium.
+        applications premium. Performance & design au service de votre marque.
       </motion.p>
       <motion.div
         variants={ctaVariants}

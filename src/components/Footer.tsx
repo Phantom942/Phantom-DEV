@@ -46,9 +46,17 @@ export function Footer() {
         </div>
       </div>
       <div className="mx-auto mt-10 max-w-4xl border-t border-[#f5f5f0]/5 pt-8">
-        <p className="text-center text-xs font-light tracking-[0.1em] text-[#f5f5f0]/40">
-          © {new Date().getFullYear()} PhantomDev. Tous droits réservés.
-        </p>
+        <div className="flex flex-col items-center justify-center gap-4 sm:flex-row sm:gap-8">
+          <a
+            href="/mentions-legales"
+            className="text-xs font-light tracking-[0.1em] text-[#f5f5f0]/40 transition-colors hover:text-[#f5f5f0]/70"
+          >
+            Mentions légales
+          </a>
+          <p className="text-center text-xs font-light tracking-[0.1em] text-[#f5f5f0]/40">
+            © {new Date().getFullYear()} PhantomDev. Tous droits réservés.
+          </p>
+        </div>
       </div>
     </footer>
   );
