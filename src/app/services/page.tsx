@@ -170,8 +170,11 @@ export default function ServicesPage() {
           </div>
 
           <div className="mt-20 rounded-sm border border-[#d4af37]/30 bg-[#0a0a0a]/50 px-6 py-8 text-center sm:px-12 sm:py-10">
-            <p className="mb-6 text-sm leading-[1.8] text-[#f5f5f0]/90">
-              Un projet en tête ? Parlons-en. Devis gratuit et sans engagement.
+            <p className="mb-4 text-sm leading-[1.8] text-[#f5f5f0]/90">
+              Un projet en tête ? Parlons-en. Devis gratuit sous 48h, sans engagement.
+            </p>
+            <p className="mb-6 text-xs font-light tracking-[0.08em] text-[#f5f5f0]/60">
+              Garantie performance : Lighthouse 90+ | Tarifs alignés marché FR/Europe
             </p>
             <Link
               href="/#contact"

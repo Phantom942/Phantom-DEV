@@ -46,8 +46,11 @@ export function Sections() {
           >
             <span className="text-2xl sm:text-4xl md:text-5xl">Contact</span>
           </h2>
-          <p className="mb-10 max-w-[95vw] text-sm leading-[1.8] tracking-[0.02em] text-[#f5f5f0]/85 sm:max-w-2xl sm:text-base md:mb-12 md:text-lg">
+          <p className="mb-6 max-w-[95vw] text-sm leading-[1.8] tracking-[0.02em] text-[#f5f5f0]/85 sm:max-w-2xl sm:text-base md:mb-8 md:text-lg">
             Un projet en tête ? Parlons-en. Devis gratuit sous 48h, sans engagement.
+          </p>
+          <p className="mb-10 text-xs font-light tracking-[0.08em] text-[#f5f5f0]/60 sm:mb-12">
+            Garantie performance : Lighthouse 90+ sur tous les sites livrés.
           </p>
           <a
             href="mailto:contact@phantomdev.fr?subject=Devis%20PhantomDev%20-%20Demande%20de%20devis"
