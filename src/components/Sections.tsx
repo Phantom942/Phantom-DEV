@@ -16,7 +16,7 @@ export function Sections() {
           <h2
             id="expertise-title"
             className="mb-6 font-extralight tracking-[0.2em] text-[#f5f5f0]"
-            style={{ fontFamily: "'Cormorant Garamond', Georgia, serif" }}
+            style={{ fontFamily: "var(--font-cormorant), Georgia, serif" }}
           >
             <span className="text-2xl sm:text-4xl md:text-5xl">Expertise</span>
           </h2>
@@ -31,25 +31,6 @@ export function Sections() {
       <SelectedWorks />
 
       <section
-        id="projets"
-        className="min-h-screen w-full max-w-[100vw] overflow-x-hidden px-4 py-16 sm:px-8 sm:py-24 md:px-16 md:py-32"
-        aria-labelledby="projets-title"
-      >
-        <ScrollReveal>
-          <h2
-            id="projets-title"
-            className="mb-16 font-extralight tracking-[0.2em] text-[#f5f5f0]"
-            style={{ fontFamily: "'Cormorant Garamond', Georgia, serif" }}
-          >
-            <span className="text-2xl sm:text-4xl md:text-5xl">Projets</span>
-          </h2>
-          <p className="max-w-[95vw] text-sm leading-[1.8] tracking-[0.02em] text-[#f5f5f0]/85 sm:max-w-2xl sm:text-base md:text-lg">
-            Réalisations à venir.
-          </p>
-        </ScrollReveal>
-      </section>
-
-      <section
         id="contact"
         className="min-h-screen w-full max-w-[100vw] overflow-x-hidden px-4 py-16 sm:px-8 sm:py-24 md:px-16 md:py-32"
         aria-labelledby="contact-title"
@@ -58,7 +39,7 @@ export function Sections() {
           <h2
             id="contact-title"
             className="mb-16 font-extralight tracking-[0.2em] text-[#f5f5f0]"
-            style={{ fontFamily: "'Cormorant Garamond', Georgia, serif" }}
+            style={{ fontFamily: "var(--font-cormorant), Georgia, serif" }}
           >
             <span className="text-2xl sm:text-4xl md:text-5xl">Contact</span>
           </h2>

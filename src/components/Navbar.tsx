@@ -7,7 +7,7 @@ import { Ghost, Menu, X } from "lucide-react";
 
 const navLinks = [
   { href: "#expertise", label: "Expertise" },
-  { href: "#selected-works", label: "Projets" },
+  { href: "#projets", label: "Projets" },
   { href: "#contact", label: "Contact" },
 ] as const;
 

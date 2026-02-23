@@ -7,6 +7,7 @@ const SMOOTHING = 0.14;
 export function CustomCursor() {
   const [position, setPosition] = useState({ x: -100, y: -100 });
   const [isVisible, setIsVisible] = useState(false);
+  const [shouldRender, setShouldRender] = useState(false);
   const cursorRef = useRef({ x: 0, y: 0 });
   const targetRef = useRef({ x: 0, y: 0 });
   const rafRef = useRef<number>(0);
@@ -14,7 +15,7 @@ export function CustomCursor() {
 
   useEffect(() => {
     if (window.matchMedia("(pointer: coarse)").matches) return;
-
+    setShouldRender(true);
     mountedRef.current = true;
     document.body.style.cursor = "none";
 
@@ -58,12 +59,7 @@ export function CustomCursor() {
     };
   }, []);
 
-  if (
-    typeof window !== "undefined" &&
-    window.matchMedia("(pointer: coarse)").matches
-  ) {
-    return null;
-  }
+  if (!shouldRender) return null;
 
   return (
     <div

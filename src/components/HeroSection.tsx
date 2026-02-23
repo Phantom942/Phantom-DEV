@@ -62,7 +62,7 @@ export function HeroSection() {
             variants={letterVariants}
             className="font-extralight"
             style={{
-              fontFamily: "'Cormorant Garamond', Georgia, serif",
+              fontFamily: "var(--font-cormorant), Georgia, serif",
               fontSize: "clamp(2rem, 10vw, 8rem)",
             }}
           >

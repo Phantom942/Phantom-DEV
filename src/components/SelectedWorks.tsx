@@ -41,7 +41,7 @@ const projects = [
 export function SelectedWorks() {
   return (
     <section
-      id="selected-works"
+      id="projets"
       className="w-full max-w-[100vw] overflow-x-hidden px-4 py-16 sm:px-8 sm:py-24 md:px-16 md:py-32"
       aria-labelledby="selected-works-title"
     >
@@ -49,7 +49,7 @@ export function SelectedWorks() {
         <h2
           id="selected-works-title"
           className="mb-6 font-extralight tracking-[0.2em] text-[#f5f5f0]"
-          style={{ fontFamily: "'Cormorant Garamond', Georgia, serif" }}
+          style={{ fontFamily: "var(--font-cormorant), Georgia, serif" }}
         >
           <span className="text-2xl sm:text-4xl md:text-5xl">Selected Works</span>
         </h2>
@@ -75,7 +75,7 @@ export function SelectedWorks() {
                     >
                       <Image
                         src={project.image}
-                        alt=""
+                        alt={`${project.title} - visuel du projet`}
                         fill
                         sizes="(max-width: 768px) 100vw, 80vw"
                         className="object-cover"
@@ -93,7 +93,7 @@ export function SelectedWorks() {
                       <h3
                         className="mb-3 font-extralight tracking-[0.1em] text-[#f5f5f0] transition-colors duration-300 group-hover:text-[#f5f5f0]"
                         style={{
-                          fontFamily: "'Cormorant Garamond', Georgia, serif",
+                          fontFamily: "var(--font-cormorant), Georgia, serif",
                         }}
                       >
                         <span className="text-lg sm:text-2xl md:text-3xl">

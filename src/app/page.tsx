@@ -9,7 +9,6 @@ export default function Home() {
     <div
       className="relative min-h-screen min-h-[100dvh] w-full max-w-[100vw] overflow-x-hidden bg-[#000000]"
       id="home"
-      style={{ overflowX: "hidden" }}
     >
       <CustomCursor />
       <MouseGlow />
