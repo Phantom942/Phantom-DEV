@@ -64,17 +64,19 @@ export const metadata: Metadata = {
     canonical: "https://phantomdev.fr",
   },
   openGraph: {
-    title: "PhantomDev | Création de sites web premium sur-mesure",
+    type: "website",
+    title: "PhantomDev | Développement web sur-mesure — React, Node.js, SaaS",
     description:
-      "Sites web sur-mesure qui convertissent. E-commerce, vitrines, applications premium. Devis gratuit.",
+      "Agence développement web premium : sites vitrines, e-commerce, applications React et Node.js. Interfaces haute performance, devis gratuit sous 48h.",
     url: "https://phantomdev.fr",
     siteName: "PhantomDev",
     locale: "fr_FR",
-    images: [{ url: "/icon.svg", width: 512, height: 512 }],
+    images: [{ url: "/icon.svg", width: 512, height: 512, alt: "PhantomDev - Création de sites web" }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "PhantomDev | Création de sites web premium",
+    title: "PhantomDev | Développement web React, Node.js, SaaS",
+    description: "Sites web sur-mesure, e-commerce, applications premium. Devis gratuit.",
   },
 };
 
@@ -89,12 +91,45 @@ export default function RootLayout({
     name: "PhantomDev",
     url: "https://phantomdev.fr",
     description:
-      "Création de sites web sur-mesure : e-commerce, vitrines, applications premium. Next.js, design et performance.",
+      "Expertise en développement web sur-mesure : sites vitrines, e-commerce, applications SaaS. Stack React, Node.js, Next.js. Interfaces haute performance et référencement.",
     areaServed: { "@type": "Country", name: "France" },
-    knowsAbout: ["Next.js", "React", "E-commerce", "Développement web", "SaaS"],
+    serviceType: [
+      "Développement web",
+      "Création de sites vitrines",
+      "E-commerce",
+      "Applications SaaS",
+      "Intégration React et Node.js",
+    ],
+    knowsAbout: [
+      "Next.js",
+      "React",
+      "Node.js",
+      "SaaS",
+      "E-commerce",
+      "Développement web",
+      "Interfaces haute performance",
+    ],
+    hasOfferCatalog: {
+      "@type": "OfferCatalog",
+      name: "Services PhantomDev",
+      itemListElement: [
+        {
+          "@type": "Offer",
+          itemOffered: { "@type": "Service", name: "Développement web sur-mesure" },
+        },
+        {
+          "@type": "Offer",
+          itemOffered: { "@type": "Service", name: "Sites vitrines et e-commerce" },
+        },
+        {
+          "@type": "Offer",
+          itemOffered: { "@type": "Service", name: "Applications SaaS React et Node.js" },
+        },
+      ],
+    },
   };
 
-return (
+  return (
     <html
       lang="fr"
       className={`${geist.variable} ${geistMono.variable} ${cormorant.variable} ${sourceSans.variable} overflow-x-hidden`}

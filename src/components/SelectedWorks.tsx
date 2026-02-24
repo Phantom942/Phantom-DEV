@@ -11,6 +11,7 @@ export function SelectedWorks() {
       id="projets"
       className="w-full max-w-[100vw] overflow-x-hidden px-4 py-12 sm:px-8 sm:py-16 md:px-16 md:py-20"
       aria-labelledby="realisations-title"
+      aria-label="Réalisations PhantomDev : projets web, développement d'interfaces haute performance et e-commerce"
     >
       <ScrollReveal>
         <h2
@@ -35,6 +36,7 @@ export function SelectedWorks() {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="block outline-none focus-visible:ring-2 focus-visible:ring-[#f5f5f0]/30 focus-visible:ring-offset-2 focus-visible:ring-offset-black"
+                  aria-label={`Voir le projet ${project.title}, ${project.description} — réalisation PhantomDev développement web`}
                 >
                   <div
                     className={`relative mb-4 flex aspect-[4/3] min-h-[120px] items-center justify-center overflow-hidden rounded-sm border px-6 py-8 transition-colors duration-300 group-hover:border-[#f5f5f0]/20 ${
@@ -47,7 +49,7 @@ export function SelectedWorks() {
                   >
                     <Image
                       src={project.image}
-                      alt={`${project.title} - logo`}
+                      alt={`Logo ${project.title}, réalisation PhantomDev — ${project.description}`}
                       fill
                       sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, 33vw"
                       className="object-contain p-4 transition-transform duration-300 group-hover:scale-[1.03]"

@@ -120,6 +120,7 @@ export function HeroSection() {
         <Link
           href="/services"
           className="inline-block underline decoration-[#d4af37]/40 underline-offset-2 transition-colors hover:text-[#f5f5f0]/90 hover:decoration-[#d4af37]/70"
+          aria-label="Voir les services PhantomDev : développement web, React, Node.js, SaaS et sites vitrines"
         >
           Voir les services
         </Link>
@@ -133,6 +134,7 @@ export function HeroSection() {
         <Link
           href="#projets"
           className="flex items-center gap-2 border border-[#f5f5f0]/30 bg-transparent px-6 py-3 text-sm font-light tracking-[0.15em] text-[#f5f5f0] transition-all hover:border-[#f5f5f0]/60 hover:bg-[#f5f5f0]/5"
+          aria-label="Voir les réalisations PhantomDev, projets web et interfaces haute performance"
         >
           Voir mes réalisations
           <ArrowDown size={16} className="rotate-[-90deg]" strokeWidth={1.5} />
@@ -142,7 +144,7 @@ export function HeroSection() {
           target="_blank"
           rel="noopener noreferrer"
           className="flex items-center gap-2 border border-[#25D366]/60 bg-[#25D366]/10 px-6 py-3 text-sm font-light tracking-[0.15em] text-[#f5f5f0] transition-all hover:bg-[#25D366]/20"
-          aria-label="Contacter sur WhatsApp"
+          aria-label="Demander un devis sur WhatsApp pour votre projet développement web ou SaaS"
         >
           Demander un devis
           <MessageCircle size={16} strokeWidth={1.5} />

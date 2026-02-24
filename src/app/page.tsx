@@ -17,7 +17,11 @@ export default function Home() {
       />
       <CursorAndGlow />
       <Navbar />
-      <main role="main" className="w-full max-w-[100vw] overflow-x-hidden">
+      <main
+        role="main"
+        className="w-full max-w-[100vw] overflow-x-hidden"
+        aria-label="Contenu principal : PhantomDev, développement web sur-mesure, React, Node.js, SaaS, sites vitrines et e-commerce"
+      >
         <HeroSection />
         <Sections />
       </main>

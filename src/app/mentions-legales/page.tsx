@@ -11,6 +11,13 @@ export const metadata: Metadata = {
   description:
     "Mentions légales de PhantomDev — Création de sites web premium sur-mesure.",
   robots: "index, follow",
+  openGraph: {
+    type: "website",
+    title: "Mentions légales | PhantomDev",
+    url: "https://phantomdev.fr/mentions-legales",
+    siteName: "PhantomDev",
+    locale: "fr_FR",
+  },
 };
 
 export default function MentionsLegalesPage() {
@@ -18,11 +25,16 @@ export default function MentionsLegalesPage() {
     <div className="relative min-h-screen w-full bg-[#000000]">
       <CursorAndGlow />
       <Navbar />
-      <main role="main" className="w-full pt-24 pb-16 sm:pt-32 sm:pb-24">
+      <main
+        role="main"
+        className="w-full pt-24 pb-16 sm:pt-32 sm:pb-24"
+        aria-label="Mentions légales PhantomDev, création de sites web"
+      >
         <div className="mx-auto max-w-3xl px-4 sm:px-8 md:px-16">
           <Link
             href="/"
             className="mb-12 inline-flex items-center gap-2 text-sm font-light tracking-[0.1em] text-[#f5f5f0]/70 transition-colors hover:text-[#f5f5f0]"
+            aria-label="Retour à l'accueil PhantomDev"
           >
             <ArrowLeft size={16} strokeWidth={1.5} />
             Retour à l&apos;accueil

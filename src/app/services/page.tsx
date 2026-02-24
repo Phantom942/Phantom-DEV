@@ -22,10 +22,13 @@ export const metadata: Metadata = {
     "PhantomDev",
   ],
   openGraph: {
-    title: "Services — Sites web premium sur-mesure",
+    type: "website",
+    title: "Services | PhantomDev — Développement web React, Node.js, SaaS",
     description:
-      "Sites vitrines, e-commerce, applications SaaS, intégration IA. Devis gratuit.",
+      "Développement web sur-mesure : sites vitrines, e-commerce, applications SaaS. Stack React, Node.js, Next.js. Tarifs et devis gratuit sous 48h.",
     url: "https://phantomdev.fr/services",
+    siteName: "PhantomDev",
+    locale: "fr_FR",
   },
 };
 
@@ -101,11 +104,16 @@ export default function ServicesPage() {
     <div className="relative min-h-screen w-full bg-[#000000]">
       <CursorAndGlow />
       <Navbar />
-      <main role="main" className="w-full pt-24 pb-16 sm:pt-32 sm:pb-24">
+      <main
+        role="main"
+        className="w-full pt-24 pb-16 sm:pt-32 sm:pb-24"
+        aria-label="Page services PhantomDev : développement web, React, Node.js, SaaS, sites vitrines et e-commerce"
+      >
         <div className="mx-auto max-w-4xl px-4 sm:px-8 md:px-16">
           <Link
             href="/#expertise"
             className="mb-12 inline-flex items-center gap-2 text-sm font-light tracking-[0.1em] text-[#f5f5f0]/70 transition-colors hover:text-[#f5f5f0]"
+            aria-label="Retour à l'accueil PhantomDev, expertise développement web"
           >
             <ArrowLeft size={16} strokeWidth={1.5} />
             Retour à l&apos;accueil
@@ -196,6 +204,7 @@ export default function ServicesPage() {
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 border border-[#25D366]/60 bg-[#25D366]/10 px-8 py-3 text-sm font-light tracking-[0.15em] text-[#f5f5f0] transition-all hover:bg-[#25D366]/20"
+              aria-label="Contacter PhantomDev sur WhatsApp pour un devis développement web ou SaaS"
             >
               Contacter sur WhatsApp
             </a>

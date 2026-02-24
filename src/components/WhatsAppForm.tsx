@@ -97,6 +97,7 @@ export function WhatsAppForm() {
       onSubmit={handleSubmit}
       className="mx-auto max-w-xl space-y-5"
       noValidate
+      aria-label="Formulaire de demande de devis : projet web, site vitrine, e-commerce ou SaaS"
     >
       <div>
         <label htmlFor="wa-name" className={labelClass}>
@@ -186,6 +187,7 @@ export function WhatsAppForm() {
       <button
         type="submit"
         className="inline-flex w-full items-center justify-center gap-2 border border-[#25D366]/60 bg-[#25D366]/10 px-8 py-4 text-sm font-light tracking-[0.15em] text-[#f5f5f0] transition-all hover:bg-[#25D366]/20 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#25D366]/50 focus-visible:ring-offset-2 focus-visible:ring-offset-black sm:w-auto"
+        aria-label="Envoyer la demande de devis sur WhatsApp pour votre projet développement web"
       >
         <MessageCircle size={20} strokeWidth={1.5} />
         Envoyer la demande sur WhatsApp

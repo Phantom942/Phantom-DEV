@@ -9,6 +9,7 @@ export function Footer() {
     <footer
       className="w-full max-w-[100vw] overflow-x-hidden border-t border-[#f5f5f0]/10 px-4 py-12 sm:px-8 sm:py-16 md:px-16"
       role="contentinfo"
+      aria-label="Pied de page PhantomDev : création de sites web, développement React et Node.js, contact et mentions légales"
     >
       <div className="mx-auto flex max-w-4xl flex-col items-center justify-between gap-8 sm:flex-row sm:gap-12">
         <div className="flex flex-col items-center gap-4 sm:items-start">
@@ -21,7 +22,7 @@ export function Footer() {
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-2 text-sm font-light tracking-[0.08em] text-[#f5f5f0]/80 transition-colors hover:text-[#f5f5f0]"
-              aria-label="Contacter sur WhatsApp"
+              aria-label="Contacter PhantomDev sur WhatsApp pour un devis projet web"
             >
               <MessageCircle size={16} strokeWidth={1.5} />
               Contact WhatsApp
@@ -41,7 +42,7 @@ export function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-[#f5f5f0]/60 transition-colors hover:text-[#f5f5f0]"
-                aria-label="LinkedIn"
+                aria-label="Profil LinkedIn PhantomDev, développement web et SaaS"
               >
                 <Linkedin size={20} strokeWidth={1.5} />
               </a>
@@ -63,6 +64,7 @@ export function Footer() {
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 text-xs font-light tracking-[0.15em] uppercase text-[#f5f5f0]/40 transition-opacity hover:text-[#f5f5f0]/70 hover:opacity-100"
             style={{ fontFamily: "var(--font-source-sans), sans-serif" }}
+            aria-label="Design et développement par PhantomDev, expertise en interfaces haute performance"
           >
             <svg
               width="20"

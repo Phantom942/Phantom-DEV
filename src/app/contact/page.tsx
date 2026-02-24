@@ -12,9 +12,13 @@ export const metadata: Metadata = {
   description:
     "Contactez PhantomDev sur WhatsApp pour votre projet web. Sites vitrines, e-commerce, applications sur-mesure. Réponse sous 48h, sans engagement.",
   openGraph: {
-    title: "Contact — Devis via WhatsApp",
-    description: "Devis gratuit sous 48h pour votre projet web. Contact WhatsApp.",
+    type: "website",
+    title: "Contact | PhantomDev — Devis développement web sous 48h",
+    description:
+      "Demandez un devis pour votre projet web : site vitrine, e-commerce, application SaaS. Réponse sous 48h via WhatsApp, sans engagement.",
     url: "https://phantomdev.fr/contact",
+    siteName: "PhantomDev",
+    locale: "fr_FR",
   },
 };
 
@@ -23,11 +27,16 @@ export default function ContactPage() {
     <div className="relative min-h-screen w-full bg-[#000000]">
       <CursorAndGlow />
       <Navbar />
-      <main role="main" className="w-full pt-24 pb-16 sm:pt-32 sm:pb-24">
+      <main
+        role="main"
+        className="w-full pt-24 pb-16 sm:pt-32 sm:pb-24"
+        aria-label="Page contact PhantomDev : demande de devis développement web, sites vitrines et SaaS"
+      >
         <div className="mx-auto max-w-2xl px-4 sm:px-8 md:px-16">
           <Link
             href="/#contact"
             className="mb-12 inline-flex items-center gap-2 text-sm font-light tracking-[0.1em] text-[#f5f5f0]/70 transition-colors hover:text-[#f5f5f0]"
+            aria-label="Retour à l'accueil PhantomDev, création de sites web"
           >
             <ArrowLeft size={16} strokeWidth={1.5} />
             Retour à l&apos;accueil

@@ -26,11 +26,12 @@ export function Navbar() {
           paddingTop: "max(0.75rem, env(safe-area-inset-top))",
         }}
         role="banner"
+        aria-label="En-tête : PhantomDev, création de sites web, développement React et Node.js, SaaS sur-mesure"
       >
         <Link
           href="/"
           className="flex min-w-0 shrink-0 items-center gap-1.5 overflow-hidden text-[#f5f5f0] transition-opacity hover:opacity-80"
-          aria-label="PhantomDev - Accueil"
+          aria-label="PhantomDev, accueil — Création de sites web premium et développement sur-mesure"
           onClick={closeMobileMenu}
         >
           <Ghost
@@ -45,13 +46,14 @@ export function Navbar() {
         <nav
           className="hidden shrink-0 items-center gap-4 md:flex md:gap-12"
           role="navigation"
-          aria-label="Navigation principale"
+          aria-label="Navigation principale : Expertise développement web, Services, Projets, Contact et devis"
         >
           {navLinks.map((link) => (
             <Link
               key={link.href}
               href={link.href}
               className="whitespace-nowrap text-sm font-light tracking-[0.15em] leading-tight text-[#f5f5f0]/85 transition-colors hover:text-[#f5f5f0]"
+              aria-label={link.label === "Expertise" ? "Expertise en développement d'interfaces haute performance" : link.label === "Services" ? "Services : sites vitrines, e-commerce, SaaS" : link.label === "Projets" ? "Réalisations et projets web" : "Contact et devis"}
             >
               {link.label}
             </Link>
@@ -61,7 +63,7 @@ export function Navbar() {
             target="_blank"
             rel="noopener noreferrer"
             className="border border-[#25D366]/60 bg-[#25D366]/10 px-4 py-2 text-xs font-light tracking-[0.15em] text-[#f5f5f0] transition-all hover:bg-[#25D366]/20"
-            aria-label="Devis gratuit sur WhatsApp"
+            aria-label="Demander un devis gratuit sur WhatsApp pour votre projet web"
           >
             Devis gratuit
           </a>
@@ -101,6 +103,7 @@ export function Navbar() {
                   href={link.href}
                   onClick={closeMobileMenu}
                   className="border-b border-[#f5f5f0]/5 py-3 text-base font-light tracking-[0.1em] text-[#f5f5f0]/90 transition-colors last:border-0 active:text-[#f5f5f0]"
+                  aria-label={link.label === "Expertise" ? "Expertise en développement d'interfaces haute performance" : link.label === "Services" ? "Services : sites vitrines, e-commerce, SaaS" : link.label === "Projets" ? "Réalisations et projets web" : "Contact et devis"}
                 >
                   {link.label}
                 </Link>
@@ -111,6 +114,7 @@ export function Navbar() {
                 rel="noopener noreferrer"
                 onClick={closeMobileMenu}
                 className="mt-4 border border-[#25D366]/60 bg-[#25D366]/10 py-3 text-center text-base font-light tracking-[0.1em] text-[#f5f5f0] transition-colors"
+                aria-label="Demander un devis gratuit sur WhatsApp"
               >
                 Devis gratuit
               </a>

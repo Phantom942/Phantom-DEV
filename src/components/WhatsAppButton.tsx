@@ -20,7 +20,7 @@ export function WhatsAppButton({
       target="_blank"
       rel="noopener noreferrer"
       className={className}
-      aria-label="Contacter PhantomDev sur WhatsApp"
+      aria-label="Contacter PhantomDev sur WhatsApp pour un devis projet web, développement React ou Node.js"
     >
       {children}
     </a>

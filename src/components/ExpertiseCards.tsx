@@ -39,7 +39,11 @@ export function ExpertiseCards() {
         const Icon = card.icon;
         return (
           <ScrollReveal key={card.id} delay={index * 0.1}>
-            <Link href={card.href} className="block">
+            <Link
+                href={card.href}
+                className="block"
+                aria-label={`${card.title} : ${card.description} — PhantomDev expertise en développement d'interfaces haute performance`}
+              >
               <motion.article
                 className="group relative min-w-0 overflow-hidden rounded-sm border border-[#f5f5f0]/10 bg-[#0a0a0a]/50 px-5 py-8 backdrop-blur-[1px] transition-all duration-500 hover:border-[#f5f5f0]/25 hover:shadow-[0_0_50px_rgba(212,175,55,0.18)] sm:px-8 sm:py-12"
                 whileHover={{ y: -2 }}
