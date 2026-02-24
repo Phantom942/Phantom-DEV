@@ -3,7 +3,6 @@
 import { ScrollReveal } from "./ScrollReveal";
 import { ExpertiseCards } from "./ExpertiseCards";
 import { SelectedWorks } from "./SelectedWorks";
-import { TestimonialsSection } from "./TestimonialsSection";
 import { WhatsAppCtaButton } from "./WhatsAppButton";
 import { WhatsAppForm } from "./WhatsAppForm";
 
@@ -32,7 +31,6 @@ export function Sections() {
       </section>
 
       <SelectedWorks />
-      <TestimonialsSection />
 
       <section
         id="contact"
