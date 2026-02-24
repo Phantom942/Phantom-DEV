@@ -42,6 +42,19 @@ const subtitleVariants = {
   },
 };
 
+const pricingVariants = {
+  hidden: { opacity: 0, y: 16 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.5,
+      delay: 0.95,
+      ease: [0.22, 1, 0.36, 1] as const,
+    },
+  },
+};
+
 const ctaVariants = {
   hidden: { opacity: 0, y: 16 },
   visible: {
@@ -97,6 +110,20 @@ export function HeroSection() {
         Sites web sur-mesure qui convertissent. E-commerce, vitrines,
         applications premium. Performance & design au service de votre marque.
       </motion.p>
+      <motion.p
+        variants={pricingVariants}
+        initial="hidden"
+        animate="visible"
+        className="mt-3 text-center text-xs font-light tracking-[0.12em] text-[#f5f5f0]/70 sm:text-sm"
+      >
+        Sites vitrines dès 4 500 € · E-commerce dès 8 000 €
+        <Link
+          href="/services"
+          className="ml-2 inline-block underline decoration-[#d4af37]/40 underline-offset-2 transition-colors hover:text-[#f5f5f0]/90 hover:decoration-[#d4af37]/70"
+        >
+          Voir tous les tarifs
+        </Link>
+      </motion.p>
       <motion.div
         variants={ctaVariants}
         initial="hidden"
@@ -111,7 +138,7 @@ export function HeroSection() {
           <ArrowDown size={16} className="rotate-[-90deg]" strokeWidth={1.5} />
         </Link>
         <Link
-          href="#contact"
+          href="/contact"
           className="flex items-center gap-2 border border-[#d4af37]/50 bg-[#d4af37]/10 px-6 py-3 text-sm font-light tracking-[0.15em] text-[#f5f5f0] transition-all hover:bg-[#d4af37]/20"
         >
           Demander un devis

@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { Mail, Github, Linkedin } from "lucide-react";
 
 export function Footer() {
@@ -22,6 +23,12 @@ export function Footer() {
               <Mail size={16} strokeWidth={1.5} />
               contact@phantomdev.fr
             </a>
+            <Link
+              href="/contact"
+              className="text-sm font-light tracking-[0.08em] text-[#f5f5f0]/80 transition-colors hover:text-[#f5f5f0]"
+            >
+              Demander un devis
+            </Link>
             <div className="flex items-center gap-6">
               <a
                 href="https://github.com/Phantom942"

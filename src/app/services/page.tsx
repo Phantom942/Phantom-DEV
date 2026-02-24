@@ -3,7 +3,7 @@ import Link from "next/link";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { CursorAndGlow } from "@/components/CursorAndGlow";
-import { ArrowLeft, Palette, Box, Brain, Check } from "lucide-react";
+import { ArrowLeft, Palette, Box, Brain, Check, Wrench } from "lucide-react";
 
 export const metadata: Metadata = {
   alternates: { canonical: "https://phantomdev.fr/services" },
@@ -76,6 +76,22 @@ const services = [
       "Solutions sur-mesure adaptées à votre secteur",
     ],
     cta: "Idéal pour : entreprises innovantes, gains de productivité.",
+  },
+  {
+    id: "maintenance",
+    title: "Maintenance & Support",
+    icon: Wrench,
+    price: "dès 199 €/mois",
+    description:
+      "Gardez votre site sécurisé, à jour et performant. Mises à jour techniques, sauvegardes et support réactif pour une sérénité au long cours.",
+    benefits: [
+      "Mises à jour de sécurité et dépendances",
+      "Sauvegardes régulières et restauration si besoin",
+      "Support par email (délai de réponse garanti)",
+      "Petites évolutions incluses selon formule",
+      "Surveillance et rapports de performance",
+    ],
+    cta: "Idéal pour : tous les sites livrés par PhantomDev, revenus récurrents prévisibles.",
   },
 ] as const;
 
@@ -177,7 +193,7 @@ export default function ServicesPage() {
               Garantie performance : Lighthouse 90+ | Tarifs alignés marché FR/Europe
             </p>
             <Link
-              href="/#contact"
+              href="/contact"
               className="inline-flex items-center gap-2 border border-[#d4af37]/50 bg-[#d4af37]/10 px-8 py-3 text-sm font-light tracking-[0.15em] text-[#f5f5f0] transition-all hover:bg-[#d4af37]/20"
             >
               Demander un devis

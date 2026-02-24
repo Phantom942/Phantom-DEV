@@ -4,7 +4,9 @@ import { ScrollReveal } from "./ScrollReveal";
 import { ExpertiseCards } from "./ExpertiseCards";
 import { SelectedWorks } from "./SelectedWorks";
 import { TrustSection } from "./TrustSection";
-import { Mail } from "lucide-react";
+import { TestimonialsSection } from "./TestimonialsSection";
+import { ContactForm } from "./ContactForm";
+import Link from "next/link";
 
 export function Sections() {
   return (
@@ -32,6 +34,7 @@ export function Sections() {
 
       <SelectedWorks />
       <TrustSection />
+      <TestimonialsSection />
 
       <section
         id="contact"
@@ -47,18 +50,20 @@ export function Sections() {
             <span className="text-2xl sm:text-4xl md:text-5xl">Contact</span>
           </h2>
           <p className="mb-6 max-w-[95vw] text-sm leading-[1.8] tracking-[0.02em] text-[#f5f5f0]/85 sm:max-w-2xl sm:text-base md:mb-8 md:text-lg">
-            Un projet en tête ? Parlons-en. Devis gratuit sous 48h, sans engagement.
+            Un projet en tête ? Remplissez le formulaire ou rendez-vous sur la page dédiée. Devis gratuit sous 48h, sans engagement.
           </p>
           <p className="mb-10 text-xs font-light tracking-[0.08em] text-[#f5f5f0]/60 sm:mb-12">
             Garantie performance : Lighthouse 90+ sur tous les sites livrés.
           </p>
-          <a
-            href="mailto:contact@phantomdev.fr?subject=Devis%20PhantomDev%20-%20Demande%20de%20devis"
-            className="inline-flex items-center gap-2 border border-[#d4af37]/50 bg-[#d4af37]/10 px-8 py-4 text-sm font-light tracking-[0.15em] text-[#f5f5f0] transition-all hover:bg-[#d4af37]/20 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#d4af37]/50 focus-visible:ring-offset-2 focus-visible:ring-offset-black"
-          >
-            <Mail size={18} strokeWidth={1.5} />
-            Demander un devis gratuit
-          </a>
+          <ContactForm variant="inline" />
+          <p className="mt-6 text-center">
+            <Link
+              href="/contact"
+              className="text-xs font-light tracking-[0.08em] text-[#f5f5f0]/60 underline decoration-[#f5f5f0]/30 underline-offset-2 transition-colors hover:text-[#f5f5f0]/80"
+            >
+              Ouvrir la page Contact
+            </Link>
+          </p>
         </ScrollReveal>
       </section>
     </>

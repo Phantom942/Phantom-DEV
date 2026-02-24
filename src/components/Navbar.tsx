@@ -9,7 +9,7 @@ const navLinks = [
   { href: "#expertise", label: "Expertise" },
   { href: "/services", label: "Services" },
   { href: "#projets", label: "Projets" },
-  { href: "#contact", label: "Contact" },
+  { href: "/contact", label: "Contact" },
 ] as const;
 
 export function Navbar() {
@@ -56,7 +56,7 @@ export function Navbar() {
             </Link>
           ))}
           <Link
-            href="#contact"
+            href="/contact"
             className="border border-[#d4af37]/50 bg-transparent px-4 py-2 text-xs font-light tracking-[0.15em] text-[#f5f5f0] transition-all hover:bg-[#d4af37]/10"
           >
             Devis gratuit
@@ -102,7 +102,7 @@ export function Navbar() {
                 </Link>
               ))}
               <Link
-                href="#contact"
+                href="/contact"
                 onClick={closeMobileMenu}
                 className="mt-4 border border-[#d4af37]/50 py-3 text-center text-base font-light tracking-[0.1em] text-[#f5f5f0] transition-colors"
               >
