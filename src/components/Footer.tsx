@@ -50,12 +50,41 @@ export function Footer() {
         </div>
       </div>
       <div className="mx-auto mt-10 max-w-4xl border-t border-[#f5f5f0]/5 pt-8">
-        <div className="flex flex-col items-center justify-center gap-4 sm:flex-row sm:gap-8">
+        <div className="flex flex-col items-center justify-center gap-4 sm:flex-row sm:flex-wrap sm:gap-8">
           <a
             href="/mentions-legales"
             className="text-xs font-light tracking-[0.1em] text-[#f5f5f0]/40 transition-colors hover:text-[#f5f5f0]/70"
           >
             Mentions légales
+          </a>
+          <a
+            href="https://phantomdev.fr"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 text-xs font-light tracking-[0.15em] uppercase text-[#f5f5f0]/40 transition-opacity hover:text-[#f5f5f0]/70 hover:opacity-100"
+            style={{ fontFamily: "var(--font-source-sans), sans-serif" }}
+          >
+            <svg
+              width="20"
+              height="20"
+              viewBox="0 0 32 32"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              className="shrink-0"
+              aria-hidden
+            >
+              <path
+                d="M16 4c-6 0-10 5-10 10 0 1.8.6 3.5 1.5 4.8v4.2l2.5-2.5 2 2.5 2-2.5 2.5 2.5v-4.2c.9-1.3 1.5-3 1.5-4.8 0-5-4-10-10-10z"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="1.2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
+              <circle cx="11" cy="10.5" r="1.2" fill="currentColor" />
+              <circle cx="21" cy="10.5" r="1.2" fill="currentColor" />
+            </svg>
+            Design by PhantomDev
           </a>
           <p className="text-center text-xs font-light tracking-[0.1em] text-[#f5f5f0]/40">
             © {new Date().getFullYear()} PhantomDev. Tous droits réservés.

@@ -132,7 +132,7 @@ export function HeroSection() {
         className="mt-10 flex flex-col items-center gap-4 sm:mt-12 sm:flex-row sm:gap-6"
       >
         <Link
-          href="#contact"
+          href="#projets"
           className="flex items-center gap-2 border border-[#f5f5f0]/30 bg-transparent px-6 py-3 text-sm font-light tracking-[0.15em] text-[#f5f5f0] transition-all hover:border-[#f5f5f0]/60 hover:bg-[#f5f5f0]/5"
         >
           Voir mes réalisations
