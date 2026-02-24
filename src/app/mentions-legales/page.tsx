@@ -52,15 +52,15 @@ export default function MentionsLegalesPage() {
                 2. Hébergement
               </h2>
               <p>
-                Ce site est hébergé par Vercel Inc., 340 S Lemon Ave #4133,
-                Walnut, CA 91789, États-Unis. Site :{" "}
+                Ce site est hébergé par GitHub, Inc., 88 Colin P Kelly Jr St,
+                San Francisco, CA 94107, États-Unis. Pages :{" "}
                 <a
-                  href="https://vercel.com"
+                  href="https://pages.github.com"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-[#d4af37]/90 underline decoration-[#d4af37]/40 transition-colors hover:decoration-[#d4af37]/80"
                 >
-                  vercel.com
+                  pages.github.com
                 </a>
               </p>
             </section>
@@ -81,12 +81,11 @@ export default function MentionsLegalesPage() {
                 4. Données personnelles
               </h2>
               <p>
-                Les données personnelles collectées via les formulaires de
-                contact ou par email sont utilisées uniquement pour répondre à
-                vos demandes et ne sont pas partagées avec des tiers. Vous
-                disposez d&apos;un droit d&apos;accès, de rectification et de
-                suppression de vos données en nous contactant à
-                contact@phantomdev.fr.
+                Les données personnelles collectées via WhatsApp ou par email
+                sont utilisées uniquement pour répondre à vos demandes et ne sont
+                pas partagées avec des tiers. Vous disposez d&apos;un droit
+                d&apos;accès, de rectification et de suppression de vos données
+                en nous contactant via WhatsApp ou à contact@phantomdev.fr.
               </p>
             </section>
 

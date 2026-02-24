@@ -3,17 +3,17 @@ import Link from "next/link";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { CursorAndGlow } from "@/components/CursorAndGlow";
-import { ContactForm } from "@/components/ContactForm";
+import { WhatsAppCtaButton } from "@/components/WhatsAppButton";
 import { ArrowLeft } from "lucide-react";
 
 export const metadata: Metadata = {
   alternates: { canonical: "https://phantomdev.fr/contact" },
-  title: "Contact | PhantomDev — Devis gratuit sous 48h",
+  title: "Contact | PhantomDev — Devis gratuit via WhatsApp",
   description:
-    "Demandez votre devis gratuit pour la création de votre site web. Sites vitrines, e-commerce, applications sur-mesure. Réponse sous 48h, sans engagement.",
+    "Contactez PhantomDev sur WhatsApp pour votre projet web. Sites vitrines, e-commerce, applications sur-mesure. Réponse sous 48h, sans engagement.",
   openGraph: {
-    title: "Contact | PhantomDev — Devis gratuit",
-    description: "Devis gratuit sous 48h pour votre projet web.",
+    title: "Contact | PhantomDev — Devis via WhatsApp",
+    description: "Devis gratuit sous 48h pour votre projet web. Contact WhatsApp.",
     url: "https://phantomdev.fr/contact",
   },
 };
@@ -40,14 +40,14 @@ export default function ContactPage() {
             <span className="text-3xl sm:text-4xl md:text-5xl">Contact</span>
           </h1>
           <p className="mb-4 max-w-xl text-sm leading-[1.8] tracking-[0.02em] text-[#f5f5f0]/85 sm:text-base md:text-lg">
-            Un projet en tête ? Décrivez-le ci-dessous. Devis gratuit sous 48h,
-            sans engagement.
+            Un projet en tête ? Contactez-moi sur WhatsApp pour un devis gratuit
+            sous 48h, sans engagement.
           </p>
           <p className="mb-10 text-xs font-light tracking-[0.08em] text-[#f5f5f0]/60">
             Garantie performance : Lighthouse 90+ sur tous les sites livrés.
           </p>
 
-          <ContactForm variant="page" />
+          <WhatsAppCtaButton />
         </div>
       </main>
       <Footer />

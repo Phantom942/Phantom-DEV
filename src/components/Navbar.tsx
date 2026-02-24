@@ -4,12 +4,13 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
 import { Ghost, Menu, X } from "lucide-react";
+import { getWhatsAppDevisUrl } from "@/data/contact";
 
 const navLinks = [
   { href: "#expertise", label: "Expertise" },
   { href: "/services", label: "Services" },
   { href: "#projets", label: "Projets" },
-  { href: "/contact", label: "Contact" },
+  { href: "/#contact", label: "Contact" },
 ] as const;
 
 export function Navbar() {
@@ -55,12 +56,15 @@ export function Navbar() {
               {link.label}
             </Link>
           ))}
-          <Link
-            href="/contact"
-            className="border border-[#d4af37]/50 bg-transparent px-4 py-2 text-xs font-light tracking-[0.15em] text-[#f5f5f0] transition-all hover:bg-[#d4af37]/10"
+          <a
+            href={getWhatsAppDevisUrl()}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="border border-[#25D366]/60 bg-[#25D366]/10 px-4 py-2 text-xs font-light tracking-[0.15em] text-[#f5f5f0] transition-all hover:bg-[#25D366]/20"
+            aria-label="Devis gratuit sur WhatsApp"
           >
             Devis gratuit
-          </Link>
+          </a>
         </nav>
 
         <button
@@ -101,13 +105,15 @@ export function Navbar() {
                   {link.label}
                 </Link>
               ))}
-              <Link
-                href="/contact"
+              <a
+                href={getWhatsAppDevisUrl()}
+                target="_blank"
+                rel="noopener noreferrer"
                 onClick={closeMobileMenu}
-                className="mt-4 border border-[#d4af37]/50 py-3 text-center text-base font-light tracking-[0.1em] text-[#f5f5f0] transition-colors"
+                className="mt-4 border border-[#25D366]/60 bg-[#25D366]/10 py-3 text-center text-base font-light tracking-[0.1em] text-[#f5f5f0] transition-colors"
               >
                 Devis gratuit
-              </Link>
+              </a>
             </nav>
           </motion.div>
         )}

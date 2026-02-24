@@ -2,7 +2,8 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
-import { ArrowDown, Mail } from "lucide-react";
+import { ArrowDown, MessageCircle } from "lucide-react";
+import { getWhatsAppDevisUrl } from "@/data/contact";
 
 const titleLetters = "PHANTOM".split("");
 
@@ -131,19 +132,22 @@ export function HeroSection() {
         className="mt-10 flex flex-col items-center gap-4 sm:mt-12 sm:flex-row sm:gap-6"
       >
         <Link
-          href="#projets"
+          href="#contact"
           className="flex items-center gap-2 border border-[#f5f5f0]/30 bg-transparent px-6 py-3 text-sm font-light tracking-[0.15em] text-[#f5f5f0] transition-all hover:border-[#f5f5f0]/60 hover:bg-[#f5f5f0]/5"
         >
           Voir mes réalisations
           <ArrowDown size={16} className="rotate-[-90deg]" strokeWidth={1.5} />
         </Link>
-        <Link
-          href="/contact"
-          className="flex items-center gap-2 border border-[#d4af37]/50 bg-[#d4af37]/10 px-6 py-3 text-sm font-light tracking-[0.15em] text-[#f5f5f0] transition-all hover:bg-[#d4af37]/20"
+        <a
+          href={getWhatsAppDevisUrl()}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="flex items-center gap-2 border border-[#25D366]/60 bg-[#25D366]/10 px-6 py-3 text-sm font-light tracking-[0.15em] text-[#f5f5f0] transition-all hover:bg-[#25D366]/20"
+          aria-label="Contacter sur WhatsApp"
         >
           Demander un devis
-          <Mail size={16} strokeWidth={1.5} />
-        </Link>
+          <MessageCircle size={16} strokeWidth={1.5} />
+        </a>
       </motion.div>
     </section>
   );

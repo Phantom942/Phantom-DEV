@@ -3,6 +3,7 @@ import Link from "next/link";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { CursorAndGlow } from "@/components/CursorAndGlow";
+import { getWhatsAppDevisUrl } from "@/data/contact";
 import { ArrowLeft, Palette, Box, Brain, Check, Wrench } from "lucide-react";
 
 export const metadata: Metadata = {
@@ -185,19 +186,21 @@ export default function ServicesPage() {
             })}
           </div>
 
-          <div className="mt-20 rounded-sm border border-[#d4af37]/30 bg-[#0a0a0a]/50 px-6 py-8 text-center sm:px-12 sm:py-10">
+          <div className="mt-20 rounded-sm border border-[#25D366]/30 bg-[#0a0a0a]/50 px-6 py-8 text-center sm:px-12 sm:py-10">
             <p className="mb-4 text-sm leading-[1.8] text-[#f5f5f0]/90">
-              Un projet en tête ? Parlons-en. Devis gratuit sous 48h, sans engagement.
+              Un projet en tête ? Contactez-moi sur WhatsApp. Devis gratuit sous 48h, sans engagement.
             </p>
             <p className="mb-6 text-xs font-light tracking-[0.08em] text-[#f5f5f0]/60">
               Garantie performance : Lighthouse 90+ | Tarifs alignés marché FR/Europe
             </p>
-            <Link
-              href="/contact"
-              className="inline-flex items-center gap-2 border border-[#d4af37]/50 bg-[#d4af37]/10 px-8 py-3 text-sm font-light tracking-[0.15em] text-[#f5f5f0] transition-all hover:bg-[#d4af37]/20"
+            <a
+              href={getWhatsAppDevisUrl()}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 border border-[#25D366]/60 bg-[#25D366]/10 px-8 py-3 text-sm font-light tracking-[0.15em] text-[#f5f5f0] transition-all hover:bg-[#25D366]/20"
             >
-              Demander un devis
-            </Link>
+              Contacter sur WhatsApp
+            </a>
           </div>
         </div>
       </main>

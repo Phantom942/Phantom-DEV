@@ -1,7 +1,8 @@
 "use client";
 
 import Link from "next/link";
-import { Mail, Github, Linkedin } from "lucide-react";
+import { MessageCircle, Github, Linkedin } from "lucide-react";
+import { getWhatsAppDevisUrl } from "@/data/contact";
 
 export function Footer() {
   return (
@@ -16,19 +17,15 @@ export function Footer() {
           </p>
           <div className="flex flex-col items-center gap-4 sm:flex-row sm:items-center sm:gap-8">
             <a
-              href="mailto:contact@phantomdev.fr"
+              href={getWhatsAppDevisUrl()}
+              target="_blank"
+              rel="noopener noreferrer"
               className="flex items-center gap-2 text-sm font-light tracking-[0.08em] text-[#f5f5f0]/80 transition-colors hover:text-[#f5f5f0]"
-              aria-label="Envoyer un email"
+              aria-label="Contacter sur WhatsApp"
             >
-              <Mail size={16} strokeWidth={1.5} />
-              contact@phantomdev.fr
+              <MessageCircle size={16} strokeWidth={1.5} />
+              Contact WhatsApp
             </a>
-            <Link
-              href="/contact"
-              className="text-sm font-light tracking-[0.08em] text-[#f5f5f0]/80 transition-colors hover:text-[#f5f5f0]"
-            >
-              Demander un devis
-            </Link>
             <div className="flex items-center gap-6">
               <a
                 href="https://github.com/Phantom942"
