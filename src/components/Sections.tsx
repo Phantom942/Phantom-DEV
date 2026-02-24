@@ -3,7 +3,6 @@
 import { ScrollReveal } from "./ScrollReveal";
 import { ExpertiseCards } from "./ExpertiseCards";
 import { SelectedWorks } from "./SelectedWorks";
-import { TrustSection } from "./TrustSection";
 import { TestimonialsSection } from "./TestimonialsSection";
 import { ContactForm } from "./ContactForm";
 import Link from "next/link";
@@ -33,7 +32,6 @@ export function Sections() {
       </section>
 
       <SelectedWorks />
-      <TrustSection />
       <TestimonialsSection />
 
       <section
