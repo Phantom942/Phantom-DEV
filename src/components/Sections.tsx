@@ -5,6 +5,7 @@ import { ExpertiseCards } from "./ExpertiseCards";
 import { SelectedWorks } from "./SelectedWorks";
 import { TestimonialsSection } from "./TestimonialsSection";
 import { WhatsAppCtaButton } from "./WhatsAppButton";
+import { WhatsAppForm } from "./WhatsAppForm";
 
 export function Sections() {
   return (
@@ -35,7 +36,7 @@ export function Sections() {
 
       <section
         id="contact"
-        className="min-h-screen w-full max-w-[100vw] overflow-x-hidden px-4 py-16 sm:px-8 sm:py-24 md:px-16 md:py-32"
+        className="w-full max-w-[100vw] overflow-x-hidden px-4 py-16 sm:px-8 sm:py-24 md:px-16 md:py-28"
         aria-labelledby="contact-title"
       >
         <ScrollReveal>
@@ -52,7 +53,16 @@ export function Sections() {
           <p className="mb-10 text-xs font-light tracking-[0.08em] text-[#f5f5f0]/60 sm:mb-12">
             Garantie performance : Lighthouse 90+ sur tous les sites livrés.
           </p>
-          <WhatsAppCtaButton />
+          <WhatsAppForm />
+          <p className="mt-6 text-center text-xs font-light tracking-[0.08em] text-[#f5f5f0]/40">
+            ou
+          </p>
+          <p className="mt-2 text-center">
+            <WhatsAppCtaButton />
+          </p>
+          <p className="mt-8 text-center text-xs font-light tracking-[0.08em] text-[#f5f5f0]/40">
+            Réponse sous 48h · Sans engagement
+          </p>
         </ScrollReveal>
       </section>
     </>
