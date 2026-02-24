@@ -36,7 +36,15 @@ export function SelectedWorks() {
                   rel="noopener noreferrer"
                   className="block outline-none focus-visible:ring-2 focus-visible:ring-[#f5f5f0]/30 focus-visible:ring-offset-2 focus-visible:ring-offset-black"
                 >
-                  <div className="relative mb-4 flex aspect-[4/3] min-h-[120px] items-center justify-center overflow-hidden rounded-sm border border-[#f5f5f0]/10 bg-[#0a0a0a] px-6 py-8 transition-colors duration-300 group-hover:border-[#f5f5f0]/20">
+                  <div
+                    className={`relative mb-4 flex aspect-[4/3] min-h-[120px] items-center justify-center overflow-hidden rounded-sm border px-6 py-8 transition-colors duration-300 group-hover:border-[#f5f5f0]/20 ${
+                      "imageBg" in project && project.imageBg === "white"
+                        ? "border-[#f5f5f0]/15 bg-white"
+                        : "imageBg" in project && project.imageBg === "gray"
+                          ? "border-[#f5f5f0]/15 bg-[#2A2A2A]"
+                          : "border-[#f5f5f0]/10 bg-[#0a0a0a]"
+                    }`}
+                  >
                     <Image
                       src={project.image}
                       alt={`${project.title} - logo`}

@@ -2,6 +2,7 @@ export const projects = [
   {
     id: "phantom-art",
     title: "Phantom Art",
+    imageBg: "white" as const,
     description:
       "Art Handling & Private Brokerage. Gestion d'œuvres d'art et courtage privé pour collectionneurs et institutions.",
     techs: ["Next.js", "Art Handling", "Tailwind"],
@@ -11,6 +12,7 @@ export const projects = [
   {
     id: "redk-motors",
     title: "REDK Motors",
+    imageBg: "gray" as const,
     description:
       "Plateforme vitrine pour spécialiste automobile. Design agressif et élégant pour véhicules de prestige.",
     techs: ["React", "Framer Motion", "Auto-Focus"],
@@ -20,6 +22,7 @@ export const projects = [
   {
     id: "moove-city",
     title: "Moove City",
+    imageBg: "white" as const,
     description:
       "Solution de mobilité urbaine. Interface dynamique axée sur la conversion et la clarté des services.",
     techs: ["UX/UI", "Next.js", "Mobile-First"],
