@@ -34,7 +34,7 @@ const services = [
     id: "conception",
     title: "Conception Web Premium",
     icon: Palette,
-    price: "à partir de 2 500€",
+    price: "à partir de 4 500€",
     description:
       "Un site qui reflète l'excellence de votre marque. Chaque interface est conçue pour captiver, guider et convertir.",
     benefits: [
@@ -50,7 +50,7 @@ const services = [
     id: "applications",
     title: "Applications Sur-Mesure",
     icon: Box,
-    price: "à partir de 5 000€",
+    price: "à partir de 8 000€",
     description:
       "Des plateformes robustes, scalables et performantes. E-commerce, SaaS, outils métier : l'architecture s'adapte à vos besoins.",
     benefits: [
@@ -82,7 +82,7 @@ const services = [
     id: "maintenance",
     title: "Maintenance & Support",
     icon: Wrench,
-    price: "dès 99 €/mois",
+    price: "dès 199 €/mois",
     description:
       "Gardez votre site sécurisé, à jour et performant. Mises à jour techniques, sauvegardes et support réactif pour une sérénité au long cours.",
     benefits: [

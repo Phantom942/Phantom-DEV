@@ -117,12 +117,11 @@ export function HeroSection() {
         animate="visible"
         className="mt-3 text-center text-xs font-light tracking-[0.12em] text-[#f5f5f0]/70 sm:text-sm"
       >
-        Sites vitrines dès 4 500 € · E-commerce dès 8 000 €
         <Link
           href="/services"
-          className="ml-2 inline-block underline decoration-[#d4af37]/40 underline-offset-2 transition-colors hover:text-[#f5f5f0]/90 hover:decoration-[#d4af37]/70"
+          className="inline-block underline decoration-[#d4af37]/40 underline-offset-2 transition-colors hover:text-[#f5f5f0]/90 hover:decoration-[#d4af37]/70"
         >
-          Voir tous les tarifs
+          Voir les services
         </Link>
       </motion.p>
       <motion.div
