@@ -8,9 +8,9 @@ import { ArrowLeft, Palette, Box, Brain, Check, Wrench } from "lucide-react";
 
 export const metadata: Metadata = {
   alternates: { canonical: "https://phantomdev.fr/services" },
-  title: "Services | PhantomDev — Création de sites web premium sur-mesure",
+  title: "Services — Création de sites web premium sur-mesure",
   description:
-    "PhantomDev propose des services de création web : sites vitrines à partir de 4 500€, e-commerce à partir de 8 000€, applications sur-mesure, intégration IA. Tarifs marché FR/Europe. Devis gratuit sous 48h.",
+    "PhantomDev : sites vitrines, e-commerce, applications sur-mesure, intégration IA. Création web premium Next.js. Tarifs compétitifs, devis gratuit sous 48h.",
   keywords: [
     "création site web",
     "développement web sur-mesure",
@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     "PhantomDev",
   ],
   openGraph: {
-    title: "Services | PhantomDev — Sites web premium sur-mesure",
+    title: "Services — Sites web premium sur-mesure",
     description:
       "Sites vitrines, e-commerce, applications SaaS, intégration IA. Devis gratuit.",
     url: "https://phantomdev.fr/services",
@@ -34,7 +34,7 @@ const services = [
     id: "conception",
     title: "Conception Web Premium",
     icon: Palette,
-    price: "à partir de 4 500€",
+    price: "à partir de 2 500€",
     description:
       "Un site qui reflète l'excellence de votre marque. Chaque interface est conçue pour captiver, guider et convertir.",
     benefits: [
@@ -50,7 +50,7 @@ const services = [
     id: "applications",
     title: "Applications Sur-Mesure",
     icon: Box,
-    price: "à partir de 8 000€",
+    price: "à partir de 5 000€",
     description:
       "Des plateformes robustes, scalables et performantes. E-commerce, SaaS, outils métier : l'architecture s'adapte à vos besoins.",
     benefits: [
@@ -82,7 +82,7 @@ const services = [
     id: "maintenance",
     title: "Maintenance & Support",
     icon: Wrench,
-    price: "dès 199 €/mois",
+    price: "dès 99 €/mois",
     description:
       "Gardez votre site sécurisé, à jour et performant. Mises à jour techniques, sauvegardes et support réactif pour une sérénité au long cours.",
     benefits: [
@@ -143,21 +143,19 @@ export default function ServicesPage() {
                       />
                     </div>
                     <div>
-                      <div className="mb-4 flex flex-wrap items-baseline justify-between gap-4">
-                        <h2
-                          className="font-extralight tracking-[0.1em] text-[#f5f5f0]"
-                          style={{
-                            fontFamily: "var(--font-cormorant), Georgia, serif",
-                          }}
-                        >
-                          <span className="text-2xl sm:text-3xl">
-                            {service.title}
-                          </span>
-                        </h2>
-                        <span className="text-sm font-light tracking-[0.08em] text-[#d4af37]/90">
-                          {service.price}
+                      <h2
+                        className="mb-1 font-extralight tracking-[0.1em] text-[#f5f5f0]"
+                        style={{
+                          fontFamily: "var(--font-cormorant), Georgia, serif",
+                        }}
+                      >
+                        <span className="text-2xl sm:text-3xl">
+                          {service.title}
                         </span>
-                      </div>
+                      </h2>
+                      <p className="mb-4 text-xs font-light tracking-[0.08em] text-[#d4af37]/80">
+                        {service.price}
+                      </p>
                       <p className="mb-8 max-w-2xl text-sm leading-[1.8] text-[#f5f5f0]/80 sm:text-base">
                         {service.description}
                       </p>

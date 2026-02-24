@@ -7,7 +7,7 @@ import { ArrowLeft } from "lucide-react";
 
 export const metadata: Metadata = {
   alternates: { canonical: "https://phantomdev.fr/mentions-legales" },
-  title: "Mentions légales | PhantomDev",
+  title: "Mentions légales",
   description:
     "Mentions légales de PhantomDev — Création de sites web premium sur-mesure.",
   robots: "index, follow",

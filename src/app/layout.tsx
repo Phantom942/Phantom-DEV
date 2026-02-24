@@ -42,7 +42,10 @@ export const viewport: Viewport = {
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://phantomdev.fr"),
-  title: "PhantomDev | Création de sites web premium sur-mesure",
+  title: {
+    default: "PhantomDev | Création de sites web premium sur-mesure",
+    template: "%s | PhantomDev",
+  },
   description:
     "PhantomDev : création de sites web sur-mesure avec Next.js. E-commerce, plateformes SaaS, sites vitrines. Performance et design premium. Devis gratuit.",
   keywords: [
@@ -54,6 +57,8 @@ export const metadata: Metadata = {
     "PhantomDev",
     "agence web",
     "site sur-mesure",
+    "création site web France",
+    "développement web sur-mesure",
   ],
   alternates: {
     canonical: "https://phantomdev.fr",
@@ -79,15 +84,15 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   const schemaOrg = {
-  "@context": "https://schema.org",
-  "@type": "Person",
-  name: "PhantomDev",
-  url: "https://phantomdev.fr",
-  jobTitle: "Architecte digital",
-  description:
-    "Création de sites web sur-mesure : e-commerce, vitrines, applications premium.",
-  knowsAbout: ["Next.js", "React", "E-commerce", "Développement web"],
-};
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    name: "PhantomDev",
+    url: "https://phantomdev.fr",
+    description:
+      "Création de sites web sur-mesure : e-commerce, vitrines, applications premium. Next.js, design et performance.",
+    areaServed: { "@type": "Country", name: "France" },
+    knowsAbout: ["Next.js", "React", "E-commerce", "Développement web", "SaaS"],
+  };
 
 return (
     <html

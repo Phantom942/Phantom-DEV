@@ -8,11 +8,11 @@ import { ArrowLeft } from "lucide-react";
 
 export const metadata: Metadata = {
   alternates: { canonical: "https://phantomdev.fr/contact" },
-  title: "Contact | PhantomDev — Devis gratuit via WhatsApp",
+  title: "Contact — Devis gratuit via WhatsApp",
   description:
     "Contactez PhantomDev sur WhatsApp pour votre projet web. Sites vitrines, e-commerce, applications sur-mesure. Réponse sous 48h, sans engagement.",
   openGraph: {
-    title: "Contact | PhantomDev — Devis via WhatsApp",
+    title: "Contact — Devis via WhatsApp",
     description: "Devis gratuit sous 48h pour votre projet web. Contact WhatsApp.",
     url: "https://phantomdev.fr/contact",
   },
