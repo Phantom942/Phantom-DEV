@@ -34,7 +34,9 @@ jobs:
         run: npm ci
 
       - name: Build (static export)
-        run: npm run build
+        run: |
+          rm -rf .next out
+          npm run build
 
       - name: List deployed files
         run: |
