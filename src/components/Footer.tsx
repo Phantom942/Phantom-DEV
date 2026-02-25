@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { MessageCircle, Github, Linkedin } from "lucide-react";
+import { MessageCircle, Github } from "lucide-react";
 import { getWhatsAppDevisUrl } from "@/data/contact";
 
 export function Footer() {
@@ -25,7 +25,7 @@ export function Footer() {
               aria-label="Contacter PhantomDev sur WhatsApp pour un devis projet web"
             >
               <MessageCircle size={16} strokeWidth={1.5} />
-              Contact WhatsApp
+              Ligne privée
             </a>
             <div className="flex items-center gap-6">
               <a
@@ -36,15 +36,6 @@ export function Footer() {
                 aria-label="GitHub"
               >
                 <Github size={20} strokeWidth={1.5} />
-              </a>
-              <a
-                href="https://www.linkedin.com/in/phantomdev"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-[#f5f5f0]/60 transition-colors hover:text-[#f5f5f0]"
-                aria-label="Profil LinkedIn PhantomDev, développement web et SaaS"
-              >
-                <Linkedin size={20} strokeWidth={1.5} />
               </a>
             </div>
           </div>
