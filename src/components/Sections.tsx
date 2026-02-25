@@ -4,6 +4,7 @@ import { Suspense } from "react";
 import { ScrollReveal } from "./ScrollReveal";
 import { ExpertiseCards } from "./ExpertiseCards";
 import { SelectedWorks } from "./SelectedWorks";
+import { FAQ } from "./FAQ";
 import { WhatsAppCtaButton } from "./WhatsAppButton";
 import { WhatsAppForm } from "./WhatsAppForm";
 
@@ -41,6 +42,10 @@ export function Sections() {
 
       <ScrollReveal delay={0.05}>
       <SelectedWorks />
+      </ScrollReveal>
+
+      <ScrollReveal delay={0.05}>
+      <FAQ />
       </ScrollReveal>
 
       <ScrollReveal delay={0.05}>

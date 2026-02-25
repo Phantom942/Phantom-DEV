@@ -6,6 +6,7 @@ import {
   Source_Sans_3,
 } from "next/font/google";
 import "./globals.css";
+import { faqItems } from "@/data/faq";
 
 const geist = Geist({
   variable: "--font-geist",
@@ -100,10 +101,12 @@ export default function RootLayout({
   const schemaOrg = {
     "@context": "https://schema.org",
     "@type": "ProfessionalService",
+    "@id": "https://phantomdev.fr/#organization",
     name: "PhantomDev",
     url: "https://phantomdev.fr",
     description:
       "Expertise en développement web sur-mesure : sites vitrines, e-commerce, applications SaaS. Stack React, Node.js, Next.js. Interfaces haute performance et référencement.",
+    sameAs: ["https://github.com/Phantom942"],
     areaServed: { "@type": "Country", name: "France" },
     serviceType: [
       "Développement web",
@@ -111,7 +114,6 @@ export default function RootLayout({
       "E-commerce",
       "Applications SaaS",
       "Intégration IA",
-      "Intégration React et Node.js",
     ],
     knowsAbout: [
       "Next.js",
@@ -122,28 +124,36 @@ export default function RootLayout({
       "Développement web",
       "Interfaces haute performance",
     ],
+    contactPoint: {
+      "@type": "ContactPoint",
+      contactType: "customer service",
+      availableLanguage: "French",
+      areaServed: "FR",
+      url: "https://phantomdev.fr/#contact",
+    },
     hasOfferCatalog: {
       "@type": "OfferCatalog",
       name: "Services PhantomDev",
       itemListElement: [
-        {
-          "@type": "Offer",
-          itemOffered: { "@type": "Service", name: "Développement web sur-mesure" },
-        },
-        {
-          "@type": "Offer",
-          itemOffered: { "@type": "Service", name: "Sites vitrines et e-commerce" },
-        },
-        {
-          "@type": "Offer",
-          itemOffered: { "@type": "Service", name: "Applications SaaS React et Node.js" },
-        },
-        {
-          "@type": "Offer",
-          itemOffered: { "@type": "Service", name: "Intégration IA et automatisation" },
-        },
+        { "@type": "Offer", itemOffered: { "@type": "Service", name: "Développement web sur-mesure" } },
+        { "@type": "Offer", itemOffered: { "@type": "Service", name: "Sites vitrines et e-commerce" } },
+        { "@type": "Offer", itemOffered: { "@type": "Service", name: "Applications SaaS" } },
+        { "@type": "Offer", itemOffered: { "@type": "Service", name: "Intégration IA" } },
       ],
     },
+  };
+
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: faqItems.map((item) => ({
+      "@type": "Question",
+      name: item.question,
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: item.answer,
+      },
+    })),
   };
 
   return (
@@ -155,6 +165,10 @@ export default function RootLayout({
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaOrg) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
         />
         {children}
       </body>

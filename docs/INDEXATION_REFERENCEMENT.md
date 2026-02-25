@@ -6,7 +6,8 @@
 - **Sitemap** : https://phantomdev.fr/sitemap.xml (pages indexées)
 - **Meta** : title, description, keywords, canonical
 - **Open Graph** : partage réseaux sociaux
-- **JSON-LD** : schema.org ProfessionalService pour Google
+- **JSON-LD** : schema.org ProfessionalService + FAQPage pour Google
+- **Optimisation IA** : FAQ schema, Organisation enrichie (contactPoint, sameAs) — aide ChatGPT, Perplexity, Google AI à recommander le site
 
 ---
 
