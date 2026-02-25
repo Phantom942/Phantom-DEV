@@ -1,45 +1,40 @@
 "use client";
 
-import { useEffect, useState, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 
 const SMOOTHING = 0.14;
 
 export function CustomCursor() {
-  const [position, setPosition] = useState({ x: -100, y: -100 });
-  const [isVisible, setIsVisible] = useState(false);
   const [shouldRender, setShouldRender] = useState(false);
+  const elRef = useRef<HTMLDivElement>(null);
   const cursorRef = useRef({ x: 0, y: 0 });
   const targetRef = useRef({ x: 0, y: 0 });
   const rafRef = useRef<number>(0);
-  const mountedRef = useRef(false);
 
   useEffect(() => {
     if (window.matchMedia("(pointer: coarse)").matches) return;
     queueMicrotask(() => setShouldRender(true));
-    mountedRef.current = true;
     document.body.style.cursor = "none";
 
     const handleMouseMove = (e: MouseEvent) => {
       targetRef.current = { x: e.clientX, y: e.clientY };
-      setIsVisible(true);
+      elRef.current?.style.setProperty("opacity", "1");
     };
 
     const handleMouseLeave = () => {
-      setIsVisible(false);
+      elRef.current?.style.setProperty("opacity", "0");
     };
 
     const animate = () => {
+      const el = elRef.current;
       const { x: tx, y: ty } = targetRef.current;
       const { x: cx, y: cy } = cursorRef.current;
-
       const nx = cx + (tx - cx) * SMOOTHING;
       const ny = cy + (ty - cy) * SMOOTHING;
-
       cursorRef.current = { x: nx, y: ny };
-      if (mountedRef.current) {
-        setPosition({ x: nx, y: ny });
+      if (el) {
+        el.style.transform = `translate(${nx}px, ${ny}px)`;
       }
-
       rafRef.current = requestAnimationFrame(animate);
     };
 
@@ -48,7 +43,6 @@ export function CustomCursor() {
     document.documentElement.addEventListener("mouseleave", handleMouseLeave);
 
     return () => {
-      mountedRef.current = false;
       document.body.style.cursor = "";
       cancelAnimationFrame(rafRef.current);
       window.removeEventListener("mousemove", handleMouseMove);
@@ -63,13 +57,10 @@ export function CustomCursor() {
 
   return (
     <div
-      className="pointer-events-none fixed left-0 top-0 z-[9999]"
+      ref={elRef}
+      className="pointer-events-none fixed left-0 top-0 z-[9999] opacity-0 transition-opacity duration-200"
       aria-hidden
-      style={{
-        transform: `translate(${position.x}px, ${position.y}px)`,
-        opacity: isVisible ? 1 : 0,
-        transition: "opacity 0.25s ease-out",
-      }}
+      style={{ willChange: "transform" }}
     >
       <div className="absolute left-0 top-0 h-4 w-4 -translate-x-1/2 -translate-y-1/2 rounded-full border border-[#f5f5f0]/90 bg-transparent backdrop-blur-[1px]" />
       <div className="absolute left-0 top-0 h-1 w-1 -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#f5f5f0]" />
