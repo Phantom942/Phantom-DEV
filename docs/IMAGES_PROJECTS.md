@@ -1,6 +1,6 @@
 # Screenshots des réalisations
 
-Ajoute ici des captures d'écran de tes sites pour un rendu cohérent.
+Ajoute dans `public/images/projects/` des captures d'écran des sites pour un rendu cohérent.
 
 **Fichiers à ajouter :**
 - `phantom-art.jpg` — Capture de phantomart.fr (recommandé : 1200x675px)
