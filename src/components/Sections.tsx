@@ -1,5 +1,6 @@
 "use client";
 
+import { Suspense } from "react";
 import { ScrollReveal } from "./ScrollReveal";
 import { ExpertiseCards } from "./ExpertiseCards";
 import { SelectedWorks } from "./SelectedWorks";
@@ -56,7 +57,9 @@ export function Sections() {
           <p className="mb-10 text-xs font-light tracking-[0.08em] text-[#f5f5f0]/60 sm:mb-12">
             Garantie performance : Lighthouse 90+ sur tous les sites livrés.
           </p>
-          <WhatsAppForm />
+          <Suspense fallback={null}>
+            <WhatsAppForm />
+          </Suspense>
           <p className="mt-6 text-center text-xs font-light tracking-[0.08em] text-[#f5f5f0]/40">
             ou
           </p>
