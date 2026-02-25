@@ -1,10 +1,11 @@
 "use client";
 
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { ScrollReveal } from "./ScrollReveal";
 import { projects } from "@/data/projects";
+import { useTranslations } from "@/hooks/useTranslations";
 import {
-  ArrowLeft,
   Palette,
   Box,
   Brain,
@@ -14,84 +15,11 @@ import {
   ExternalLink,
 } from "lucide-react";
 
-const services = [
-  {
-    id: "conception",
-    title: "Conception Web Premium",
-    icon: Palette,
-    price: "à partir de 4 500€",
-    typeParam: "vitrine",
-    description:
-      "Un site qui reflète l'excellence de votre marque. Chaque interface est conçue pour captiver, guider et convertir.",
-    benefits: [
-      "Design sur-mesure, zéro template générique",
-      "UX pensée pour la conversion et l'engagement",
-      "Identité visuelle cohérente et raffinée",
-      "Responsive parfait (Mobile-First, breakpoints optimisés)",
-      "Animations subtiles (CSS, Framer Motion)",
-    ],
-    cta: "Idéal pour : marques premium, portfolios, sites vitrines.",
-    projectRef: "phantom-art",
-    projectLabel: null as string | null,
-  },
-  {
-    id: "applications",
-    title: "Applications Sur-Mesure",
-    icon: Box,
-    price: "à partir de 8 000€",
-    typeParam: "application",
-    badge: "Meilleur rapport qualité/prix" as const,
-    description:
-      "Des plateformes robustes, scalables et performantes. E-commerce, SaaS, outils métier : l'architecture s'adapte à vos besoins.",
-    benefits: [
-      "E-commerce avec panier, paiement, gestion des stocks",
-      "Serverless Architecture (Vercel, AWS)",
-      "APIs REST ou GraphQL pour vos intégrations",
-      "Performance optimisée (Next.js, React Server Components)",
-      "Déploiement et maintenance simplifiés",
-    ],
-    cta: "Idéal pour : startups, PME, projets à fort trafic.",
-    projectRef: "redk-motors",
-    projectLabel: null,
-  },
-  {
-    id: "ia",
-    title: "Intégration IA Stratégique",
-    icon: Brain,
-    price: "sur devis",
-    typeParam: "autre",
-    description:
-      "L'intelligence artificielle au service de votre business. Chatbots, recommandations personnalisées, automatisation intelligente.",
-    benefits: [
-      "Chatbots et assistants conversationnels",
-      "RAG (Retrieval-Augmented Generation)",
-      "Systèmes de recommandation personnalisés",
-      "Intégration d'APIs IA (OpenAI, Claude, etc.)",
-      "Solutions sur-mesure adaptées à votre secteur",
-    ],
-    cta: "Idéal pour : entreprises innovantes, gains de productivité.",
-    projectRef: null,
-    projectLabel: "Nouveau",
-  },
-  {
-    id: "maintenance",
-    title: "Maintenance & Support",
-    icon: Wrench,
-    price: "dès 199 €/mois",
-    typeParam: "maintenance",
-    description:
-      "Gardez votre site sécurisé, à jour et performant. Mises à jour techniques, sauvegardes et support réactif pour une sérénité au long cours.",
-    benefits: [
-      "Mises à jour de sécurité et dépendances",
-      "Sauvegardes régulières et restauration si besoin",
-      "Support par email (délai de réponse garanti)",
-      "Petites évolutions incluses selon formule",
-      "Surveillance et rapports de performance",
-    ],
-    cta: "Idéal pour : tous les sites livrés par PhantomDev, revenus récurrents prévisibles.",
-    projectRef: null,
-    projectLabel: null,
-  },
+const serviceConfigs = [
+  { id: "conception" as const, icon: Palette, typeParam: "vitrine", projectRef: "phantom-art" as const, projectLabel: null as string | null },
+  { id: "applications" as const, icon: Box, typeParam: "application", projectRef: "redk-motors" as const, projectLabel: null as string | null },
+  { id: "ia" as const, icon: Brain, typeParam: "autre", projectRef: null as string | null, projectLabelKey: "projectLabel" as const },
+  { id: "maintenance" as const, icon: Wrench, typeParam: "maintenance", projectRef: null as string | null, projectLabel: null as string | null },
 ] as const;
 
 function getProjectByRef(ref: string) {
@@ -99,18 +27,25 @@ function getProjectByRef(ref: string) {
 }
 
 export function ServicesList() {
+  const pathname = usePathname();
+  const { t } = useTranslations();
+  const sl = t.servicesList;
+  const localePrefix = pathname.startsWith("/en-gb") ? "/en-gb" : pathname.startsWith("/en-us") ? "/en-us" : "";
+
   return (
     <div className="space-y-16 md:space-y-24">
-      {services.map((service, index) => {
-        const Icon = service.icon;
-        const project =
-          service.projectRef && getProjectByRef(service.projectRef);
+      {serviceConfigs.map((config, index) => {
+        const Icon = config.icon;
+        const s = sl[config.id];
+        const project = config.projectRef ? getProjectByRef(config.projectRef) : null;
+        const projectLabel = "projectLabelKey" in config ? (s as { projectLabel?: string }).projectLabel : config.projectLabel;
+        const badge = "badge" in s ? (s as { badge?: string }).badge : undefined;
         const isEven = index % 2 === 1;
 
         return (
-          <ScrollReveal key={service.id} delay={index * 0.08}>
+          <ScrollReveal key={config.id} delay={index * 0.08}>
             <section
-              id={service.id}
+              id={config.id}
               className="group/Service scroll-mt-24"
             >
               <div
@@ -150,32 +85,32 @@ export function ServicesList() {
                           }}
                         >
                           <span className="text-2xl sm:text-3xl">
-                            {service.title}
+                            {s.title}
                           </span>
                         </h2>
-                        {"badge" in service && service.badge && (
+                        {badge && (
                           <span className="rounded-sm border border-[#d4af37]/50 bg-[#d4af37]/10 px-2 py-0.5 text-[10px] font-light tracking-wider text-[#d4af37]">
-                            {service.badge}
+                            {badge}
                           </span>
                         )}
-                        {service.projectLabel && (
+                        {projectLabel && (
                           <span className="rounded-sm border border-[#25D366]/40 bg-[#25D366]/10 px-2 py-0.5 text-[10px] font-light tracking-wider text-[#25D366]">
-                            {service.projectLabel}
+                            {projectLabel}
                           </span>
                         )}
                       </div>
                       <p className="mb-4 text-xs font-light tracking-[0.08em] text-[#d4af37]/80">
-                        {service.price}
+                        {s.price}
                       </p>
                       <p className="mb-8 max-w-2xl text-sm leading-[1.8] text-[#f5f5f0]/80 sm:text-base">
-                        {service.description}
+                        {s.description}
                       </p>
                       <ul
                         className={`mb-6 space-y-3 ${
                           isEven ? "md:ml-auto md:max-w-2xl" : ""
                         }`}
                       >
-                        {service.benefits.map((benefit) => (
+                        {s.benefits.map((benefit) => (
                           <li
                             key={benefit}
                             className={`flex items-start gap-3 text-sm text-[#f5f5f0]/85 ${
@@ -192,7 +127,7 @@ export function ServicesList() {
                         ))}
                       </ul>
                       <p className="text-xs font-light tracking-[0.1em] text-[#f5f5f0]/60">
-                        {service.cta}
+                        {s.cta}
                       </p>
                       {project && (
                         <p
@@ -200,7 +135,7 @@ export function ServicesList() {
                             isEven ? "md:justify-end" : ""
                           }`}
                         >
-                          <span>Utilisé pour :</span>
+                          <span>{sl.usedFor}</span>
                           <Link
                               href={project.href}
                               target="_blank"
@@ -213,10 +148,10 @@ export function ServicesList() {
                         </p>
                       )}
                       <Link
-                        href={`/?type=${service.typeParam}#contact`}
+                        href={`${localePrefix || "/"}?type=${config.typeParam}#contact`}
                         className="mt-8 inline-flex items-center gap-2 border border-[#d4af37]/40 bg-[#d4af37]/5 px-6 py-3 text-xs font-light tracking-[0.15em] text-[#f5f5f0] transition-all hover:border-[#d4af37]/60 hover:bg-[#d4af37]/10"
                       >
-                        Demander un devis sur-mesure
+                        {s.ctaButton}
                         <ArrowRight size={14} strokeWidth={1.5} />
                       </Link>
                     </div>
