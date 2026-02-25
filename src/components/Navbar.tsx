@@ -21,7 +21,7 @@ export function Navbar() {
   return (
     <>
       <header
-        className="fixed left-0 right-0 top-0 z-50 flex w-full max-w-[100vw] flex-row items-center justify-between gap-2 overflow-hidden border-b border-[#f5f5f0]/5 bg-[#000000] px-4 py-3 md:px-16 md:py-6"
+        className="fixed left-0 right-0 top-0 z-50 flex w-full max-w-full flex-row items-center justify-between gap-2 overflow-hidden border-b border-[#f5f5f0]/5 bg-[#000000] px-4 py-3 md:px-16 md:py-6"
         style={{
           paddingTop: "max(0.75rem, env(safe-area-inset-top))",
         }}

@@ -72,7 +72,7 @@ const ctaVariants = {
 export function HeroSection() {
   return (
     <section
-      className="relative flex min-h-[100dvh] min-h-screen w-full max-w-[100vw] flex-col items-center justify-center overflow-hidden px-4 pt-24 sm:px-8 sm:pt-28 md:px-16"
+      className="relative flex min-h-[100dvh] min-h-screen w-full max-w-full flex-col items-center justify-center overflow-hidden px-4 pt-24 sm:px-8 sm:pt-28 md:px-16"
       aria-labelledby="hero-title"
       style={{
         paddingTop: "max(6rem, calc(5rem + env(safe-area-inset-top)))",

@@ -7,7 +7,7 @@ import { getWhatsAppDevisUrl } from "@/data/contact";
 export function Footer() {
   return (
     <footer
-      className="w-full max-w-[100vw] overflow-x-hidden border-t border-[#f5f5f0]/10 px-4 py-12 sm:px-8 sm:py-16 md:px-16"
+      className="w-full max-w-full overflow-x-clip border-t border-[#f5f5f0]/10 px-4 py-12 sm:px-8 sm:py-16 md:px-16"
       role="contentinfo"
       aria-label="Pied de page PhantomDev : création de sites web, développement React et Node.js, contact et mentions légales"
     >

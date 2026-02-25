@@ -34,7 +34,7 @@ const cards = [
 
 export function ExpertiseCards() {
   return (
-    <div className="grid w-full max-w-[100vw] grid-cols-1 gap-4 sm:gap-6 md:grid-cols-3">
+    <div className="grid w-full max-w-full grid-cols-1 gap-4 sm:gap-6 md:grid-cols-3">
       {cards.map((card, index) => {
         const Icon = card.icon;
         return (

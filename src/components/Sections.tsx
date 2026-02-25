@@ -13,7 +13,7 @@ export function Sections() {
       <ScrollReveal>
       <section
         id="expertise"
-        className="min-h-screen w-full max-w-[100vw] overflow-x-hidden px-4 py-16 sm:px-8 sm:py-24 md:px-16 md:py-32"
+        className="min-h-screen w-full max-w-full overflow-x-clip px-4 py-16 sm:px-8 sm:py-24 md:px-16 md:py-32"
         aria-labelledby="expertise-title"
       >
         <ScrollReveal>
@@ -40,7 +40,7 @@ export function Sections() {
       <ScrollReveal delay={0.05}>
       <section
         id="contact"
-        className="w-full max-w-[100vw] overflow-x-hidden px-4 py-16 sm:px-8 sm:py-24 md:px-16 md:py-28"
+        className="w-full max-w-full overflow-x-clip px-4 py-16 sm:px-8 sm:py-24 md:px-16 md:py-28"
         aria-labelledby="contact-title"
       >
         <ScrollReveal>

@@ -9,7 +9,7 @@ export function SelectedWorks() {
   return (
     <section
       id="projets"
-      className="w-full max-w-[100vw] overflow-x-hidden px-4 py-12 sm:px-8 sm:py-16 md:px-16 md:py-20"
+      className="w-full max-w-full overflow-x-clip px-4 py-12 sm:px-8 sm:py-16 md:px-16 md:py-20"
       aria-labelledby="realisations-title"
       aria-label="Réalisations PhantomDev : projets web, développement d'interfaces haute performance et e-commerce"
     >

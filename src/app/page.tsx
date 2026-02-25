@@ -8,7 +8,7 @@ import { creativeWorkSchema } from "@/data/projects";
 export default function Home() {
   return (
     <div
-      className="relative min-h-screen min-h-[100dvh] w-full max-w-[100vw] overflow-x-hidden bg-[#000000]"
+      className="relative min-h-screen min-h-[100dvh] w-full overflow-x-clip bg-[#000000]"
       id="home"
     >
       <script
@@ -19,7 +19,7 @@ export default function Home() {
       <Navbar />
       <main
         role="main"
-        className="w-full max-w-[100vw] overflow-x-hidden"
+        className="w-full overflow-x-clip"
         aria-label="Contenu principal : PhantomDev, développement web sur-mesure, React, Node.js, SaaS, sites vitrines et e-commerce"
       >
         <HeroSection />
