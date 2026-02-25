@@ -29,16 +29,15 @@ html {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
-  overflow-x: hidden;
-  overflow-y: scroll;
-  -webkit-overflow-scrolling: touch;
+  overflow-x: clip;
+  overflow-y: auto;
   width: 100%;
   max-width: 100vw;
 }
 
 body {
-  overflow-x: hidden;
-  touch-action: manipulation;
+  overflow-x: clip;
+  touch-action: pan-y pan-x;
   overscroll-behavior-x: none;
   -webkit-tap-highlight-color: transparent;
   width: 100%;

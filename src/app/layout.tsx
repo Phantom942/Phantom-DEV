@@ -146,9 +146,9 @@ export default function RootLayout({
   return (
     <html
       lang="fr"
-      className={`${geist.variable} ${geistMono.variable} ${cormorant.variable} ${sourceSans.variable} overflow-x-hidden`}
+      className={`${geist.variable} ${geistMono.variable} ${cormorant.variable} ${sourceSans.variable} overflow-x-clip`}
     >
-      <body className="overflow-x-hidden font-sans antialiased">
+      <body className="overflow-x-clip font-sans antialiased">
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaOrg) }}
