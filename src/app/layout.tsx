@@ -65,18 +65,27 @@ export const metadata: Metadata = {
   },
   openGraph: {
     type: "website",
-    title: "PhantomDev | Développement web sur-mesure — React, Node.js, SaaS",
+    title: "PhantomDev — Solutions Web Haute Performance & Design Premium",
     description:
-      "Agence développement web premium : sites vitrines, e-commerce, applications React et Node.js. Interfaces haute performance, devis gratuit sous 48h.",
+      "PhantomDev — Solutions Web Haute Performance & Design Premium. Sites vitrines, e-commerce, applications sur-mesure. Devis gratuit sous 48h.",
     url: "https://phantomdev.fr",
     siteName: "PhantomDev",
     locale: "fr_FR",
-    images: [{ url: "/icon.svg", width: 512, height: 512, alt: "PhantomDev - Création de sites web" }],
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "PhantomDev — Solutions Web Haute Performance & Design Premium",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "PhantomDev | Développement web React, Node.js, SaaS",
-    description: "Sites web sur-mesure, e-commerce, applications premium. Devis gratuit.",
+    title: "PhantomDev — Solutions Web Haute Performance & Design Premium",
+    description:
+      "Sites vitrines, e-commerce, applications sur-mesure. Devis gratuit sous 48h.",
+    images: ["/og-image.png"],
   },
 };
 
@@ -98,6 +107,7 @@ export default function RootLayout({
       "Création de sites vitrines",
       "E-commerce",
       "Applications SaaS",
+      "Intégration IA",
       "Intégration React et Node.js",
     ],
     knowsAbout: [
@@ -124,6 +134,10 @@ export default function RootLayout({
         {
           "@type": "Offer",
           itemOffered: { "@type": "Service", name: "Applications SaaS React et Node.js" },
+        },
+        {
+          "@type": "Offer",
+          itemOffered: { "@type": "Service", name: "Intégration IA et automatisation" },
         },
       ],
     },

@@ -14,7 +14,7 @@ export function Footer() {
       <div className="mx-auto flex max-w-4xl flex-col items-center justify-between gap-8 sm:flex-row sm:gap-12">
         <div className="flex flex-col items-center gap-4 sm:items-start">
           <p className="text-xs font-light tracking-[0.15em] text-[#f5f5f0]/60">
-            PhantomDev — Création de sites web premium
+            PhantomDev — Création de sites web premium sur-mesure
           </p>
           <div className="flex flex-col items-center gap-4 sm:flex-row sm:items-center sm:gap-8">
             <a
@@ -50,6 +50,9 @@ export function Footer() {
           </div>
         </div>
       </div>
+      <p className="mx-auto mt-8 max-w-4xl text-center text-[10px] font-light tracking-[0.08em] text-[#f5f5f0]/50">
+        Basé en France — Interventions internationales — Contrats de maintenance garantis
+      </p>
       <div className="mx-auto mt-10 max-w-4xl border-t border-[#f5f5f0]/5 pt-8">
         <div className="flex flex-col items-center justify-center gap-4 sm:flex-row sm:flex-wrap sm:gap-8">
           <a

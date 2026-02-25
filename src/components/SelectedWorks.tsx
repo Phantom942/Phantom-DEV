@@ -1,11 +1,14 @@
 "use client";
 
+import { useState } from "react";
 import Image from "next/image";
-import { ArrowUpRight } from "lucide-react";
+import { ArrowUpRight, ChevronDown, ChevronUp } from "lucide-react";
 import { ScrollReveal } from "./ScrollReveal";
 import { projects } from "@/data/projects";
 
 export function SelectedWorks() {
+  const [expandedId, setExpandedId] = useState<string | null>(null);
+
   return (
     <section
       id="projets"
@@ -38,8 +41,12 @@ export function SelectedWorks() {
                   className="block outline-none focus-visible:ring-2 focus-visible:ring-[#f5f5f0]/30 focus-visible:ring-offset-2 focus-visible:ring-offset-black"
                   aria-label={`Voir le projet ${project.title}, ${project.description} — réalisation PhantomDev développement web`}
                 >
-                  <div
-                    className={`relative mb-4 flex aspect-[4/3] min-h-[120px] items-center justify-center overflow-hidden rounded-sm border px-6 py-8 transition-colors duration-300 group-hover:border-[#f5f5f0]/20 ${
+                  <div className="relative mb-4">
+                    <span className="absolute right-2 top-2 z-10 rounded-sm border border-[#d4af37]/40 bg-[#0a0a0a]/95 px-2 py-1 text-[9px] font-light tracking-wider text-[#d4af37] backdrop-blur-sm">
+                      {"result" in project ? project.result : `Lighthouse ${"lighthouseScore" in project ? project.lighthouseScore : 95}%`}
+                    </span>
+                    <div
+                      className={`relative flex aspect-[4/3] min-h-[120px] items-center justify-center overflow-hidden rounded-sm border px-6 py-8 transition-colors duration-300 group-hover:border-[#f5f5f0]/20 ${
                       "imageBg" in project && project.imageBg === "white"
                         ? "border-[#f5f5f0]/15 bg-white"
                         : "imageBg" in project && project.imageBg === "gray"
@@ -69,6 +76,12 @@ export function SelectedWorks() {
                       <p className="mt-0.5 truncate text-xs text-[#f5f5f0]/60">
                         {project.description}
                       </p>
+                      <p className="mt-2 text-[10px] font-light tracking-[0.06em] text-[#d4af37]/70">
+                        {project.techs.join(" • ")}
+                        {"lighthouseScore" in project && project.lighthouseScore
+                          ? ` · Lighthouse ${project.lighthouseScore}/100`
+                          : ""}
+                      </p>
                     </div>
                     <ArrowUpRight
                       size={16}
@@ -77,6 +90,46 @@ export function SelectedWorks() {
                     />
                   </div>
                 </a>
+                {"details" in project && project.details && (
+                  <div className="mt-3">
+                    <button
+                      type="button"
+                      onClick={(e) => {
+                        e.preventDefault();
+                        setExpandedId(expandedId === project.id ? null : project.id);
+                      }}
+                      className="inline-flex items-center gap-1 text-[10px] font-light tracking-[0.08em] text-[#f5f5f0]/50 transition-colors hover:text-[#d4af37]/80"
+                      aria-expanded={expandedId === project.id}
+                    >
+                      Détails techniques
+                      {expandedId === project.id ? (
+                        <ChevronUp size={12} strokeWidth={1.5} />
+                      ) : (
+                        <ChevronDown size={12} strokeWidth={1.5} />
+                      )}
+                    </button>
+                    {expandedId === project.id && (
+                      <div
+                        className="mt-2 space-y-1 rounded-sm border border-[#f5f5f0]/10 bg-[#0a0a0a]/60 px-3 py-2.5 text-[10px] font-light leading-[1.6] text-[#f5f5f0]/70"
+                        role="region"
+                        aria-label="Détails techniques du projet"
+                      >
+                        <p>
+                          <span className="text-[#d4af37]/70">Enjeu :</span>{" "}
+                          {project.details.enjeu}
+                        </p>
+                        <p>
+                          <span className="text-[#d4af37]/70">Solution :</span>{" "}
+                          {project.details.solution}
+                        </p>
+                        <p>
+                          <span className="text-[#d4af37]/70">Gain :</span>{" "}
+                          {project.details.gain}
+                        </p>
+                      </div>
+                    )}
+                  </div>
+                )}
               </article>
             </li>
           </ScrollReveal>

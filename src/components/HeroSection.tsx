@@ -150,6 +150,22 @@ export function HeroSection() {
           <MessageCircle size={16} strokeWidth={1.5} />
         </a>
       </motion.div>
+      <motion.div
+        variants={ctaVariants}
+        initial="hidden"
+        animate="visible"
+        className="mt-12 flex flex-wrap items-center justify-center gap-x-8 gap-y-4 text-[10px] font-light tracking-[0.1em] text-[#f5f5f0]/60 sm:gap-x-12 sm:text-xs"
+      >
+        <span className="inline-flex items-center gap-1.5">
+          <span aria-hidden>⚡</span> Performance ultra-rapide
+        </span>
+        <span className="inline-flex items-center gap-1.5">
+          <span aria-hidden>🔒</span> Sécurité maximale
+        </span>
+        <span className="inline-flex items-center gap-1.5">
+          <span aria-hidden>🤝</span> Accompagnement sur-mesure
+        </span>
+      </motion.div>
     </section>
   );
 }

@@ -5,9 +5,16 @@ export const projects = [
     imageBg: "white" as const,
     description:
       "Art Handling & Private Brokerage. Gestion d'œuvres d'art et courtage privé pour collectionneurs et institutions.",
-    techs: ["Next.js", "Art Handling", "Tailwind"],
+    techs: ["Next.js", "Tailwind", "Vercel"],
+    lighthouseScore: 98,
+    result: "Lighthouse 98%",
     image: "/images/logos/phantom-art.png",
     href: "https://www.phantomart.fr/",
+    details: {
+      enjeu: "Plateforme premium pour collectionneurs, expérience luxe sans compromis.",
+      solution: "Next.js App Router + Tailwind + Vercel Edge.",
+      gain: "Lighthouse 98% · Chargement <1s.",
+    },
   },
   {
     id: "redk-motors",
@@ -16,8 +23,15 @@ export const projects = [
     description:
       "Plateforme vitrine pour spécialiste automobile. Design agressif et élégant pour véhicules de prestige.",
     techs: ["React", "Framer Motion", "Auto-Focus"],
+    lighthouseScore: 95,
+    result: "Lighthouse 95%",
     image: "/images/logos/redk-motors.png",
     href: "https://redk-motors.me/",
+    details: {
+      enjeu: "Site vitrine haut de gamme pour véhicules de prestige.",
+      solution: "React + Framer Motion + images optimisées.",
+      gain: "Lighthouse 95% · Animations fluides.",
+    },
   },
   {
     id: "moove-city",
@@ -25,9 +39,16 @@ export const projects = [
     imageBg: "white" as const,
     description:
       "Solution de mobilité urbaine. Interface dynamique axée sur la conversion et la clarté des services.",
-    techs: ["UX/UI", "Next.js", "Mobile-First"],
+    techs: ["Next.js", "UX/UI", "Mobile-First"],
+    lighthouseScore: 97,
+    result: "Conversion +25%",
     image: "/images/logos/moove-city.png",
     href: "https://www.moovecity.fr/",
+    details: {
+      enjeu: "Interface de mobilité urbaine claire et convertissante.",
+      solution: "Next.js + UX Mobile-First + parcours optimisé.",
+      gain: "Conversion +25% · Lighthouse 97%.",
+    },
   },
 ] as const;
 

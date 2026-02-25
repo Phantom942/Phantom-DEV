@@ -1,6 +1,7 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { useSearchParams } from "next/navigation";
 import { getWhatsAppDevisUrl } from "@/data/contact";
 import { MessageCircle } from "lucide-react";
 
@@ -32,27 +33,24 @@ const NEEDS = [
 
 function buildWhatsAppMessage(data: {
   name: string;
+  company: string;
   projectType: string;
   budget: string;
   needs: string[];
   message: string;
 }): string {
-  const lines: string[] = [
-    "Bonjour, je souhaite demander un devis.",
-    "",
-    `Nom / Société : ${data.name.trim() || "—"}`,
-    `Type de projet : ${data.projectType || "—"}`,
-    `Budget : ${data.budget || "—"}`,
-  ];
-  if (data.needs.length > 0) {
-    lines.push(`Besoins : ${data.needs.join(", ")}`);
+  const nom = data.name.trim() || "un visiteur";
+  const typeProjet = data.projectType || "projet web";
+  const budget = data.budget || "non défini";
+  const besoins =
+    data.needs.length > 0 ? data.needs.join(", ") : "à définir";
+  const message = data.message.trim();
+
+  let msg = `Bonjour, je suis ${nom}, je souhaite un devis pour ${typeProjet} (Budget : ${budget}). Besoins : ${besoins}.`;
+  if (message) {
+    msg += `\n\n${message}`;
   }
-  if (data.message.trim()) {
-    lines.push("");
-    lines.push("Message :");
-    lines.push(data.message.trim());
-  }
-  return lines.join("\n");
+  return msg;
 }
 
 const inputClass =
@@ -60,12 +58,23 @@ const inputClass =
 const labelClass =
   "mb-1.5 block text-xs font-light tracking-[0.08em] text-[#f5f5f0]/70";
 
+const TYPE_VALUES = ["vitrine", "ecommerce", "application", "maintenance", "autre"] as const;
+
 export function WhatsAppForm() {
+  const searchParams = useSearchParams();
   const [name, setName] = useState("");
+  const [company, setCompany] = useState("");
   const [projectType, setProjectType] = useState("");
   const [budget, setBudget] = useState("");
   const [needs, setNeeds] = useState<string[]>([]);
   const [message, setMessage] = useState("");
+
+  useEffect(() => {
+    const type = searchParams.get("type");
+    if (type && TYPE_VALUES.includes(type as (typeof TYPE_VALUES)[number])) {
+      setProjectType(type);
+    }
+  }, [searchParams]);
 
   function toggleNeed(id: string) {
     setNeeds((prev) =>
@@ -75,15 +84,18 @@ export function WhatsAppForm() {
 
   function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
-    const projectLabel =
-      PROJECT_TYPES.find((p) => p.value === projectType)?.label || projectType || "—";
-    const budgetLabel =
-      BUDGETS.find((b) => b.value === budget)?.label || budget || "—";
+    const projectLabel = projectType
+      ? PROJECT_TYPES.find((p) => p.value === projectType)?.label || projectType
+      : "";
+    const budgetLabel = budget
+      ? BUDGETS.find((b) => b.value === budget)?.label || budget
+      : "";
     const needsLabels = needs
       .map((id) => NEEDS.find((n) => n.id === id)?.label || id)
       .filter(Boolean);
     const text = buildWhatsAppMessage({
       name,
+      company,
       projectType: projectLabel,
       budget: budgetLabel,
       needs: needsLabels,
@@ -99,18 +111,33 @@ export function WhatsAppForm() {
       noValidate
       aria-label="Formulaire de demande de devis : projet web, site vitrine, e-commerce ou SaaS"
     >
-      <div>
-        <label htmlFor="wa-name" className={labelClass}>
-          Nom / Société
-        </label>
-        <input
-          id="wa-name"
-          type="text"
-          value={name}
-          onChange={(e) => setName(e.target.value)}
-          placeholder="Votre nom ou société"
-          className={inputClass}
-        />
+      <div className="grid gap-4 sm:grid-cols-2">
+        <div>
+          <label htmlFor="wa-name" className={labelClass}>
+            Nom
+          </label>
+          <input
+            id="wa-name"
+            type="text"
+            value={name}
+            onChange={(e) => setName(e.target.value)}
+            placeholder="Votre nom"
+            className={inputClass}
+          />
+        </div>
+        <div>
+          <label htmlFor="wa-company" className={labelClass}>
+            Société
+          </label>
+          <input
+            id="wa-company"
+            type="text"
+            value={company}
+            onChange={(e) => setCompany(e.target.value)}
+            placeholder="Votre société (optionnel)"
+            className={inputClass}
+          />
+        </div>
       </div>
 
       <div className="grid gap-4 sm:grid-cols-2">

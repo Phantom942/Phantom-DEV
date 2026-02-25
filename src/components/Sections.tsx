@@ -9,6 +9,7 @@ import { WhatsAppForm } from "./WhatsAppForm";
 export function Sections() {
   return (
     <>
+      <ScrollReveal>
       <section
         id="expertise"
         className="min-h-screen w-full max-w-[100vw] overflow-x-hidden px-4 py-16 sm:px-8 sm:py-24 md:px-16 md:py-32"
@@ -29,9 +30,13 @@ export function Sections() {
         </ScrollReveal>
         <ExpertiseCards />
       </section>
+      </ScrollReveal>
 
+      <ScrollReveal delay={0.05}>
       <SelectedWorks />
+      </ScrollReveal>
 
+      <ScrollReveal delay={0.05}>
       <section
         id="contact"
         className="w-full max-w-[100vw] overflow-x-hidden px-4 py-16 sm:px-8 sm:py-24 md:px-16 md:py-28"
@@ -63,6 +68,7 @@ export function Sections() {
           </p>
         </ScrollReveal>
       </section>
+      </ScrollReveal>
     </>
   );
 }
