@@ -2,47 +2,32 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { Palette, Box, Brain, ArrowRight } from "lucide-react";
 import { ScrollReveal } from "./ScrollReveal";
+import { useTranslations } from "@/hooks/useTranslations";
 
-const cards = [
-  {
-    id: "conception",
-    title: "Conception Web Premium",
-    description:
-      "Interfaces raffinées, UX pensée pour la conversion. Design sur-mesure qui renforce votre image de marque.",
-    icon: Palette,
-    href: "/services#conception",
-  },
-  {
-    id: "applications",
-    title: "Applications Sur-Mesure",
-    description:
-      "E-commerce, SaaS, plateformes métier. Architecture solide, scalabilité et performances optimisées.",
-    icon: Box,
-    href: "/services#applications",
-  },
-  {
-    id: "ia",
-    title: "Intégration IA Stratégique",
-    description:
-      "Chatbots, recommandations, automatisation. L'intelligence artificielle au service de vos processus.",
-    icon: Brain,
-    href: "/services#ia",
-  },
-] as const;
+const cardIds = ["conception", "applications", "ia"] as const;
+const icons = { conception: Palette, applications: Box, ia: Brain };
 
 export function ExpertiseCards() {
+  const { t } = useTranslations();
+  const pathname = usePathname();
+  const prefix = pathname.startsWith("/en-gb") ? "/en-gb" : pathname.startsWith("/en-us") ? "/en-us" : "";
   return (
     <div className="grid w-full max-w-full grid-cols-1 gap-4 sm:gap-6 md:grid-cols-3">
-      {cards.map((card, index) => {
-        const Icon = card.icon;
+      {cardIds.map((id, index) => {
+        const Icon = icons[id];
+        const titleKey = id === "conception" ? "conception" : id === "applications" ? "applications" : "ia";
+        const descKey = `${titleKey}Desc` as "conceptionDesc" | "applicationsDesc" | "iaDesc";
+        const title = t.expertiseCards[titleKey];
+        const desc = t.expertiseCards[descKey];
         return (
-          <ScrollReveal key={card.id} delay={index * 0.1}>
+          <ScrollReveal key={id} delay={index * 0.1}>
             <Link
-                href={card.href}
+                href={`${prefix || ""}/services#${id}`}
                 className="block"
-                aria-label={`${card.title} : ${card.description} — PhantomDev expertise en développement d'interfaces haute performance`}
+                aria-label={`${title} : ${desc}`}
               >
               <motion.article
                 className="group relative min-w-0 overflow-hidden rounded-sm border border-[#f5f5f0]/10 bg-[#0a0a0a]/50 px-5 py-8 backdrop-blur-[1px] transition-all duration-500 hover:border-[#f5f5f0]/25 hover:shadow-[0_0_50px_rgba(212,175,55,0.18)] sm:px-8 sm:py-12"
@@ -64,13 +49,13 @@ export function ExpertiseCards() {
                   strokeWidth={1.25}
                 />
                 <h3 className="mb-3 text-xs font-light tracking-[0.06em] text-[#f5f5f0] transition-colors duration-300 group-hover:text-[#f5f5f0] sm:text-sm md:text-base md:tracking-[0.08em]">
-                  {card.title}
+                  {title}
                 </h3>
                 <p className="mb-6 text-xs leading-[1.6] text-[#f5f5f0]/65 sm:text-sm">
-                  {card.description}
+                  {desc}
                 </p>
                 <span className="inline-flex items-center gap-1.5 text-xs font-light tracking-[0.1em] text-[#d4af37]/90 transition-all group-hover:gap-2">
-                  En savoir plus
+                  {t.expertiseCards.learnMore}
                   <ArrowRight size={14} strokeWidth={1.5} />
                 </span>
               </div>

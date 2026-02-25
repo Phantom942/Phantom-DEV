@@ -4,9 +4,11 @@ import { usePathname } from "next/navigation";
 import Link from "next/link";
 import { MessageCircle, Github } from "lucide-react";
 import { getWhatsAppDevisUrl } from "@/data/contact";
+import { useTranslations } from "@/hooks/useTranslations";
 
 export function Footer() {
   const pathname = usePathname();
+  const { t } = useTranslations();
   const prefix = pathname.startsWith("/en-gb") ? "/en-gb" : pathname.startsWith("/en-us") ? "/en-us" : "";
 
   return (
@@ -18,7 +20,7 @@ export function Footer() {
       <div className="mx-auto flex max-w-4xl flex-col items-center justify-between gap-8 sm:flex-row sm:gap-12">
         <div className="flex flex-col items-center gap-4 sm:items-start">
           <p className="text-xs font-light tracking-[0.15em] text-[#f5f5f0]/60">
-            PhantomDev — Création de sites web premium sur-mesure
+            {t.footer.tagline}
           </p>
           <div className="flex flex-col items-center gap-4 sm:flex-row sm:items-center sm:gap-8">
             <a
@@ -29,7 +31,7 @@ export function Footer() {
               aria-label="Contacter PhantomDev sur WhatsApp pour un devis projet web"
             >
               <MessageCircle size={16} strokeWidth={1.5} />
-              Ligne privée
+              {t.footer.privateLine}
             </a>
             <div className="flex items-center gap-6">
               <a
@@ -46,7 +48,7 @@ export function Footer() {
         </div>
       </div>
       <p className="mx-auto mt-8 max-w-4xl text-center text-[10px] font-light tracking-[0.08em] text-[#f5f5f0]/50">
-        Basé en France — Interventions internationales — Contrats de maintenance garantis
+        {t.footer.based}
       </p>
       <div className="mx-auto mt-10 max-w-4xl border-t border-[#f5f5f0]/5 pt-8">
         <div className="flex flex-col items-center justify-center gap-4 sm:flex-row sm:flex-wrap sm:gap-8">
@@ -84,10 +86,10 @@ export function Footer() {
               <circle cx="11" cy="10.5" r="1.2" fill="currentColor" />
               <circle cx="21" cy="10.5" r="1.2" fill="currentColor" />
             </svg>
-            Design by PhantomDev
+            {t.footer.designBy}
           </a>
           <p className="text-center text-xs font-light tracking-[0.1em] text-[#f5f5f0]/40">
-            © {new Date().getFullYear()} PhantomDev. Tous droits réservés.
+            © {new Date().getFullYear()} PhantomDev. {t.footer.rights}
           </p>
         </div>
       </div>

@@ -1,0 +1,183 @@
+import type { Locale } from "@/i18n";
+
+export const translations = {
+  fr: {
+    hero: {
+      title: "PhantomDev — Création de sites web premium sur-mesure",
+      subtitle:
+        "Sites web sur-mesure qui convertissent. E-commerce, vitrines, applications premium. Performance & design au service de votre marque.",
+      seeServices: "Voir les services",
+      seeProjects: "Voir mes réalisations",
+      requestQuote: "Demander un devis",
+      badge1: "Performance ultra-rapide",
+      badge2: "Sécurité maximale",
+      badge3: "Accompagnement sur-mesure",
+    },
+    sections: {
+      expertise: "Expertise",
+      expertiseDesc:
+        "Architecture web premium, interfaces raffinées. Des solutions sur-mesure qui convertissent et renforcent votre image.",
+      transition: "— Des interfaces qui marquent les esprits —",
+      realisations: "Réalisations",
+      realisationsDesc: "L'excellence technique au service de l'élégance.",
+      contact: "Contact",
+      contactDesc: "Un projet en tête ? Contactez-moi sur WhatsApp pour un devis gratuit sous 48h, sans engagement.",
+      performance: "Garantie performance : Lighthouse 90+ sur tous les sites livrés.",
+      or: "ou",
+      response: "Réponse sous 48h · Sans engagement",
+    },
+    faq: {
+      title: "Questions fréquentes",
+      items: [
+        { q: "Qu'est-ce que PhantomDev ?", a: "PhantomDev est une agence de création de sites web sur-mesure basée en France. Spécialisée en Next.js, React et Node.js, elle conçoit des sites vitrines, e-commerce et applications SaaS avec des interfaces premium et des performances optimisées (Lighthouse 90+)." },
+        { q: "Quels services propose PhantomDev ?", a: "PhantomDev propose la conception web premium (interfaces sur-mesure, UX conversion), les applications sur-mesure (e-commerce, SaaS, plateformes métier) et l'intégration IA stratégique (chatbots, automatisation, recommandations)." },
+        { q: "Comment contacter PhantomDev pour un devis ?", a: "Contactez PhantomDev via WhatsApp pour un devis gratuit sous 48h, sans engagement. Le site phantomdev.fr propose un formulaire et un bouton direct vers la ligne WhatsApp." },
+        { q: "PhantomDev travaille-t-elle à l'international ?", a: "Oui. PhantomDev est basée en France mais intervient à l'international. Les contrats de maintenance sont garantis." },
+        { q: "Quelle garantie performance offre PhantomDev ?", a: "PhantomDev garantit un score Lighthouse 90+ sur tous les sites livrés, assurant des performances optimisées et une excellente expérience utilisateur." },
+      ],
+    },
+    footer: {
+      tagline: "PhantomDev — Création de sites web premium sur-mesure",
+      privateLine: "Ligne privée",
+      based: "Basé en France — Interventions internationales — Contrats de maintenance garantis",
+      designBy: "Design by PhantomDev",
+      rights: "Tous droits réservés.",
+    },
+    nav: {
+      expertise: "Expertise",
+      services: "Services",
+      projects: "Projets",
+      contact: "Contact",
+      freeQuote: "Devis gratuit",
+    },
+    expertiseCards: {
+      conception: "Conception Web Premium",
+      conceptionDesc: "Interfaces raffinées, UX pensée pour la conversion. Design sur-mesure qui renforce votre image de marque.",
+      applications: "Applications Sur-Mesure",
+      applicationsDesc: "E-commerce, SaaS, plateformes métier. Architecture solide, scalabilité et performances optimisées.",
+      ia: "Intégration IA Stratégique",
+      iaDesc: "Chatbots, recommandations, automatisation. L'intelligence artificielle au service de vos processus.",
+      learnMore: "En savoir plus",
+    },
+  },
+  "en-GB": {
+    hero: {
+      title: "PhantomDev — Premium custom web development",
+      subtitle:
+        "Custom websites that convert. E-commerce, landing pages, premium applications. Performance & design at the service of your brand.",
+      seeServices: "View services",
+      seeProjects: "View my work",
+      requestQuote: "Request a quote",
+      badge1: "Ultra-fast performance",
+      badge2: "Maximum security",
+      badge3: "Tailored support",
+    },
+    sections: {
+      expertise: "Expertise",
+      expertiseDesc:
+        "Premium web architecture, refined interfaces. Bespoke solutions that convert and strengthen your image.",
+      transition: "— Interfaces that leave a mark —",
+      realisations: "Portfolio",
+      realisationsDesc: "Technical excellence in the service of elegance.",
+      contact: "Contact",
+      contactDesc: "Got a project in mind? Contact me on WhatsApp for a free quote within 48h, no commitment.",
+      performance: "Performance guarantee: Lighthouse 90+ on all delivered sites.",
+      or: "or",
+      response: "Response within 48h · No commitment",
+    },
+    faq: {
+      title: "Frequently asked questions",
+      items: [
+        { q: "What is PhantomDev?", a: "PhantomDev is a custom web development agency based in France. Specialised in Next.js, React and Node.js, it creates websites, e-commerce and SaaS applications with premium interfaces and optimised performance (Lighthouse 90+)." },
+        { q: "What services does PhantomDev offer?", a: "PhantomDev offers premium web design (bespoke interfaces, conversion UX), custom applications (e-commerce, SaaS, business platforms) and strategic AI integration (chatbots, automation, recommendations)." },
+        { q: "How to contact PhantomDev for a quote?", a: "Contact PhantomDev via WhatsApp for a free quote within 48h, no commitment. The phantomdev.fr site offers a form and direct button to the WhatsApp line." },
+        { q: "Does PhantomDev work internationally?", a: "Yes. PhantomDev is based in France but operates internationally. Maintenance contracts are guaranteed." },
+        { q: "What performance guarantee does PhantomDev offer?", a: "PhantomDev guarantees a Lighthouse score of 90+ on all delivered sites, ensuring optimised performance and excellent user experience." },
+      ],
+    },
+    footer: {
+      tagline: "PhantomDev — Premium custom web development",
+      privateLine: "Private line",
+      based: "Based in France — International services — Guaranteed maintenance contracts",
+      designBy: "Design by PhantomDev",
+      rights: "All rights reserved.",
+    },
+    nav: {
+      expertise: "Expertise",
+      services: "Services",
+      projects: "Projects",
+      contact: "Contact",
+      freeQuote: "Free quote",
+    },
+    expertiseCards: {
+      conception: "Premium Web Design",
+      conceptionDesc: "Refined interfaces, UX designed for conversion. Bespoke design that strengthens your brand image.",
+      applications: "Custom Applications",
+      applicationsDesc: "E-commerce, SaaS, business platforms. Solid architecture, scalability and optimised performance.",
+      ia: "Strategic AI Integration",
+      iaDesc: "Chatbots, recommendations, automation. Artificial intelligence at the service of your processes.",
+      learnMore: "Learn more",
+    },
+  },
+  "en-US": {
+    hero: {
+      title: "PhantomDev — Premium custom web development",
+      subtitle:
+        "Custom websites that convert. E-commerce, landing pages, premium applications. Performance & design at the service of your brand.",
+      seeServices: "View services",
+      seeProjects: "View my work",
+      requestQuote: "Request a quote",
+      badge1: "Ultra-fast performance",
+      badge2: "Maximum security",
+      badge3: "Tailored support",
+    },
+    sections: {
+      expertise: "Expertise",
+      expertiseDesc:
+        "Premium web architecture, refined interfaces. Custom solutions that convert and strengthen your image.",
+      transition: "— Interfaces that leave a mark —",
+      realisations: "Portfolio",
+      realisationsDesc: "Technical excellence in the service of elegance.",
+      contact: "Contact",
+      contactDesc: "Got a project in mind? Contact me on WhatsApp for a free quote within 48h, no commitment.",
+      performance: "Performance guarantee: Lighthouse 90+ on all delivered sites.",
+      or: "or",
+      response: "Response within 48h · No commitment",
+    },
+    faq: {
+      title: "Frequently asked questions",
+      items: [
+        { q: "What is PhantomDev?", a: "PhantomDev is a custom web development agency based in France. Specialised in Next.js, React and Node.js, it creates websites, e-commerce and SaaS applications with premium interfaces and optimised performance (Lighthouse 90+)." },
+        { q: "What services does PhantomDev offer?", a: "PhantomDev offers premium web design (bespoke interfaces, conversion UX), custom applications (e-commerce, SaaS, business platforms) and strategic AI integration (chatbots, automation, recommendations)." },
+        { q: "How to contact PhantomDev for a quote?", a: "Contact PhantomDev via WhatsApp for a free quote within 48h, no commitment. The phantomdev.fr site offers a form and direct button to the WhatsApp line." },
+        { q: "Does PhantomDev work internationally?", a: "Yes. PhantomDev is based in France but operates internationally. Maintenance contracts are guaranteed." },
+        { q: "What performance guarantee does PhantomDev offer?", a: "PhantomDev guarantees a Lighthouse score of 90+ on all delivered sites, ensuring optimised performance and excellent user experience." },
+      ],
+    },
+    footer: {
+      tagline: "PhantomDev — Premium custom web development",
+      privateLine: "Private line",
+      based: "Based in France — International services — Guaranteed maintenance contracts",
+      designBy: "Design by PhantomDev",
+      rights: "All rights reserved.",
+    },
+    nav: {
+      expertise: "Expertise",
+      services: "Services",
+      projects: "Projects",
+      contact: "Contact",
+      freeQuote: "Free quote",
+    },
+    expertiseCards: {
+      conception: "Premium Web Design",
+      conceptionDesc: "Refined interfaces, UX designed for conversion. Custom design that strengthens your brand image.",
+      applications: "Custom Applications",
+      applicationsDesc: "E-commerce, SaaS, business platforms. Solid architecture, scalability and optimized performance.",
+      ia: "Strategic AI Integration",
+      iaDesc: "Chatbots, recommendations, automation. Artificial intelligence at the service of your processes.",
+      learnMore: "Learn more",
+    },
+  },
+} as const;
+
+export type TranslationKey = keyof (typeof translations)["fr"];

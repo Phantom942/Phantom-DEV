@@ -4,8 +4,10 @@ import Image from "next/image";
 import { ArrowUpRight } from "lucide-react";
 import { ScrollReveal } from "./ScrollReveal";
 import { projects } from "@/data/projects";
+import { useTranslations } from "@/hooks/useTranslations";
 
 export function SelectedWorks() {
+  const { t } = useTranslations();
   return (
     <section
       id="projets"
@@ -19,10 +21,10 @@ export function SelectedWorks() {
           className="mb-4 font-extralight tracking-[0.2em] text-[#f5f5f0]"
           style={{ fontFamily: "var(--font-cormorant), Georgia, serif" }}
         >
-          <span className="text-xl sm:text-2xl md:text-3xl">Réalisations</span>
+          <span className="text-xl sm:text-2xl md:text-3xl">{t.sections.realisations}</span>
         </h2>
         <p className="mb-8 text-xs leading-[1.6] tracking-[0.02em] text-[#f5f5f0]/75 sm:text-sm">
-          {"L'excellence technique au service de l'élégance."}
+          {t.sections.realisationsDesc}
         </p>
       </ScrollReveal>
 

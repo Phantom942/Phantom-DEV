@@ -1,9 +1,10 @@
 "use client";
 
 import { ScrollReveal } from "./ScrollReveal";
-import { faqItems } from "@/data/faq";
+import { useTranslations } from "@/hooks/useTranslations";
 
 export function FAQ() {
+  const { t } = useTranslations();
   return (
     <section
       id="faq"
@@ -17,18 +18,18 @@ export function FAQ() {
           style={{ fontFamily: "var(--font-cormorant), Georgia, serif" }}
         >
           <span className="text-xl sm:text-2xl md:text-3xl">
-            Questions fréquentes
+            {t.faq.title}
           </span>
         </h2>
         <dl className="mx-auto max-w-2xl space-y-6">
-          {faqItems.map((item, index) => (
+          {t.faq.items.map((item, index) => (
             <ScrollReveal key={index} delay={index * 0.05}>
               <div className="border-b border-[#f5f5f0]/5 pb-6 last:border-0">
                 <dt className="mb-2 text-sm font-light tracking-[0.06em] text-[#f5f5f0]">
-                  {item.question}
+                  {item.q}
                 </dt>
                 <dd className="text-sm leading-[1.7] tracking-[0.02em] text-[#f5f5f0]/75">
-                  {item.answer}
+                  {item.a}
                 </dd>
               </div>
             </ScrollReveal>

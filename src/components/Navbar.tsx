@@ -7,26 +7,21 @@ import Link from "next/link";
 import { Ghost, Menu, X } from "lucide-react";
 import { getWhatsAppDevisUrl } from "@/data/contact";
 import { LanguageSelector } from "./LanguageSelector";
-
-const navLinks = [
-  { href: "#expertise", label: "Expertise" },
-  { href: "/services", label: "Services" },
-  { href: "#projets", label: "Projets" },
-  { href: "/#contact", label: "Contact" },
-] as const;
+import { useTranslations } from "@/hooks/useTranslations";
 
 export function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const pathname = usePathname();
+  const { t } = useTranslations();
   const localePrefix = pathname.startsWith("/en-gb") ? "/en-gb" : pathname.startsWith("/en-us") ? "/en-us" : "";
 
   const closeMobileMenu = () => setMobileMenuOpen(false);
 
   const navLinksWithLocale = [
-    { href: `${localePrefix}/#expertise`, label: "Expertise" },
-    { href: `${localePrefix}/services`, label: "Services" },
-    { href: `${localePrefix}/#projets`, label: "Projets" },
-    { href: `${localePrefix}/#contact`, label: "Contact" },
+    { href: `${localePrefix || ""}/#expertise`, label: t.nav.expertise },
+    { href: `${localePrefix || ""}/services`, label: t.nav.services },
+    { href: `${localePrefix || ""}/#projets`, label: t.nav.projects },
+    { href: `${localePrefix || ""}/#contact`, label: t.nav.contact },
   ];
 
   return (
@@ -77,7 +72,7 @@ export function Navbar() {
             className="border border-[#25D366]/60 bg-[#25D366]/10 px-4 py-2 text-xs font-light tracking-[0.15em] text-[#f5f5f0] transition-all hover:bg-[#25D366]/20"
             aria-label="Demander un devis gratuit sur WhatsApp pour votre projet web"
           >
-            Devis gratuit
+            {t.nav.freeQuote}
           </a>
         </nav>
 
@@ -131,7 +126,7 @@ export function Navbar() {
                 className="mt-4 border border-[#25D366]/60 bg-[#25D366]/10 py-3 text-center text-base font-light tracking-[0.1em] text-[#f5f5f0] transition-colors"
                 aria-label="Demander un devis gratuit sur WhatsApp"
               >
-                Devis gratuit
+                {t.nav.freeQuote}
               </a>
             </nav>
           </motion.div>
