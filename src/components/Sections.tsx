@@ -13,7 +13,7 @@ export function Sections() {
       <ScrollReveal>
       <section
         id="expertise"
-        className="min-h-screen w-full max-w-full overflow-x-clip px-4 py-16 sm:px-8 sm:py-24 md:px-16 md:py-32"
+        className="w-full max-w-full overflow-x-clip px-4 py-16 sm:px-8 sm:py-20 md:px-16 md:py-24"
         aria-labelledby="expertise-title"
       >
         <ScrollReveal>
@@ -31,6 +31,12 @@ export function Sections() {
         </ScrollReveal>
         <ExpertiseCards />
       </section>
+      </ScrollReveal>
+
+      <ScrollReveal delay={0.03}>
+        <p className="px-4 py-8 text-center text-sm font-light italic tracking-[0.02em] text-[#f5f5f0]/50 sm:py-10 md:py-12">
+          — Des interfaces qui marquent les esprits —
+        </p>
       </ScrollReveal>
 
       <ScrollReveal delay={0.05}>
