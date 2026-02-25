@@ -7,8 +7,13 @@ import { ServicesList } from "@/components/ServicesList";
 import { getWhatsAppDevisUrl } from "@/data/contact";
 import { ArrowLeft, ArrowRight, MessageCircle } from "lucide-react";
 
+import { getHreflangAlternates } from "@/lib/hreflang";
+
 export const metadata: Metadata = {
-  alternates: { canonical: "https://phantomdev.fr/services" },
+  alternates: {
+    canonical: "https://phantomdev.fr/services",
+    languages: getHreflangAlternates("/services"),
+  },
   title: "Services — Création de sites web premium sur-mesure",
   description:
     "PhantomDev : sites vitrines, e-commerce, applications sur-mesure, intégration IA. Création web premium Next.js. Tarifs compétitifs, devis gratuit sous 48h.",

@@ -7,7 +7,7 @@ import {
 } from "next/font/google";
 import "./globals.css";
 import { faqItems } from "@/data/faq";
-import { HreflangLinks } from "@/components/HreflangLinks";
+import { LangAttribute } from "@/components/LangAttribute";
 
 const geist = Geist({
   variable: "--font-geist",
@@ -163,7 +163,7 @@ export default function RootLayout({
       className={`${geist.variable} ${geistMono.variable} ${cormorant.variable} ${sourceSans.variable} overflow-x-clip`}
     >
       <body className="overflow-x-clip font-sans antialiased">
-        <HreflangLinks />
+        <LangAttribute />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaOrg) }}

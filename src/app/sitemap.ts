@@ -14,6 +14,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const enEntries = enLocales.flatMap((locale) => [
     { url: `${base}/${locale}`, priority: 0.9 },
     { url: `${base}/${locale}/services`, priority: 0.8 },
+    { url: `${base}/${locale}/contact`, priority: 0.9 },
     { url: `${base}/${locale}/mentions-legales`, priority: 0.2 },
   ]);
   return [

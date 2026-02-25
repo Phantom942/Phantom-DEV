@@ -1,9 +1,15 @@
+import type { Metadata } from "next";
 import { Navbar } from "@/components/Navbar";
 import { HeroSection } from "@/components/HeroSection";
 import { CursorAndGlow } from "@/components/CursorAndGlow";
 import { Sections } from "@/components/Sections";
 import { Footer } from "@/components/Footer";
 import { creativeWorkSchema } from "@/data/projects";
+import { getHreflangAlternates } from "@/lib/hreflang";
+
+export const metadata: Metadata = {
+  alternates: { languages: getHreflangAlternates("/en-gb") },
+};
 
 export default function EnGBHome() {
   return (

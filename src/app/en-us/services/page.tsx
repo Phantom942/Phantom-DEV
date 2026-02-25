@@ -7,8 +7,13 @@ import { ServicesList } from "@/components/ServicesList";
 import { getWhatsAppDevisUrl } from "@/data/contact";
 import { ArrowLeft, ArrowRight, MessageCircle } from "lucide-react";
 
+import { getHreflangAlternates } from "@/lib/hreflang";
+
 export const metadata: Metadata = {
-  alternates: { canonical: "https://phantomdev.fr/en-us/services" },
+  alternates: {
+    canonical: "https://phantomdev.fr/en-us/services",
+    languages: getHreflangAlternates("/en-us/services"),
+  },
   title: "Services — PhantomDev",
   description: "PhantomDev: custom web development, e-commerce, SaaS. Next.js, React.",
   openGraph: { type: "website", url: "https://phantomdev.fr/en-us/services" },

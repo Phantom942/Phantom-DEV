@@ -4,32 +4,8 @@ import { useState, useEffect } from "react";
 import { useSearchParams } from "next/navigation";
 import { getWhatsAppDevisUrl } from "@/data/contact";
 import { MessageCircle } from "lucide-react";
+import { useTranslations } from "@/hooks/useTranslations";
 
-const PROJECT_TYPES = [
-  { value: "", label: "Type de projet" },
-  { value: "vitrine", label: "Site vitrine" },
-  { value: "ecommerce", label: "E-commerce" },
-  { value: "application", label: "Application / SaaS" },
-  { value: "maintenance", label: "Maintenance" },
-  { value: "autre", label: "Autre" },
-] as const;
-
-const BUDGETS = [
-  { value: "", label: "Budget approximatif" },
-  { value: "moins-5", label: "Moins de 5 000 €" },
-  { value: "5-10", label: "5 000 € – 10 000 €" },
-  { value: "10-20", label: "10 000 € – 20 000 €" },
-  { value: "plus-20", label: "Plus de 20 000 €" },
-  { value: "non-defini", label: "Non défini" },
-] as const;
-
-const NEEDS = [
-  { id: "design", label: "Design / identité visuelle" },
-  { id: "seo", label: "SEO / référencement" },
-  { id: "maintenance", label: "Maintenance continue" },
-  { id: "formation", label: "Formation à la mise à jour" },
-  { id: "hebergement", label: "Hébergement inclus" },
-] as const;
 
 function buildWhatsAppMessage(data: {
   name: string;
@@ -62,12 +38,38 @@ const TYPE_VALUES = ["vitrine", "ecommerce", "application", "maintenance", "autr
 
 export function WhatsAppForm() {
   const searchParams = useSearchParams();
+  const { t } = useTranslations();
+  const cf = t.contactForm;
   const [name, setName] = useState("");
   const [company, setCompany] = useState("");
   const [projectType, setProjectType] = useState("");
   const [budget, setBudget] = useState("");
   const [needs, setNeeds] = useState<string[]>([]);
   const [message, setMessage] = useState("");
+
+  const projectTypes = [
+    { value: "", label: cf.projectTypes.empty },
+    { value: "vitrine", label: cf.projectTypes.vitrine },
+    { value: "ecommerce", label: cf.projectTypes.ecommerce },
+    { value: "application", label: cf.projectTypes.application },
+    { value: "maintenance", label: cf.projectTypes.maintenance },
+    { value: "autre", label: cf.projectTypes.autre },
+  ];
+  const budgets = [
+    { value: "", label: cf.budgets.empty },
+    { value: "moins-5", label: cf.budgets["moins-5"] },
+    { value: "5-10", label: cf.budgets["5-10"] },
+    { value: "10-20", label: cf.budgets["10-20"] },
+    { value: "plus-20", label: cf.budgets["plus-20"] },
+    { value: "non-defini", label: cf.budgets["non-defini"] },
+  ];
+  const needsList = [
+    { id: "design", label: cf.needsLabels.design },
+    { id: "seo", label: cf.needsLabels.seo },
+    { id: "maintenance", label: cf.needsLabels.maintenance },
+    { id: "formation", label: cf.needsLabels.formation },
+    { id: "hebergement", label: cf.needsLabels.hebergement },
+  ];
 
   useEffect(() => {
     const type = searchParams.get("type");
@@ -85,13 +87,13 @@ export function WhatsAppForm() {
   function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
     const projectLabel = projectType
-      ? PROJECT_TYPES.find((p) => p.value === projectType)?.label || projectType
+      ? projectTypes.find((p) => p.value === projectType)?.label || projectType
       : "";
     const budgetLabel = budget
-      ? BUDGETS.find((b) => b.value === budget)?.label || budget
+      ? budgets.find((b) => b.value === budget)?.label || budget
       : "";
     const needsLabels = needs
-      .map((id) => NEEDS.find((n) => n.id === id)?.label || id)
+      .map((id) => needsList.find((n) => n.id === id)?.label || id)
       .filter(Boolean);
     const text = buildWhatsAppMessage({
       name,
@@ -114,27 +116,27 @@ export function WhatsAppForm() {
       <div className="grid gap-4 sm:grid-cols-2">
         <div>
           <label htmlFor="wa-name" className={labelClass}>
-            Nom
+            {cf.name}
           </label>
           <input
             id="wa-name"
             type="text"
             value={name}
             onChange={(e) => setName(e.target.value)}
-            placeholder="Votre nom"
+            placeholder={cf.namePlaceholder}
             className={inputClass}
           />
         </div>
         <div>
           <label htmlFor="wa-company" className={labelClass}>
-            Société
+            {cf.company}
           </label>
           <input
             id="wa-company"
             type="text"
             value={company}
             onChange={(e) => setCompany(e.target.value)}
-            placeholder="Votre société (optionnel)"
+            placeholder={cf.companyPlaceholder}
             className={inputClass}
           />
         </div>
@@ -143,7 +145,7 @@ export function WhatsAppForm() {
       <div className="grid gap-4 sm:grid-cols-2">
         <div>
           <label htmlFor="wa-type" className={labelClass}>
-            Type de projet
+            {cf.projectType}
           </label>
           <select
             id="wa-type"
@@ -151,7 +153,7 @@ export function WhatsAppForm() {
             onChange={(e) => setProjectType(e.target.value)}
             className={inputClass}
           >
-            {PROJECT_TYPES.map((opt) => (
+            {projectTypes.map((opt) => (
               <option key={opt.value || "empty"} value={opt.value}>
                 {opt.label}
               </option>
@@ -160,7 +162,7 @@ export function WhatsAppForm() {
         </div>
         <div>
           <label htmlFor="wa-budget" className={labelClass}>
-            Budget approximatif
+            {cf.budget}
           </label>
           <select
             id="wa-budget"
@@ -168,7 +170,7 @@ export function WhatsAppForm() {
             onChange={(e) => setBudget(e.target.value)}
             className={inputClass}
           >
-            {BUDGETS.map((opt) => (
+            {budgets.map((opt) => (
               <option key={opt.value || "empty"} value={opt.value}>
                 {opt.label}
               </option>
@@ -178,9 +180,9 @@ export function WhatsAppForm() {
       </div>
 
       <div>
-        <span className={labelClass}>Besoins (optionnel)</span>
+        <span className={labelClass}>{cf.needs}</span>
         <div className="mt-2 flex flex-wrap gap-x-6 gap-y-3">
-          {NEEDS.map((need) => (
+          {needsList.map((need) => (
             <label
               key={need.id}
               className="flex cursor-pointer items-center gap-2 text-sm font-light text-[#f5f5f0]/85"
@@ -199,14 +201,14 @@ export function WhatsAppForm() {
 
       <div>
         <label htmlFor="wa-message" className={labelClass}>
-          Votre message
+          {cf.message}
         </label>
         <textarea
           id="wa-message"
           value={message}
           onChange={(e) => setMessage(e.target.value)}
           rows={4}
-          placeholder="Décrivez votre projet, objectifs, délais..."
+          placeholder={cf.messagePlaceholder}
           className={`${inputClass} resize-y min-h-[100px]`}
         />
       </div>
@@ -214,10 +216,10 @@ export function WhatsAppForm() {
       <button
         type="submit"
         className="inline-flex w-full items-center justify-center gap-2 border border-[#25D366]/60 bg-[#25D366]/10 px-8 py-4 text-sm font-light tracking-[0.15em] text-[#f5f5f0] transition-all hover:bg-[#25D366]/20 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#25D366]/50 focus-visible:ring-offset-2 focus-visible:ring-offset-black sm:w-auto"
-        aria-label="Envoyer la demande de devis sur WhatsApp pour votre projet développement web"
+        aria-label={cf.submit}
       >
         <MessageCircle size={20} strokeWidth={1.5} />
-        Envoyer la demande sur WhatsApp
+        {cf.submit}
       </button>
     </form>
   );

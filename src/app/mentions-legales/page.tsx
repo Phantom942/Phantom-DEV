@@ -5,8 +5,13 @@ import { Footer } from "@/components/Footer";
 import { CursorAndGlow } from "@/components/CursorAndGlow";
 import { ArrowLeft } from "lucide-react";
 
+import { getHreflangAlternates } from "@/lib/hreflang";
+
 export const metadata: Metadata = {
-  alternates: { canonical: "https://phantomdev.fr/mentions-legales" },
+  alternates: {
+    canonical: "https://phantomdev.fr/mentions-legales",
+    languages: getHreflangAlternates("/mentions-legales"),
+  },
   title: "Mentions légales",
   description:
     "Mentions légales de PhantomDev — Création de sites web premium sur-mesure.",
