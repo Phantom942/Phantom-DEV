@@ -63,6 +63,9 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://phantomdev.fr",
   },
+  verification: {
+    google: "HZvfGLZepr3elEwyUp-gNB9r9oQQ4L4tXC0kjfWDYjw",
+  },
   openGraph: {
     type: "website",
     title: "PhantomDev — Solutions Web Haute Performance & Design Premium",
