@@ -8,15 +8,16 @@ import { getWhatsAppDevisUrl } from "@/data/contact";
 import { ArrowLeft, ArrowRight, MessageCircle } from "lucide-react";
 
 import { getHreflangAlternates } from "@/lib/hreflang";
+import { getBreadcrumbForPath } from "@/lib/breadcrumb";
 
 export const metadata: Metadata = {
   alternates: {
     canonical: "https://phantomdev.fr/services",
     languages: getHreflangAlternates("/services"),
   },
-  title: "Services — Création de sites web premium sur-mesure",
+  title: "Services et tarifs — Sites vitrines, e-commerce, SaaS",
   description:
-    "PhantomDev : sites vitrines, e-commerce, applications sur-mesure, intégration IA. Création web premium Next.js. Tarifs compétitifs, devis gratuit sous 48h.",
+    "Tarifs création de sites web : vitrines dès 4 500€, e-commerce dès 8 000€, maintenance dès 199€/mois. Devis gratuit sous 48h.",
   keywords: [
     "création site web",
     "développement web sur-mesure",
@@ -29,9 +30,9 @@ export const metadata: Metadata = {
   ],
   openGraph: {
     type: "website",
-    title: "Services | PhantomDev — Développement web React, Node.js, SaaS",
+    title: "Services | PhantomDev — Tarifs sites vitrines, e-commerce, SaaS",
     description:
-      "Développement web sur-mesure : sites vitrines, e-commerce, applications SaaS. Stack React, Node.js, Next.js. Tarifs et devis gratuit sous 48h.",
+      "Tarifs création web : vitrines dès 4 500€, e-commerce dès 8 000€. Devis gratuit sous 48h.",
     url: "https://phantomdev.fr/services",
     siteName: "PhantomDev",
     locale: "fr_FR",
@@ -39,8 +40,14 @@ export const metadata: Metadata = {
 };
 
 export default function ServicesPage() {
+  const breadcrumbSchema = getBreadcrumbForPath("/services", "Services");
+
   return (
     <div className="relative min-h-screen w-full bg-[#000000]">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
       <CursorAndGlow />
       <Navbar />
       <main

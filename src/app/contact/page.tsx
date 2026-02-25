@@ -7,15 +7,16 @@ import { WhatsAppCtaButton } from "@/components/WhatsAppButton";
 import { ArrowLeft } from "lucide-react";
 
 import { getHreflangAlternates } from "@/lib/hreflang";
+import { getBreadcrumbForPath } from "@/lib/breadcrumb";
 
 export const metadata: Metadata = {
   alternates: {
     canonical: "https://phantomdev.fr/contact",
     languages: getHreflangAlternates("/contact"),
   },
-  title: "Contact — Devis gratuit via WhatsApp",
+  title: "Contact — Devis gratuit sous 48h",
   description:
-    "Contactez PhantomDev sur WhatsApp pour votre projet web. Sites vitrines, e-commerce, applications sur-mesure. Réponse sous 48h, sans engagement.",
+    "Demandez votre devis gratuit. Contact WhatsApp direct. Réponse sous 48h, sans engagement. Sites vitrines, e-commerce, SaaS.",
   openGraph: {
     type: "website",
     title: "Contact | PhantomDev — Devis développement web sous 48h",
@@ -28,8 +29,14 @@ export const metadata: Metadata = {
 };
 
 export default function ContactPage() {
+  const breadcrumbSchema = getBreadcrumbForPath("/contact", "Contact");
+
   return (
     <div className="relative min-h-screen w-full bg-[#000000]">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
       <CursorAndGlow />
       <Navbar />
       <main
