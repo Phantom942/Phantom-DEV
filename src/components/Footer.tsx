@@ -1,10 +1,14 @@
 "use client";
 
+import { usePathname } from "next/navigation";
 import Link from "next/link";
 import { MessageCircle, Github } from "lucide-react";
 import { getWhatsAppDevisUrl } from "@/data/contact";
 
 export function Footer() {
+  const pathname = usePathname();
+  const prefix = pathname.startsWith("/en-gb") ? "/en-gb" : pathname.startsWith("/en-us") ? "/en-us" : "";
+
   return (
     <footer
       className="w-full max-w-full overflow-x-clip border-t border-[#f5f5f0]/10 px-4 py-12 sm:px-8 sm:py-16 md:px-16"
@@ -47,7 +51,7 @@ export function Footer() {
       <div className="mx-auto mt-10 max-w-4xl border-t border-[#f5f5f0]/5 pt-8">
         <div className="flex flex-col items-center justify-center gap-4 sm:flex-row sm:flex-wrap sm:gap-8">
           <a
-            href="/mentions-legales"
+            href={`${prefix}/mentions-legales`}
             className="text-xs font-light tracking-[0.1em] text-[#f5f5f0]/40 transition-colors hover:text-[#f5f5f0]/70"
           >
             Mentions légales

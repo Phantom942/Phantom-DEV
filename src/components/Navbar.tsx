@@ -1,10 +1,12 @@
 "use client";
 
 import { useState } from "react";
+import { usePathname } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
 import { Ghost, Menu, X } from "lucide-react";
 import { getWhatsAppDevisUrl } from "@/data/contact";
+import { LanguageSelector } from "./LanguageSelector";
 
 const navLinks = [
   { href: "#expertise", label: "Expertise" },
@@ -15,8 +17,17 @@ const navLinks = [
 
 export function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const pathname = usePathname();
+  const localePrefix = pathname.startsWith("/en-gb") ? "/en-gb" : pathname.startsWith("/en-us") ? "/en-us" : "";
 
   const closeMobileMenu = () => setMobileMenuOpen(false);
+
+  const navLinksWithLocale = [
+    { href: `${localePrefix}/#expertise`, label: "Expertise" },
+    { href: `${localePrefix}/services`, label: "Services" },
+    { href: `${localePrefix}/#projets`, label: "Projets" },
+    { href: `${localePrefix}/#contact`, label: "Contact" },
+  ];
 
   return (
     <>
@@ -29,7 +40,7 @@ export function Navbar() {
         aria-label="En-tête : PhantomDev, création de sites web, développement React et Node.js, SaaS sur-mesure"
       >
         <Link
-          href="/"
+          href={localePrefix || "/"}
           className="flex min-w-0 shrink-0 items-center gap-1.5 overflow-hidden text-[#f5f5f0] transition-opacity hover:opacity-80"
           aria-label="PhantomDev, accueil — Création de sites web premium et développement sur-mesure"
           onClick={closeMobileMenu}
@@ -48,7 +59,8 @@ export function Navbar() {
           role="navigation"
           aria-label="Navigation principale : Expertise développement web, Services, Projets, Contact et devis"
         >
-          {navLinks.map((link) => (
+          <LanguageSelector />
+          {navLinksWithLocale.map((link) => (
             <Link
               key={link.href}
               href={link.href}
@@ -97,7 +109,10 @@ export function Navbar() {
               role="navigation"
               aria-label="Menu mobile"
             >
-              {navLinks.map((link) => (
+              <div className="flex justify-center border-b border-[#f5f5f0]/5 py-3">
+                <LanguageSelector />
+              </div>
+              {navLinksWithLocale.map((link) => (
                 <Link
                   key={link.href}
                   href={link.href}
