@@ -24,6 +24,9 @@
 .DS_Store
 *.pem
 
+# archives / téléchargements (doublons de contenu déjà dans public/ ou docs/)
+PhantomDev-Footer-Credit-*/
+
 # debug
 npm-debug.log*
 yarn-debug.log*
