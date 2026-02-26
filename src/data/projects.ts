@@ -34,6 +34,23 @@ export const projects = [
     },
   },
   {
+    id: "kraken-metals",
+    title: "Kraken Metals",
+    imageBg: "gray" as const,
+    description:
+      "Atelier de soudage de précision à Ivry-sur-Seine. Métallerie, ferronnerie d'art, tuyauterie industrielle. Intervention sous 24h.",
+    techs: ["Site vitrine", "SEO", "Responsive"],
+    lighthouseScore: 95,
+    result: "Lighthouse 95%",
+    image: "/images/logos/kraken-metals.png",
+    href: "https://www.kraken-metals.fr/",
+    details: {
+      enjeu: "Site vitrine pour atelier de soudage de précision, Paris & Val-de-Marne.",
+      solution: "Design industriel, mise en avant des services et de la zone d'intervention.",
+      gain: "Présence digitale · Intervention sous 24h.",
+    },
+  },
+  {
     id: "moove-city",
     title: "Moove City",
     imageBg: "white" as const,
