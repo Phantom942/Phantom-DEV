@@ -28,7 +28,7 @@ export function SelectedWorks() {
         </p>
       </ScrollReveal>
 
-      <ul className="mx-auto grid max-w-5xl grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 md:gap-8">
+      <ul className="mx-auto grid max-w-5xl grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4 lg:gap-8">
         {projects.map((project, index) => (
           <ScrollReveal key={project.id} delay={index * 0.08}>
             <li>
