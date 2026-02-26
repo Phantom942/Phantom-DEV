@@ -71,3 +71,8 @@ body {
   letter-spacing: var(--letter-spacing-tight);
   font-feature-settings: "kern" 1, "liga" 1;
 }
+
+@keyframes metallic-shimmer {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}

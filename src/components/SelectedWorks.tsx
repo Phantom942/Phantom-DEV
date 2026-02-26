@@ -60,11 +60,13 @@ export function SelectedWorks() {
                             fontFamily: "system-ui, -apple-system, sans-serif",
                             fontSize: "clamp(0.7rem, 2.2vw, 0.95rem)",
                             lineHeight: 1.3,
-                            background: "linear-gradient(175deg, #ffffff 0%, #e0e0e0 12%, #b8b8b8 28%, #888 45%, #606060 55%, #909090 72%, #d0d0d0 88%, #f5f5f5 100%)",
+                            background: "linear-gradient(110deg, #ffffff 0%, #e8e8e8 20%, #c0c0c0 40%, #909090 50%, #c0c0c0 60%, #e8e8e8 80%, #ffffff 100%)",
+                            backgroundSize: "200% 100%",
                             backgroundClip: "text",
                             WebkitBackgroundClip: "text",
                             color: "transparent",
-                            filter: "drop-shadow(0 1px 2px rgba(255,255,255,0.5)) drop-shadow(0 2px 4px rgba(0,0,0,0.4))",
+                            textShadow: "0 1px 2px rgba(0,0,0,0.4)",
+                            animation: "metallic-shimmer 5s ease-in-out infinite",
                           }}
                         >
                           KRAKEN
