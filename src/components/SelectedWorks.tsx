@@ -42,11 +42,13 @@ export function SelectedWorks() {
                 >
                   <div
                     className={`relative mb-4 flex aspect-[4/3] min-h-[120px] items-center justify-center overflow-hidden rounded-sm border px-6 py-8 transition-colors duration-300 group-hover:border-[#f5f5f0]/20 ${
-                      "imageBg" in project && project.imageBg === "white"
-                        ? "border-[#f5f5f0]/15 bg-white"
-                        : "imageBg" in project && project.imageBg === "gray"
-                          ? "border-[#f5f5f0]/15 bg-[#2A2A2A]"
-                          : "border-[#f5f5f0]/10 bg-[#0a0a0a]"
+                      project.id === "kraken-metals"
+                        ? "border-[#f5f5f0]/15 bg-[#004b6e]"
+                        : "imageBg" in project && project.imageBg === "white"
+                          ? "border-[#f5f5f0]/15 bg-white"
+                          : "imageBg" in project && project.imageBg === "gray"
+                            ? "border-[#f5f5f0]/15 bg-[#2A2A2A]"
+                            : "border-[#f5f5f0]/10 bg-[#0a0a0a]"
                     }`}
                   >
                     {project.id === "kraken-metals" ? (
@@ -58,7 +60,7 @@ export function SelectedWorks() {
                           className="text-center font-bold tracking-[0.2em] uppercase"
                           style={{
                             fontFamily: "system-ui, -apple-system, sans-serif",
-                            fontSize: "clamp(0.7rem, 2.2vw, 0.95rem)",
+                            fontSize: "clamp(0.95rem, 2.8vw, 1.25rem)",
                             lineHeight: 1.3,
                             background: "linear-gradient(110deg, #ffffff 0%, #e8e8e8 20%, #c0c0c0 40%, #909090 50%, #c0c0c0 60%, #e8e8e8 80%, #ffffff 100%)",
                             backgroundSize: "200% 100%",
