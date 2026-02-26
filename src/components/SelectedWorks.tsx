@@ -74,6 +74,35 @@ export function SelectedWorks() {
                           METALS
                         </span>
                       </div>
+                    ) : project.id === "redk-motors" ? (
+                      <div
+                        className="relative flex items-center justify-center gap-1 transition-transform duration-300 group-hover:scale-[1.03]"
+                        aria-hidden
+                      >
+                        <span
+                          className="font-bold tracking-[0.12em] uppercase"
+                          style={{
+                            fontFamily: "Montserrat, system-ui, sans-serif",
+                            fontSize: "clamp(0.65rem, 2vw, 0.95rem)",
+                            lineHeight: 1.2,
+                            color: "#d41e24",
+                            textShadow: "0 0 5px rgba(212,30,36,1), 0 0 10px rgba(212,30,36,0.9), 0 0 15px rgba(212,30,36,0.8), 0 0 20px rgba(212,30,36,0.7), 0 0 30px rgba(212,30,36,0.6), 0 0 40px rgba(212,30,36,0.5), 0 0 60px rgba(212,30,36,0.4)",
+                            animation: "neon-pulse-red 2s ease-in-out infinite alternate",
+                          }}
+                        >
+                          RED-K
+                        </span>
+                        <span
+                          className="font-bold tracking-[0.12em] uppercase text-white"
+                          style={{
+                            fontFamily: "Montserrat, system-ui, sans-serif",
+                            fontSize: "clamp(0.65rem, 2vw, 0.95rem)",
+                            lineHeight: 1.2,
+                          }}
+                        >
+                          MOTORS
+                        </span>
+                      </div>
                     ) : (
                       <Image
                         src={project.image}
