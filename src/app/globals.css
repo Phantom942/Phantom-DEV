@@ -77,6 +77,31 @@ body {
   50% { background-position: 100% 50%; }
 }
 
+@keyframes smoke-1 {
+  0%, 100% { opacity: 0.3; transform: scale(0.8); }
+  50% { opacity: 0.5; transform: scale(1); }
+}
+
+@keyframes smoke-2 {
+  0%, 100% { opacity: 0.2; transform: scale(0.9); }
+  50% { opacity: 0.4; transform: scale(1.05); }
+}
+
+@keyframes smoke-3 {
+  0%, 100% { opacity: 0.15; }
+  50% { opacity: 0.35; }
+}
+
+@keyframes smoke-4 {
+  0%, 100% { opacity: 0.1; }
+  50% { opacity: 0.3; }
+}
+
+.animate-smoke-1 { animation: smoke-1 3s ease-in-out 1.5s infinite; }
+.animate-smoke-2 { animation: smoke-2 3.5s ease-in-out 1.7s infinite; }
+.animate-smoke-3 { animation: smoke-3 4s ease-in-out 1.9s infinite; }
+.animate-smoke-4 { animation: smoke-4 3.2s ease-in-out 2s infinite; }
+
 @keyframes neon-pulse-red {
   from {
     text-shadow: 0 0 5px rgba(212,30,36,1), 0 0 10px rgba(212,30,36,0.9), 0 0 15px rgba(212,30,36,0.8), 0 0 20px rgba(212,30,36,0.7), 0 0 30px rgba(212,30,36,0.6), 0 0 40px rgba(212,30,36,0.5), 0 0 60px rgba(212,30,36,0.4);

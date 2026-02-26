@@ -43,14 +43,56 @@ export function SelectedWorks() {
                   <div
                     className={`relative mb-4 flex aspect-[4/3] min-h-[120px] items-center justify-center overflow-hidden rounded-sm border px-6 py-8 transition-colors duration-300 group-hover:border-[#f5f5f0]/20 ${
                       project.id === "kraken-metals"
-                        ? "border-[#f5f5f0]/15 bg-[#004b6e]"
-                        : "imageBg" in project && project.imageBg === "white"
-                          ? "border-[#f5f5f0]/15 bg-white"
-                          : "imageBg" in project && project.imageBg === "gray"
-                            ? "border-[#f5f5f0]/15 bg-[#2A2A2A]"
-                            : "border-[#f5f5f0]/10 bg-[#0a0a0a]"
+                        ? "border-[#f5f5f0]/15 bg-[#003548]"
+                        : project.id === "redk-motors"
+                          ? "border-[#f5f5f0]/15 bg-[#1a1a1a]"
+                          : "imageBg" in project && project.imageBg === "white"
+                            ? "border-[#f5f5f0]/15 bg-white"
+                            : "imageBg" in project && project.imageBg === "gray"
+                              ? "border-[#f5f5f0]/15 bg-[#2A2A2A]"
+                              : "border-[#f5f5f0]/10 bg-[#0a0a0a]"
                     }`}
                   >
+                    {project.id === "redk-motors" && (
+                      <div className="absolute inset-0 overflow-hidden" aria-hidden>
+                        <svg className="absolute inset-0 h-full w-full" viewBox="0 0 200 120" preserveAspectRatio="xMidYMid slice">
+                          <defs>
+                            <filter id="smoke-blur" x="-50%" y="-50%" width="200%" height="200%">
+                              <feGaussianBlur in="SourceGraphic" stdDeviation="12" result="blur" />
+                              <feColorMatrix in="blur" type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 0.5 0" result="smoke" />
+                              <feBlend in="SourceGraphic" in2="smoke" mode="normal" />
+                            </filter>
+                            <filter id="smoke-soft">
+                              <feGaussianBlur in="SourceGraphic" stdDeviation="15" />
+                            </filter>
+                            <radialGradient id="smoke-grad-1" cx="50%" cy="50%" r="50%">
+                              <stop offset="0%" stopColor="rgba(200,200,200,0.4)" />
+                              <stop offset="50%" stopColor="rgba(180,180,180,0.15)" />
+                              <stop offset="100%" stopColor="rgba(160,160,160,0)" />
+                            </radialGradient>
+                            <radialGradient id="smoke-grad-2" cx="50%" cy="50%" r="50%">
+                              <stop offset="0%" stopColor="rgba(220,220,220,0.35)" />
+                              <stop offset="60%" stopColor="rgba(200,200,200,0.1)" />
+                              <stop offset="100%" stopColor="rgba(180,180,180,0)" />
+                            </radialGradient>
+                            <radialGradient id="smoke-grad-3" cx="50%" cy="50%" r="50%">
+                              <stop offset="0%" stopColor="rgba(190,190,190,0.3)" />
+                              <stop offset="70%" stopColor="rgba(170,170,170,0.08)" />
+                              <stop offset="100%" stopColor="transparent" />
+                            </radialGradient>
+                          </defs>
+                          {/* Fumée pneu - gradient radial + blur pour rendu réaliste */}
+                          <g filter="url(#smoke-soft)">
+                            <ellipse cx="130" cy="50" rx="35" ry="25" fill="url(#smoke-grad-1)" className="animate-smoke-1" />
+                            <ellipse cx="150" cy="60" rx="30" ry="22" fill="url(#smoke-grad-2)" className="animate-smoke-2" />
+                            <ellipse cx="165" cy="72" rx="28" ry="20" fill="url(#smoke-grad-3)" className="animate-smoke-3" />
+                            <ellipse cx="110" cy="75" rx="25" ry="18" fill="url(#smoke-grad-2)" className="animate-smoke-4" />
+                            <ellipse cx="75" cy="88" rx="22" ry="16" fill="url(#smoke-grad-3)" className="animate-smoke-4" style={{ animationDelay: "0.3s" }} />
+                            <ellipse cx="145" cy="82" rx="20" ry="14" fill="url(#smoke-grad-1)" className="animate-smoke-1" style={{ animationDelay: "0.5s" }} />
+                          </g>
+                        </svg>
+                      </div>
+                    )}
                     {project.id === "kraken-metals" ? (
                       <div
                         className="relative flex items-center justify-center transition-transform duration-300 group-hover:scale-[1.03]"
@@ -78,14 +120,14 @@ export function SelectedWorks() {
                       </div>
                     ) : project.id === "redk-motors" ? (
                       <div
-                        className="relative flex items-center justify-center gap-1 transition-transform duration-300 group-hover:scale-[1.03]"
+                        className="relative z-10 flex items-center justify-center gap-1 transition-transform duration-300 group-hover:scale-[1.03]"
                         aria-hidden
                       >
                         <span
                           className="font-bold tracking-[0.12em] uppercase"
                           style={{
                             fontFamily: "Montserrat, system-ui, sans-serif",
-                            fontSize: "clamp(0.65rem, 2vw, 0.95rem)",
+                            fontSize: "clamp(0.85rem, 2.5vw, 1.15rem)",
                             lineHeight: 1.2,
                             color: "#d41e24",
                             textShadow: "0 0 5px rgba(212,30,36,1), 0 0 10px rgba(212,30,36,0.9), 0 0 15px rgba(212,30,36,0.8), 0 0 20px rgba(212,30,36,0.7), 0 0 30px rgba(212,30,36,0.6), 0 0 40px rgba(212,30,36,0.5), 0 0 60px rgba(212,30,36,0.4)",
@@ -98,7 +140,7 @@ export function SelectedWorks() {
                           className="font-bold tracking-[0.12em] uppercase text-white"
                           style={{
                             fontFamily: "Montserrat, system-ui, sans-serif",
-                            fontSize: "clamp(0.65rem, 2vw, 0.95rem)",
+                            fontSize: "clamp(0.85rem, 2.5vw, 1.15rem)",
                             lineHeight: 1.2,
                           }}
                         >
