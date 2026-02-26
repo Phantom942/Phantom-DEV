@@ -49,14 +49,39 @@ export function SelectedWorks() {
                           : "border-[#f5f5f0]/10 bg-[#0a0a0a]"
                     }`}
                   >
-                    <Image
-                      src={project.image}
-                      alt={`Logo ${project.title}, réalisation PhantomDev — ${project.description}`}
-                      fill
-                      sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, 33vw"
-                      className="object-contain p-4 transition-transform duration-300 group-hover:scale-[1.03]"
-                      priority={index === 0}
-                    />
+                    {project.id === "kraken-metals" ? (
+                      <div
+                        className="relative flex items-center justify-center transition-transform duration-300 group-hover:scale-[1.03]"
+                        aria-hidden
+                      >
+                        <span
+                          className="text-center font-bold tracking-[0.2em] uppercase"
+                          style={{
+                            fontFamily: "system-ui, -apple-system, sans-serif",
+                            fontSize: "clamp(0.7rem, 2.2vw, 0.95rem)",
+                            lineHeight: 1.3,
+                            background: "linear-gradient(175deg, #ffffff 0%, #e0e0e0 12%, #b8b8b8 28%, #888 45%, #606060 55%, #909090 72%, #d0d0d0 88%, #f5f5f5 100%)",
+                            backgroundClip: "text",
+                            WebkitBackgroundClip: "text",
+                            color: "transparent",
+                            filter: "drop-shadow(0 1px 2px rgba(255,255,255,0.5)) drop-shadow(0 2px 4px rgba(0,0,0,0.4))",
+                          }}
+                        >
+                          KRAKEN
+                          <br />
+                          METALS
+                        </span>
+                      </div>
+                    ) : (
+                      <Image
+                        src={project.image}
+                        alt={`Logo ${project.title}, réalisation PhantomDev — ${project.description}`}
+                        fill
+                        sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, 33vw"
+                        className="object-contain p-4 transition-transform duration-300 group-hover:scale-[1.03]"
+                        priority={index === 0}
+                      />
+                    )}
                   </div>
                   <div className="flex items-center justify-between gap-3">
                     <div className="min-w-0 flex-1">
