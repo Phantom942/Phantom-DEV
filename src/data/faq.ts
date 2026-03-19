@@ -21,7 +21,7 @@ export const faqItems = [
   {
     question: "PhantomDev travaille-t-elle à l'international ?",
     answer:
-      "Oui. PhantomDev est basée en France mais intervient à l'international. Les contrats de maintenance sont garantis.",
+      "Oui. PhantomDev intervient en France, en Europe (UK, Suisse, Belgique, Allemagne…), en Amérique du Nord et au-delà. Travail 100% à distance, contrats de maintenance garantis.",
   },
   {
     question: "Quelle garantie performance offre PhantomDev ?",

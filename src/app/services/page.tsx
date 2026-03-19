@@ -15,9 +15,9 @@ export const metadata: Metadata = {
     canonical: "https://phantomdev.fr/services",
     languages: getHreflangAlternates("/services"),
   },
-  title: "Services et tarifs — Sites vitrines, e-commerce, SaaS",
+  title: "Services et tarifs — Sites vitrines, e-commerce, SaaS | International",
   description:
-    "Tarifs création de sites web : vitrines dès 4 500€, e-commerce dès 8 000€, maintenance dès 199€/mois. Devis gratuit sous 48h.",
+    "Tarifs création de sites web : vitrines dès 4 500€, e-commerce dès 8 000€, maintenance dès 199€/mois. Devis gratuit sous 48h. France, Europe, international.",
   keywords: [
     "création site web",
     "développement web sur-mesure",
@@ -51,6 +51,7 @@ export default function ServicesPage() {
       <CursorAndGlow />
       <Navbar />
       <main
+        id="main"
         role="main"
         className="w-full pt-24 pb-16 sm:pt-32 sm:pb-24"
         aria-label="Page services PhantomDev : développement web, React, Node.js, SaaS, sites vitrines et e-commerce"

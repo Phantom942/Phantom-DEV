@@ -39,10 +39,13 @@ export const translations = {
     footer: {
       tagline: "PhantomDev — Création de sites web premium sur-mesure",
       privateLine: "Ligne privée",
-      based: "Basé en France — Interventions internationales — Contrats de maintenance garantis",
+      ctaTitle: "Prêt à lancer votre projet ?",
+      ctaButton: "Demander un devis gratuit",
+      based: "France, Europe, international — Interventions à distance — Contrats de maintenance garantis",
       designBy: "Design by PhantomDev",
       rights: "Tous droits réservés.",
     },
+    skipToContent: "Aller au contenu principal",
     nav: {
       expertise: "Expertise",
       services: "Services",
@@ -156,6 +159,15 @@ export const translations = {
       },
       usedFor: "Utilisé pour :",
     },
+    stats: {
+      projects: "projets livrés",
+      years: "ans d'expérience",
+    },
+    projects: {
+      filterAll: "Tous",
+      filterVitrine: "Sites vitrines",
+      filterApplication: "Applications",
+    },
   },
   "en-GB": {
     hero: {
@@ -195,10 +207,13 @@ export const translations = {
     footer: {
       tagline: "PhantomDev — Premium custom web development",
       privateLine: "Private line",
-      based: "Based in France — International services — Guaranteed maintenance contracts",
+      ctaTitle: "Ready to start your project?",
+      ctaButton: "Request a free quote",
+      based: "France, Europe, worldwide — Remote projects — Guaranteed maintenance contracts",
       designBy: "Design by PhantomDev",
       rights: "All rights reserved.",
     },
+    skipToContent: "Skip to main content",
     nav: {
       expertise: "Expertise",
       services: "Services",
@@ -312,6 +327,15 @@ export const translations = {
       },
       usedFor: "Used for:",
     },
+    stats: {
+      projects: "projects delivered",
+      years: "years of experience",
+    },
+    projects: {
+      filterAll: "All",
+      filterVitrine: "Landing pages",
+      filterApplication: "Applications",
+    },
   },
   "en-US": {
     hero: {
@@ -351,10 +375,13 @@ export const translations = {
     footer: {
       tagline: "PhantomDev — Premium custom web development",
       privateLine: "Private line",
-      based: "Based in France — International services — Guaranteed maintenance contracts",
+      ctaTitle: "Ready to start your project?",
+      ctaButton: "Request a free quote",
+      based: "France, Europe, worldwide — Remote projects — Guaranteed maintenance contracts",
       designBy: "Design by PhantomDev",
       rights: "All rights reserved.",
     },
+    skipToContent: "Skip to main content",
     nav: {
       expertise: "Expertise",
       services: "Services",
@@ -467,6 +494,15 @@ export const translations = {
         ctaButton: "Request a custom quote",
       },
       usedFor: "Used for:",
+    },
+    stats: {
+      projects: "projects delivered",
+      years: "years of experience",
+    },
+    projects: {
+      filterAll: "All",
+      filterVitrine: "Landing pages",
+      filterApplication: "Applications",
     },
   },
 } as const;

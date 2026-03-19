@@ -1,6 +1,9 @@
+export type ProjectType = "vitrine" | "application";
+
 export const projects = [
   {
     id: "phantom-art",
+    type: "vitrine" as const,
     title: "Phantom Art",
     imageBg: "white" as const,
     description:
@@ -18,6 +21,7 @@ export const projects = [
   },
   {
     id: "redk-motors",
+    type: "vitrine" as const,
     title: "REDK Motors",
     imageBg: "gray" as const,
     description:
@@ -35,6 +39,7 @@ export const projects = [
   },
   {
     id: "kraken-metals",
+    type: "vitrine" as const,
     title: "Kraken Metals",
     imageBg: "gray" as const,
     description:
@@ -52,6 +57,7 @@ export const projects = [
   },
   {
     id: "moove-city",
+    type: "application" as const,
     title: "Moove City",
     imageBg: "white" as const,
     description:
@@ -67,13 +73,31 @@ export const projects = [
       gain: "Conversion +25% · Lighthouse 97%.",
     },
   },
+  {
+    id: "oriental-beauty",
+    type: "vitrine" as const,
+    title: "Oriental Beauty",
+    imageBg: "white" as const,
+    description:
+      "Institut Browlift & Cire Orientale à Créteil. Site vitrine pour sublimer regard et peau dans un cadre apaisant.",
+    techs: ["Site vitrine", "SEO", "Responsive"],
+    lighthouseScore: 95,
+    result: "Lighthouse 95%",
+    image: "/images/logos/oriental-beauty.png",
+    href: "https://www.orientalbeauty.fr/",
+    details: {
+      enjeu: "Site vitrine pour institut de beauté, Browlift et cire orientale à Créteil (94).",
+      solution: "Design élégant, mise en avant des services et prise de rendez-vous en ligne.",
+      gain: "Présence digitale · Calendrier intégré.",
+    },
+  },
 ] as const;
 
 export const creativeWorkSchema = {
   "@context": "https://schema.org",
   "@type": "ItemList",
   name: "Réalisations PhantomDev",
-  description: "Projets web réalisés par PhantomDev : sites vitrines, e-commerce, applications sur-mesure.",
+  description: "Projets web réalisés par PhantomDev : sites vitrines, e-commerce, applications sur-mesure. International.",
   itemListElement: projects.map((p, i) => ({
     "@type": "ListItem",
     position: i + 1,
@@ -81,9 +105,9 @@ export const creativeWorkSchema = {
       "@type": "CreativeWork",
       name: p.title,
       description: p.description,
-      url: `https://phantomdev.fr#${p.id}`,
+      url: p.href,
       author: {
-        "@type": "Person",
+        "@type": "Organization",
         name: "PhantomDev",
         url: "https://phantomdev.fr",
       },

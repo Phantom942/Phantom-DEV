@@ -59,7 +59,7 @@ export function Navbar() {
             <Link
               key={link.href}
               href={link.href}
-              className="whitespace-nowrap text-sm font-light tracking-[0.15em] leading-tight text-[#f5f5f0]/85 transition-colors hover:text-[#f5f5f0]"
+              className="whitespace-nowrap text-sm font-light tracking-[0.15em] leading-tight text-[#f5f5f0]/85 transition-colors hover:text-[#f5f5f0] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#d4af37]/50 focus-visible:ring-offset-2 focus-visible:ring-offset-black"
               aria-label={link.label === "Expertise" ? "Expertise en développement d'interfaces haute performance" : link.label === "Services" ? "Services : sites vitrines, e-commerce, SaaS" : link.label === "Projets" ? "Réalisations et projets web" : "Contact et devis"}
             >
               {link.label}
@@ -69,7 +69,7 @@ export function Navbar() {
             href={getWhatsAppDevisUrl()}
             target="_blank"
             rel="noopener noreferrer"
-            className="border border-[#25D366]/60 bg-[#25D366]/10 px-4 py-2 text-xs font-light tracking-[0.15em] text-[#f5f5f0] transition-all hover:bg-[#25D366]/20"
+            className="rounded-sm border border-[#25D366]/60 bg-[#25D366]/10 px-4 py-2 text-xs font-light tracking-[0.15em] text-[#f5f5f0] transition-all hover:scale-[1.02] hover:bg-[#25D366]/20"
             aria-label="Demander un devis gratuit sur WhatsApp pour votre projet web"
           >
             {t.nav.freeQuote}
@@ -112,7 +112,7 @@ export function Navbar() {
                   key={link.href}
                   href={link.href}
                   onClick={closeMobileMenu}
-                  className="border-b border-[#f5f5f0]/5 py-3 text-base font-light tracking-[0.1em] text-[#f5f5f0]/90 transition-colors last:border-0 active:text-[#f5f5f0]"
+                  className="border-b border-[#f5f5f0]/5 py-3 text-base font-light tracking-[0.1em] text-[#f5f5f0]/90 transition-colors last:border-0 active:text-[#f5f5f0] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-[#d4af37]/50"
                   aria-label={link.label === "Expertise" ? "Expertise en développement d'interfaces haute performance" : link.label === "Services" ? "Services : sites vitrines, e-commerce, SaaS" : link.label === "Projets" ? "Réalisations et projets web" : "Contact et devis"}
                 >
                   {link.label}

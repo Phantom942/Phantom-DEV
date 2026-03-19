@@ -97,10 +97,21 @@ body {
   50% { opacity: 0.3; }
 }
 
+.animate-cta-glow { animation: cta-glow 3s ease-in-out infinite; }
 .animate-smoke-1 { animation: smoke-1 3s ease-in-out 1.5s infinite; }
 .animate-smoke-2 { animation: smoke-2 3.5s ease-in-out 1.7s infinite; }
 .animate-smoke-3 { animation: smoke-3 4s ease-in-out 1.9s infinite; }
 .animate-smoke-4 { animation: smoke-4 3.2s ease-in-out 2s infinite; }
+
+@keyframes cta-glow {
+  0%, 100% { box-shadow: 0 0 20px rgba(37, 211, 102, 0.2); }
+  50% { box-shadow: 0 0 30px rgba(37, 211, 102, 0.35); }
+}
+
+@keyframes subtle-float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-2px); }
+}
 
 @keyframes neon-pulse-red {
   from {

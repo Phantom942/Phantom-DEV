@@ -8,6 +8,8 @@ import {
 import "./globals.css";
 import { faqItems } from "@/data/faq";
 import { LangAttribute } from "@/components/LangAttribute";
+import { FloatingWhatsAppButton } from "@/components/FloatingWhatsAppButton";
+import { SkipToContent } from "@/components/SkipToContent";
 
 const geist = Geist({
   variable: "--font-geist",
@@ -45,25 +47,37 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
   metadataBase: new URL("https://phantomdev.fr"),
   title: {
-    default: "PhantomDev | Création de sites web premium sur-mesure",
+    default: "PhantomDev | Création de sites web premium sur-mesure — International",
     template: "%s | PhantomDev",
   },
   description:
-    "Création de sites web premium sur-mesure. E-commerce, SaaS, vitrines. Devis gratuit sous 48h. Performance Lighthouse 90+. Réponse rapide.",
+    "Création de sites web premium sur-mesure. E-commerce, SaaS, vitrines. Devis gratuit sous 48h. Performance Lighthouse 90+. France, Europe, international.",
   keywords: [
     "création site web",
     "développeur web freelance",
-    "création site web France",
+    "développeur web international",
     "site vitrine sur-mesure",
     "développement e-commerce",
     "refonte site web",
     "Next.js",
-    "agence web",
+    "agence web remote",
     "site sur-mesure",
-    "développement web",
+    "développement web Europe",
+    "freelance web international",
   ],
   alternates: {
     canonical: "https://phantomdev.fr",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
   },
   verification: {
     google: "HZvfGLZepr3elEwyUp-gNB9r9oQQ4L4tXC0kjfWDYjw",
@@ -72,10 +86,11 @@ export const metadata: Metadata = {
     type: "website",
     title: "PhantomDev — Création sites web premium | Devis gratuit 48h",
     description:
-      "Sites web sur-mesure qui convertissent. E-commerce, SaaS, vitrines. Devis gratuit sous 48h. Performance garantie Lighthouse 90+.",
+      "Sites web sur-mesure qui convertissent. E-commerce, SaaS, vitrines. Devis gratuit sous 48h. Performance garantie. France, Europe, international.",
     url: "https://phantomdev.fr",
     siteName: "PhantomDev",
     locale: "fr_FR",
+    alternateLocale: ["en_GB", "en_US"],
     images: [
       {
         url: "/og-image.png",
@@ -89,8 +104,13 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "PhantomDev — Création sites web premium | Devis gratuit 48h",
     description:
-      "Sites web sur-mesure. E-commerce, SaaS. Devis gratuit sous 48h. Performance garantie.",
+      "Sites web sur-mesure. E-commerce, SaaS. Devis gratuit sous 48h. Performance garantie. International.",
     images: ["/og-image.png"],
+  },
+  other: {
+    "geo.region": "EU",
+    "geo.placename": "Europe",
+    "target": "global",
   },
 };
 
@@ -106,13 +126,18 @@ export default function RootLayout({
     name: "PhantomDev",
     url: "https://phantomdev.fr",
     description:
-      "Création de sites web premium sur-mesure. Sites vitrines, e-commerce, SaaS. Next.js, React, Node.js. Devis gratuit sous 48h. Performance Lighthouse 90+.",
+      "Création de sites web premium sur-mesure. Sites vitrines, e-commerce, SaaS. Next.js, React, Node.js. Devis gratuit sous 48h. Performance Lighthouse 90+. France, Europe, international.",
     image: "https://phantomdev.fr/og-image.png",
     sameAs: ["https://github.com/Phantom942"],
     areaServed: [
       { "@type": "Country", name: "France" },
       { "@type": "Country", name: "United Kingdom" },
       { "@type": "Country", name: "United States" },
+      { "@type": "Country", name: "Canada" },
+      { "@type": "Country", name: "Switzerland" },
+      { "@type": "Country", name: "Belgium" },
+      { "@type": "Country", name: "Luxembourg" },
+      { "@type": "Country", name: "Germany" },
     ],
     priceRange: "€€",
     serviceType: [
@@ -137,7 +162,7 @@ export default function RootLayout({
       "@type": "ContactPoint",
       contactType: "customer service",
       availableLanguage: ["French", "English"],
-      areaServed: ["FR", "GB", "US"],
+      areaServed: ["FR", "GB", "US", "CA", "CH", "BE", "LU", "DE"],
       url: "https://phantomdev.fr/contact",
     },
     hasOfferCatalog: {
@@ -150,6 +175,17 @@ export default function RootLayout({
         { "@type": "Offer", itemOffered: { "@type": "Service", name: "Intégration IA", description: "Chatbots, recommandations, automatisation intelligente." } },
       ],
     },
+  };
+
+  const websiteSchema = {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "@id": "https://phantomdev.fr/#website",
+    url: "https://phantomdev.fr",
+    name: "PhantomDev",
+    description: "Création de sites web premium sur-mesure — France, Europe, international",
+    publisher: { "@id": "https://phantomdev.fr/#organization" },
+    inLanguage: ["fr", "en"],
   };
 
   const faqSchema = {
@@ -171,6 +207,7 @@ export default function RootLayout({
       className={`${geist.variable} ${geistMono.variable} ${cormorant.variable} ${sourceSans.variable} overflow-x-clip`}
     >
       <body className="overflow-x-clip font-sans antialiased">
+        <SkipToContent />
         <LangAttribute />
         <script
           type="application/ld+json"
@@ -178,9 +215,14 @@ export default function RootLayout({
         />
         <script
           type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
+        />
+        <script
+          type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
         />
         {children}
+        <FloatingWhatsAppButton />
       </body>
     </html>
   );

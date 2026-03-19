@@ -1,17 +1,37 @@
 "use client";
 
+import { useState, useMemo } from "react";
 import Image from "next/image";
 import { ArrowUpRight } from "lucide-react";
 import { ScrollReveal } from "./ScrollReveal";
-import { projects } from "@/data/projects";
+import { projects, type ProjectType } from "@/data/projects";
 import { useTranslations } from "@/hooks/useTranslations";
+
+const FILTERS: { value: ProjectType | "all"; labelKey: string }[] = [
+  { value: "all", labelKey: "filterAll" },
+  { value: "vitrine", labelKey: "filterVitrine" },
+  { value: "application", labelKey: "filterApplication" },
+];
 
 export function SelectedWorks() {
   const { t } = useTranslations();
+  const [filter, setFilter] = useState<ProjectType | "all">("all");
+
+  const filteredProjects = useMemo(() => {
+    const list =
+      filter === "all"
+        ? [...projects]
+        : projects.filter((p) => p.type === filter);
+    return list as (typeof projects)[number][];
+  }, [filter]);
+
+  const projectsLabel =
+    "projects" in t ? t.projects : { filterAll: "Tous", filterVitrine: "Sites vitrines", filterApplication: "Applications" };
+
   return (
     <section
       id="projets"
-      className="w-full max-w-full overflow-x-clip px-4 py-10 sm:px-8 sm:py-12 md:px-16 md:py-16"
+      className="w-full max-w-full overflow-x-clip bg-[#000000] px-4 py-10 sm:px-8 sm:py-12 md:px-16 md:py-16"
       aria-labelledby="realisations-title"
       aria-label="Réalisations PhantomDev : projets web, développement d'interfaces haute performance et e-commerce"
     >
@@ -23,16 +43,34 @@ export function SelectedWorks() {
         >
           <span className="text-xl sm:text-2xl md:text-3xl">{t.sections.realisations}</span>
         </h2>
-        <p className="mb-8 text-xs leading-[1.6] tracking-[0.02em] text-[#f5f5f0]/75 sm:text-sm">
+        <p className="mb-6 text-xs leading-[1.6] tracking-[0.02em] text-[#f5f5f0]/75 sm:text-sm">
           {t.sections.realisationsDesc}
         </p>
+        <div className="mb-8 flex flex-wrap gap-2" role="tablist" aria-label="Filtrer les projets">
+          {FILTERS.map((f) => (
+            <button
+              key={f.value}
+              type="button"
+              role="tab"
+              aria-selected={filter === f.value}
+              onClick={() => setFilter(f.value)}
+              className={`rounded-sm border px-4 py-2 text-xs font-light tracking-[0.08em] transition-colors ${
+                filter === f.value
+                  ? "border-[#d4af37]/50 bg-[#d4af37]/10 text-[#f5f5f0]"
+                  : "border-[#f5f5f0]/20 bg-transparent text-[#f5f5f0]/70 hover:border-[#f5f5f0]/40 hover:text-[#f5f5f0]"
+              }`}
+            >
+              {projectsLabel[f.labelKey as keyof typeof projectsLabel]}
+            </button>
+          ))}
+        </div>
       </ScrollReveal>
 
       <ul className="mx-auto grid max-w-5xl grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4 lg:gap-8">
-        {projects.map((project, index) => (
+        {filteredProjects.map((project, index) => (
           <ScrollReveal key={project.id} delay={index * 0.08}>
             <li>
-              <article className="group">
+              <article className="group transition-transform duration-300 hover:-translate-y-1">
                 <a
                   href={project.href}
                   target="_blank"
@@ -46,11 +84,9 @@ export function SelectedWorks() {
                         ? "border-[#f5f5f0]/15 bg-[#003548]"
                         : project.id === "redk-motors"
                           ? "border-[#f5f5f0]/15 bg-[#1a1a1a]"
-                          : "imageBg" in project && project.imageBg === "white"
+                          : project.imageBg === "white"
                             ? "border-[#f5f5f0]/15 bg-white"
-                            : "imageBg" in project && project.imageBg === "gray"
-                              ? "border-[#f5f5f0]/15 bg-[#2A2A2A]"
-                              : "border-[#f5f5f0]/10 bg-[#0a0a0a]"
+                            : "border-[#f5f5f0]/15 bg-[#2A2A2A]"
                     }`}
                   >
                     {project.id === "redk-motors" && (
@@ -168,8 +204,11 @@ export function SelectedWorks() {
                       >
                         <span className="text-base sm:text-lg">{project.title}</span>
                       </h3>
-                      <p className="mt-0.5 truncate text-xs text-[#f5f5f0]/60">
+                      <p className="mt-0.5 line-clamp-2 text-xs text-[#f5f5f0]/60">
                         {project.description}
+                      </p>
+                      <p className="mt-1.5 text-[10px] font-light tracking-[0.06em] text-[#d4af37]/80">
+                        {project.details.gain}
                       </p>
                     </div>
                     <ArrowUpRight

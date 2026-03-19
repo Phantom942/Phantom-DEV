@@ -4,7 +4,9 @@ import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { CursorAndGlow } from "@/components/CursorAndGlow";
 import { WhatsAppCtaButton } from "@/components/WhatsAppButton";
+import { WhatsAppForm } from "@/components/WhatsAppForm";
 import { ArrowLeft } from "lucide-react";
+import { Suspense } from "react";
 
 import { getHreflangAlternates } from "@/lib/hreflang";
 import { getBreadcrumbForPath } from "@/lib/breadcrumb";
@@ -14,9 +16,9 @@ export const metadata: Metadata = {
     canonical: "https://phantomdev.fr/contact",
     languages: getHreflangAlternates("/contact"),
   },
-  title: "Contact — Devis gratuit sous 48h",
+  title: "Contact — Devis gratuit sous 48h | International",
   description:
-    "Demandez votre devis gratuit. Contact WhatsApp direct. Réponse sous 48h, sans engagement. Sites vitrines, e-commerce, SaaS.",
+    "Demandez votre devis gratuit. Contact WhatsApp direct. Réponse sous 48h, sans engagement. France, Europe, international.",
   openGraph: {
     type: "website",
     title: "Contact | PhantomDev — Devis développement web sous 48h",
@@ -40,6 +42,7 @@ export default function ContactPage() {
       <CursorAndGlow />
       <Navbar />
       <main
+        id="main"
         role="main"
         className="w-full pt-24 pb-16 sm:pt-32 sm:pb-24"
         aria-label="Page contact PhantomDev : demande de devis développement web, sites vitrines et SaaS"
@@ -68,7 +71,15 @@ export default function ContactPage() {
             Garantie performance : Lighthouse 90+ sur tous les sites livrés.
           </p>
 
-          <WhatsAppCtaButton />
+          <Suspense fallback={null}>
+            <WhatsAppForm />
+          </Suspense>
+          <p className="mt-6 text-center text-xs font-light tracking-[0.08em] text-[#f5f5f0]/40">
+            ou
+          </p>
+          <p className="mt-2 text-center">
+            <WhatsAppCtaButton />
+          </p>
         </div>
       </main>
       <Footer />

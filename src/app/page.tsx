@@ -9,6 +9,13 @@ import { getHreflangAlternates } from "@/lib/hreflang";
 
 export const metadata: Metadata = {
   alternates: { languages: getHreflangAlternates("/") },
+  title: "Création de sites web premium sur-mesure — International",
+  description:
+    "PhantomDev crée des sites web sur-mesure qui convertissent. E-commerce, SaaS, vitrines. Devis gratuit sous 48h. Performance Lighthouse 90+. France, Europe, monde.",
+  openGraph: {
+    url: "https://phantomdev.fr",
+    locale: "fr_FR",
+  },
 };
 
 export default function Home() {
@@ -24,6 +31,7 @@ export default function Home() {
       <CursorAndGlow />
       <Navbar />
       <main
+        id="main"
         role="main"
         className="w-full overflow-x-clip"
         aria-label="Contenu principal : PhantomDev, développement web sur-mesure, React, Node.js, SaaS, sites vitrines et e-commerce"

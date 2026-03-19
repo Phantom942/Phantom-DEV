@@ -31,6 +31,7 @@ export default function MentionsLegalesPage() {
       <CursorAndGlow />
       <Navbar />
       <main
+        id="main"
         role="main"
         className="w-full pt-24 pb-16 sm:pt-32 sm:pb-24"
         aria-label="Mentions légales PhantomDev, création de sites web"

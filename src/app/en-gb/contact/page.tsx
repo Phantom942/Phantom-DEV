@@ -34,6 +34,7 @@ export default function EnGBContactPage() {
       <CursorAndGlow />
       <Navbar />
       <main
+        id="main"
         role="main"
         className="w-full pt-24 pb-16 sm:pt-32 sm:pb-24"
         aria-label="PhantomDev contact page: request a quote for web development, websites and SaaS"

@@ -9,6 +9,13 @@ import { getHreflangAlternates } from "@/lib/hreflang";
 
 export const metadata: Metadata = {
   alternates: { languages: getHreflangAlternates("/en-gb") },
+  title: "Premium custom web development — UK & International",
+  description:
+    "PhantomDev creates custom websites that convert. E-commerce, SaaS, landing pages. Free quote within 48h. Lighthouse 90+ performance. UK, Europe, worldwide.",
+  openGraph: {
+    url: "https://phantomdev.fr/en-gb",
+    locale: "en_GB",
+  },
 };
 
 export default function EnGBHome() {
@@ -24,6 +31,7 @@ export default function EnGBHome() {
       <CursorAndGlow />
       <Navbar />
       <main
+        id="main"
         role="main"
         className="w-full overflow-x-clip"
         aria-label="PhantomDev — Premium custom web development, React, Node.js, SaaS"

@@ -17,6 +17,21 @@ export function Footer() {
       role="contentinfo"
       aria-label="Pied de page PhantomDev : création de sites web, développement React et Node.js, contact et mentions légales"
     >
+      <div className="mx-auto mb-12 flex max-w-4xl flex-col items-center justify-center rounded-lg border border-[#f5f5f0]/10 bg-[#0a0a0a]/40 px-6 py-8 text-center sm:mb-16 sm:px-10 sm:py-12">
+        <p className="mb-4 text-sm font-light tracking-[0.08em] text-[#f5f5f0]/90 sm:text-base">
+          {t.footer.ctaTitle}
+        </p>
+        <a
+          href={getWhatsAppDevisUrl()}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center gap-2 border border-[#25D366]/60 bg-[#25D366]/15 px-8 py-3 text-sm font-light tracking-[0.12em] text-[#f5f5f0] transition-all hover:scale-[1.02] hover:bg-[#25D366]/25"
+          aria-label={t.footer.ctaButton}
+        >
+          <MessageCircle size={18} strokeWidth={1.5} />
+          {t.footer.ctaButton}
+        </a>
+      </div>
       <div className="mx-auto flex max-w-4xl flex-col items-center justify-between gap-8 sm:flex-row sm:gap-12">
         <div className="flex flex-col items-center gap-4 sm:items-start">
           <p className="text-xs font-light tracking-[0.15em] text-[#f5f5f0]/60">
@@ -52,17 +67,15 @@ export function Footer() {
       </p>
       <div className="mx-auto mt-10 max-w-4xl border-t border-[#f5f5f0]/5 pt-8">
         <div className="flex flex-col items-center justify-center gap-4 sm:flex-row sm:flex-wrap sm:gap-8">
-          <a
-            href={`${prefix}/mentions-legales`}
-            className="text-xs font-light tracking-[0.1em] text-[#f5f5f0]/40 transition-colors hover:text-[#f5f5f0]/70"
+          <Link
+            href={`${prefix || ""}/mentions-legales`}
+            className="text-xs font-light tracking-[0.1em] text-[#f5f5f0]/40 transition-colors hover:text-[#f5f5f0]/70 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#d4af37]/50 focus-visible:ring-offset-2 focus-visible:ring-offset-black"
           >
             Mentions légales
-          </a>
-          <a
-            href="https://phantomdev.fr"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 text-xs font-light tracking-[0.15em] uppercase text-[#f5f5f0]/40 transition-opacity hover:text-[#f5f5f0]/70 hover:opacity-100"
+          </Link>
+          <Link
+            href={prefix || "/"}
+            className="inline-flex items-center gap-2 text-xs font-light tracking-[0.15em] uppercase text-[#f5f5f0]/40 transition-opacity hover:text-[#f5f5f0]/70 hover:opacity-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#d4af37]/50 focus-visible:ring-offset-2 focus-visible:ring-offset-black"
             style={{ fontFamily: "var(--font-source-sans), sans-serif" }}
             aria-label="Design et développement par PhantomDev, expertise en interfaces haute performance"
           >
@@ -87,7 +100,7 @@ export function Footer() {
               <circle cx="21" cy="10.5" r="1.2" fill="currentColor" />
             </svg>
             {t.footer.designBy}
-          </a>
+          </Link>
           <p className="text-center text-xs font-light tracking-[0.1em] text-[#f5f5f0]/40">
             © {new Date().getFullYear()} PhantomDev. {t.footer.rights}
           </p>

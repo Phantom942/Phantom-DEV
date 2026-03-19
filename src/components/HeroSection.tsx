@@ -1,9 +1,9 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion, useReducedMotion } from "framer-motion";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { ArrowDown, MessageCircle } from "lucide-react";
+import { ArrowDown, MessageCircle, Zap, Shield, Handshake } from "lucide-react";
 import { getWhatsAppDevisUrl } from "@/data/contact";
 import { useTranslations } from "@/hooks/useTranslations";
 
@@ -74,6 +74,7 @@ const ctaVariants = {
 export function HeroSection() {
   const { t } = useTranslations();
   const pathname = usePathname();
+  const prefersReducedMotion = useReducedMotion();
   const localePrefix = pathname.startsWith("/en-gb") ? "/en-gb" : pathname.startsWith("/en-us") ? "/en-us" : "";
 
   return (
@@ -84,12 +85,19 @@ export function HeroSection() {
         paddingTop: "max(6rem, calc(5rem + env(safe-area-inset-top)))",
       }}
     >
+      <div
+        className="pointer-events-none absolute inset-0 opacity-30"
+        aria-hidden
+        style={{
+          background: "radial-gradient(ellipse 80% 50% at 50% 0%, rgba(212, 175, 55, 0.08) 0%, transparent 60%)",
+        }}
+      />
       <h1 id="hero-title" className="sr-only">
         {t.hero.title}
       </h1>
       <motion.div
-        className="flex w-full max-w-[100%] flex-wrap justify-center gap-0.5 overflow-hidden px-1 font-extralight leading-[1.05] tracking-tight text-[#f5f5f0] sm:gap-1 sm:tracking-[0.08em] md:gap-2 md:tracking-[0.15em]"
-        variants={containerVariants}
+        className="relative flex w-full max-w-[100%] flex-wrap justify-center gap-0.5 overflow-hidden px-1 font-extralight leading-[1.05] tracking-tight text-[#f5f5f0] sm:gap-1 sm:tracking-[0.08em] md:gap-2 md:tracking-[0.15em]"
+        variants={prefersReducedMotion ? { hidden: {}, visible: {} } : containerVariants}
         initial="hidden"
         animate="visible"
         aria-hidden
@@ -97,7 +105,7 @@ export function HeroSection() {
         {titleLetters.map((letter, index) => (
           <motion.span
             key={`${letter}-${index}`}
-            variants={letterVariants}
+            variants={prefersReducedMotion ? { hidden: { opacity: 1, y: 0 }, visible: { opacity: 1, y: 0 } } : letterVariants}
             className="font-extralight"
             style={{
               fontFamily: "var(--font-cormorant), Georgia, serif",
@@ -109,7 +117,7 @@ export function HeroSection() {
         ))}
       </motion.div>
       <motion.p
-        variants={subtitleVariants}
+        variants={prefersReducedMotion ? { hidden: { opacity: 1, y: 0 }, visible: { opacity: 1, y: 0 } } : subtitleVariants}
         initial="hidden"
         animate="visible"
         className="mt-6 max-w-[90vw] px-2 text-center text-sm font-light leading-[1.8] tracking-wide text-[#f5f5f0]/90 sm:mt-8 sm:max-w-2xl sm:text-base md:mt-12 md:text-lg md:tracking-[0.05em]"
@@ -117,7 +125,7 @@ export function HeroSection() {
         {t.hero.subtitle}
       </motion.p>
       <motion.p
-        variants={pricingVariants}
+        variants={prefersReducedMotion ? { hidden: { opacity: 1, y: 0 }, visible: { opacity: 1, y: 0 } } : pricingVariants}
         initial="hidden"
         animate="visible"
         className="mt-3 text-center text-xs font-light tracking-[0.12em] text-[#f5f5f0]/70 sm:text-sm"
@@ -131,7 +139,7 @@ export function HeroSection() {
         </Link>
       </motion.p>
       <motion.div
-        variants={ctaVariants}
+        variants={prefersReducedMotion ? { hidden: { opacity: 1, y: 0 }, visible: { opacity: 1, y: 0 } } : ctaVariants}
         initial="hidden"
         animate="visible"
         className="mt-10 flex flex-col items-center gap-4 sm:mt-12 sm:flex-row sm:gap-6"
@@ -148,7 +156,7 @@ export function HeroSection() {
           href={getWhatsAppDevisUrl()}
           target="_blank"
           rel="noopener noreferrer"
-          className="flex items-center gap-2 border border-[#25D366]/60 bg-[#25D366]/10 px-6 py-3 text-sm font-light tracking-[0.15em] text-[#f5f5f0] transition-all hover:bg-[#25D366]/20"
+          className="animate-cta-glow flex items-center gap-2 border border-[#25D366]/70 bg-[#25D366]/15 px-6 py-3 text-sm font-light tracking-[0.15em] text-[#f5f5f0] transition-all hover:scale-[1.02] hover:bg-[#25D366]/25 hover:border-[#25D366] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#25D366]/50"
           aria-label={t.hero.requestQuote}
         >
           {t.hero.requestQuote}
@@ -156,21 +164,42 @@ export function HeroSection() {
         </a>
       </motion.div>
       <motion.div
-        variants={ctaVariants}
+        variants={prefersReducedMotion ? { hidden: { opacity: 1, y: 0 }, visible: { opacity: 1, y: 0 } } : ctaVariants}
         initial="hidden"
         animate="visible"
         className="mt-12 flex flex-wrap items-center justify-center gap-x-8 gap-y-4 text-[10px] font-light tracking-[0.1em] text-[#f5f5f0]/60 sm:gap-x-12 sm:text-xs"
       >
-        <span className="inline-flex items-center gap-1.5">
-          <span aria-hidden>⚡</span> {t.hero.badge1}
+        <span className="inline-flex items-center gap-2 rounded-full border border-[#f5f5f0]/10 bg-[#f5f5f0]/5 px-4 py-2 backdrop-blur-sm transition-colors hover:border-[#f5f5f0]/20 hover:bg-[#f5f5f0]/10">
+          <Zap size={14} className="text-[#d4af37]/80" strokeWidth={1.5} aria-hidden />
+          {t.hero.badge1}
         </span>
-        <span className="inline-flex items-center gap-1.5">
-          <span aria-hidden>🔒</span> {t.hero.badge2}
+        <span className="inline-flex items-center gap-2 rounded-full border border-[#f5f5f0]/10 bg-[#f5f5f0]/5 px-4 py-2 backdrop-blur-sm transition-colors hover:border-[#f5f5f0]/20 hover:bg-[#f5f5f0]/10">
+          <Shield size={14} className="text-[#d4af37]/80" strokeWidth={1.5} aria-hidden />
+          {t.hero.badge2}
         </span>
-        <span className="inline-flex items-center gap-1.5">
-          <span aria-hidden>🤝</span> {t.hero.badge3}
+        <span className="inline-flex items-center gap-2 rounded-full border border-[#f5f5f0]/10 bg-[#f5f5f0]/5 px-4 py-2 backdrop-blur-sm transition-colors hover:border-[#f5f5f0]/20 hover:bg-[#f5f5f0]/10">
+          <Handshake size={14} className="text-[#d4af37]/80" strokeWidth={1.5} aria-hidden />
+          {t.hero.badge3}
         </span>
       </motion.div>
+      {"stats" in t && (
+        <motion.div
+          variants={prefersReducedMotion ? { hidden: { opacity: 1, y: 0 }, visible: { opacity: 1, y: 0 } } : ctaVariants}
+          initial="hidden"
+          animate="visible"
+          className="mt-8 flex flex-wrap items-center justify-center gap-x-10 gap-y-2 border-t border-[#f5f5f0]/10 pt-8 sm:gap-x-14"
+          aria-label="Chiffres clés PhantomDev"
+        >
+          <span className="text-center">
+            <span className="block text-lg font-light tracking-[0.1em] text-[#d4af37]/90 sm:text-xl">5+</span>
+            <span className="text-[10px] font-light tracking-[0.15em] text-[#f5f5f0]/50 uppercase sm:text-xs">{t.stats.projects}</span>
+          </span>
+          <span className="text-center">
+            <span className="block text-lg font-light tracking-[0.1em] text-[#d4af37]/90 sm:text-xl">5+</span>
+            <span className="text-[10px] font-light tracking-[0.15em] text-[#f5f5f0]/50 uppercase sm:text-xs">{t.stats.years}</span>
+          </span>
+        </motion.div>
+      )}
     </section>
   );
 }

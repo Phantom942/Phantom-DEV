@@ -24,7 +24,7 @@ export default function EnGBServicesPage() {
     <div className="relative min-h-screen w-full bg-[#000000]">
       <CursorAndGlow />
       <Navbar />
-      <main role="main" className="w-full pt-24 pb-16 sm:pt-32 sm:pb-24">
+      <main id="main" role="main" className="w-full pt-24 pb-16 sm:pt-32 sm:pb-24">
         <div className="mx-auto max-w-4xl px-4 sm:px-8 md:px-16">
           <Link
             href="/en-gb/#expertise"
