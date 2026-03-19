@@ -1,4 +1,12 @@
 /**
+ * Formspree — envoi des demandes par email.
+ * Créez un formulaire sur https://formspree.io, récupérez l'ID (ex: mjvndpqa)
+ * et définissez NEXT_PUBLIC_FORMSPREE_ID dans .env.local ou sur votre hébergeur.
+ */
+export const FORMSPREE_ID =
+  typeof process !== "undefined" ? process.env.NEXT_PUBLIC_FORMSPREE_ID || "" : "";
+
+/**
  * Numéro WhatsApp (indicatif pays + numéro, sans + ni espaces).
  * Exemple : 33612345678 pour la France, 13436662018 pour US/Canada.
  * Définir NEXT_PUBLIC_WHATSAPP_NUMBER dans .env.local ou sur votre hébergeur.

@@ -2,8 +2,8 @@
 
 import { useState, useEffect, useCallback } from "react";
 import { useSearchParams } from "next/navigation";
-import { getWhatsAppDevisUrl } from "@/data/contact";
-import { MessageCircle, AlertCircle } from "lucide-react";
+import { getWhatsAppDevisUrl, FORMSPREE_ID } from "@/data/contact";
+import { MessageCircle, AlertCircle, Mail, Loader2, CheckCircle } from "lucide-react";
 import { useTranslations } from "@/hooks/useTranslations";
 
 const FORM_STORAGE_KEY = "phantomdev_contact_draft";
@@ -115,8 +115,9 @@ export function WhatsAppForm() {
   const [urgency, setUrgency] = useState("");
   const [needs, setNeeds] = useState<string[]>([]);
   const [message, setMessage] = useState("");
-  const [errors, setErrors] = useState<{ name?: boolean; message?: boolean }>({});
+  const [errors, setErrors] = useState<{ name?: boolean; email?: boolean; message?: boolean }>({});
   const [touched, setTouched] = useState(false);
+  const [emailStatus, setEmailStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
 
   const projectTypes = [
     { value: "", label: cf.projectTypes.empty },
@@ -234,8 +235,88 @@ export function WhatsAppForm() {
     window.open(getWhatsAppDevisUrl(text), "_blank", "noopener,noreferrer");
   }
 
+  async function handleSubmitEmail(e: React.FormEvent) {
+    e.preventDefault();
+    setTouched(true);
+    const nameValid = name.trim().length > 0;
+    const emailValid = email.trim().length > 0 && /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.trim());
+    const messageValid = message.trim().length > 0;
+    setErrors({
+      name: !nameValid,
+      email: !emailValid,
+      message: !messageValid,
+    });
+
+    if (!nameValid || !emailValid || !messageValid) return;
+    if (!FORMSPREE_ID) {
+      setEmailStatus("error");
+      return;
+    }
+
+    setEmailStatus("loading");
+    const projectLabel = projectType ? projectTypes.find((p) => p.value === projectType)?.label || projectType : "";
+    const budgetLabel = budget ? budgets.find((b) => b.value === budget)?.label || budget : "";
+    const urgencyLabel = urgency ? urgencyOptions.find((u) => u.value === urgency)?.label || urgency : "";
+    const needsLabels = needs.map((id) => needsList.find((n) => n.id === id)?.label || id).filter(Boolean);
+
+    try {
+      const res = await fetch(`https://formspree.io/f/${FORMSPREE_ID}`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          name: name.trim(),
+          email: email.trim(),
+          company: company.trim(),
+          projectType: projectLabel,
+          budget: budgetLabel,
+          urgency: urgencyLabel,
+          needs: needsLabels.join(", ") || "—",
+          message: message.trim(),
+          _subject: `[PhantomDev] Nouvelle demande de devis — ${name.trim()}`,
+        }),
+      });
+
+      if (!res.ok) throw new Error("Formspree error");
+      setEmailStatus("success");
+      setName("");
+      setEmail("");
+      setCompany("");
+      setProjectType("");
+      setBudget("");
+      setUrgency("");
+      setNeeds([]);
+      setMessage("");
+      setErrors({});
+      setTouched(false);
+      try {
+        localStorage.removeItem(FORM_STORAGE_KEY);
+      } catch {
+        /* ignore */
+      }
+    } catch {
+      setEmailStatus("error");
+    }
+  }
+
   const nameInvalid = touched && errors.name;
+  const emailInvalid = touched && errors.email;
   const messageInvalid = touched && errors.message;
+  const hasFormspree = !!FORMSPREE_ID;
+
+  if (emailStatus === "success") {
+    return (
+      <div
+        className="mx-auto flex max-w-xl flex-col items-center justify-center gap-4 rounded-sm border border-[#25D366]/30 bg-[#25D366]/5 px-6 py-10 text-center"
+        role="status"
+        aria-live="polite"
+      >
+        <CheckCircle size={40} className="text-[#25D366]" strokeWidth={1.5} />
+        <div>
+          <p className="text-sm font-light tracking-[0.05em] text-[#f5f5f0]">{cf.submitSuccess}</p>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <form
@@ -279,11 +360,22 @@ export function WhatsAppForm() {
             id="wa-email"
             type="email"
             value={email}
-            onChange={(e) => setEmail(e.target.value)}
+            onChange={(e) => {
+              setEmail(e.target.value);
+              if (errors.email) setErrors((prev) => ({ ...prev, email: false }));
+            }}
             placeholder={cf.emailPlaceholder}
-            className={inputClass}
+            className={emailInvalid ? inputErrorClass : inputClass}
             autoComplete="email"
+            aria-invalid={emailInvalid || undefined}
+            aria-describedby={emailInvalid ? "wa-email-error" : undefined}
           />
+          {emailInvalid && (
+            <p id="wa-email-error" className="mt-1.5 flex items-center gap-2 text-xs text-red-400" role="alert">
+              <AlertCircle size={14} className="shrink-0" />
+              {cf.emailRequired}
+            </p>
+          )}
         </div>
       </div>
 
@@ -403,7 +495,17 @@ export function WhatsAppForm() {
         )}
       </div>
 
-      <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:gap-4">
+      {emailStatus === "error" && (
+        <div
+          className="flex items-center gap-2 rounded-sm border border-red-500/30 bg-red-500/10 px-4 py-3 text-sm text-red-200"
+          role="alert"
+        >
+          <AlertCircle size={18} className="shrink-0" />
+          <span>{cf.submitError}</span>
+        </div>
+      )}
+
+      <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-center sm:gap-4">
         <button
           type="submit"
           className="inline-flex w-full items-center justify-center gap-2 border border-[#25D366]/60 bg-[#25D366]/10 px-8 py-4 text-sm font-light tracking-[0.15em] text-[#f5f5f0] transition-all hover:bg-[#25D366]/20 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#25D366]/50 focus-visible:ring-offset-2 focus-visible:ring-offset-black sm:w-auto"
@@ -412,7 +514,28 @@ export function WhatsAppForm() {
           <MessageCircle size={20} strokeWidth={1.5} />
           {cf.submit}
         </button>
-        <p className="text-xs font-light tracking-[0.08em] text-[#f5f5f0]/50">
+        {hasFormspree && (
+          <button
+            type="button"
+            onClick={handleSubmitEmail}
+            disabled={emailStatus === "loading"}
+            className="inline-flex w-full items-center justify-center gap-2 border border-[#d4af37]/50 bg-[#d4af37]/10 px-8 py-4 text-sm font-light tracking-[0.15em] text-[#f5f5f0] transition-all hover:bg-[#d4af37]/20 disabled:opacity-60 disabled:cursor-not-allowed focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#d4af37]/50 focus-visible:ring-offset-2 focus-visible:ring-offset-black sm:w-auto"
+            aria-label={cf.submitEmail}
+          >
+            {emailStatus === "loading" ? (
+              <>
+                <Loader2 size={20} className="animate-spin" strokeWidth={1.5} />
+                {cf.submitLoading}
+              </>
+            ) : (
+              <>
+                <Mail size={20} strokeWidth={1.5} />
+                {cf.submitEmail}
+              </>
+            )}
+          </button>
+        )}
+        <p className="w-full text-xs font-light tracking-[0.08em] text-[#f5f5f0]/50 sm:w-auto">
           {cf.response48h}
         </p>
       </div>
