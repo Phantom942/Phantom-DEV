@@ -6,7 +6,12 @@ export const faqItems = [
   {
     question: "Qu'est-ce que PhantomDev ?",
     answer:
-      "PhantomDev est une agence de création de sites web sur-mesure basée en France. Spécialisée en Next.js, React et Node.js, elle conçoit des sites vitrines, e-commerce et applications SaaS avec des interfaces premium et des performances optimisées (Lighthouse 90+).",
+      "PhantomDev est une agence de création de sites web sur-mesure basée en France. Spécialisée en Next.js, React et Node.js, elle conçoit des sites vitrines, e-commerce et applications SaaS avec des interfaces premium, des performances optimisées (Lighthouse 90+) et une livraison rapide.",
+  },
+  {
+    question: "Quels sont les délais de livraison ?",
+    answer:
+      "Un site vitrine simple peut être livré en 48h. Pour les projets plus complexes (e-commerce, applications sur-mesure), les délais sont adaptés selon la portée. Un planning est établi dès la validation du devis.",
   },
   {
     question: "Quels services propose PhantomDev ?",

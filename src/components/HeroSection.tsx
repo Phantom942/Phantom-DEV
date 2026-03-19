@@ -3,7 +3,7 @@
 import { motion, useReducedMotion } from "framer-motion";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { ArrowDown, MessageCircle, Zap, Shield, Handshake } from "lucide-react";
+import { ArrowDown, MessageCircle, Zap, Shield, Truck, Handshake } from "lucide-react";
 import { getWhatsAppDevisUrl } from "@/data/contact";
 import { useTranslations } from "@/hooks/useTranslations";
 
@@ -178,8 +178,12 @@ export function HeroSection() {
           {t.hero.badge2}
         </span>
         <span className="inline-flex items-center gap-2 rounded-full border border-[#f5f5f0]/10 bg-[#f5f5f0]/5 px-4 py-2 backdrop-blur-sm transition-colors hover:border-[#f5f5f0]/20 hover:bg-[#f5f5f0]/10">
-          <Handshake size={14} className="text-[#d4af37]/80" strokeWidth={1.5} aria-hidden />
+          <Truck size={14} className="text-[#d4af37]/80" strokeWidth={1.5} aria-hidden />
           {t.hero.badge3}
+        </span>
+        <span className="inline-flex items-center gap-2 rounded-full border border-[#f5f5f0]/10 bg-[#f5f5f0]/5 px-4 py-2 backdrop-blur-sm transition-colors hover:border-[#f5f5f0]/20 hover:bg-[#f5f5f0]/10">
+          <Handshake size={14} className="text-[#d4af37]/80" strokeWidth={1.5} aria-hidden />
+          {t.hero.badge4}
         </span>
       </motion.div>
       {"stats" in t && (

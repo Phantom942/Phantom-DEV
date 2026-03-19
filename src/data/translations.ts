@@ -11,7 +11,8 @@ export const translations = {
       requestQuote: "Demander un devis",
       badge1: "Performance ultra-rapide",
       badge2: "Sécurité maximale",
-      badge3: "Accompagnement sur-mesure",
+      badge3: "Livraison sous 48h",
+      badge4: "Accompagnement sur-mesure",
     },
     sections: {
       expertise: "Expertise",
@@ -22,14 +23,15 @@ export const translations = {
       realisationsDesc: "L'excellence technique au service de l'élégance.",
       contact: "Contact",
       contactDesc: "Un projet en tête ? Contactez-moi sur WhatsApp pour un devis gratuit sous 48h, sans engagement.",
-      performance: "Garantie performance : Lighthouse 90+ sur tous les sites livrés.",
+      performance: "Garantie performance : Lighthouse 90+ sur tous les sites livrés. Site vitrine livrable en 48h.",
       or: "ou",
-      response: "Réponse sous 48h · Sans engagement",
+      response: "Réponse sous 48h · Site livrable en 48h · Sans engagement",
     },
     faq: {
       title: "Questions fréquentes",
       items: [
-        { q: "Qu'est-ce que PhantomDev ?", a: "PhantomDev est une agence de création de sites web sur-mesure basée en France. Spécialisée en Next.js, React et Node.js, elle conçoit des sites vitrines, e-commerce et applications SaaS avec des interfaces premium et des performances optimisées (Lighthouse 90+)." },
+        { q: "Qu'est-ce que PhantomDev ?", a: "PhantomDev est une agence de création de sites web sur-mesure basée en France. Spécialisée en Next.js, React et Node.js, elle conçoit des sites vitrines, e-commerce et applications SaaS avec des interfaces premium, des performances optimisées (Lighthouse 90+) et une livraison rapide." },
+        { q: "Quels sont les délais de livraison ?", a: "Un site vitrine simple peut être livré en 48h. Pour les projets plus complexes (e-commerce, applications sur-mesure), les délais sont adaptés selon la portée. Un planning est établi dès la validation du devis." },
         { q: "Quels services propose PhantomDev ?", a: "PhantomDev propose la conception web premium (interfaces sur-mesure, UX conversion), les applications sur-mesure (e-commerce, SaaS, plateformes métier) et l'intégration IA stratégique (chatbots, automatisation, recommandations)." },
         { q: "Comment contacter PhantomDev pour un devis ?", a: "Contactez PhantomDev via WhatsApp pour un devis gratuit sous 48h, sans engagement. Le site phantomdev.fr propose un formulaire et un bouton direct vers la ligne WhatsApp." },
         { q: "PhantomDev travaille-t-elle à l'international ?", a: "Oui. PhantomDev est basée en France mais intervient à l'international. Les contrats de maintenance sont garantis." },
@@ -41,7 +43,7 @@ export const translations = {
       privateLine: "Ligne privée",
       ctaTitle: "Prêt à lancer votre projet ?",
       ctaButton: "Demander un devis gratuit",
-      based: "France, Europe, international — Interventions à distance — Contrats de maintenance garantis",
+      based: "France, Europe, international — Site livrable en 48h — Contrats de maintenance garantis",
       designBy: "Design by PhantomDev",
       rights: "Tous droits réservés.",
     },
@@ -101,8 +103,8 @@ export const translations = {
     servicesList: {
       conception: {
         title: "Conception Web Premium",
-        price: "à partir de 4 500€",
-        description: "Un site qui reflète l'excellence de votre marque. Chaque interface est conçue pour captiver, guider et convertir.",
+        price: "à partir de 2 500€",
+        description: "Un site qui reflète l'excellence de votre marque. Chaque interface est conçue pour captiver, guider et convertir. Livrable en 48h pour un projet simple.",
         benefits: [
           "Design sur-mesure, zéro template générique",
           "UX pensée pour la conversion et l'engagement",
@@ -115,7 +117,7 @@ export const translations = {
       },
       applications: {
         title: "Applications Sur-Mesure",
-        price: "à partir de 8 000€",
+        price: "à partir de 6 000€",
         badge: "Meilleur rapport qualité/prix",
         description: "Des plateformes robustes, scalables et performantes. E-commerce, SaaS, outils métier : l'architecture s'adapte à vos besoins.",
         benefits: [
@@ -145,7 +147,7 @@ export const translations = {
       },
       maintenance: {
         title: "Maintenance & Support",
-        price: "dès 199 €/mois",
+        price: "dès 99 €/mois",
         description: "Gardez votre site sécurisé, à jour et performant. Mises à jour techniques, sauvegardes et support réactif pour une sérénité au long cours.",
         benefits: [
           "Mises à jour de sécurité et dépendances",
@@ -179,7 +181,8 @@ export const translations = {
       requestQuote: "Request a quote",
       badge1: "Ultra-fast performance",
       badge2: "Maximum security",
-      badge3: "Tailored support",
+      badge3: "Delivery in 48h",
+      badge4: "Tailored support",
     },
     sections: {
       expertise: "Expertise",
@@ -190,14 +193,15 @@ export const translations = {
       realisationsDesc: "Technical excellence in the service of elegance.",
       contact: "Contact",
       contactDesc: "Got a project in mind? Contact me on WhatsApp for a free quote within 48h, no commitment.",
-      performance: "Performance guarantee: Lighthouse 90+ on all delivered sites.",
+      performance: "Performance guarantee: Lighthouse 90+ on all delivered sites. Landing page deliverable in 48h.",
       or: "or",
-      response: "Response within 48h · No commitment",
+      response: "Response within 48h · Site deliverable in 48h · No commitment",
     },
     faq: {
       title: "Frequently asked questions",
       items: [
-        { q: "What is PhantomDev?", a: "PhantomDev is a custom web development agency based in France. Specialised in Next.js, React and Node.js, it creates websites, e-commerce and SaaS applications with premium interfaces and optimised performance (Lighthouse 90+)." },
+        { q: "What is PhantomDev?", a: "PhantomDev is a custom web development agency based in France. Specialised in Next.js, React and Node.js, it creates websites, e-commerce and SaaS applications with premium interfaces, optimised performance (Lighthouse 90+) and fast delivery." },
+        { q: "What are the delivery times?", a: "A simple landing page can be delivered in 48 hours. For more complex projects (e-commerce, custom applications), timelines are adapted to the scope. A schedule is agreed once the quote is approved." },
         { q: "What services does PhantomDev offer?", a: "PhantomDev offers premium web design (bespoke interfaces, conversion UX), custom applications (e-commerce, SaaS, business platforms) and strategic AI integration (chatbots, automation, recommendations)." },
         { q: "How to contact PhantomDev for a quote?", a: "Contact PhantomDev via WhatsApp for a free quote within 48h, no commitment. The phantomdev.fr site offers a form and direct button to the WhatsApp line." },
         { q: "Does PhantomDev work internationally?", a: "Yes. PhantomDev is based in France but operates internationally. Maintenance contracts are guaranteed." },
@@ -209,7 +213,7 @@ export const translations = {
       privateLine: "Private line",
       ctaTitle: "Ready to start your project?",
       ctaButton: "Request a free quote",
-      based: "France, Europe, worldwide — Remote projects — Guaranteed maintenance contracts",
+      based: "France, Europe, worldwide — Site deliverable in 48h — Guaranteed maintenance contracts",
       designBy: "Design by PhantomDev",
       rights: "All rights reserved.",
     },
@@ -269,8 +273,8 @@ export const translations = {
     servicesList: {
       conception: {
         title: "Premium Web Design",
-        price: "from €4,500",
-        description: "A site that reflects your brand's excellence. Every interface is designed to captivate, guide and convert.",
+        price: "from €2,500",
+        description: "A site that reflects your brand's excellence. Every interface is designed to captivate, guide and convert. Deliverable in 48h for simple projects.",
         benefits: [
           "Bespoke design, no generic templates",
           "UX designed for conversion and engagement",
@@ -283,7 +287,7 @@ export const translations = {
       },
       applications: {
         title: "Custom Applications",
-        price: "from €8,000",
+        price: "from €6,000",
         badge: "Best value for money",
         description: "Robust, scalable and performant platforms. E-commerce, SaaS, business tools: architecture adapts to your needs.",
         benefits: [
@@ -313,7 +317,7 @@ export const translations = {
       },
       maintenance: {
         title: "Maintenance & Support",
-        price: "from €199/month",
+        price: "from €99/month",
         description: "Keep your site secure, up to date and performant. Technical updates, backups and responsive support for long-term peace of mind.",
         benefits: [
           "Security and dependency updates",
@@ -347,7 +351,8 @@ export const translations = {
       requestQuote: "Request a quote",
       badge1: "Ultra-fast performance",
       badge2: "Maximum security",
-      badge3: "Tailored support",
+      badge3: "Delivery in 48h",
+      badge4: "Tailored support",
     },
     sections: {
       expertise: "Expertise",
@@ -358,14 +363,15 @@ export const translations = {
       realisationsDesc: "Technical excellence in the service of elegance.",
       contact: "Contact",
       contactDesc: "Got a project in mind? Contact me on WhatsApp for a free quote within 48h, no commitment.",
-      performance: "Performance guarantee: Lighthouse 90+ on all delivered sites.",
+      performance: "Performance guarantee: Lighthouse 90+ on all delivered sites. Landing page deliverable in 48h.",
       or: "or",
-      response: "Response within 48h · No commitment",
+      response: "Response within 48h · Site deliverable in 48h · No commitment",
     },
     faq: {
       title: "Frequently asked questions",
       items: [
-        { q: "What is PhantomDev?", a: "PhantomDev is a custom web development agency based in France. Specialised in Next.js, React and Node.js, it creates websites, e-commerce and SaaS applications with premium interfaces and optimised performance (Lighthouse 90+)." },
+        { q: "What is PhantomDev?", a: "PhantomDev is a custom web development agency based in France. Specialised in Next.js, React and Node.js, it creates websites, e-commerce and SaaS applications with premium interfaces, optimised performance (Lighthouse 90+) and fast delivery." },
+        { q: "What are the delivery times?", a: "A simple landing page can be delivered in 48 hours. For more complex projects (e-commerce, custom applications), timelines are adapted to the scope. A schedule is agreed once the quote is approved." },
         { q: "What services does PhantomDev offer?", a: "PhantomDev offers premium web design (bespoke interfaces, conversion UX), custom applications (e-commerce, SaaS, business platforms) and strategic AI integration (chatbots, automation, recommendations)." },
         { q: "How to contact PhantomDev for a quote?", a: "Contact PhantomDev via WhatsApp for a free quote within 48h, no commitment. The phantomdev.fr site offers a form and direct button to the WhatsApp line." },
         { q: "Does PhantomDev work internationally?", a: "Yes. PhantomDev is based in France but operates internationally. Maintenance contracts are guaranteed." },
@@ -377,7 +383,7 @@ export const translations = {
       privateLine: "Private line",
       ctaTitle: "Ready to start your project?",
       ctaButton: "Request a free quote",
-      based: "France, Europe, worldwide — Remote projects — Guaranteed maintenance contracts",
+      based: "France, Europe, worldwide — Site deliverable in 48h — Guaranteed maintenance contracts",
       designBy: "Design by PhantomDev",
       rights: "All rights reserved.",
     },
@@ -437,8 +443,8 @@ export const translations = {
     servicesList: {
       conception: {
         title: "Premium Web Design",
-        price: "from $5,000",
-        description: "A site that reflects your brand's excellence. Every interface is designed to captivate, guide and convert.",
+        price: "from $3,000",
+        description: "A site that reflects your brand's excellence. Every interface is designed to captivate, guide and convert. Deliverable in 48h for simple projects.",
         benefits: [
           "Custom design, no generic templates",
           "UX designed for conversion and engagement",
@@ -451,7 +457,7 @@ export const translations = {
       },
       applications: {
         title: "Custom Applications",
-        price: "from $9,000",
+        price: "from $7,000",
         badge: "Best value for money",
         description: "Robust, scalable and performant platforms. E-commerce, SaaS, business tools: architecture adapts to your needs.",
         benefits: [
@@ -481,7 +487,7 @@ export const translations = {
       },
       maintenance: {
         title: "Maintenance & Support",
-        price: "from $220/month",
+        price: "from $120/month",
         description: "Keep your site secure, up to date and performant. Technical updates, backups and responsive support for long-term peace of mind.",
         benefits: [
           "Security and dependency updates",

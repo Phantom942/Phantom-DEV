@@ -17,7 +17,7 @@ export const metadata: Metadata = {
   },
   title: "Services et tarifs — Sites vitrines, e-commerce, SaaS | International",
   description:
-    "Tarifs création de sites web : vitrines dès 4 500€, e-commerce dès 8 000€, maintenance dès 199€/mois. Devis gratuit sous 48h. France, Europe, international.",
+    "Tarifs création de sites web : vitrines dès 2 500€, e-commerce dès 6 000€, maintenance dès 99€/mois. Devis gratuit sous 48h. France, Europe, international.",
   keywords: [
     "création site web",
     "développement web sur-mesure",
@@ -32,7 +32,7 @@ export const metadata: Metadata = {
     type: "website",
     title: "Services | PhantomDev — Tarifs sites vitrines, e-commerce, SaaS",
     description:
-      "Tarifs création web : vitrines dès 4 500€, e-commerce dès 8 000€. Devis gratuit sous 48h.",
+      "Tarifs création web : vitrines dès 2 500€, e-commerce dès 6 000€. Devis gratuit sous 48h.",
     url: "https://phantomdev.fr/services",
     siteName: "PhantomDev",
     locale: "fr_FR",
