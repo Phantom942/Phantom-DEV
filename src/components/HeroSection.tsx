@@ -198,10 +198,6 @@ export function HeroSection() {
             <span className="block text-lg font-light tracking-[0.1em] text-[#d4af37]/90 sm:text-xl">5+</span>
             <span className="text-[10px] font-light tracking-[0.15em] text-[#f5f5f0]/50 uppercase sm:text-xs">{t.stats.projects}</span>
           </span>
-          <span className="text-center">
-            <span className="block text-lg font-light tracking-[0.1em] text-[#d4af37]/90 sm:text-xl">5+</span>
-            <span className="text-[10px] font-light tracking-[0.15em] text-[#f5f5f0]/50 uppercase sm:text-xs">{t.stats.years}</span>
-          </span>
         </motion.div>
       )}
     </section>
