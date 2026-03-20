@@ -118,6 +118,7 @@ export function WhatsAppForm() {
   const [errors, setErrors] = useState<{ name?: boolean; email?: boolean; message?: boolean }>({});
   const [touched, setTouched] = useState(false);
   const [emailStatus, setEmailStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
+  const [emailErrorDetail, setEmailErrorDetail] = useState("");
 
   const projectTypes = [
     { value: "", label: cf.projectTypes.empty },
@@ -254,6 +255,7 @@ export function WhatsAppForm() {
     }
 
     setEmailStatus("loading");
+    setEmailErrorDetail("");
     const projectLabel = projectType ? projectTypes.find((p) => p.value === projectType)?.label || projectType : "";
     const budgetLabel = budget ? budgets.find((b) => b.value === budget)?.label || budget : "";
     const urgencyLabel = urgency ? urgencyOptions.find((u) => u.value === urgency)?.label || urgency : "";
@@ -261,24 +263,34 @@ export function WhatsAppForm() {
 
     try {
       if (WEB3FORMS_ACCESS_KEY) {
-        const res = await fetch("https://api.web3forms.com/submit", {
+        const payload = {
+          subject: `[PhantomDev] Nouvelle demande de devis — ${name.trim()}`,
+          name: name.trim(),
+          email: email.trim(),
+          company: company.trim(),
+          projectType: projectLabel,
+          budget: budgetLabel,
+          urgency: urgencyLabel,
+          needs: needsLabels.join(", ") || "—",
+          message: message.trim(),
+        };
+        const res = await fetch(`https://api.web3forms.com/submit/${WEB3FORMS_ACCESS_KEY}`, {
           method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({
-            access_key: WEB3FORMS_ACCESS_KEY,
-            subject: `[PhantomDev] Nouvelle demande de devis — ${name.trim()}`,
-            name: name.trim(),
-            email: email.trim(),
-            company: company.trim(),
-            projectType: projectLabel,
-            budget: budgetLabel,
-            urgency: urgencyLabel,
-            needs: needsLabels.join(", ") || "—",
-            message: message.trim(),
-          }),
+          headers: {
+            "Content-Type": "application/json",
+            "Accept": "application/json",
+          },
+          body: JSON.stringify(payload),
         });
-        const data = (await res.json().catch(() => ({}))) as { success?: boolean };
-        if (!res.ok || !data.success) throw new Error("Web3Forms error");
+        const data = (await res.json().catch(() => ({}))) as {
+          success?: boolean;
+          message?: string;
+          body?: { message?: string };
+        };
+        if (!res.ok || !data.success) {
+          const errMsg = data.body?.message || data.message || `HTTP ${res.status}`;
+          throw new Error(errMsg);
+        }
       } else if (FORMSPREE_ID) {
         const body = new URLSearchParams({
           name: name.trim(),
@@ -319,8 +331,9 @@ export function WhatsAppForm() {
       } catch {
         /* ignore */
       }
-    } catch {
+    } catch (err) {
       setEmailStatus("error");
+      setEmailErrorDetail(err instanceof Error ? err.message : "");
     }
   }
 
@@ -523,11 +536,16 @@ export function WhatsAppForm() {
 
       {emailStatus === "error" && (
         <div
-          className="flex items-center gap-2 rounded-sm border border-red-500/30 bg-red-500/10 px-4 py-3 text-sm text-red-200"
+          className="flex flex-col gap-1 rounded-sm border border-red-500/30 bg-red-500/10 px-4 py-3 text-sm text-red-200"
           role="alert"
         >
-          <AlertCircle size={18} className="shrink-0" />
-          <span>{cf.submitError}</span>
+          <div className="flex items-center gap-2">
+            <AlertCircle size={18} className="shrink-0" />
+            <span>{cf.submitError}</span>
+          </div>
+          {emailErrorDetail && (
+            <p className="text-xs text-red-300/80">Détail : {emailErrorDetail}</p>
+          )}
         </div>
       )}
 
