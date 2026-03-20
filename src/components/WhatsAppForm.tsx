@@ -263,7 +263,8 @@ export function WhatsAppForm() {
 
     try {
       if (WEB3FORMS_ACCESS_KEY) {
-        const payload = {
+        const body = new URLSearchParams({
+          access_key: WEB3FORMS_ACCESS_KEY,
           subject: `[PhantomDev] Nouvelle demande de devis — ${name.trim()}`,
           name: name.trim(),
           email: email.trim(),
@@ -273,14 +274,11 @@ export function WhatsAppForm() {
           urgency: urgencyLabel,
           needs: needsLabels.join(", ") || "—",
           message: message.trim(),
-        };
-        const res = await fetch(`https://api.web3forms.com/submit/${WEB3FORMS_ACCESS_KEY}`, {
+        });
+        const res = await fetch("https://api.web3forms.com/submit", {
           method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-            "Accept": "application/json",
-          },
-          body: JSON.stringify(payload),
+          headers: { "Content-Type": "application/x-www-form-urlencoded" },
+          body: body.toString(),
         });
         const data = (await res.json().catch(() => ({}))) as {
           success?: boolean;
