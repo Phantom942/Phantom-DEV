@@ -2,7 +2,7 @@
 
 import { useState, useEffect, useCallback } from "react";
 import { useSearchParams } from "next/navigation";
-import { getWhatsAppDevisUrl, FORMSPREE_ID } from "@/data/contact";
+import { getWhatsAppDevisUrl, WEB3FORMS_ACCESS_KEY, FORMSPREE_ID, HAS_EMAIL_SERVICE } from "@/data/contact";
 import { MessageCircle, AlertCircle, Mail, Loader2, CheckCircle } from "lucide-react";
 import { useTranslations } from "@/hooks/useTranslations";
 
@@ -248,7 +248,7 @@ export function WhatsAppForm() {
     });
 
     if (!nameValid || !emailValid || !messageValid) return;
-    if (!FORMSPREE_ID) {
+    if (!HAS_EMAIL_SERVICE) {
       setEmailStatus("error");
       return;
     }
@@ -260,27 +260,48 @@ export function WhatsAppForm() {
     const needsLabels = needs.map((id) => needsList.find((n) => n.id === id)?.label || id).filter(Boolean);
 
     try {
-      const body = new URLSearchParams({
-        name: name.trim(),
-        email: email.trim(),
-        company: company.trim(),
-        projectType: projectLabel,
-        budget: budgetLabel,
-        urgency: urgencyLabel,
-        needs: needsLabels.join(", ") || "—",
-        message: message.trim(),
-        _subject: `[PhantomDev] Nouvelle demande de devis — ${name.trim()}`,
-      });
-
-      const res = await fetch(`https://formspree.io/f/${FORMSPREE_ID}`, {
-        method: "POST",
-        headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        body: body.toString(),
-      });
-
-      if (!res.ok) {
-        const errData = await res.json().catch(() => ({}));
-        throw new Error((errData as { error?: string })?.error || `HTTP ${res.status}`);
+      if (WEB3FORMS_ACCESS_KEY) {
+        const res = await fetch("https://api.web3forms.com/submit", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            access_key: WEB3FORMS_ACCESS_KEY,
+            subject: `[PhantomDev] Nouvelle demande de devis — ${name.trim()}`,
+            name: name.trim(),
+            email: email.trim(),
+            company: company.trim(),
+            projectType: projectLabel,
+            budget: budgetLabel,
+            urgency: urgencyLabel,
+            needs: needsLabels.join(", ") || "—",
+            message: message.trim(),
+          }),
+        });
+        const data = (await res.json().catch(() => ({}))) as { success?: boolean };
+        if (!res.ok || !data.success) throw new Error("Web3Forms error");
+      } else if (FORMSPREE_ID) {
+        const body = new URLSearchParams({
+          name: name.trim(),
+          email: email.trim(),
+          company: company.trim(),
+          projectType: projectLabel,
+          budget: budgetLabel,
+          urgency: urgencyLabel,
+          needs: needsLabels.join(", ") || "—",
+          message: message.trim(),
+          _subject: `[PhantomDev] Nouvelle demande de devis — ${name.trim()}`,
+        });
+        const res = await fetch(`https://formspree.io/f/${FORMSPREE_ID}`, {
+          method: "POST",
+          headers: { "Content-Type": "application/x-www-form-urlencoded" },
+          body: body.toString(),
+        });
+        if (!res.ok) {
+          const errData = await res.json().catch(() => ({}));
+          throw new Error((errData as { error?: string })?.error || `HTTP ${res.status}`);
+        }
+      } else {
+        throw new Error("No email service");
       }
       setEmailStatus("success");
       setName("");
@@ -306,7 +327,7 @@ export function WhatsAppForm() {
   const nameInvalid = touched && errors.name;
   const emailInvalid = touched && errors.email;
   const messageInvalid = touched && errors.message;
-  const hasFormspree = !!FORMSPREE_ID;
+  const hasFormspree = HAS_EMAIL_SERVICE;
 
   if (emailStatus === "success") {
     return (

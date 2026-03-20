@@ -1,10 +1,19 @@
 /**
- * Formspree — envoi des demandes par email.
- * Créez un formulaire sur https://formspree.io, récupérez l'ID (ex: mjvndpqa)
- * et définissez NEXT_PUBLIC_FORMSPREE_ID dans .env.local ou sur votre hébergeur.
+ * Web3Forms — envoi des demandes par email (recommandé, sans restriction de domaine).
+ * Créez une clé sur https://web3forms.com, vérifiez contact@phantomdev.fr,
+ * et définissez NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY.
+ */
+export const WEB3FORMS_ACCESS_KEY =
+  typeof process !== "undefined" ? process.env.NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY || "" : "";
+
+/**
+ * Formspree — alternative. Définissez NEXT_PUBLIC_FORMSPREE_ID si pas Web3Forms.
  */
 export const FORMSPREE_ID =
   typeof process !== "undefined" ? process.env.NEXT_PUBLIC_FORMSPREE_ID || "" : "";
+
+/** Un service email est configuré (Web3Forms ou Formspree) */
+export const HAS_EMAIL_SERVICE = !!(WEB3FORMS_ACCESS_KEY || FORMSPREE_ID);
 
 /**
  * Numéro WhatsApp (indicatif pays + numéro, sans + ni espaces).
