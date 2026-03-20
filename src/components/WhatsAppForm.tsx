@@ -260,23 +260,28 @@ export function WhatsAppForm() {
     const needsLabels = needs.map((id) => needsList.find((n) => n.id === id)?.label || id).filter(Boolean);
 
     try {
-      const res = await fetch(`https://formspree.io/f/${FORMSPREE_ID}`, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          name: name.trim(),
-          email: email.trim(),
-          company: company.trim(),
-          projectType: projectLabel,
-          budget: budgetLabel,
-          urgency: urgencyLabel,
-          needs: needsLabels.join(", ") || "—",
-          message: message.trim(),
-          _subject: `[PhantomDev] Nouvelle demande de devis — ${name.trim()}`,
-        }),
+      const body = new URLSearchParams({
+        name: name.trim(),
+        email: email.trim(),
+        company: company.trim(),
+        projectType: projectLabel,
+        budget: budgetLabel,
+        urgency: urgencyLabel,
+        needs: needsLabels.join(", ") || "—",
+        message: message.trim(),
+        _subject: `[PhantomDev] Nouvelle demande de devis — ${name.trim()}`,
       });
 
-      if (!res.ok) throw new Error("Formspree error");
+      const res = await fetch(`https://formspree.io/f/${FORMSPREE_ID}`, {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: body.toString(),
+      });
+
+      if (!res.ok) {
+        const errData = await res.json().catch(() => ({}));
+        throw new Error((errData as { error?: string })?.error || `HTTP ${res.status}`);
+      }
       setEmailStatus("success");
       setName("");
       setEmail("");
