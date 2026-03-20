@@ -191,7 +191,7 @@ export function HeroSection() {
           variants={prefersReducedMotion ? { hidden: { opacity: 1, y: 0 }, visible: { opacity: 1, y: 0 } } : ctaVariants}
           initial="hidden"
           animate="visible"
-          className="mt-8 flex flex-wrap items-center justify-center gap-x-10 gap-y-2 border-t border-[#f5f5f0]/10 pt-8 sm:gap-x-14"
+          className="mt-8 flex w-full flex-wrap items-center justify-center gap-x-10 gap-y-2 border-t border-[#f5f5f0]/10 pt-8 sm:gap-x-14"
           aria-label="Chiffres clés PhantomDev"
         >
           <span className="text-center">
