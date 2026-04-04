@@ -21,7 +21,7 @@ export function Navbar() {
     { href: `${localePrefix || ""}/#expertise`, label: t.nav.expertise },
     { href: `${localePrefix || ""}/services`, label: t.nav.services },
     { href: `${localePrefix || ""}/grapheneos`, label: t.nav.grapheneOS },
-    { href: `${localePrefix || ""}/#projets`, label: t.nav.projects },
+    { href: `${localePrefix || ""}/realisations`, label: t.nav.projects },
     { href: `${localePrefix || ""}/#contact`, label: t.nav.contact },
   ];
 

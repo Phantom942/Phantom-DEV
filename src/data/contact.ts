@@ -28,6 +28,19 @@ const digits = raw.replace(/\D/g, "");
 export const WHATSAPP_NUMBER = digits || "33746325035";
 export const WHATSAPP_URL = `https://wa.me/${WHATSAPP_NUMBER}`;
 
+/** Numéro lisible pour affichage (ex. +33 7 46 32 50 35). */
+export function getWhatsAppDisplayHuman(): string {
+  const d = WHATSAPP_NUMBER;
+  if (d.startsWith("33") && d.length === 11) {
+    const r = d.slice(2);
+    return `+33 ${r[0]} ${r.slice(1, 3)} ${r.slice(3, 5)} ${r.slice(5, 7)} ${r.slice(7, 9)}`;
+  }
+  if (d.startsWith("1") && d.length === 11) {
+    return `+1 (${d.slice(1, 4)}) ${d.slice(4, 7)}-${d.slice(7)}`;
+  }
+  return `+${d}`;
+}
+
 const DEFAULT_MESSAGE =
   "Bonjour, j'aimerais demander un devis pour un projet web.";
 export function getWhatsAppDevisUrl(text?: string): string {

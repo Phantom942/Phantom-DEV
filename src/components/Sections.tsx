@@ -25,7 +25,7 @@ export function Sections() {
             >
               <span className="text-2xl sm:text-4xl md:text-5xl">{t.sections.expertise}</span>
             </h2>
-            <p className="mx-auto mb-8 max-w-2xl text-center text-sm leading-[1.8] tracking-[0.02em] text-[#f5f5f0]/85 sm:mb-12 sm:max-w-3xl sm:text-base md:mb-16 md:text-lg">
+            <p className="mx-auto mb-8 max-w-2xl text-center text-base leading-relaxed tracking-normal text-[#f5f5f0]/88 sm:mb-12 sm:max-w-3xl sm:text-lg md:mb-16 md:text-xl md:leading-relaxed">
               {t.sections.expertiseDesc}
             </p>
             <ExpertiseCards />

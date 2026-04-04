@@ -26,6 +26,7 @@ export const translations = {
       response: "Réponse sous 48h · Site livrable en 48h · Sans engagement",
       projectsSectionAria:
         "Réalisations PhantomDev : projets web, interfaces haute performance et e-commerce",
+      filterTablistAria: "Filtrer les projets par type",
     },
     faq: {
       title: "Questions fréquentes",
@@ -43,6 +44,9 @@ export const translations = {
         "Pied de page PhantomDev : création de sites web, contact WhatsApp, mentions légales",
       tagline: "PhantomDev — Création de sites web premium sur-mesure",
       privateLine: "Ligne privée",
+      privateLineAria: "Ligne privée — contact WhatsApp PhantomDev",
+      mainLine: "Ligne principale",
+      mainLineAria: "Ligne principale — contact WhatsApp PhantomDev",
       ctaTitle: "Prêt à lancer votre projet ?",
       ctaButton: "Demander un devis gratuit",
       based: "France, Europe, international — Site livrable en 48h — Contrats de maintenance garantis",
@@ -56,17 +60,17 @@ export const translations = {
       grapheneOS: "GrapheneOS",
       grapheneAria:
         "Installations GrapheneOS — Android sécurisé et respect de la vie privée sur Pixel",
-      projects: "Projets",
+      projects: "Réalisations",
       contact: "Contact",
       freeQuote: "Devis gratuit",
       ariaExpertise: "Expertise en développement d'interfaces haute performance",
-      ariaServices: "Services : sites vitrines, e-commerce, SaaS",
+      ariaServices: "Services : sites vitrines, e-commerce, SaaS, SEO",
       ariaProjects: "Réalisations et projets web",
       ariaContact: "Contact et devis",
       bannerAria:
         "En-tête : PhantomDev, création de sites web, développement React et Node.js, SaaS sur-mesure",
       mainNavAria:
-        "Navigation principale : expertise développement web, services, GrapheneOS, projets, contact et devis",
+        "Navigation principale : expertise, services, GrapheneOS, réalisations, contact et devis",
       homeLogoAria:
         "PhantomDev, accueil — création de sites web premium et développement sur-mesure",
       whatsappQuoteAria: "Demander un devis gratuit sur WhatsApp pour votre projet web",
@@ -171,6 +175,9 @@ export const translations = {
       conceptionDesc: "Interfaces raffinées, UX pensée pour la conversion. Design sur-mesure qui renforce votre image de marque.",
       applications: "Applications Sur-Mesure",
       applicationsDesc: "E-commerce, SaaS, plateformes métier. Architecture solide, scalabilité et performances optimisées.",
+      seo: "Programme SEO & visibilité",
+      seoDesc:
+        "Audit technique, mots-clés, on-page et suivi : plus de trafic qualifié sans promesses creuses.",
       ia: "Intégration IA Stratégique",
       iaDesc: "Chatbots, recommandations, automatisation. L'intelligence artificielle au service de vos processus.",
       learnMore: "En savoir plus",
@@ -182,6 +189,7 @@ export const translations = {
         vitrine: "Site vitrine",
         ecommerce: "E-commerce",
         application: "Application / SaaS",
+        seo: "Pack SEO / référencement",
         maintenance: "Maintenance",
         autre: "Autre",
       },
@@ -236,7 +244,6 @@ export const translations = {
       conception: {
         title: "Conception Web Premium",
         hook: "Votre image premium, convertie en leads — sans look « template ».",
-        price: "2 500€",
         description:
           "On ne vend pas seulement un design : on vend un parcours clair (message, preuve, action). Idéal pour asseoir la confiance, présenter une offre forte et déclencher la prise de contact. Les projets simples peuvent être livrés très vite.",
         benefits: [
@@ -252,7 +259,6 @@ export const translations = {
       applications: {
         title: "Applications Sur-Mesure",
         hook: "Une base technique solide pour vendre, scaler et intégrer vos outils.",
-        price: "6 000€",
         badge: "Meilleur rapport qualité/prix",
         description:
           "E-commerce, SaaS, plateformes métier : on priorise la fiabilité, la vitesse perçue et une architecture qui tient la charge. Moins de friction au checkout, plus de clarté pour vos équipes au quotidien.",
@@ -266,10 +272,24 @@ export const translations = {
         cta: "Souvent choisi par : startups, PME en croissance, e-commerce et projets à fort trafic.",
         ctaButton: "Demander un devis sur-mesure",
       },
+      seo: {
+        title: "Programme SEO & visibilité",
+        hook: "Plus de trafic qualifié : technique saine, contenu aligné sur l’intention de recherche, suivi mesurable.",
+        description:
+          "Pack structuré pour sites en ligne ou en refonte : audit technique (indexation, performances, Core Web Vitals), ciblage sémantique, optimisation on-page, données structurées lorsque pertinent, et indicateurs pour suivre la progression. Actions priorisées et calendrier clair — pas de promesses irréalistes.",
+        benefits: [
+          "Audit technique & indexation (Search Console, crawl, erreurs)",
+          "Recherche de mots-clés, pages piliers et intention de recherche",
+          "Titres, méta descriptions, balisage sémantique et maillage interne",
+          "Schema.org / résultats enrichis quand c’est adapté au projet",
+          "Suivi : positions, clics, recommandations et itérations",
+        ],
+        cta: "Souvent choisi par : PME locales, marques en croissance, sites après lancement ou refonte.",
+        ctaButton: "Demander un devis sur-mesure",
+      },
       ia: {
         title: "Intégration IA Stratégique",
         hook: "Moins de tâches répétitives, plus de réponses utiles — avec un cadre sécurisé.",
-        price: "Sur devis",
         projectLabel: "Nouveau",
         description:
           "On part de vos processus réels (support, qualification, contenus, recommandations) pour intégrer l’IA là où elle fait gagner du temps et de la qualité — sans gadget. Mise en place progressive et mesurable.",
@@ -286,7 +306,6 @@ export const translations = {
       maintenance: {
         title: "Maintenance & Support",
         hook: "Zéro surprise : mises à jour, sauvegardes et petites évolutions sous contrôle.",
-        price: "99 € / mois",
         description:
           "Le web bouge vite : sécurité, dépendances, performances. Un plan de maintenance évite les urgences coûteuses et garde votre site aligné avec votre activité (petites évolutions incluses selon la formule).",
         benefits: [
@@ -301,15 +320,21 @@ export const translations = {
       },
       usedFor: "Référence réelle :",
     },
+    realisationsPage: {
+      backHome: "Retour à l'accueil",
+      pageTitle: "Réalisations",
+      intro:
+        "Sites vitrines, applications et interfaces premium — performance, design et conversion au service de votre marque.",
+      mainAria:
+        "Page réalisations PhantomDev : portfolio de projets web et développement sur-mesure",
+    },
     servicesPage: {
       eyebrow: "Offres PhantomDev",
-      pageTitle: "Services & investissement",
+      pageTitle: "Services",
       introLead:
-        "Chaque ligne ci-dessous répond à une intention business : être crédible, vendre en ligne, industrialiser un outil, ou intégrer l’IA sans bricolage. Tarifs indicatifs : le devis final dépend du périmètre — toujours clair, sous 48h.",
+        "Chaque ligne ci-dessous répond à une intention business : être crédible, vendre en ligne, gagner en visibilité (SEO), industrialiser un outil, ou intégrer l’IA sans bricolage. Chaque projet fait l’objet d’un devis adapté au périmètre — toujours clair, sous 48h.",
       introSub:
         "Réponse sous 48h · Sans engagement · France, Europe & international · Lighthouse 90+ sur les sites livrés",
-      priceLabel: "À partir de",
-      priceLabelFlat: "Dès",
       trustPoints: [
         "Lighthouse 90+ garanti",
         "Vitrine simple : mise en ligne rapide possible",
@@ -319,6 +344,7 @@ export const translations = {
       jumpNavAria: "Accéder rapidement à une offre",
       jumpConception: "Image & conversion",
       jumpApplications: "E-commerce & apps",
+      jumpSeo: "SEO & visibilité",
       jumpIa: "IA & automatisation",
       jumpMaintenance: "Maintenance",
       exploreLabel: "Parcourir les offres",
@@ -366,6 +392,7 @@ export const translations = {
       response: "Response within 48h · Site deliverable in 48h · No commitment",
       projectsSectionAria:
         "PhantomDev portfolio: web projects, high-performance interfaces and e-commerce",
+      filterTablistAria: "Filter projects by type",
     },
     faq: {
       title: "Frequently asked questions",
@@ -383,6 +410,9 @@ export const translations = {
         "PhantomDev footer: web development, WhatsApp contact, legal notice",
       tagline: "PhantomDev — Premium custom web development",
       privateLine: "Private line",
+      privateLineAria: "Private line — WhatsApp PhantomDev",
+      mainLine: "Main line",
+      mainLineAria: "Main line — WhatsApp PhantomDev",
       ctaTitle: "Ready to start your project?",
       ctaButton: "Request a free quote",
       based: "France, Europe, worldwide — Site deliverable in 48h — Guaranteed maintenance contracts",
@@ -396,11 +426,11 @@ export const translations = {
       grapheneOS: "GrapheneOS",
       grapheneAria:
         "GrapheneOS installation service — privacy-focused Android on supported Pixel devices",
-      projects: "Projects",
+      projects: "Portfolio",
       contact: "Contact",
       freeQuote: "Free quote",
       ariaExpertise: "Expertise in high-performance interface development",
-      ariaServices: "Services: landing pages, e-commerce, SaaS",
+      ariaServices: "Services: landing pages, e-commerce, SaaS, SEO",
       ariaProjects: "Portfolio and web projects",
       ariaContact: "Contact and quote request",
       bannerAria:
@@ -509,6 +539,9 @@ export const translations = {
       conceptionDesc: "Refined interfaces, UX designed for conversion. Bespoke design that strengthens your brand image.",
       applications: "Custom Applications",
       applicationsDesc: "E-commerce, SaaS, business platforms. Solid architecture, scalability and optimised performance.",
+      seo: "SEO programme & visibility",
+      seoDesc:
+        "Technical audit, keywords, on-page SEO and reporting — more qualified traffic without empty promises.",
       ia: "Strategic AI Integration",
       iaDesc: "Chatbots, recommendations, automation. Artificial intelligence at the service of your processes.",
       learnMore: "Learn more",
@@ -520,6 +553,7 @@ export const translations = {
         vitrine: "Landing page",
         ecommerce: "E-commerce",
         application: "Application / SaaS",
+        seo: "SEO package",
         maintenance: "Maintenance",
         autre: "Other",
       },
@@ -574,7 +608,6 @@ export const translations = {
       conception: {
         title: "Premium Web Design",
         hook: "Premium positioning that converts — not a generic template look.",
-        price: "€2,500",
         description:
           "We don’t only ship visuals: we shape a clear journey (message, proof, action). Perfect when you need credibility, a strong offer, and more qualified enquiries. Simple builds can go live very quickly.",
         benefits: [
@@ -590,7 +623,6 @@ export const translations = {
       applications: {
         title: "Custom Applications",
         hook: "A solid technical base to sell, scale, and connect your stack.",
-        price: "€6,000",
         badge: "Best value for money",
         description:
           "E-commerce, SaaS, internal tools: we prioritise reliability, perceived speed, and architecture that holds under load. Less checkout friction, clearer day-to-day workflows for your team.",
@@ -604,10 +636,24 @@ export const translations = {
         cta: "Often chosen by: startups, growing SMEs, e-commerce, high-traffic products.",
         ctaButton: "Request a bespoke quote",
       },
+      seo: {
+        title: "SEO programme & visibility",
+        hook: "More qualified traffic: solid technical foundations, content aligned with search intent, measurable tracking.",
+        description:
+          "Structured programme for live sites or redesigns: technical audit (indexing, performance, Core Web Vitals), semantic targeting, on-page optimisation, structured data when relevant, and dashboards to track progress. Prioritised actions and a clear roadmap — no unrealistic promises.",
+        benefits: [
+          "Technical audit & indexing (Search Console, crawl, issues)",
+          "Keyword research, pillar pages and search intent",
+          "Titles, meta descriptions, semantic markup and internal linking",
+          "Schema.org / rich results when appropriate",
+          "Tracking: rankings, clicks, recommendations and iterations",
+        ],
+        cta: "Often chosen by: local businesses, growing brands, sites post-launch or redesign.",
+        ctaButton: "Request a bespoke quote",
+      },
       ia: {
         title: "Strategic AI Integration",
         hook: "Fewer repetitive tasks, better answers — with a safe, pragmatic setup.",
-        price: "Custom quote",
         projectLabel: "New",
         description:
           "We start from real workflows (support, qualification, content, recommendations) and integrate AI where it saves time and improves quality — no gimmicks. Phased, measurable rollout.",
@@ -624,7 +670,6 @@ export const translations = {
       maintenance: {
         title: "Maintenance & Support",
         hook: "No surprises: updates, backups, and small improvements under control.",
-        price: "€99 / month",
         description:
           "The web moves fast: security, dependencies, performance. A maintenance plan prevents expensive emergencies and keeps your site aligned with your business (minor changes included depending on plan).",
         benefits: [
@@ -639,15 +684,21 @@ export const translations = {
       },
       usedFor: "Live reference:",
     },
+    realisationsPage: {
+      backHome: "Back to home",
+      pageTitle: "Portfolio",
+      intro:
+        "Landing pages, applications and premium interfaces — performance, design and conversion for your brand.",
+      mainAria:
+        "PhantomDev portfolio page: web projects and custom development",
+    },
     servicesPage: {
       eyebrow: "PhantomDev offers",
-      pageTitle: "Services & pricing",
+      pageTitle: "Services",
       introLead:
-        "Each offer maps to a business goal: build trust, sell online, ship a serious product, or integrate AI without duct tape. Indicative pricing — your quote depends on scope, always clear within 48h.",
+        "Each offer maps to a business goal: build trust, sell online, grow organic visibility (SEO), ship a serious product, or integrate AI without duct tape. Every project gets a quote tailored to scope — always clear within 48h.",
       introSub:
         "Reply within 48h · No commitment · France, Europe & worldwide · Lighthouse 90+ on delivered sites",
-      priceLabel: "From",
-      priceLabelFlat: "From",
       trustPoints: [
         "Lighthouse 90+ guarantee",
         "Simple sites: fast go-live possible",
@@ -657,6 +708,7 @@ export const translations = {
       jumpNavAria: "Jump to an offer",
       jumpConception: "Brand & conversion",
       jumpApplications: "E-commerce & apps",
+      jumpSeo: "SEO & visibility",
       jumpIa: "AI & automation",
       jumpMaintenance: "Maintenance",
       exploreLabel: "Browse offers",
@@ -704,6 +756,7 @@ export const translations = {
       response: "Response within 48h · Site deliverable in 48h · No commitment",
       projectsSectionAria:
         "PhantomDev portfolio: web projects, high-performance interfaces and e-commerce",
+      filterTablistAria: "Filter projects by type",
     },
     faq: {
       title: "Frequently asked questions",
@@ -721,6 +774,9 @@ export const translations = {
         "PhantomDev footer: web development, WhatsApp contact, legal notice",
       tagline: "PhantomDev — Premium custom web development",
       privateLine: "Private line",
+      privateLineAria: "Private line — WhatsApp PhantomDev",
+      mainLine: "Main line",
+      mainLineAria: "Main line — WhatsApp PhantomDev",
       ctaTitle: "Ready to start your project?",
       ctaButton: "Request a free quote",
       based: "France, Europe, worldwide — Site deliverable in 48h — Guaranteed maintenance contracts",
@@ -734,11 +790,11 @@ export const translations = {
       grapheneOS: "GrapheneOS",
       grapheneAria:
         "GrapheneOS installation service — privacy-focused Android on supported Pixel devices",
-      projects: "Projects",
+      projects: "Portfolio",
       contact: "Contact",
       freeQuote: "Free quote",
       ariaExpertise: "Expertise in high-performance interface development",
-      ariaServices: "Services: landing pages, e-commerce, SaaS",
+      ariaServices: "Services: landing pages, e-commerce, SaaS, SEO",
       ariaProjects: "Portfolio and web projects",
       ariaContact: "Contact and quote request",
       bannerAria:
@@ -847,6 +903,9 @@ export const translations = {
       conceptionDesc: "Refined interfaces, UX designed for conversion. Custom design that strengthens your brand image.",
       applications: "Custom Applications",
       applicationsDesc: "E-commerce, SaaS, business platforms. Solid architecture, scalability and optimized performance.",
+      seo: "SEO program & visibility",
+      seoDesc:
+        "Technical audit, keywords, on-page SEO and reporting — more qualified traffic without empty promises.",
       ia: "Strategic AI Integration",
       iaDesc: "Chatbots, recommendations, automation. Artificial intelligence at the service of your processes.",
       learnMore: "Learn more",
@@ -858,6 +917,7 @@ export const translations = {
         vitrine: "Landing page",
         ecommerce: "E-commerce",
         application: "Application / SaaS",
+        seo: "SEO package",
         maintenance: "Maintenance",
         autre: "Other",
       },
@@ -912,7 +972,6 @@ export const translations = {
       conception: {
         title: "Premium Web Design",
         hook: "Premium positioning that converts — not a generic template look.",
-        price: "$3,000",
         description:
           "We don’t only ship visuals: we shape a clear journey (message, proof, action). Perfect when you need credibility, a strong offer, and more qualified enquiries. Simple builds can go live very quickly.",
         benefits: [
@@ -928,7 +987,6 @@ export const translations = {
       applications: {
         title: "Custom Applications",
         hook: "A solid technical base to sell, scale, and connect your stack.",
-        price: "$7,000",
         badge: "Best value for money",
         description:
           "E-commerce, SaaS, internal tools: we prioritise reliability, perceived speed, and architecture that holds under load. Less checkout friction, clearer day-to-day workflows for your team.",
@@ -942,10 +1000,24 @@ export const translations = {
         cta: "Often chosen by: startups, growing SMBs, e-commerce, high-traffic products.",
         ctaButton: "Request a custom quote",
       },
+      seo: {
+        title: "SEO program & visibility",
+        hook: "More qualified traffic: solid technical foundations, content aligned with search intent, measurable tracking.",
+        description:
+          "Structured program for live sites or redesigns: technical audit (indexing, performance, Core Web Vitals), semantic targeting, on-page optimization, structured data when relevant, and dashboards to track progress. Prioritized actions and a clear roadmap — no unrealistic promises.",
+        benefits: [
+          "Technical audit & indexing (Search Console, crawl, issues)",
+          "Keyword research, pillar pages and search intent",
+          "Titles, meta descriptions, semantic markup and internal linking",
+          "Schema.org / rich results when appropriate",
+          "Tracking: rankings, clicks, recommendations and iterations",
+        ],
+        cta: "Often chosen by: local businesses, growing brands, sites post-launch or redesign.",
+        ctaButton: "Request a custom quote",
+      },
       ia: {
         title: "Strategic AI Integration",
         hook: "Fewer repetitive tasks, better answers — with a safe, pragmatic setup.",
-        price: "Custom quote",
         projectLabel: "New",
         description:
           "We start from real workflows (support, qualification, content, recommendations) and integrate AI where it saves time and improves quality — no gimmicks. Phased, measurable rollout.",
@@ -962,7 +1034,6 @@ export const translations = {
       maintenance: {
         title: "Maintenance & Support",
         hook: "No surprises: updates, backups, and small improvements under control.",
-        price: "$120 / month",
         description:
           "The web moves fast: security, dependencies, performance. A maintenance plan prevents expensive emergencies and keeps your site aligned with your business (minor changes included depending on plan).",
         benefits: [
@@ -977,15 +1048,21 @@ export const translations = {
       },
       usedFor: "Live reference:",
     },
+    realisationsPage: {
+      backHome: "Back to home",
+      pageTitle: "Portfolio",
+      intro:
+        "Landing pages, applications and premium interfaces — performance, design and conversion for your brand.",
+      mainAria:
+        "PhantomDev portfolio page: web projects and custom development",
+    },
     servicesPage: {
       eyebrow: "PhantomDev offers",
-      pageTitle: "Services & pricing",
+      pageTitle: "Services",
       introLead:
-        "Each offer maps to a business goal: build trust, sell online, ship a serious product, or integrate AI without duct tape. Indicative pricing — your quote depends on scope, always clear within 48h.",
+        "Each offer maps to a business goal: build trust, sell online, grow organic visibility (SEO), ship a serious product, or integrate AI without duct tape. Every project gets a quote tailored to scope — always clear within 48h.",
       introSub:
         "Reply within 48h · No commitment · France, Europe & worldwide · Lighthouse 90+ on delivered sites",
-      priceLabel: "From",
-      priceLabelFlat: "From",
       trustPoints: [
         "Lighthouse 90+ guarantee",
         "Simple sites: fast go-live possible",
@@ -995,6 +1072,7 @@ export const translations = {
       jumpNavAria: "Jump to an offer",
       jumpConception: "Brand & conversion",
       jumpApplications: "E-commerce & apps",
+      jumpSeo: "SEO & visibility",
       jumpIa: "AI & automation",
       jumpMaintenance: "Maintenance",
       exploreLabel: "Browse offers",

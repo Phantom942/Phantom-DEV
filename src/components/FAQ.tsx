@@ -61,7 +61,7 @@ export function FAQ() {
                           transition={{ duration: 0.25, ease: "easeInOut" }}
                           className="overflow-hidden"
                         >
-                          <p className="border-t border-[#f5f5f0]/5 px-5 py-4 text-sm leading-[1.7] tracking-[0.02em] text-[#f5f5f0]/75">
+                          <p className="border-t border-[#f5f5f0]/5 px-5 py-4 text-base leading-relaxed tracking-normal text-[#f5f5f0]/82">
                             {item.a}
                           </p>
                         </motion.div>

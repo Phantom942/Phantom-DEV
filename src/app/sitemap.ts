@@ -41,6 +41,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
       alternates: getAlternates("/contact"),
     },
     {
+      url: `${BASE}/realisations`,
+      lastModified: now,
+      changeFrequency: "weekly",
+      priority: 0.85,
+      alternates: getAlternates("/realisations"),
+    },
+    {
       url: `${BASE}/grapheneos`,
       lastModified: now,
       changeFrequency: "monthly",
@@ -56,13 +63,25 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
   ];
   const enLocales = ["en-gb", "en-us"] as const;
-  const enPaths = ["", "/services", "/contact", "/grapheneos", "/mentions-legales"] as const;
+  const enPaths = ["", "/services", "/contact", "/realisations", "/grapheneos", "/mentions-legales"] as const;
   const enEntries: MetadataRoute.Sitemap = enLocales.flatMap((locale) =>
     enPaths.map((path) => {
       const fullPath = path ? `/${locale}${path}` : `/${locale}`;
       const url = `${BASE}${fullPath}`;
-      const changeFreq = path === "/mentions-legales" ? "yearly" : path === "" || path === "/services" ? "weekly" : "monthly";
-      const priority = path === "/mentions-legales" ? 0.2 : path === "" ? 0.9 : 0.8;
+      const changeFreq =
+        path === "/mentions-legales"
+          ? "yearly"
+          : path === "" || path === "/services" || path === "/realisations"
+            ? "weekly"
+            : "monthly";
+      const priority =
+        path === "/mentions-legales"
+          ? 0.2
+          : path === ""
+            ? 0.9
+            : path === "/realisations"
+              ? 0.85
+              : 0.8;
       return {
         url,
         lastModified: now,

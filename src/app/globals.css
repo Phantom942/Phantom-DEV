@@ -8,8 +8,8 @@
   --foreground: #f5f5f0;
   --foreground-muted: rgba(245, 245, 240, 0.85);
   --line-height-tight: 1.2;
-  --line-height-normal: 1.6;
-  --line-height-relaxed: 1.85;
+  --line-height-normal: 1.65;
+  --line-height-relaxed: 1.8;
   --letter-spacing-tight: 0.02em;
   --letter-spacing-normal: 0.04em;
   --letter-spacing-wide: 0.1em;
@@ -44,7 +44,7 @@ html::-webkit-scrollbar-thumb:hover {
 
 html {
   /* Base légèrement plus lisible (~+6 %) ; les utilitaires Tailwind en rem suivent. Le mot PHANTOM du hero reste dimensionné en px. */
-  font-size: clamp(16px, 0.25vw + 15px, 17.5px);
+  font-size: clamp(16px, 0.35vw + 14.75px, 18px);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;

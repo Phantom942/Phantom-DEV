@@ -8,6 +8,7 @@ import { useTranslations } from "@/hooks/useTranslations";
 import {
   Palette,
   Box,
+  Search,
   Brain,
   Check,
   Wrench,
@@ -18,6 +19,7 @@ import {
 const serviceConfigs = [
   { id: "conception" as const, icon: Palette, typeParam: "vitrine", projectRef: "phantom-art" as const, projectLabel: null as string | null },
   { id: "applications" as const, icon: Box, typeParam: "application", projectRef: "redk-motors" as const, projectLabel: null as string | null },
+  { id: "seo" as const, icon: Search, typeParam: "seo", projectRef: null as string | null, projectLabel: null as string | null },
   { id: "ia" as const, icon: Brain, typeParam: "autre", projectRef: null as string | null, projectLabelKey: "projectLabel" as const },
   { id: "maintenance" as const, icon: Wrench, typeParam: "maintenance", projectRef: null as string | null, projectLabel: null as string | null },
 ] as const;
@@ -107,50 +109,6 @@ export function ServicesList() {
                       >
                         {s.hook}
                       </p>
-                      <div
-                        className={`mb-6 rounded-sm border border-[#d4af37]/25 bg-gradient-to-r from-[#d4af37]/[0.12] to-transparent px-4 py-3 sm:px-5 sm:py-4 ${
-                          isEven ? "md:ml-auto md:max-w-md" : "max-w-md"
-                        }`}
-                      >
-                        {config.id === "ia" ? (
-                          <p
-                            className="text-lg font-light tracking-wide text-[#d4af37] sm:text-xl"
-                            style={{
-                              fontFamily: "var(--font-cormorant), Georgia, serif",
-                            }}
-                          >
-                            {s.price}
-                          </p>
-                        ) : config.id === "maintenance" ? (
-                          <>
-                            <p className="mb-0.5 text-[9px] font-light uppercase tracking-[0.22em] text-[#f5f5f0]/45">
-                              {sp.priceLabelFlat}
-                            </p>
-                            <p
-                              className="text-lg font-light text-[#f5f5f0] sm:text-xl"
-                              style={{
-                                fontFamily: "var(--font-cormorant), Georgia, serif",
-                              }}
-                            >
-                              <span className="text-[#d4af37]">{s.price}</span>
-                            </p>
-                          </>
-                        ) : (
-                          <>
-                            <p className="mb-0.5 text-[9px] font-light uppercase tracking-[0.22em] text-[#f5f5f0]/45">
-                              {sp.priceLabel}
-                            </p>
-                            <p
-                              className="text-lg font-light text-[#f5f5f0] sm:text-xl"
-                              style={{
-                                fontFamily: "var(--font-cormorant), Georgia, serif",
-                              }}
-                            >
-                              <span className="text-[#d4af37]">{s.price}</span>
-                            </p>
-                          </>
-                        )}
-                      </div>
                       <p className="mb-8 max-w-2xl text-sm leading-[1.8] text-[#f5f5f0]/80 sm:text-base">
                         {s.description}
                       </p>

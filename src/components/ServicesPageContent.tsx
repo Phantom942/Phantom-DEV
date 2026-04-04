@@ -17,6 +17,7 @@ export function ServicesPageContent() {
   const jumps = [
     { href: "#conception", label: sp.jumpConception },
     { href: "#applications", label: sp.jumpApplications },
+    { href: "#seo", label: sp.jumpSeo },
     { href: "#ia", label: sp.jumpIa },
     { href: "#maintenance", label: sp.jumpMaintenance },
   ] as const;

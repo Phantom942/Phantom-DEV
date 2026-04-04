@@ -8,11 +8,12 @@ import { getHreflangAlternates } from "@/lib/hreflang";
 import { getBreadcrumbForPath } from "@/lib/breadcrumb";
 import { defaultOpenGraphImages, twitterSummaryLarge } from "@/lib/social-metadata";
 
-const title = "Services et tarifs — Sites vitrines, e-commerce, SaaS | International";
+const title = "Services — Sites vitrines, e-commerce, SaaS | PhantomDev";
 const description =
-  "Tarifs création de sites web : vitrines dès 2 500€, e-commerce dès 6 000€, maintenance dès 99€/mois. Devis gratuit sous 48h. France, Europe, international.";
-const ogTitle = "Services | PhantomDev — Tarifs sites vitrines, e-commerce, SaaS";
-const ogDesc = "Tarifs création web : vitrines dès 2 500€, e-commerce dès 6 000€. Devis gratuit sous 48h.";
+  "Création de sites web sur-mesure : vitrines premium, e-commerce, applications et maintenance. Devis gratuit sous 48h. France, Europe, international.";
+const ogTitle = "Services | PhantomDev — Développement web sur-mesure";
+const ogDesc =
+  "Offres PhantomDev : conception web, e-commerce, SaaS, intégration IA, maintenance. Devis clair sous 48h.";
 
 export const metadata: Metadata = {
   alternates: {
@@ -27,6 +28,8 @@ export const metadata: Metadata = {
     "site vitrine",
     "e-commerce",
     "SaaS",
+    "SEO",
+    "référencement naturel",
     "intégration IA",
     "Next.js",
     "PhantomDev",
@@ -58,7 +61,7 @@ export default function ServicesPage() {
         id="main"
         role="main"
         className="w-full pt-24 pb-16 sm:pt-32 sm:pb-24"
-        aria-label="Page services PhantomDev : développement web, React, Node.js, SaaS, sites vitrines et e-commerce"
+        aria-label="Page services PhantomDev : développement web, React, Node.js, SaaS, SEO, sites vitrines et e-commerce"
       >
         <ServicesPageContent />
       </main>

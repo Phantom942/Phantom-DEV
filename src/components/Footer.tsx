@@ -3,7 +3,7 @@
 import { usePathname } from "next/navigation";
 import Link from "next/link";
 import { MessageCircle, Github } from "lucide-react";
-import { getWhatsAppDevisUrl } from "@/data/contact";
+import { getWhatsAppDevisUrl, getWhatsAppDisplayHuman } from "@/data/contact";
 import { useTranslations } from "@/hooks/useTranslations";
 
 export function Footer() {
@@ -34,19 +34,29 @@ export function Footer() {
       </div>
       <div className="mx-auto flex max-w-4xl flex-col items-center justify-between gap-8 sm:flex-row sm:gap-12">
         <div className="flex flex-col items-center gap-4 sm:items-start">
-          <p className="text-xs font-light tracking-[0.15em] text-[#f5f5f0]/60">
+          <p className="text-sm font-light tracking-[0.06em] text-[#f5f5f0]/75">
             {t.footer.tagline}
           </p>
-          <div className="flex flex-col items-center gap-4 sm:flex-row sm:items-center sm:gap-8">
+          <div className="flex flex-col items-center gap-4 sm:flex-row sm:flex-wrap sm:items-center sm:gap-x-10 sm:gap-y-3">
             <a
               href={getWhatsAppDevisUrl()}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-2 text-sm font-light tracking-[0.08em] text-[#f5f5f0]/80 transition-colors hover:text-[#f5f5f0]"
-              aria-label="Contacter PhantomDev sur WhatsApp pour un devis projet web"
+              className="flex items-center gap-2 text-sm font-light tracking-normal text-[#f5f5f0]/85 transition-colors hover:text-[#f5f5f0]"
+              aria-label={t.footer.privateLineAria}
             >
-              <MessageCircle size={16} strokeWidth={1.5} />
+              <MessageCircle size={16} strokeWidth={1.5} className="shrink-0 text-[#f5f5f0]/70" />
               {t.footer.privateLine}
+            </a>
+            <a
+              href={getWhatsAppDevisUrl()}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 text-sm font-light tracking-normal text-[#f5f5f0]/85 transition-colors hover:text-[#f5f5f0]"
+              aria-label={`${t.footer.mainLineAria} (${getWhatsAppDisplayHuman()})`}
+            >
+              <MessageCircle size={16} strokeWidth={1.5} className="shrink-0 text-[#f5f5f0]/70" />
+              {t.footer.mainLine}
             </a>
             <div className="flex items-center gap-6">
               <a
@@ -62,7 +72,7 @@ export function Footer() {
           </div>
         </div>
       </div>
-      <p className="mx-auto mt-8 max-w-4xl text-center text-[10px] font-light tracking-[0.08em] text-[#f5f5f0]/50">
+      <p className="mx-auto mt-8 max-w-4xl text-center text-xs font-light leading-relaxed tracking-normal text-[#f5f5f0]/62">
         {t.footer.based}
       </p>
       <div className="mx-auto mt-10 max-w-4xl border-t border-[#f5f5f0]/5 pt-8">
