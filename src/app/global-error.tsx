@@ -17,7 +17,7 @@ export default function GlobalError({
 
   return (
     <html lang="fr">
-      <body className="min-h-screen bg-[#000000] font-sans text-[#f5f5f0] antialiased">
+      <body className="min-h-screen bg-[#353839] font-sans text-[#f5f5f0] antialiased">
         <main
           role="main"
           className="flex min-h-screen flex-col items-center justify-center px-4"

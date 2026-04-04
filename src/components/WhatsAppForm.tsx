@@ -41,9 +41,9 @@ Besoins : ${besoins}`;
 }
 
 const inputClass =
-  "w-full border border-[#f5f5f0]/20 bg-[#0a0a0a] px-4 py-3 text-sm font-light tracking-[0.02em] text-[#f5f5f0] placeholder:text-[#f5f5f0]/40 focus:border-[#25D366]/50 focus:outline-none focus:ring-1 focus:ring-[#25D366]/30";
+  "w-full border border-[#f5f5f0]/20 bg-[#2c2f31] px-4 py-3 text-sm font-light tracking-[0.02em] text-[#f5f5f0] placeholder:text-[#f5f5f0]/40 focus:border-[#25D366]/50 focus:outline-none focus:ring-1 focus:ring-[#25D366]/30";
 const inputErrorClass =
-  "w-full border border-red-500/50 bg-[#0a0a0a] px-4 py-3 text-sm font-light tracking-[0.02em] text-[#f5f5f0] placeholder:text-[#f5f5f0]/40 focus:border-red-500 focus:outline-none focus:ring-1 focus:ring-red-500/30";
+  "w-full border border-red-500/50 bg-[#2c2f31] px-4 py-3 text-sm font-light tracking-[0.02em] text-[#f5f5f0] placeholder:text-[#f5f5f0]/40 focus:border-red-500 focus:outline-none focus:ring-1 focus:ring-red-500/30";
 const labelClass =
   "mb-1.5 block text-xs font-light tracking-[0.08em] text-[#f5f5f0]/70";
 
@@ -519,7 +519,7 @@ export function WhatsAppForm() {
                 type="checkbox"
                 checked={needs.includes(need.id)}
                 onChange={() => toggleNeed(need.id)}
-                className="h-4 w-4 border-[#f5f5f0]/30 bg-[#0a0a0a] text-[#25D366] focus:ring-[#25D366]/50"
+                className="h-4 w-4 border-[#f5f5f0]/30 bg-[#2c2f31] text-[#25D366] focus:ring-[#25D366]/50"
               />
               <span>{need.label}</span>
             </label>
@@ -572,7 +572,7 @@ export function WhatsAppForm() {
       <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-center sm:gap-4">
         <button
           type="submit"
-          className="inline-flex w-full items-center justify-center gap-2 border border-[#25D366]/60 bg-[#25D366]/10 px-8 py-4 text-sm font-light tracking-[0.15em] text-[#f5f5f0] transition-all hover:bg-[#25D366]/20 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#25D366]/50 focus-visible:ring-offset-2 focus-visible:ring-offset-black sm:w-auto"
+          className="inline-flex w-full items-center justify-center gap-2 border border-[#25D366]/60 bg-[#25D366]/10 px-8 py-4 text-sm font-light tracking-[0.15em] text-[#f5f5f0] transition-all hover:bg-[#25D366]/20 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#25D366]/50 focus-visible:ring-offset-2 focus-visible:ring-offset-[#353839] sm:w-auto"
           aria-label={cf.submit}
         >
           <MessageCircle size={20} strokeWidth={1.5} />
@@ -583,7 +583,7 @@ export function WhatsAppForm() {
             type="button"
             onClick={handleSubmitEmail}
             disabled={emailStatus === "loading"}
-            className="inline-flex w-full items-center justify-center gap-2 border border-[#d4af37]/50 bg-[#d4af37]/10 px-8 py-4 text-sm font-light tracking-[0.15em] text-[#f5f5f0] transition-all hover:bg-[#d4af37]/20 disabled:opacity-60 disabled:cursor-not-allowed focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#d4af37]/50 focus-visible:ring-offset-2 focus-visible:ring-offset-black sm:w-auto"
+            className="inline-flex w-full items-center justify-center gap-2 border border-[#d4af37]/50 bg-[#d4af37]/10 px-8 py-4 text-sm font-light tracking-[0.15em] text-[#f5f5f0] transition-all hover:bg-[#d4af37]/20 disabled:opacity-60 disabled:cursor-not-allowed focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#d4af37]/50 focus-visible:ring-offset-2 focus-visible:ring-offset-[#353839] sm:w-auto"
             aria-label={cf.submitEmail}
           >
             {emailStatus === "loading" ? (

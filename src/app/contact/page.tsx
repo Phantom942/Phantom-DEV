@@ -42,7 +42,7 @@ export default function ContactPage() {
   const breadcrumbSchema = getBreadcrumbForPath("/contact", "Contact");
 
   return (
-    <div className="relative min-h-screen w-full bg-[#000000]">
+    <div className="relative min-h-screen w-full bg-[#353839]">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}

@@ -34,7 +34,7 @@ export const metadata: Metadata = {
 
 export default function MentionsLegalesPage() {
   return (
-    <div className="relative min-h-screen w-full bg-[#000000]">
+    <div className="relative min-h-screen w-full bg-[#353839]">
       <CursorAndGlow />
       <Navbar />
       <main

@@ -31,7 +31,7 @@ export function SelectedWorks() {
   return (
     <section
       id="projets"
-      className="w-full max-w-full overflow-x-clip bg-[#000000] px-4 py-10 sm:px-8 sm:py-12 md:px-16 md:py-16"
+      className="w-full max-w-full overflow-x-clip bg-[#353839] px-4 py-10 sm:px-8 sm:py-12 md:px-16 md:py-16"
       aria-labelledby="realisations-title"
       aria-label="Réalisations PhantomDev : projets web, développement d'interfaces haute performance et e-commerce"
     >
@@ -66,7 +66,7 @@ export function SelectedWorks() {
         </div>
       </ScrollReveal>
 
-      <ul className="mx-auto grid max-w-5xl grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4 lg:gap-8">
+      <ul className="mx-auto grid max-w-7xl grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-5 lg:gap-5 xl:gap-6">
         {filteredProjects.map((project, index) => (
           <ScrollReveal key={project.id} delay={index * 0.08}>
             <li>
@@ -75,7 +75,7 @@ export function SelectedWorks() {
                   href={project.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="block outline-none focus-visible:ring-2 focus-visible:ring-[#f5f5f0]/30 focus-visible:ring-offset-2 focus-visible:ring-offset-black"
+                  className="block outline-none focus-visible:ring-2 focus-visible:ring-[#f5f5f0]/30 focus-visible:ring-offset-2 focus-visible:ring-offset-[#353839]"
                   aria-label={`Voir le projet ${project.title}, ${project.description} — réalisation PhantomDev développement web`}
                 >
                   <div
@@ -188,7 +188,7 @@ export function SelectedWorks() {
                         src={project.image}
                         alt={`Logo ${project.title}, réalisation PhantomDev — ${project.description}`}
                         fill
-                        sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, 33vw"
+                        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 20vw"
                         className="object-contain p-4 transition-transform duration-300 group-hover:scale-[1.03]"
                         priority={index === 0}
                       />

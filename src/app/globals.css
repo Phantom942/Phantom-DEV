@@ -1,7 +1,10 @@
 @import "tailwindcss";
 
 :root {
-  --background: #000000;
+  /* Onyx principal + surfaces dérivées (cartes / champs plus sombres, bandes légèrement différentes) */
+  --background: #353839;
+  --surface-alt: #323538;
+  --surface: #2c2f31;
   --foreground: #f5f5f0;
   --foreground-muted: rgba(245, 245, 240, 0.85);
   --line-height-tight: 1.2;
@@ -40,6 +43,8 @@ html::-webkit-scrollbar-thumb:hover {
 }
 
 html {
+  /* Base légèrement plus lisible (~+6 %) ; les utilitaires Tailwind en rem suivent. Le mot PHANTOM du hero reste dimensionné en px. */
+  font-size: clamp(16px, 0.25vw + 15px, 17.5px);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
@@ -48,6 +53,8 @@ html {
   width: 100%;
   scrollbar-width: thin;
   scrollbar-color: rgba(245, 245, 240, 0.25) transparent;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -66,7 +73,7 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: var(--font-source-sans), var(--font-geist), system-ui, sans-serif;
-  font-size: 16px;
+  font-size: 1rem;
   line-height: var(--line-height-normal);
   letter-spacing: var(--letter-spacing-tight);
   font-feature-settings: "kern" 1, "liga" 1;

@@ -16,7 +16,7 @@ export function Sections() {
       <ScrollReveal>
         <section
           id="expertise"
-          className="w-full max-w-full overflow-x-clip bg-[#050505] px-4 py-16 sm:px-8 sm:py-20 md:px-16 md:py-24"
+          className="w-full max-w-full overflow-x-clip bg-[#323538] px-4 py-16 sm:px-8 sm:py-20 md:px-16 md:py-24"
           aria-labelledby="expertise-title"
         >
           <h2
@@ -44,7 +44,7 @@ export function Sections() {
       </ScrollReveal>
 
       <ScrollReveal delay={0.05}>
-        <div className="w-full bg-[#050505]">
+        <div className="w-full bg-[#323538]">
           <FAQ />
         </div>
       </ScrollReveal>
@@ -52,7 +52,7 @@ export function Sections() {
       <ScrollReveal delay={0.05}>
         <section
           id="contact"
-          className="w-full max-w-full overflow-x-clip border-t border-[#f5f5f0]/5 bg-[#000000] px-4 py-16 sm:px-8 sm:py-24 md:px-16 md:py-28"
+          className="w-full max-w-full overflow-x-clip border-t border-[#f5f5f0]/5 bg-[#353839] px-4 py-16 sm:px-8 sm:py-24 md:px-16 md:py-28"
           aria-labelledby="contact-title"
         >
           <h2
@@ -68,7 +68,7 @@ export function Sections() {
           <p className="mb-10 text-xs font-light tracking-[0.08em] text-[#f5f5f0]/60 sm:mb-12">
             {t.sections.performance}
           </p>
-          <div className="mx-auto max-w-xl rounded-lg border border-[#f5f5f0]/10 bg-[#0a0a0a]/60 p-6 backdrop-blur-sm sm:p-8">
+          <div className="mx-auto max-w-xl rounded-lg border border-[#f5f5f0]/10 bg-[#2c2f31]/60 p-6 backdrop-blur-sm sm:p-8">
             <Suspense fallback={null}>
               <WhatsAppForm />
             </Suspense>

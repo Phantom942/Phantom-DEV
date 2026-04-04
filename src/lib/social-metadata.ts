@@ -17,12 +17,25 @@ export const defaultOpenGraphImages: NonNullable<Metadata["openGraph"]>["images"
 
 export function twitterSummaryLarge(
   title: string,
-  description: string
+  description: string,
+  /** URL absolue de l’image (carte Twitter / réseaux). Par défaut : OG PhantomDev. */
+  twitterImageAbsoluteUrl?: string
 ): NonNullable<Metadata["twitter"]> {
+  const image =
+    twitterImageAbsoluteUrl ?? `${SITE_URL}${OG_IMAGE_PATH}`;
   return {
     card: "summary_large_image",
     title,
     description,
-    images: [`${SITE_URL}${OG_IMAGE_PATH}`],
+    images: [image],
   };
 }
+
+export const GRAPHENE_OG_LOGO_PATH = "/graphene/grapheneos-logo.png";
+
+/** Base URL + dimensions ; préciser `alt` dans les métadonnées par langue. */
+export const grapheneOpenGraphImageBase = {
+  url: GRAPHENE_OG_LOGO_PATH,
+  width: 512,
+  height: 512,
+} as const;

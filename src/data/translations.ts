@@ -49,9 +49,108 @@ export const translations = {
     nav: {
       expertise: "Expertise",
       services: "Services",
+      grapheneOS: "GrapheneOS",
+      grapheneAria:
+        "Installations GrapheneOS — Android sécurisé et respect de la vie privée sur Pixel",
       projects: "Projets",
       contact: "Contact",
       freeQuote: "Devis gratuit",
+      ariaExpertise: "Expertise en développement d'interfaces haute performance",
+      ariaServices: "Services : sites vitrines, e-commerce, SaaS",
+      ariaProjects: "Réalisations et projets web",
+      ariaContact: "Contact et devis",
+    },
+    graphenePage: {
+      backHome: "Retour à l'accueil",
+      title: "Installations GrapheneOS",
+      tagline:
+        "Android renforcé, orienté confidentialité : flash sécurisé et prise en main sur smartphones Google Pixel compatibles.",
+      intro:
+        "Vous souhaitez passer à GrapheneOS sans risquer une erreur de flash ou perdre des données ? Je propose un accompagnement pour installer l’OS, sécuriser le démarrage et configurer les bases (profils, applications, mises à jour).",
+      pillars: [
+        {
+          title: "Confidentialité & sécurité",
+          body: "Système minimal, permissions strictes, sandboxing renforcé — une base saine pour réduire la surface d’attaque et le pistage.",
+        },
+        {
+          title: "Installation maîtrisée",
+          body: "Déverrouillage du bootloader, flash officiel depuis les sources GrapheneOS, vérification des étapes pour limiter les erreurs.",
+        },
+        {
+          title: "Après l’installation",
+          body: "Conseils pour profils utilisateur, stores / sources d’apps, sauvegardes et bonnes habitudes au quotidien.",
+        },
+      ],
+      devicesTitle: "Appareils compatibles",
+      devicesBody:
+        "GrapheneOS cible une sélection de Google Pixel récents. Indiquez le modèle exact de votre téléphone lors de la prise de contact pour confirmer la compatibilité avant rendez-vous.",
+      processTitle: "Déroulement type",
+      steps: [
+        "Message sur WhatsApp avec le modèle de Pixel et votre ville / disponibilités.",
+        "Confirmation de compatibilité et créneau (sur place ou envoi postal selon accord).",
+        "Flash sécurisé, configuration initiale et applications essentielles.",
+        "Remise du téléphone prêt à l’emploi et rappels des bonnes pratiques.",
+      ],
+      disclaimer:
+        "PhantomDev n’est pas affilié au projet GrapheneOS. GrapheneOS est un logiciel open source indépendant. Une installation professionnelle n’engage pas la responsabilité du projet GrapheneOS et ne dispense pas du respect des lois en vigueur ni d’un usage responsable de l’appareil.",
+      ctaWhatsApp: "Demander une installation sur WhatsApp",
+      whatsappMessage:
+        "Bonjour, je souhaite une installation GrapheneOS. Modèle de Pixel : ",
+      mainAria:
+        "Page installations GrapheneOS : Android sécurisé, confidentialité, smartphones Pixel",
+      seo: {
+        documentTitle:
+          "Installation GrapheneOS sur Google Pixel — flash sécurisé, confidentialité",
+        description:
+          "Installation professionnelle de GrapheneOS sur Pixel compatibles : flash sécurisé, déverrouillage bootloader, configuration confidentialité. France & Europe. Demande via WhatsApp — PhantomDev.",
+        ogTitle:
+          "Installation GrapheneOS sur Pixel | PhantomDev — Android sécurisé",
+        ogDescription:
+          "Service d’installation GrapheneOS : smartphones Google Pixel, flash officiel, vie privée. Réponse rapide sur WhatsApp.",
+        ogImageAlt:
+          "Logo officiel GrapheneOS — OS mobile open source axé sécurité et confidentialité",
+        keywords: [
+          "GrapheneOS",
+          "installation GrapheneOS",
+          "installer GrapheneOS Pixel",
+          "flash GrapheneOS",
+          "Google Pixel GrapheneOS",
+          "Android sécurisé",
+          "smartphone confidentialité",
+          "bootloader Pixel",
+          "OS mobile open source",
+          "dégoogler téléphone",
+          "PhantomDev GrapheneOS",
+          "installation GrapheneOS France",
+        ],
+      },
+      visualSectionHeading: "Pixel & GrapheneOS",
+      visualSectionAria:
+        "Visuels : cadres de smartphones avec le logo GrapheneOS sur l’écran",
+      phoneScreenAlt:
+        "Logo GrapheneOS affiché sur l’écran d’un smartphone Google Pixel — illustration PhantomDev",
+      logoCredit:
+        "Logo GrapheneOS : projet open source indépendant (grapheneos.org). PhantomDev n’est pas affilié à GrapheneOS.",
+      officialLinkLabel: "Site officiel GrapheneOS — documentation et releases",
+      faqSectionTitle: "Questions fréquentes — GrapheneOS",
+      faqSchema: [
+        {
+          q: "Qu’est-ce que GrapheneOS ?",
+          a: "GrapheneOS est un système d’exploitation mobile basé sur Android Open Source Project (AOSP), orienté confidentialité et sécurité, développé en open source. Il ne contient pas les applications Google par défaut et renforce le sandboxing et les protections.",
+        },
+        {
+          q: "Quels smartphones sont compatibles avec GrapheneOS ?",
+          a: "GrapheneOS prend en charge une liste définie de modèles Google Pixel (voir la FAQ matériel sur grapheneos.org). Indiquez toujours le modèle exact et la variante (eSIM, région) avant une installation.",
+        },
+        {
+          q: "Une installation GrapheneOS efface-t-elle mes données ?",
+          a: "Le déverrouillage du bootloader et le flash effacent en général les données du téléphone. Une sauvegarde préalable est indispensable. Les étapes précises dépendent de votre appareil et seront expliquées avant intervention.",
+        },
+        {
+          q: "PhantomDev est-il affilié au projet GrapheneOS ?",
+          a: "Non. PhantomDev propose un accompagnement à l’installation ; GrapheneOS est un projet indépendant. Pour le support officiel et les instructions à jour, consultez grapheneos.org.",
+        },
+      ],
     },
     expertiseCards: {
       conception: "Conception Web Premium",
@@ -120,8 +219,10 @@ export const translations = {
     servicesList: {
       conception: {
         title: "Conception Web Premium",
-        price: "à partir de 2 500€",
-        description: "Un site qui reflète l'excellence de votre marque. Chaque interface est conçue pour captiver, guider et convertir. Livrable en 48h pour un projet simple.",
+        hook: "Votre image premium, convertie en leads — sans look « template ».",
+        price: "2 500€",
+        description:
+          "On ne vend pas seulement un design : on vend un parcours clair (message, preuve, action). Idéal pour asseoir la confiance, présenter une offre forte et déclencher la prise de contact. Les projets simples peuvent être livrés très vite.",
         benefits: [
           "Design sur-mesure, zéro template générique",
           "UX pensée pour la conversion et l'engagement",
@@ -129,14 +230,16 @@ export const translations = {
           "Responsive parfait (Mobile-First, breakpoints optimisés)",
           "Animations subtiles (CSS, Framer Motion)",
         ],
-        cta: "Idéal pour : marques premium, portfolios, sites vitrines.",
+        cta: "Souvent choisi par : marques premium, portfolios, sites vitrines à fort enjeu image.",
         ctaButton: "Demander un devis sur-mesure",
       },
       applications: {
         title: "Applications Sur-Mesure",
-        price: "à partir de 6 000€",
+        hook: "Une base technique solide pour vendre, scaler et intégrer vos outils.",
+        price: "6 000€",
         badge: "Meilleur rapport qualité/prix",
-        description: "Des plateformes robustes, scalables et performantes. E-commerce, SaaS, outils métier : l'architecture s'adapte à vos besoins.",
+        description:
+          "E-commerce, SaaS, plateformes métier : on priorise la fiabilité, la vitesse perçue et une architecture qui tient la charge. Moins de friction au checkout, plus de clarté pour vos équipes au quotidien.",
         benefits: [
           "E-commerce avec panier, paiement, gestion des stocks",
           "Serverless Architecture (Vercel, AWS)",
@@ -144,14 +247,16 @@ export const translations = {
           "Performance optimisée (Next.js, React Server Components)",
           "Déploiement et maintenance simplifiés",
         ],
-        cta: "Idéal pour : startups, PME, projets à fort trafic.",
+        cta: "Souvent choisi par : startups, PME en croissance, e-commerce et projets à fort trafic.",
         ctaButton: "Demander un devis sur-mesure",
       },
       ia: {
         title: "Intégration IA Stratégique",
-        price: "sur devis",
+        hook: "Moins de tâches répétitives, plus de réponses utiles — avec un cadre sécurisé.",
+        price: "Sur devis",
         projectLabel: "Nouveau",
-        description: "L'intelligence artificielle au service de votre business. Chatbots, recommandations personnalisées, automatisation intelligente.",
+        description:
+          "On part de vos processus réels (support, qualification, contenus, recommandations) pour intégrer l’IA là où elle fait gagner du temps et de la qualité — sans gadget. Mise en place progressive et mesurable.",
         benefits: [
           "Chatbots et assistants conversationnels",
           "RAG (Retrieval-Augmented Generation)",
@@ -159,13 +264,15 @@ export const translations = {
           "Intégration d'APIs IA (OpenAI, Claude, etc.)",
           "Solutions sur-mesure adaptées à votre secteur",
         ],
-        cta: "Idéal pour : entreprises innovantes, gains de productivité.",
+        cta: "Souvent choisi par : équipes commerciales / support, médias, marques qui scalent le contenu.",
         ctaButton: "Demander un devis sur-mesure",
       },
       maintenance: {
         title: "Maintenance & Support",
-        price: "dès 99 €/mois",
-        description: "Gardez votre site sécurisé, à jour et performant. Mises à jour techniques, sauvegardes et support réactif pour une sérénité au long cours.",
+        hook: "Zéro surprise : mises à jour, sauvegardes et petites évolutions sous contrôle.",
+        price: "99 € / mois",
+        description:
+          "Le web bouge vite : sécurité, dépendances, performances. Un plan de maintenance évite les urgences coûteuses et garde votre site aligné avec votre activité (petites évolutions incluses selon la formule).",
         benefits: [
           "Mises à jour de sécurité et dépendances",
           "Sauvegardes régulières et restauration si besoin",
@@ -173,10 +280,38 @@ export const translations = {
           "Petites évolutions incluses selon formule",
           "Surveillance et rapports de performance",
         ],
-        cta: "Idéal pour : tous les sites livrés par PhantomDev, revenus récurrents prévisibles.",
+        cta: "Indispensable après livraison : tout site qui doit rester sûr, à jour et évolutif.",
         ctaButton: "Demander un devis sur-mesure",
       },
-      usedFor: "Utilisé pour :",
+      usedFor: "Référence réelle :",
+    },
+    servicesPage: {
+      eyebrow: "Offres PhantomDev",
+      pageTitle: "Services & investissement",
+      introLead:
+        "Chaque ligne ci-dessous répond à une intention business : être crédible, vendre en ligne, industrialiser un outil, ou intégrer l’IA sans bricolage. Tarifs indicatifs : le devis final dépend du périmètre — toujours clair, sous 48h.",
+      introSub:
+        "Réponse sous 48h · Sans engagement · France, Europe & international · Lighthouse 90+ sur les sites livrés",
+      priceLabel: "À partir de",
+      priceLabelFlat: "Dès",
+      trustPoints: [
+        "Lighthouse 90+ garanti",
+        "Vitrine simple : mise en ligne rapide possible",
+        "Devis détaillé sous 48h",
+        "Next.js · React · stack moderne",
+      ],
+      jumpNavAria: "Accéder rapidement à une offre",
+      jumpConception: "Image & conversion",
+      jumpApplications: "E-commerce & apps",
+      jumpIa: "IA & automatisation",
+      jumpMaintenance: "Maintenance",
+      exploreLabel: "Parcourir les offres",
+      closingTitle: "Un projet en tête ?",
+      closingLead:
+        "Décrivez votre contexte (objectif, délai, budget approximatif). Je reviens vers vous avec une proposition structurée — sans jargon inutile.",
+      closingQuoteCta: "Demander un devis sur-mesure",
+      closingWhatsAppCta: "Écrire sur WhatsApp",
+      cardReassurance: "Sans engagement · Réponse sous 48h",
     },
     stats: {
       projects: "projets livrés",
@@ -238,9 +373,106 @@ export const translations = {
     nav: {
       expertise: "Expertise",
       services: "Services",
+      grapheneOS: "GrapheneOS",
+      grapheneAria:
+        "GrapheneOS installation service — privacy-focused Android on supported Pixel devices",
       projects: "Projects",
       contact: "Contact",
       freeQuote: "Free quote",
+      ariaExpertise: "Expertise in high-performance interface development",
+      ariaServices: "Services: landing pages, e-commerce, SaaS",
+      ariaProjects: "Portfolio and web projects",
+      ariaContact: "Contact and quote request",
+    },
+    graphenePage: {
+      backHome: "Back to home",
+      title: "GrapheneOS installations",
+      tagline:
+        "Hardened, privacy-oriented Android: secure flashing and onboarding for compatible Google Pixel phones.",
+      intro:
+        "Want GrapheneOS without the stress of a bad flash or lost data? I offer hands-on help to install the OS, lock down boot flow where applicable, and set up the essentials (profiles, apps, updates).",
+      pillars: [
+        {
+          title: "Privacy & security",
+          body: "Minimal base system, stricter permissions, stronger sandboxing — a solid foundation to reduce tracking and attack surface.",
+        },
+        {
+          title: "Controlled installation",
+          body: "Bootloader unlock, official GrapheneOS install path, careful step-by-step checks to avoid common mistakes.",
+        },
+        {
+          title: "After install",
+          body: "Guidance on user profiles, app sources, backups, and day-to-day habits.",
+        },
+      ],
+      devicesTitle: "Supported devices",
+      devicesBody:
+        "GrapheneOS targets a range of recent Google Pixel models. Share your exact phone model when you get in touch so we can confirm compatibility before booking.",
+      processTitle: "Typical flow",
+      steps: [
+        "WhatsApp message with Pixel model and your location / availability.",
+        "Compatibility check and time slot (in person or mail-in by agreement).",
+        "Secure flash, initial setup, and essential apps.",
+        "Handover with the phone ready to use and a short recap of best practices.",
+      ],
+      disclaimer:
+        "PhantomDev is not affiliated with the GrapheneOS project. GrapheneOS is independent open-source software. A professional install does not shift liability to GrapheneOS and does not replace compliance with applicable law or responsible device use.",
+      ctaWhatsApp: "Request installation on WhatsApp",
+      whatsappMessage: "Hello, I'd like a GrapheneOS install. Pixel model: ",
+      mainAria:
+        "GrapheneOS installation page: secure Android, privacy, Google Pixel",
+      seo: {
+        documentTitle:
+          "GrapheneOS installation on Google Pixel — secure flashing, privacy",
+        description:
+          "Professional GrapheneOS installation for supported Pixel phones: secure flashing, bootloader unlock guidance, privacy-focused setup. UK, EU & worldwide by arrangement. WhatsApp PhantomDev.",
+        ogTitle: "GrapheneOS Pixel install | PhantomDev — private Android",
+        ogDescription:
+          "Hands-on GrapheneOS installs for compatible Google Pixel devices. Official install path, privacy-first setup. Message on WhatsApp.",
+        ogImageAlt:
+          "Official GrapheneOS logo — open-source mobile OS focused on security and privacy",
+        keywords: [
+          "GrapheneOS",
+          "GrapheneOS install",
+          "install GrapheneOS Pixel",
+          "flash GrapheneOS",
+          "Google Pixel GrapheneOS",
+          "private Android",
+          "secure smartphone",
+          "Pixel bootloader",
+          "open source mobile OS",
+          "deGoogle phone",
+          "PhantomDev GrapheneOS",
+          "GrapheneOS UK Europe",
+        ],
+      },
+      visualSectionHeading: "Pixel & GrapheneOS",
+      visualSectionAria:
+        "Illustrations: smartphone frames showing the GrapheneOS logo on screen",
+      phoneScreenAlt:
+        "GrapheneOS logo on a Google Pixel phone screen — PhantomDev illustration",
+      logoCredit:
+        "GrapheneOS logo: independent open-source project (grapheneos.org). PhantomDev is not affiliated with GrapheneOS.",
+      officialLinkLabel: "Official GrapheneOS site — docs and releases",
+      faqSectionTitle: "FAQ — GrapheneOS",
+      faqSchema: [
+        {
+          q: "What is GrapheneOS?",
+          a: "GrapheneOS is a privacy- and security-focused mobile OS based on the Android Open Source Project (AOSP), developed as open source. It does not ship Google apps by default and hardens sandboxing and exploit mitigations.",
+        },
+        {
+          q: "Which phones support GrapheneOS?",
+          a: "GrapheneOS supports a defined set of Google Pixel models (see the official device support FAQ on grapheneos.org). Always share your exact model and variant (eSIM, region) before booking an install.",
+        },
+        {
+          q: "Will installing GrapheneOS erase my data?",
+          a: "Unlocking the bootloader and flashing typically wipe the device. Back up first. Exact steps depend on your hardware and are explained before any work begins.",
+        },
+        {
+          q: "Is PhantomDev affiliated with GrapheneOS?",
+          a: "No. PhantomDev offers installation assistance; GrapheneOS is an independent project. For official support and up-to-date instructions, see grapheneos.org.",
+        },
+      ],
     },
     expertiseCards: {
       conception: "Premium Web Design",
@@ -309,8 +541,10 @@ export const translations = {
     servicesList: {
       conception: {
         title: "Premium Web Design",
-        price: "from €2,500",
-        description: "A site that reflects your brand's excellence. Every interface is designed to captivate, guide and convert. Deliverable in 48h for simple projects.",
+        hook: "Premium positioning that converts — not a generic template look.",
+        price: "€2,500",
+        description:
+          "We don’t only ship visuals: we shape a clear journey (message, proof, action). Perfect when you need credibility, a strong offer, and more qualified enquiries. Simple builds can go live very quickly.",
         benefits: [
           "Bespoke design, no generic templates",
           "UX designed for conversion and engagement",
@@ -318,14 +552,16 @@ export const translations = {
           "Perfect responsive (Mobile-First, optimised breakpoints)",
           "Subtle animations (CSS, Framer Motion)",
         ],
-        cta: "Ideal for: premium brands, portfolios, landing pages.",
+        cta: "Often chosen by: premium brands, portfolios, high-stakes landing pages.",
         ctaButton: "Request a bespoke quote",
       },
       applications: {
         title: "Custom Applications",
-        price: "from €6,000",
+        hook: "A solid technical base to sell, scale, and connect your stack.",
+        price: "€6,000",
         badge: "Best value for money",
-        description: "Robust, scalable and performant platforms. E-commerce, SaaS, business tools: architecture adapts to your needs.",
+        description:
+          "E-commerce, SaaS, internal tools: we prioritise reliability, perceived speed, and architecture that holds under load. Less checkout friction, clearer day-to-day workflows for your team.",
         benefits: [
           "E-commerce with cart, payment, stock management",
           "Serverless Architecture (Vercel, AWS)",
@@ -333,14 +569,16 @@ export const translations = {
           "Optimised performance (Next.js, React Server Components)",
           "Simplified deployment and maintenance",
         ],
-        cta: "Ideal for: startups, SMEs, high-traffic projects.",
+        cta: "Often chosen by: startups, growing SMEs, e-commerce, high-traffic products.",
         ctaButton: "Request a bespoke quote",
       },
       ia: {
         title: "Strategic AI Integration",
-        price: "on request",
+        hook: "Fewer repetitive tasks, better answers — with a safe, pragmatic setup.",
+        price: "Custom quote",
         projectLabel: "New",
-        description: "Artificial intelligence at the service of your business. Chatbots, personalised recommendations, smart automation.",
+        description:
+          "We start from real workflows (support, qualification, content, recommendations) and integrate AI where it saves time and improves quality — no gimmicks. Phased, measurable rollout.",
         benefits: [
           "Chatbots and conversational assistants",
           "RAG (Retrieval-Augmented Generation)",
@@ -348,13 +586,15 @@ export const translations = {
           "AI API integration (OpenAI, Claude, etc.)",
           "Bespoke solutions tailored to your sector",
         ],
-        cta: "Ideal for: innovative companies, productivity gains.",
+        cta: "Often chosen by: sales/support teams, publishers, brands scaling content.",
         ctaButton: "Request a bespoke quote",
       },
       maintenance: {
         title: "Maintenance & Support",
-        price: "from €99/month",
-        description: "Keep your site secure, up to date and performant. Technical updates, backups and responsive support for long-term peace of mind.",
+        hook: "No surprises: updates, backups, and small improvements under control.",
+        price: "€99 / month",
+        description:
+          "The web moves fast: security, dependencies, performance. A maintenance plan prevents expensive emergencies and keeps your site aligned with your business (minor changes included depending on plan).",
         benefits: [
           "Security and dependency updates",
           "Regular backups and restoration if needed",
@@ -362,10 +602,38 @@ export const translations = {
           "Minor evolutions included depending on plan",
           "Performance monitoring and reports",
         ],
-        cta: "Ideal for: all sites delivered by PhantomDev, predictable recurring revenue.",
+        cta: "Essential after launch: any site that must stay secure, current, and evolvable.",
         ctaButton: "Request a bespoke quote",
       },
-      usedFor: "Used for:",
+      usedFor: "Live reference:",
+    },
+    servicesPage: {
+      eyebrow: "PhantomDev offers",
+      pageTitle: "Services & pricing",
+      introLead:
+        "Each offer maps to a business goal: build trust, sell online, ship a serious product, or integrate AI without duct tape. Indicative pricing — your quote depends on scope, always clear within 48h.",
+      introSub:
+        "Reply within 48h · No commitment · France, Europe & worldwide · Lighthouse 90+ on delivered sites",
+      priceLabel: "From",
+      priceLabelFlat: "From",
+      trustPoints: [
+        "Lighthouse 90+ guarantee",
+        "Simple sites: fast go-live possible",
+        "Detailed quote within 48h",
+        "Next.js · React · modern stack",
+      ],
+      jumpNavAria: "Jump to an offer",
+      jumpConception: "Brand & conversion",
+      jumpApplications: "E-commerce & apps",
+      jumpIa: "AI & automation",
+      jumpMaintenance: "Maintenance",
+      exploreLabel: "Browse offers",
+      closingTitle: "Planning a project?",
+      closingLead:
+        "Share your context (goal, timeline, rough budget). You’ll get a structured proposal — straight to the point, no unnecessary jargon.",
+      closingQuoteCta: "Request a bespoke quote",
+      closingWhatsAppCta: "Message on WhatsApp",
+      cardReassurance: "No commitment · Reply within 48h",
     },
     stats: {
       projects: "projects delivered",
@@ -427,9 +695,106 @@ export const translations = {
     nav: {
       expertise: "Expertise",
       services: "Services",
+      grapheneOS: "GrapheneOS",
+      grapheneAria:
+        "GrapheneOS installation service — privacy-focused Android on supported Pixel devices",
       projects: "Projects",
       contact: "Contact",
       freeQuote: "Free quote",
+      ariaExpertise: "Expertise in high-performance interface development",
+      ariaServices: "Services: landing pages, e-commerce, SaaS",
+      ariaProjects: "Portfolio and web projects",
+      ariaContact: "Contact and quote request",
+    },
+    graphenePage: {
+      backHome: "Back to home",
+      title: "GrapheneOS installations",
+      tagline:
+        "Hardened, privacy-oriented Android: secure flashing and onboarding for compatible Google Pixel phones.",
+      intro:
+        "Want GrapheneOS without the stress of a bad flash or lost data? I offer hands-on help to install the OS, lock down boot flow where applicable, and set up the essentials (profiles, apps, updates).",
+      pillars: [
+        {
+          title: "Privacy & security",
+          body: "Minimal base system, stricter permissions, stronger sandboxing — a solid foundation to reduce tracking and attack surface.",
+        },
+        {
+          title: "Controlled installation",
+          body: "Bootloader unlock, official GrapheneOS install path, careful step-by-step checks to avoid common mistakes.",
+        },
+        {
+          title: "After install",
+          body: "Guidance on user profiles, app sources, backups, and day-to-day habits.",
+        },
+      ],
+      devicesTitle: "Supported devices",
+      devicesBody:
+        "GrapheneOS targets a range of recent Google Pixel models. Share your exact phone model when you get in touch so we can confirm compatibility before booking.",
+      processTitle: "Typical flow",
+      steps: [
+        "WhatsApp message with Pixel model and your location / availability.",
+        "Compatibility check and time slot (in person or mail-in by agreement).",
+        "Secure flash, initial setup, and essential apps.",
+        "Handover with the phone ready to use and a short recap of best practices.",
+      ],
+      disclaimer:
+        "PhantomDev is not affiliated with the GrapheneOS project. GrapheneOS is independent open-source software. A professional install does not shift liability to GrapheneOS and does not replace compliance with applicable law or responsible device use.",
+      ctaWhatsApp: "Request installation on WhatsApp",
+      whatsappMessage: "Hello, I'd like a GrapheneOS install. Pixel model: ",
+      mainAria:
+        "GrapheneOS installation page: secure Android, privacy, Google Pixel",
+      seo: {
+        documentTitle:
+          "GrapheneOS installation on Google Pixel — secure flashing, privacy",
+        description:
+          "Professional GrapheneOS installation for supported Pixel phones: secure flashing, bootloader unlock guidance, privacy-focused setup. US, EU & worldwide by arrangement. WhatsApp PhantomDev.",
+        ogTitle: "GrapheneOS Pixel install | PhantomDev — private Android",
+        ogDescription:
+          "Hands-on GrapheneOS installs for compatible Google Pixel devices. Official install path, privacy-first setup. Message on WhatsApp.",
+        ogImageAlt:
+          "Official GrapheneOS logo — open-source mobile OS focused on security and privacy",
+        keywords: [
+          "GrapheneOS",
+          "GrapheneOS install",
+          "install GrapheneOS Pixel",
+          "flash GrapheneOS",
+          "Google Pixel GrapheneOS",
+          "private Android",
+          "secure smartphone",
+          "Pixel bootloader",
+          "open source mobile OS",
+          "deGoogle phone",
+          "PhantomDev GrapheneOS",
+          "GrapheneOS United States",
+        ],
+      },
+      visualSectionHeading: "Pixel & GrapheneOS",
+      visualSectionAria:
+        "Illustrations: smartphone frames showing the GrapheneOS logo on screen",
+      phoneScreenAlt:
+        "GrapheneOS logo on a Google Pixel phone screen — PhantomDev illustration",
+      logoCredit:
+        "GrapheneOS logo: independent open-source project (grapheneos.org). PhantomDev is not affiliated with GrapheneOS.",
+      officialLinkLabel: "Official GrapheneOS site — docs and releases",
+      faqSectionTitle: "FAQ — GrapheneOS",
+      faqSchema: [
+        {
+          q: "What is GrapheneOS?",
+          a: "GrapheneOS is a privacy- and security-focused mobile OS based on the Android Open Source Project (AOSP), developed as open source. It does not ship Google apps by default and hardens sandboxing and exploit mitigations.",
+        },
+        {
+          q: "Which phones support GrapheneOS?",
+          a: "GrapheneOS supports a defined set of Google Pixel models (see the official device support FAQ on grapheneos.org). Always share your exact model and variant (eSIM, region) before booking an install.",
+        },
+        {
+          q: "Will installing GrapheneOS erase my data?",
+          a: "Unlocking the bootloader and flashing typically wipe the device. Back up first. Exact steps depend on your hardware and are explained before any work begins.",
+        },
+        {
+          q: "Is PhantomDev affiliated with GrapheneOS?",
+          a: "No. PhantomDev offers installation assistance; GrapheneOS is an independent project. For official support and up-to-date instructions, see grapheneos.org.",
+        },
+      ],
     },
     expertiseCards: {
       conception: "Premium Web Design",
@@ -498,8 +863,10 @@ export const translations = {
     servicesList: {
       conception: {
         title: "Premium Web Design",
-        price: "from $3,000",
-        description: "A site that reflects your brand's excellence. Every interface is designed to captivate, guide and convert. Deliverable in 48h for simple projects.",
+        hook: "Premium positioning that converts — not a generic template look.",
+        price: "$3,000",
+        description:
+          "We don’t only ship visuals: we shape a clear journey (message, proof, action). Perfect when you need credibility, a strong offer, and more qualified enquiries. Simple builds can go live very quickly.",
         benefits: [
           "Custom design, no generic templates",
           "UX designed for conversion and engagement",
@@ -507,14 +874,16 @@ export const translations = {
           "Perfect responsive (Mobile-First, optimized breakpoints)",
           "Subtle animations (CSS, Framer Motion)",
         ],
-        cta: "Ideal for: premium brands, portfolios, landing pages.",
+        cta: "Often chosen by: premium brands, portfolios, high-stakes landing pages.",
         ctaButton: "Request a custom quote",
       },
       applications: {
         title: "Custom Applications",
-        price: "from $7,000",
+        hook: "A solid technical base to sell, scale, and connect your stack.",
+        price: "$7,000",
         badge: "Best value for money",
-        description: "Robust, scalable and performant platforms. E-commerce, SaaS, business tools: architecture adapts to your needs.",
+        description:
+          "E-commerce, SaaS, internal tools: we prioritise reliability, perceived speed, and architecture that holds under load. Less checkout friction, clearer day-to-day workflows for your team.",
         benefits: [
           "E-commerce with cart, payment, stock management",
           "Serverless Architecture (Vercel, AWS)",
@@ -522,14 +891,16 @@ export const translations = {
           "Optimized performance (Next.js, React Server Components)",
           "Simplified deployment and maintenance",
         ],
-        cta: "Ideal for: startups, SMBs, high-traffic projects.",
+        cta: "Often chosen by: startups, growing SMBs, e-commerce, high-traffic products.",
         ctaButton: "Request a custom quote",
       },
       ia: {
         title: "Strategic AI Integration",
-        price: "on request",
+        hook: "Fewer repetitive tasks, better answers — with a safe, pragmatic setup.",
+        price: "Custom quote",
         projectLabel: "New",
-        description: "Artificial intelligence at the service of your business. Chatbots, personalized recommendations, smart automation.",
+        description:
+          "We start from real workflows (support, qualification, content, recommendations) and integrate AI where it saves time and improves quality — no gimmicks. Phased, measurable rollout.",
         benefits: [
           "Chatbots and conversational assistants",
           "RAG (Retrieval-Augmented Generation)",
@@ -537,13 +908,15 @@ export const translations = {
           "AI API integration (OpenAI, Claude, etc.)",
           "Custom solutions tailored to your sector",
         ],
-        cta: "Ideal for: innovative companies, productivity gains.",
+        cta: "Often chosen by: sales/support teams, publishers, brands scaling content.",
         ctaButton: "Request a custom quote",
       },
       maintenance: {
         title: "Maintenance & Support",
-        price: "from $120/month",
-        description: "Keep your site secure, up to date and performant. Technical updates, backups and responsive support for long-term peace of mind.",
+        hook: "No surprises: updates, backups, and small improvements under control.",
+        price: "$120 / month",
+        description:
+          "The web moves fast: security, dependencies, performance. A maintenance plan prevents expensive emergencies and keeps your site aligned with your business (minor changes included depending on plan).",
         benefits: [
           "Security and dependency updates",
           "Regular backups and restoration if needed",
@@ -551,10 +924,38 @@ export const translations = {
           "Minor evolutions included depending on plan",
           "Performance monitoring and reports",
         ],
-        cta: "Ideal for: all sites delivered by PhantomDev, predictable recurring revenue.",
+        cta: "Essential after launch: any site that must stay secure, current, and evolvable.",
         ctaButton: "Request a custom quote",
       },
-      usedFor: "Used for:",
+      usedFor: "Live reference:",
+    },
+    servicesPage: {
+      eyebrow: "PhantomDev offers",
+      pageTitle: "Services & pricing",
+      introLead:
+        "Each offer maps to a business goal: build trust, sell online, ship a serious product, or integrate AI without duct tape. Indicative pricing — your quote depends on scope, always clear within 48h.",
+      introSub:
+        "Reply within 48h · No commitment · France, Europe & worldwide · Lighthouse 90+ on delivered sites",
+      priceLabel: "From",
+      priceLabelFlat: "From",
+      trustPoints: [
+        "Lighthouse 90+ guarantee",
+        "Simple sites: fast go-live possible",
+        "Detailed quote within 48h",
+        "Next.js · React · modern stack",
+      ],
+      jumpNavAria: "Jump to an offer",
+      jumpConception: "Brand & conversion",
+      jumpApplications: "E-commerce & apps",
+      jumpIa: "AI & automation",
+      jumpMaintenance: "Maintenance",
+      exploreLabel: "Browse offers",
+      closingTitle: "Planning a project?",
+      closingLead:
+        "Share your context (goal, timeline, rough budget). You’ll get a structured proposal — straight to the point, no unnecessary jargon.",
+      closingQuoteCta: "Request a custom quote",
+      closingWhatsAppCta: "Message on WhatsApp",
+      cardReassurance: "No commitment · Reply within 48h",
     },
     stats: {
       projects: "projects delivered",

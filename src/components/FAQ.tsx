@@ -32,7 +32,7 @@ export function FAQ() {
             return (
               <ScrollReveal key={index} delay={index * 0.04}>
                 <div
-                  className="overflow-hidden rounded-sm border border-[#f5f5f0]/10 bg-[#0a0a0a]/40 transition-colors hover:border-[#f5f5f0]/15"
+                  className="overflow-hidden rounded-sm border border-[#f5f5f0]/10 bg-[#2c2f31]/40 transition-colors hover:border-[#f5f5f0]/15"
                   aria-expanded={isOpen}
                 >
                   <dt>

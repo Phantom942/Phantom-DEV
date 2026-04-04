@@ -30,7 +30,7 @@ export function ExpertiseCards() {
                 aria-label={`${title} : ${desc}`}
               >
               <motion.article
-                className="group relative min-w-0 overflow-hidden rounded-sm border border-[#f5f5f0]/10 bg-[#0a0a0a]/50 px-5 py-8 backdrop-blur-[1px] transition-all duration-500 hover:border-[#f5f5f0]/25 hover:shadow-[0_0_50px_rgba(212,175,55,0.18)] sm:px-8 sm:py-12"
+                className="group relative min-w-0 overflow-hidden rounded-sm border border-[#f5f5f0]/10 bg-[#2c2f31]/50 px-5 py-8 backdrop-blur-[1px] transition-all duration-500 hover:border-[#f5f5f0]/25 hover:shadow-[0_0_50px_rgba(212,175,55,0.18)] sm:px-8 sm:py-12"
                 whileHover={{ y: -2 }}
                 transition={{ duration: 0.3 }}
               >

@@ -92,7 +92,7 @@ export function LanguageSelector({ variant = "dropdown" }: LanguageSelectorProps
       {open && (
         <ul
           role="listbox"
-          className="absolute right-0 top-full z-[60] mt-2 min-w-[160px] rounded-md border border-[#f5f5f0]/10 bg-[#0a0a0a] py-2 shadow-lg"
+          className="absolute right-0 top-full z-[60] mt-2 min-w-[160px] rounded-md border border-[#f5f5f0]/10 bg-[#2c2f31] py-2 shadow-lg"
           aria-label="Sélectionner une langue"
         >
           {locales.map((locale) => (

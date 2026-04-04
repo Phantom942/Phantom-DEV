@@ -109,7 +109,8 @@ export function HeroSection() {
             className="font-extralight"
             style={{
               fontFamily: "var(--font-cormorant), Georgia, serif",
-              fontSize: "clamp(2rem, 10vw, 8rem)",
+              /* px : inchangé quand la base html (rem) augmente pour le reste du site */
+              fontSize: "clamp(32px, 10vw, 128px)",
             }}
           >
             {letter}

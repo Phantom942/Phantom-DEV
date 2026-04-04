@@ -27,7 +27,7 @@ export const metadata: Metadata = {
 export default function EnUSHome() {
   return (
     <div
-      className="relative min-h-screen min-h-[100dvh] w-full overflow-x-clip bg-[#000000]"
+      className="relative min-h-screen min-h-[100dvh] w-full overflow-x-clip bg-[#353839]"
       id="home"
     >
       <script

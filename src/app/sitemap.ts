@@ -41,6 +41,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
       alternates: getAlternates("/contact"),
     },
     {
+      url: `${BASE}/grapheneos`,
+      lastModified: now,
+      changeFrequency: "monthly",
+      priority: 0.75,
+      alternates: getAlternates("/grapheneos"),
+    },
+    {
       url: `${BASE}/mentions-legales`,
       lastModified: now,
       changeFrequency: "yearly",
@@ -49,7 +56,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
   ];
   const enLocales = ["en-gb", "en-us"] as const;
-  const enPaths = ["", "/services", "/contact", "/mentions-legales"] as const;
+  const enPaths = ["", "/services", "/contact", "/grapheneos", "/mentions-legales"] as const;
   const enEntries: MetadataRoute.Sitemap = enLocales.flatMap((locale) =>
     enPaths.map((path) => {
       const fullPath = path ? `/${locale}${path}` : `/${locale}`;

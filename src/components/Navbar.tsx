@@ -20,14 +20,24 @@ export function Navbar() {
   const navLinksWithLocale = [
     { href: `${localePrefix || ""}/#expertise`, label: t.nav.expertise },
     { href: `${localePrefix || ""}/services`, label: t.nav.services },
+    { href: `${localePrefix || ""}/grapheneos`, label: t.nav.grapheneOS },
     { href: `${localePrefix || ""}/#projets`, label: t.nav.projects },
     { href: `${localePrefix || ""}/#contact`, label: t.nav.contact },
   ];
 
+  function navLinkAriaLabel(label: string): string {
+    if (label === t.nav.grapheneOS) return t.nav.grapheneAria;
+    if (label === t.nav.expertise) return t.nav.ariaExpertise;
+    if (label === t.nav.services) return t.nav.ariaServices;
+    if (label === t.nav.projects) return t.nav.ariaProjects;
+    if (label === t.nav.contact) return t.nav.ariaContact;
+    return label;
+  }
+
   return (
     <>
       <header
-        className="fixed left-0 right-0 top-0 z-50 flex w-full max-w-full flex-row items-center justify-between gap-2 overflow-x-clip border-b border-[#f5f5f0]/5 bg-[#000000] px-4 py-3 md:px-16 md:py-6"
+        className="fixed left-0 right-0 top-0 z-50 flex w-full max-w-full flex-row items-center justify-between gap-2 overflow-x-clip border-b border-[#f5f5f0]/5 bg-[#353839] px-4 py-3 md:px-16 md:py-6"
         style={{
           paddingTop: "max(0.75rem, env(safe-area-inset-top))",
         }}
@@ -59,8 +69,8 @@ export function Navbar() {
             <Link
               key={link.href}
               href={link.href}
-              className="whitespace-nowrap text-sm font-light tracking-[0.15em] leading-tight text-[#f5f5f0]/85 transition-colors hover:text-[#f5f5f0] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#d4af37]/50 focus-visible:ring-offset-2 focus-visible:ring-offset-black"
-              aria-label={link.label === "Expertise" ? "Expertise en développement d'interfaces haute performance" : link.label === "Services" ? "Services : sites vitrines, e-commerce, SaaS" : link.label === "Projets" ? "Réalisations et projets web" : "Contact et devis"}
+              className="whitespace-nowrap text-sm font-light tracking-[0.15em] leading-tight text-[#f5f5f0]/85 transition-colors hover:text-[#f5f5f0] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#d4af37]/50 focus-visible:ring-offset-2 focus-visible:ring-offset-[#353839]"
+              aria-label={navLinkAriaLabel(link.label)}
             >
               {link.label}
             </Link>
@@ -94,7 +104,7 @@ export function Navbar() {
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.2 }}
-            className="fixed inset-x-0 z-40 overflow-hidden bg-[#0a0a0a] md:hidden"
+            className="fixed inset-x-0 z-40 overflow-hidden bg-[#2c2f31] md:hidden"
             style={{
               top: "calc(3rem + env(safe-area-inset-top))",
             }}
@@ -113,7 +123,7 @@ export function Navbar() {
                   href={link.href}
                   onClick={closeMobileMenu}
                   className="border-b border-[#f5f5f0]/5 py-3 text-base font-light tracking-[0.1em] text-[#f5f5f0]/90 transition-colors last:border-0 active:text-[#f5f5f0] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-[#d4af37]/50"
-                  aria-label={link.label === "Expertise" ? "Expertise en développement d'interfaces haute performance" : link.label === "Services" ? "Services : sites vitrines, e-commerce, SaaS" : link.label === "Projets" ? "Réalisations et projets web" : "Contact et devis"}
+                  aria-label={navLinkAriaLabel(link.label)}
                 >
                   {link.label}
                 </Link>

@@ -33,7 +33,7 @@ export const metadata: Metadata = {
 
 export default function EnUSMentionsLegalesPage() {
   return (
-    <div className="relative min-h-screen w-full bg-[#000000]">
+    <div className="relative min-h-screen w-full bg-[#353839]">
       <CursorAndGlow />
       <Navbar />
       <main id="main" role="main" className="w-full pt-24 pb-16 sm:pt-32 sm:pb-24">

@@ -30,6 +30,7 @@ export function ServicesList() {
   const pathname = usePathname();
   const { t } = useTranslations();
   const sl = t.servicesList;
+  const sp = t.servicesPage;
   const localePrefix = pathname.startsWith("/en-gb") ? "/en-gb" : pathname.startsWith("/en-us") ? "/en-us" : "";
 
   return (
@@ -49,7 +50,7 @@ export function ServicesList() {
               className="group/Service scroll-mt-24"
             >
               <div
-                className={`relative overflow-hidden rounded-sm border border-[#f5f5f0]/10 bg-[#0a0a0a]/30 px-6 py-8 transition-all duration-500 hover:border-[#d4af37]/25 hover:shadow-[0_0_40px_rgba(212,175,55,0.08)] sm:px-10 sm:py-12 md:flex md:items-start md:gap-12 md:px-12 ${
+                className={`relative overflow-hidden rounded-sm border border-[#f5f5f0]/10 bg-[#2c2f31]/30 px-6 py-8 transition-all duration-500 hover:border-[#d4af37]/25 hover:shadow-[0_0_40px_rgba(212,175,55,0.08)] sm:px-10 sm:py-12 md:flex md:items-start md:gap-12 md:px-12 ${
                   isEven ? "md:flex-row-reverse" : ""
                 }`}
                 style={{
@@ -68,7 +69,7 @@ export function ServicesList() {
                       isEven ? "md:flex-row-reverse" : ""
                     }`}
                   >
-                    <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-sm border border-[#f5f5f0]/20 bg-[#0a0a0a] transition-all duration-300 group-hover/Service:border-[#d4af37]/50 group-hover/Service:shadow-[0_0_24px_rgba(212,175,55,0.2)]">
+                    <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-sm border border-[#f5f5f0]/20 bg-[#2c2f31] transition-all duration-300 group-hover/Service:border-[#d4af37]/50 group-hover/Service:shadow-[0_0_24px_rgba(212,175,55,0.2)]">
                       <Icon
                         size={28}
                         strokeWidth={1.25}
@@ -99,9 +100,57 @@ export function ServicesList() {
                           </span>
                         )}
                       </div>
-                      <p className="mb-4 text-xs font-light tracking-[0.08em] text-[#d4af37]/80">
-                        {s.price}
+                      <p
+                        className={`mb-5 max-w-2xl text-sm font-light leading-snug text-[#f5f5f0]/90 sm:text-base ${
+                          isEven ? "md:ml-auto" : ""
+                        }`}
+                      >
+                        {s.hook}
                       </p>
+                      <div
+                        className={`mb-6 rounded-sm border border-[#d4af37]/25 bg-gradient-to-r from-[#d4af37]/[0.12] to-transparent px-4 py-3 sm:px-5 sm:py-4 ${
+                          isEven ? "md:ml-auto md:max-w-md" : "max-w-md"
+                        }`}
+                      >
+                        {config.id === "ia" ? (
+                          <p
+                            className="text-lg font-light tracking-wide text-[#d4af37] sm:text-xl"
+                            style={{
+                              fontFamily: "var(--font-cormorant), Georgia, serif",
+                            }}
+                          >
+                            {s.price}
+                          </p>
+                        ) : config.id === "maintenance" ? (
+                          <>
+                            <p className="mb-0.5 text-[9px] font-light uppercase tracking-[0.22em] text-[#f5f5f0]/45">
+                              {sp.priceLabelFlat}
+                            </p>
+                            <p
+                              className="text-lg font-light text-[#f5f5f0] sm:text-xl"
+                              style={{
+                                fontFamily: "var(--font-cormorant), Georgia, serif",
+                              }}
+                            >
+                              <span className="text-[#d4af37]">{s.price}</span>
+                            </p>
+                          </>
+                        ) : (
+                          <>
+                            <p className="mb-0.5 text-[9px] font-light uppercase tracking-[0.22em] text-[#f5f5f0]/45">
+                              {sp.priceLabel}
+                            </p>
+                            <p
+                              className="text-lg font-light text-[#f5f5f0] sm:text-xl"
+                              style={{
+                                fontFamily: "var(--font-cormorant), Georgia, serif",
+                              }}
+                            >
+                              <span className="text-[#d4af37]">{s.price}</span>
+                            </p>
+                          </>
+                        )}
+                      </div>
                       <p className="mb-8 max-w-2xl text-sm leading-[1.8] text-[#f5f5f0]/80 sm:text-base">
                         {s.description}
                       </p>
@@ -149,11 +198,18 @@ export function ServicesList() {
                       )}
                       <Link
                         href={`${localePrefix || "/"}?type=${config.typeParam}#contact`}
-                        className="mt-8 inline-flex items-center gap-2 border border-[#d4af37]/40 bg-[#d4af37]/5 px-6 py-3 text-xs font-light tracking-[0.15em] text-[#f5f5f0] transition-all hover:border-[#d4af37]/60 hover:bg-[#d4af37]/10"
+                        className="mt-8 inline-flex items-center gap-2 border border-[#d4af37]/45 bg-[#d4af37]/10 px-6 py-3.5 text-xs font-light tracking-[0.15em] text-[#f5f5f0] transition-all hover:border-[#d4af37]/65 hover:bg-[#d4af37]/18"
                       >
                         {s.ctaButton}
                         <ArrowRight size={14} strokeWidth={1.5} />
                       </Link>
+                      <p
+                        className={`mt-3 text-[10px] font-light tracking-[0.08em] text-[#f5f5f0]/42 ${
+                          isEven ? "md:text-right" : ""
+                        }`}
+                      >
+                        {sp.cardReassurance}
+                      </p>
                     </div>
                   </div>
                 </div>
