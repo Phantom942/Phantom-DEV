@@ -1,16 +1,10 @@
 "use client";
 
 import { MessageCircle } from "lucide-react";
-import { usePathname } from "next/navigation";
 import { getWhatsAppDevisUrl } from "@/data/contact";
 
 export function FloatingWhatsAppButton() {
-  const pathname = usePathname();
   const label = "Demander un devis sur WhatsApp";
-
-  if (pathname === "/mockups" || pathname?.startsWith("/mockups/")) {
-    return null;
-  }
 
   return (
     <a

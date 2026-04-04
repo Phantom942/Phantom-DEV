@@ -41,13 +41,6 @@ jobs:
           rm -rf .next out
           npm run build
 
-      - name: GitHub Pages — URL /mockups (dossier index.html)
-        run: |
-          if [ -f "out/mockups.html" ]; then
-            mkdir -p "out/mockups"
-            cp "out/mockups.html" "out/mockups/index.html"
-          fi
-
       - name: List deployed files
         run: |
           echo "Contenu de out/ déployé :"

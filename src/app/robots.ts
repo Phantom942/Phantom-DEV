@@ -7,7 +7,7 @@ export default function robots(): MetadataRoute.Robots {
     rules: {
       userAgent: "*",
       allow: "/",
-      disallow: ["/api/", "/mockups"],
+      disallow: ["/api/"],
     },
     sitemap: "https://phantomdev.fr/sitemap.xml",
   };
