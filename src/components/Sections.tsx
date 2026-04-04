@@ -1,13 +1,11 @@
 "use client";
 
-import { Suspense } from "react";
 import { ScrollReveal } from "./ScrollReveal";
 import { useTranslations } from "@/hooks/useTranslations";
 import { ExpertiseCards } from "./ExpertiseCards";
 import { SelectedWorks } from "./SelectedWorks";
 import { FAQ } from "./FAQ";
 import { WhatsAppCtaButton } from "./WhatsAppButton";
-import { WhatsAppForm } from "./WhatsAppForm";
 
 export function Sections() {
   const { t } = useTranslations();
@@ -68,17 +66,9 @@ export function Sections() {
           <p className="mb-10 text-xs font-light tracking-[0.08em] text-[#f5f5f0]/60 sm:mb-12">
             {t.sections.performance}
           </p>
-          <div className="mx-auto max-w-xl rounded-lg border border-[#f5f5f0]/10 bg-[#2c2f31]/60 p-6 backdrop-blur-sm sm:p-8">
-            <Suspense fallback={null}>
-              <WhatsAppForm />
-            </Suspense>
-          </div>
-          <p className="mt-6 text-center text-xs font-light tracking-[0.08em] text-[#f5f5f0]/40">
-            {t.sections.or}
-          </p>
-          <p className="mt-2 text-center">
+          <div className="flex flex-col items-center">
             <WhatsAppCtaButton />
-          </p>
+          </div>
           <p className="mt-8 text-center text-xs font-light tracking-[0.08em] text-[#f5f5f0]/40">
             {t.sections.response}
           </p>

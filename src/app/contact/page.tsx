@@ -4,9 +4,7 @@ import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { CursorAndGlow } from "@/components/CursorAndGlow";
 import { WhatsAppCtaButton } from "@/components/WhatsAppButton";
-import { WhatsAppForm } from "@/components/WhatsAppForm";
 import { ArrowLeft } from "lucide-react";
-import { Suspense } from "react";
 
 import { getHreflangAlternates } from "@/lib/hreflang";
 import { getBreadcrumbForPath } from "@/lib/breadcrumb";
@@ -79,14 +77,11 @@ export default function ContactPage() {
             Garantie performance : Lighthouse 90+ sur tous les sites livrés.
           </p>
 
-          <Suspense fallback={null}>
-            <WhatsAppForm />
-          </Suspense>
-          <p className="mt-6 text-center text-xs font-light tracking-[0.08em] text-[#f5f5f0]/40">
-            ou
-          </p>
-          <p className="mt-2 text-center">
+          <div className="flex flex-col items-center">
             <WhatsAppCtaButton />
+          </div>
+          <p className="mt-8 text-center text-xs font-light tracking-[0.08em] text-[#f5f5f0]/40">
+            Réponse sous 48h · Sans engagement
           </p>
         </div>
       </main>

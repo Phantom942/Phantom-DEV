@@ -1,11 +1,9 @@
 import type { Metadata } from "next";
-import { Suspense } from "react";
 import Link from "next/link";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { CursorAndGlow } from "@/components/CursorAndGlow";
 import { WhatsAppCtaButton } from "@/components/WhatsAppButton";
-import { WhatsAppForm } from "@/components/WhatsAppForm";
 import { ArrowLeft } from "lucide-react";
 import { getHreflangAlternates } from "@/lib/hreflang";
 import { defaultOpenGraphImages, twitterSummaryLarge } from "@/lib/social-metadata";
@@ -70,12 +68,12 @@ export default function EnUSContactPage() {
             Performance guarantee: Lighthouse 90+ on all delivered sites.
           </p>
 
-          <WhatsAppCtaButton />
-          <div className="mt-12">
-            <Suspense fallback={null}>
-              <WhatsAppForm />
-            </Suspense>
+          <div className="flex flex-col items-center">
+            <WhatsAppCtaButton />
           </div>
+          <p className="mt-8 text-center text-xs font-light tracking-[0.08em] text-[#f5f5f0]/40">
+            Response within 48h · No commitment
+          </p>
         </div>
       </main>
       <Footer />

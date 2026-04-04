@@ -213,6 +213,8 @@ export const translations = {
       submitSuccess: "Message envoyé ! Je vous recontacte sous 48h.",
       submitLoading: "Envoi en cours...",
       submitError: "Erreur d'envoi. Réessayez ou contactez-moi sur WhatsApp.",
+      submitNetworkError:
+        "Connexion vers le service d’e-mail impossible (réseau, VPN, pare-feu ou bloqueur de pubs). Réessayez, essayez un autre réseau ou utilisez le bouton WhatsApp.",
       submitTooFast: "Merci d'attendre quelques secondes avant un nouvel envoi.",
       backToHome: "Retour à l'accueil",
     },
@@ -535,6 +537,8 @@ export const translations = {
       submitSuccess: "Message sent! I'll get back to you within 48h.",
       submitLoading: "Sending...",
       submitError: "Send error. Please try again or contact me on WhatsApp.",
+      submitNetworkError:
+        "Could not reach the email service (network, VPN, firewall or ad blocker). Try again, another network, or use WhatsApp.",
       submitTooFast: "Please wait a few seconds before sending again.",
       backToHome: "Back to home",
     },
@@ -857,6 +861,8 @@ export const translations = {
       submitSuccess: "Message sent! I'll get back to you within 48h.",
       submitLoading: "Sending...",
       submitError: "Send error. Please try again or contact me on WhatsApp.",
+      submitNetworkError:
+        "Could not reach the email service (network, VPN, firewall or ad blocker). Try again, another network, or use WhatsApp.",
       submitTooFast: "Please wait a few seconds before sending again.",
       backToHome: "Back to home",
     },
