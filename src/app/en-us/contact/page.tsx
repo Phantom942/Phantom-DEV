@@ -6,6 +6,7 @@ import { CursorAndGlow } from "@/components/CursorAndGlow";
 import { WhatsAppCtaButton } from "@/components/WhatsAppButton";
 import { ArrowLeft } from "lucide-react";
 import { getHreflangAlternates } from "@/lib/hreflang";
+import { getBreadcrumbForPath } from "@/lib/breadcrumb";
 import { defaultOpenGraphImages, twitterSummaryLarge } from "@/lib/social-metadata";
 
 const title = "Contact — Free quote via WhatsApp";
@@ -35,8 +36,14 @@ export const metadata: Metadata = {
 };
 
 export default function EnUSContactPage() {
+  const breadcrumbSchema = getBreadcrumbForPath("/en-us/contact", "Contact");
+
   return (
     <div className="relative min-h-screen w-full bg-[#353839]">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
       <CursorAndGlow />
       <Navbar />
       <main
@@ -45,35 +52,39 @@ export default function EnUSContactPage() {
         className="w-full pt-24 pb-16 sm:pt-32 sm:pb-24"
         aria-label="PhantomDev contact page: request a quote for web development, websites and SaaS"
       >
-        <div className="mx-auto max-w-2xl px-4 sm:px-8 md:px-16">
-          <Link
-            href="/en-us"
-            className="mb-12 inline-flex items-center gap-2 text-sm font-light tracking-[0.1em] text-[#f5f5f0]/70 transition-colors hover:text-[#f5f5f0]"
-            aria-label="Back to PhantomDev homepage"
-          >
-            <ArrowLeft size={16} strokeWidth={1.5} />
-            Back to home
-          </Link>
+        <div className="mx-auto w-full max-w-7xl px-4 sm:px-8 md:px-16">
+          <div className="mx-auto w-full max-w-2xl">
+            <Link
+              href="/en-us"
+              className="mb-10 inline-flex items-center gap-2 text-sm font-light tracking-[0.1em] text-[#f5f5f0]/70 transition-colors hover:text-[#f5f5f0]"
+              aria-label="Back to PhantomDev homepage"
+            >
+              <ArrowLeft size={16} strokeWidth={1.5} />
+              Back to home
+            </Link>
 
-          <h1
-            className="mb-6 font-extralight tracking-[0.15em] text-[#f5f5f0]"
-            style={{ fontFamily: "var(--font-cormorant), Georgia, serif" }}
-          >
-            <span className="text-3xl sm:text-4xl md:text-5xl">Contact</span>
-          </h1>
-          <p className="mb-4 max-w-xl text-sm leading-[1.8] tracking-[0.02em] text-[#f5f5f0]/85 sm:text-base md:text-lg">
-            Got a project in mind? Contact me on WhatsApp for a free quote within 48h, no commitment.
-          </p>
-          <p className="mb-10 text-xs font-light tracking-[0.08em] text-[#f5f5f0]/60">
-            Performance guarantee: Lighthouse 90+ on all delivered sites.
-          </p>
+            <div className="rounded-lg border border-[#f5f5f0]/10 bg-[#2c2f31]/35 px-6 py-10 text-center sm:px-10 sm:py-12">
+              <h1
+                className="mb-6 font-extralight tracking-[0.15em] text-[#f5f5f0]"
+                style={{ fontFamily: "var(--font-cormorant), Georgia, serif" }}
+              >
+                <span className="text-3xl sm:text-4xl md:text-5xl">Contact</span>
+              </h1>
+              <p className="mb-4 text-sm leading-[1.8] tracking-[0.02em] text-[#f5f5f0]/85 sm:text-base md:text-lg">
+                Got a project in mind? Contact me on WhatsApp for a free quote within 48h, no commitment.
+              </p>
+              <p className="mb-10 text-xs font-light tracking-[0.08em] text-[#f5f5f0]/60">
+                Performance guarantee: Lighthouse 90+ on all delivered sites.
+              </p>
 
-          <div className="flex flex-col items-center">
-            <WhatsAppCtaButton />
+              <div className="flex flex-col items-center">
+                <WhatsAppCtaButton />
+              </div>
+              <p className="mt-8 text-center text-xs font-light tracking-[0.08em] text-[#f5f5f0]/40">
+                Response within 48h · No commitment
+              </p>
+            </div>
           </div>
-          <p className="mt-8 text-center text-xs font-light tracking-[0.08em] text-[#f5f5f0]/40">
-            Response within 48h · No commitment
-          </p>
         </div>
       </main>
       <Footer />

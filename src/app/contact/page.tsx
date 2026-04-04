@@ -53,36 +53,40 @@ export default function ContactPage() {
         className="w-full pt-24 pb-16 sm:pt-32 sm:pb-24"
         aria-label="Page contact PhantomDev : demande de devis développement web, sites vitrines et SaaS"
       >
-        <div className="mx-auto max-w-2xl px-4 sm:px-8 md:px-16">
-          <Link
-            href="/#contact"
-            className="mb-12 inline-flex items-center gap-2 text-sm font-light tracking-[0.1em] text-[#f5f5f0]/70 transition-colors hover:text-[#f5f5f0]"
-            aria-label="Retour à l'accueil PhantomDev, création de sites web"
-          >
-            <ArrowLeft size={16} strokeWidth={1.5} />
-            Retour à l&apos;accueil
-          </Link>
+        <div className="mx-auto w-full max-w-7xl px-4 sm:px-8 md:px-16">
+          <div className="mx-auto w-full max-w-2xl">
+            <Link
+              href="/#contact"
+              className="mb-10 inline-flex items-center gap-2 text-sm font-light tracking-[0.1em] text-[#f5f5f0]/70 transition-colors hover:text-[#f5f5f0]"
+              aria-label="Retour à l'accueil PhantomDev, création de sites web"
+            >
+              <ArrowLeft size={16} strokeWidth={1.5} />
+              Retour à l&apos;accueil
+            </Link>
 
-          <h1
-            className="mb-6 font-extralight tracking-[0.15em] text-[#f5f5f0]"
-            style={{ fontFamily: "var(--font-cormorant), Georgia, serif" }}
-          >
-            <span className="text-3xl sm:text-4xl md:text-5xl">Contact</span>
-          </h1>
-          <p className="mb-4 max-w-xl text-sm leading-[1.8] tracking-[0.02em] text-[#f5f5f0]/85 sm:text-base md:text-lg">
-            Un projet en tête ? Contactez-moi sur WhatsApp pour un devis gratuit
-            sous 48h, sans engagement.
-          </p>
-          <p className="mb-10 text-xs font-light tracking-[0.08em] text-[#f5f5f0]/60">
-            Garantie performance : Lighthouse 90+ sur tous les sites livrés.
-          </p>
+            <div className="rounded-lg border border-[#f5f5f0]/10 bg-[#2c2f31]/35 px-6 py-10 text-center sm:px-10 sm:py-12">
+              <h1
+                className="mb-6 font-extralight tracking-[0.15em] text-[#f5f5f0]"
+                style={{ fontFamily: "var(--font-cormorant), Georgia, serif" }}
+              >
+                <span className="text-3xl sm:text-4xl md:text-5xl">Contact</span>
+              </h1>
+              <p className="mb-4 text-sm leading-[1.8] tracking-[0.02em] text-[#f5f5f0]/85 sm:text-base md:text-lg">
+                Un projet en tête ? Contactez-moi sur WhatsApp pour un devis gratuit
+                sous 48h, sans engagement.
+              </p>
+              <p className="mb-10 text-xs font-light tracking-[0.08em] text-[#f5f5f0]/60">
+                Garantie performance : Lighthouse 90+ sur tous les sites livrés.
+              </p>
 
-          <div className="flex flex-col items-center">
-            <WhatsAppCtaButton />
+              <div className="flex flex-col items-center">
+                <WhatsAppCtaButton />
+              </div>
+              <p className="mt-8 text-center text-xs font-light tracking-[0.08em] text-[#f5f5f0]/40">
+                Réponse sous 48h · Sans engagement
+              </p>
+            </div>
           </div>
-          <p className="mt-8 text-center text-xs font-light tracking-[0.08em] text-[#f5f5f0]/40">
-            Réponse sous 48h · Sans engagement
-          </p>
         </div>
       </main>
       <Footer />

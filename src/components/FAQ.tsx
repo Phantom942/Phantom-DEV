@@ -16,25 +16,23 @@ export function FAQ() {
       className="w-full max-w-full overflow-x-clip border-t border-[#f5f5f0]/5 px-4 py-12 sm:px-8 sm:py-16 md:px-16 md:py-20"
       aria-labelledby="faq-title"
     >
-      <ScrollReveal>
-        <h2
-          id="faq-title"
-          className="mb-8 font-extralight tracking-[0.2em] text-[#f5f5f0]"
-          style={{ fontFamily: "var(--font-cormorant), Georgia, serif" }}
-        >
-          <span className="text-xl sm:text-2xl md:text-3xl">
-            {t.faq.title}
-          </span>
-        </h2>
-        <dl className="mx-auto max-w-2xl space-y-2">
+      <div className="mx-auto w-full max-w-7xl">
+        <ScrollReveal>
+          <h2
+            id="faq-title"
+            className="mb-8 text-center font-extralight tracking-[0.2em] text-[#f5f5f0]"
+            style={{ fontFamily: "var(--font-cormorant), Georgia, serif" }}
+          >
+            <span className="text-xl sm:text-2xl md:text-3xl">
+              {t.faq.title}
+            </span>
+          </h2>
+          <dl className="mx-auto w-full max-w-2xl space-y-2">
           {t.faq.items.map((item, index) => {
             const isOpen = openIndex === index;
             return (
               <ScrollReveal key={index} delay={index * 0.04}>
-                <div
-                  className="overflow-hidden rounded-sm border border-[#f5f5f0]/10 bg-[#2c2f31]/40 transition-colors hover:border-[#f5f5f0]/15"
-                  aria-expanded={isOpen}
-                >
+                <div className="overflow-hidden rounded-sm border border-[#f5f5f0]/10 bg-[#2c2f31]/40 transition-colors hover:border-[#f5f5f0]/15">
                   <dt>
                     <button
                       type="button"
@@ -74,8 +72,9 @@ export function FAQ() {
               </ScrollReveal>
             );
           })}
-        </dl>
-      </ScrollReveal>
+          </dl>
+        </ScrollReveal>
+      </div>
     </section>
   );
 }

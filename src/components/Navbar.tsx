@@ -42,12 +42,12 @@ export function Navbar() {
           paddingTop: "max(0.75rem, env(safe-area-inset-top))",
         }}
         role="banner"
-        aria-label="En-tête : PhantomDev, création de sites web, développement React et Node.js, SaaS sur-mesure"
+        aria-label={t.nav.bannerAria}
       >
         <Link
           href={localePrefix || "/"}
           className="flex min-w-0 shrink-0 items-center gap-1.5 overflow-hidden text-[#f5f5f0] transition-opacity hover:opacity-80"
-          aria-label="PhantomDev, accueil — Création de sites web premium et développement sur-mesure"
+          aria-label={t.nav.homeLogoAria}
           onClick={closeMobileMenu}
         >
           <Ghost
@@ -62,7 +62,7 @@ export function Navbar() {
         <nav
           className="hidden shrink-0 items-center gap-4 md:flex md:gap-12"
           role="navigation"
-          aria-label="Navigation principale : Expertise développement web, Services, Projets, Contact et devis"
+          aria-label={t.nav.mainNavAria}
         >
           <LanguageSelector variant="dropdown" />
           {navLinksWithLocale.map((link) => (
@@ -80,7 +80,7 @@ export function Navbar() {
             target="_blank"
             rel="noopener noreferrer"
             className="rounded-sm border border-[#25D366]/60 bg-[#25D366]/10 px-4 py-2 text-xs font-light tracking-[0.15em] text-[#f5f5f0] transition-all hover:scale-[1.02] hover:bg-[#25D366]/20"
-            aria-label="Demander un devis gratuit sur WhatsApp pour votre projet web"
+            aria-label={t.nav.whatsappQuoteAria}
           >
             {t.nav.freeQuote}
           </a>
@@ -90,7 +90,7 @@ export function Navbar() {
           type="button"
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
           className="flex h-9 w-9 shrink-0 items-center justify-center rounded-md text-[#f5f5f0] transition-colors active:bg-[#f5f5f0]/10 md:hidden"
-          aria-label={mobileMenuOpen ? "Fermer le menu" : "Ouvrir le menu"}
+          aria-label={mobileMenuOpen ? t.nav.menuCloseAria : t.nav.menuOpenAria}
           aria-expanded={mobileMenuOpen}
         >
           {mobileMenuOpen ? <X size={22} /> : <Menu size={22} />}
@@ -112,7 +112,7 @@ export function Navbar() {
             <nav
               className="flex flex-col border-t border-[#f5f5f0]/10 px-4 py-2"
               role="navigation"
-              aria-label="Menu mobile"
+              aria-label={t.nav.mobileNavAria}
             >
               <div className="border-b border-[#f5f5f0]/5 py-3">
                 <LanguageSelector variant="inline" />
@@ -134,7 +134,7 @@ export function Navbar() {
                 rel="noopener noreferrer"
                 onClick={closeMobileMenu}
                 className="mt-4 border border-[#25D366]/60 bg-[#25D366]/10 py-3 text-center text-base font-light tracking-[0.1em] text-[#f5f5f0] transition-colors"
-                aria-label="Demander un devis gratuit sur WhatsApp"
+                aria-label={t.nav.whatsappQuoteAria}
               >
                 {t.nav.freeQuote}
               </a>

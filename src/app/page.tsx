@@ -5,6 +5,7 @@ import { CursorAndGlow } from "@/components/CursorAndGlow";
 import { Sections } from "@/components/Sections";
 import { Footer } from "@/components/Footer";
 import { creativeWorkSchema } from "@/data/projects";
+import { buildFaqPageJsonLd } from "@/lib/faq-jsonld";
 import { getHreflangAlternates } from "@/lib/hreflang";
 import { defaultOpenGraphImages, twitterSummaryLarge } from "@/lib/social-metadata";
 
@@ -36,6 +37,12 @@ export default function Home() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(creativeWorkSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(buildFaqPageJsonLd("fr")),
+        }}
       />
       <CursorAndGlow />
       <Navbar />

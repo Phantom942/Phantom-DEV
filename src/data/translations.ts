@@ -24,6 +24,8 @@ export const translations = {
       performance: "Garantie performance : Lighthouse 90+ sur tous les sites livrés. Site vitrine livrable en 48h.",
       or: "ou",
       response: "Réponse sous 48h · Site livrable en 48h · Sans engagement",
+      projectsSectionAria:
+        "Réalisations PhantomDev : projets web, interfaces haute performance et e-commerce",
     },
     faq: {
       title: "Questions fréquentes",
@@ -31,12 +33,14 @@ export const translations = {
         { q: "Qu'est-ce que PhantomDev ?", a: "PhantomDev est une agence de création de sites web sur-mesure basée en France. Spécialisée en Next.js, React et Node.js, elle conçoit des sites vitrines, e-commerce et applications SaaS avec des interfaces premium, des performances optimisées (Lighthouse 90+) et une livraison rapide." },
         { q: "Quels sont les délais de livraison ?", a: "Un site vitrine simple peut être livré en 48h. Pour les projets plus complexes (e-commerce, applications sur-mesure), les délais sont adaptés selon la portée. Un planning est établi dès la validation du devis." },
         { q: "Quels services propose PhantomDev ?", a: "PhantomDev propose la conception web premium (interfaces sur-mesure, UX conversion), les applications sur-mesure (e-commerce, SaaS, plateformes métier) et l'intégration IA stratégique (chatbots, automatisation, recommandations)." },
-        { q: "Comment contacter PhantomDev pour un devis ?", a: "Contactez PhantomDev via WhatsApp pour un devis gratuit sous 48h, sans engagement. Le site phantomdev.fr propose un formulaire et un bouton direct vers la ligne WhatsApp." },
+        { q: "Comment contacter PhantomDev pour un devis ?", a: "Contactez PhantomDev via WhatsApp pour un devis gratuit sous 48h, sans engagement. Le site phantomdev.fr propose un accès direct à la ligne WhatsApp depuis la page d’accueil et la page Contact." },
         { q: "PhantomDev travaille-t-elle à l'international ?", a: "Oui. PhantomDev est basée en France mais intervient à l'international. Les contrats de maintenance sont garantis." },
         { q: "Quelle garantie performance offre PhantomDev ?", a: "PhantomDev garantit un score Lighthouse 90+ sur tous les sites livrés, assurant des performances optimisées et une excellente expérience utilisateur." },
       ],
     },
     footer: {
+      contentinfoAria:
+        "Pied de page PhantomDev : création de sites web, contact WhatsApp, mentions légales",
       tagline: "PhantomDev — Création de sites web premium sur-mesure",
       privateLine: "Ligne privée",
       ctaTitle: "Prêt à lancer votre projet ?",
@@ -59,6 +63,16 @@ export const translations = {
       ariaServices: "Services : sites vitrines, e-commerce, SaaS",
       ariaProjects: "Réalisations et projets web",
       ariaContact: "Contact et devis",
+      bannerAria:
+        "En-tête : PhantomDev, création de sites web, développement React et Node.js, SaaS sur-mesure",
+      mainNavAria:
+        "Navigation principale : expertise développement web, services, GrapheneOS, projets, contact et devis",
+      homeLogoAria:
+        "PhantomDev, accueil — création de sites web premium et développement sur-mesure",
+      whatsappQuoteAria: "Demander un devis gratuit sur WhatsApp pour votre projet web",
+      menuOpenAria: "Ouvrir le menu",
+      menuCloseAria: "Fermer le menu",
+      mobileNavAria: "Menu mobile de navigation",
     },
     graphenePage: {
       backHome: "Retour à l'accueil",
@@ -350,6 +364,8 @@ export const translations = {
       performance: "Performance guarantee: Lighthouse 90+ on all delivered sites. Landing page deliverable in 48h.",
       or: "or",
       response: "Response within 48h · Site deliverable in 48h · No commitment",
+      projectsSectionAria:
+        "PhantomDev portfolio: web projects, high-performance interfaces and e-commerce",
     },
     faq: {
       title: "Frequently asked questions",
@@ -357,12 +373,14 @@ export const translations = {
         { q: "What is PhantomDev?", a: "PhantomDev is a custom web development agency based in France. Specialised in Next.js, React and Node.js, it creates websites, e-commerce and SaaS applications with premium interfaces, optimised performance (Lighthouse 90+) and fast delivery." },
         { q: "What are the delivery times?", a: "A simple landing page can be delivered in 48 hours. For more complex projects (e-commerce, custom applications), timelines are adapted to the scope. A schedule is agreed once the quote is approved." },
         { q: "What services does PhantomDev offer?", a: "PhantomDev offers premium web design (bespoke interfaces, conversion UX), custom applications (e-commerce, SaaS, business platforms) and strategic AI integration (chatbots, automation, recommendations)." },
-        { q: "How to contact PhantomDev for a quote?", a: "Contact PhantomDev via WhatsApp for a free quote within 48h, no commitment. The phantomdev.fr site offers a form and direct button to the WhatsApp line." },
+        { q: "How to contact PhantomDev for a quote?", a: "Contact PhantomDev via WhatsApp for a free quote within 48h, no commitment. The phantomdev.fr site offers direct access to WhatsApp from the homepage and Contact page." },
         { q: "Does PhantomDev work internationally?", a: "Yes. PhantomDev is based in France but operates internationally. Maintenance contracts are guaranteed." },
         { q: "What performance guarantee does PhantomDev offer?", a: "PhantomDev guarantees a Lighthouse score of 90+ on all delivered sites, ensuring optimised performance and excellent user experience." },
       ],
     },
     footer: {
+      contentinfoAria:
+        "PhantomDev footer: web development, WhatsApp contact, legal notice",
       tagline: "PhantomDev — Premium custom web development",
       privateLine: "Private line",
       ctaTitle: "Ready to start your project?",
@@ -385,6 +403,16 @@ export const translations = {
       ariaServices: "Services: landing pages, e-commerce, SaaS",
       ariaProjects: "Portfolio and web projects",
       ariaContact: "Contact and quote request",
+      bannerAria:
+        "Header: PhantomDev, premium web development, React and Node.js, custom SaaS",
+      mainNavAria:
+        "Main navigation: expertise, services, GrapheneOS, portfolio, contact and quotes",
+      homeLogoAria:
+        "PhantomDev, home — premium custom web development",
+      whatsappQuoteAria: "Request a free quote on WhatsApp for your web project",
+      menuOpenAria: "Open menu",
+      menuCloseAria: "Close menu",
+      mobileNavAria: "Mobile navigation menu",
     },
     graphenePage: {
       backHome: "Back to home",
@@ -674,6 +702,8 @@ export const translations = {
       performance: "Performance guarantee: Lighthouse 90+ on all delivered sites. Landing page deliverable in 48h.",
       or: "or",
       response: "Response within 48h · Site deliverable in 48h · No commitment",
+      projectsSectionAria:
+        "PhantomDev portfolio: web projects, high-performance interfaces and e-commerce",
     },
     faq: {
       title: "Frequently asked questions",
@@ -681,12 +711,14 @@ export const translations = {
         { q: "What is PhantomDev?", a: "PhantomDev is a custom web development agency based in France. Specialised in Next.js, React and Node.js, it creates websites, e-commerce and SaaS applications with premium interfaces, optimised performance (Lighthouse 90+) and fast delivery." },
         { q: "What are the delivery times?", a: "A simple landing page can be delivered in 48 hours. For more complex projects (e-commerce, custom applications), timelines are adapted to the scope. A schedule is agreed once the quote is approved." },
         { q: "What services does PhantomDev offer?", a: "PhantomDev offers premium web design (bespoke interfaces, conversion UX), custom applications (e-commerce, SaaS, business platforms) and strategic AI integration (chatbots, automation, recommendations)." },
-        { q: "How to contact PhantomDev for a quote?", a: "Contact PhantomDev via WhatsApp for a free quote within 48h, no commitment. The phantomdev.fr site offers a form and direct button to the WhatsApp line." },
+        { q: "How to contact PhantomDev for a quote?", a: "Contact PhantomDev via WhatsApp for a free quote within 48h, no commitment. The phantomdev.fr site offers direct access to WhatsApp from the homepage and Contact page." },
         { q: "Does PhantomDev work internationally?", a: "Yes. PhantomDev is based in France but operates internationally. Maintenance contracts are guaranteed." },
         { q: "What performance guarantee does PhantomDev offer?", a: "PhantomDev guarantees a Lighthouse score of 90+ on all delivered sites, ensuring optimised performance and excellent user experience." },
       ],
     },
     footer: {
+      contentinfoAria:
+        "PhantomDev footer: web development, WhatsApp contact, legal notice",
       tagline: "PhantomDev — Premium custom web development",
       privateLine: "Private line",
       ctaTitle: "Ready to start your project?",
@@ -709,6 +741,16 @@ export const translations = {
       ariaServices: "Services: landing pages, e-commerce, SaaS",
       ariaProjects: "Portfolio and web projects",
       ariaContact: "Contact and quote request",
+      bannerAria:
+        "Header: PhantomDev, premium web development, React and Node.js, custom SaaS",
+      mainNavAria:
+        "Main navigation: expertise, services, GrapheneOS, portfolio, contact and quotes",
+      homeLogoAria:
+        "PhantomDev, home — premium custom web development",
+      whatsappQuoteAria: "Request a free quote on WhatsApp for your web project",
+      menuOpenAria: "Open menu",
+      menuCloseAria: "Close menu",
+      mobileNavAria: "Mobile navigation menu",
     },
     graphenePage: {
       backHome: "Back to home",

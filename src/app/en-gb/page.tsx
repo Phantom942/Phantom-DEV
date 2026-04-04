@@ -5,6 +5,7 @@ import { CursorAndGlow } from "@/components/CursorAndGlow";
 import { Sections } from "@/components/Sections";
 import { Footer } from "@/components/Footer";
 import { creativeWorkSchema } from "@/data/projects";
+import { buildFaqPageJsonLd } from "@/lib/faq-jsonld";
 import { getHreflangAlternates } from "@/lib/hreflang";
 import { defaultOpenGraphImages, twitterSummaryLarge } from "@/lib/social-metadata";
 
@@ -13,7 +14,10 @@ const description =
   "PhantomDev creates custom websites that convert. E-commerce, SaaS, landing pages. Free quote within 48h. Lighthouse 90+ performance. UK, Europe, worldwide.";
 
 export const metadata: Metadata = {
-  alternates: { languages: getHreflangAlternates("/en-gb") },
+  alternates: {
+    canonical: "https://phantomdev.fr/en-gb",
+    languages: getHreflangAlternates("/en-gb"),
+  },
   title,
   description,
   openGraph: {
@@ -33,6 +37,12 @@ export default function EnGBHome() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(creativeWorkSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(buildFaqPageJsonLd("en-GB")),
+        }}
       />
       <CursorAndGlow />
       <Navbar />

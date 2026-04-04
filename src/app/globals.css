@@ -79,6 +79,11 @@ body {
   font-feature-settings: "kern" 1, "liga" 1;
 }
 
+::selection {
+  background: rgba(212, 175, 55, 0.22);
+  color: var(--foreground);
+}
+
 @keyframes metallic-shimmer {
   0%, 100% { background-position: 0% 50%; }
   50% { background-position: 100% 50%; }

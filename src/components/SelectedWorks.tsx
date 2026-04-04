@@ -33,40 +33,45 @@ export function SelectedWorks() {
       id="projets"
       className="w-full max-w-full overflow-x-clip bg-[#353839] px-4 py-10 sm:px-8 sm:py-12 md:px-16 md:py-16"
       aria-labelledby="realisations-title"
-      aria-label="Réalisations PhantomDev : projets web, développement d'interfaces haute performance et e-commerce"
+      aria-label={t.sections.projectsSectionAria}
     >
-      <ScrollReveal>
-        <h2
-          id="realisations-title"
-          className="mb-4 font-extralight tracking-[0.2em] text-[#f5f5f0]"
-          style={{ fontFamily: "var(--font-cormorant), Georgia, serif" }}
-        >
-          <span className="text-xl sm:text-2xl md:text-3xl">{t.sections.realisations}</span>
-        </h2>
-        <p className="mb-6 text-xs leading-[1.6] tracking-[0.02em] text-[#f5f5f0]/75 sm:text-sm">
-          {t.sections.realisationsDesc}
-        </p>
-        <div className="mb-8 flex flex-wrap gap-2" role="tablist" aria-label="Filtrer les projets">
-          {FILTERS.map((f) => (
-            <button
-              key={f.value}
-              type="button"
-              role="tab"
-              aria-selected={filter === f.value}
-              onClick={() => setFilter(f.value)}
-              className={`rounded-sm border px-4 py-2 text-xs font-light tracking-[0.08em] transition-colors ${
-                filter === f.value
-                  ? "border-[#d4af37]/50 bg-[#d4af37]/10 text-[#f5f5f0]"
-                  : "border-[#f5f5f0]/20 bg-transparent text-[#f5f5f0]/70 hover:border-[#f5f5f0]/40 hover:text-[#f5f5f0]"
-              }`}
-            >
-              {projectsLabel[f.labelKey as keyof typeof projectsLabel]}
-            </button>
-          ))}
-        </div>
-      </ScrollReveal>
+      <div className="mx-auto w-full max-w-7xl">
+        <ScrollReveal>
+          <h2
+            id="realisations-title"
+            className="mb-4 text-center font-extralight tracking-[0.2em] text-[#f5f5f0] sm:text-left"
+            style={{ fontFamily: "var(--font-cormorant), Georgia, serif" }}
+          >
+            <span className="text-xl sm:text-2xl md:text-3xl">{t.sections.realisations}</span>
+          </h2>
+          <p className="mx-auto mb-6 max-w-2xl text-center text-xs leading-[1.6] tracking-[0.02em] text-[#f5f5f0]/75 sm:mx-0 sm:max-w-none sm:text-left sm:text-sm">
+            {t.sections.realisationsDesc}
+          </p>
+          <div
+            className="mb-8 flex flex-wrap justify-center gap-2 sm:justify-start"
+            role="tablist"
+            aria-label="Filtrer les projets"
+          >
+            {FILTERS.map((f) => (
+              <button
+                key={f.value}
+                type="button"
+                role="tab"
+                aria-selected={filter === f.value}
+                onClick={() => setFilter(f.value)}
+                className={`rounded-sm border px-4 py-2 text-xs font-light tracking-[0.08em] transition-colors ${
+                  filter === f.value
+                    ? "border-[#d4af37]/50 bg-[#d4af37]/10 text-[#f5f5f0]"
+                    : "border-[#f5f5f0]/20 bg-transparent text-[#f5f5f0]/70 hover:border-[#f5f5f0]/40 hover:text-[#f5f5f0]"
+                }`}
+              >
+                {projectsLabel[f.labelKey as keyof typeof projectsLabel]}
+              </button>
+            ))}
+          </div>
+        </ScrollReveal>
 
-      <ul className="mx-auto grid max-w-7xl grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-5 lg:gap-5 xl:gap-6">
+        <ul className="grid w-full grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-5 lg:gap-5 xl:gap-6">
         {filteredProjects.map((project, index) => (
           <ScrollReveal key={project.id} delay={index * 0.08}>
             <li>
@@ -222,7 +227,8 @@ export function SelectedWorks() {
             </li>
           </ScrollReveal>
         ))}
-      </ul>
+        </ul>
+      </div>
     </section>
   );
 }

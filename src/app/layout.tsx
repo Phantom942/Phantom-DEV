@@ -6,7 +6,6 @@ import {
   Source_Sans_3,
 } from "next/font/google";
 import "./globals.css";
-import { faqItems } from "@/data/faq";
 import { LangAttribute } from "@/components/LangAttribute";
 import { FloatingWhatsAppButton } from "@/components/FloatingWhatsAppButton";
 import { SkipToContent } from "@/components/SkipToContent";
@@ -65,6 +64,8 @@ export const metadata: Metadata = {
     "site sur-mesure",
     "développement web Europe",
     "freelance web international",
+    "installation GrapheneOS",
+    "Google Pixel",
   ],
   alternates: {
     canonical: "https://phantomdev.fr",
@@ -141,6 +142,7 @@ export default function RootLayout({
       "E-commerce",
       "Applications SaaS",
       "Intégration IA",
+      "Installation GrapheneOS (Google Pixel)",
     ],
     knowsAbout: [
       "Next.js",
@@ -150,6 +152,7 @@ export default function RootLayout({
       "SaaS",
       "E-commerce",
       "Développement web",
+      "GrapheneOS",
     ],
     slogan: "Des sites web premium qui convertissent.",
     contactPoint: {
@@ -182,19 +185,6 @@ export default function RootLayout({
     inLanguage: ["fr", "en"],
   };
 
-  const faqSchema = {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    mainEntity: faqItems.map((item) => ({
-      "@type": "Question",
-      name: item.question,
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: item.answer,
-      },
-    })),
-  };
-
   return (
     <html
       lang="fr"
@@ -211,10 +201,6 @@ export default function RootLayout({
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
-        />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
         />
         {children}
         <FloatingWhatsAppButton />

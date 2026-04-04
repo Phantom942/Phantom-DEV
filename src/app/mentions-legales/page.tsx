@@ -6,6 +6,7 @@ import { CursorAndGlow } from "@/components/CursorAndGlow";
 import { ArrowLeft } from "lucide-react";
 
 import { getHreflangAlternates } from "@/lib/hreflang";
+import { getBreadcrumbTrail } from "@/lib/breadcrumb";
 import { defaultOpenGraphImages, twitterSummaryLarge } from "@/lib/social-metadata";
 
 const title = "Mentions légales";
@@ -33,8 +34,16 @@ export const metadata: Metadata = {
 };
 
 export default function MentionsLegalesPage() {
+  const breadcrumbSchema = getBreadcrumbTrail([
+    { path: "/mentions-legales", label: "Mentions légales" },
+  ]);
+
   return (
     <div className="relative min-h-screen w-full bg-[#353839]">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
       <CursorAndGlow />
       <Navbar />
       <main

@@ -15,7 +15,7 @@ export function Footer() {
     <footer
       className="w-full max-w-full overflow-x-clip border-t border-[#f5f5f0]/10 px-4 py-12 sm:px-8 sm:py-16 md:px-16"
       role="contentinfo"
-      aria-label="Pied de page PhantomDev : création de sites web, développement React et Node.js, contact et mentions légales"
+      aria-label={t.footer.contentinfoAria}
     >
       <div className="mx-auto mb-12 flex max-w-4xl flex-col items-center justify-center rounded-lg border border-[#f5f5f0]/10 bg-[#2c2f31]/40 px-6 py-8 text-center sm:mb-16 sm:px-10 sm:py-12">
         <p className="mb-4 text-sm font-light tracking-[0.08em] text-[#f5f5f0]/90 sm:text-base">

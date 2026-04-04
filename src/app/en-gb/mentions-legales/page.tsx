@@ -6,6 +6,7 @@ import { CursorAndGlow } from "@/components/CursorAndGlow";
 import { ArrowLeft } from "lucide-react";
 
 import { getHreflangAlternates } from "@/lib/hreflang";
+import { getBreadcrumbTrail } from "@/lib/breadcrumb";
 import { defaultOpenGraphImages, twitterSummaryLarge } from "@/lib/social-metadata";
 
 const title = "Legal notice | PhantomDev";
@@ -32,8 +33,16 @@ export const metadata: Metadata = {
 };
 
 export default function EnGBMentionsLegalesPage() {
+  const breadcrumbSchema = getBreadcrumbTrail([
+    { path: "/en-gb/mentions-legales", label: "Legal notice" },
+  ]);
+
   return (
     <div className="relative min-h-screen w-full bg-[#353839]">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
       <CursorAndGlow />
       <Navbar />
       <main id="main" role="main" className="w-full pt-24 pb-16 sm:pt-32 sm:pb-24">
