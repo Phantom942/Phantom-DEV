@@ -10,10 +10,10 @@ import { defaultOpenGraphImages, twitterSummaryLarge } from "@/lib/social-metada
 
 const title = "Services — Sites vitrines, e-commerce, SaaS | PhantomDev";
 const description =
-  "Création de sites web sur-mesure : vitrines premium, e-commerce, applications et maintenance. Devis gratuit sous 48h. France, Europe, international.";
+  "Création de sites web sur-mesure : vitrines premium, e-commerce, applications et maintenance. Devis gratuit sous 24h. France, Europe, international.";
 const ogTitle = "Services | PhantomDev — Développement web sur-mesure";
 const ogDesc =
-  "Offres PhantomDev : conception web, e-commerce, SaaS, intégration IA, maintenance. Devis clair sous 48h.";
+  "Offres PhantomDev : conception web, e-commerce, SaaS, intégration IA, maintenance. Devis clair sous 24h.";
 
 export const metadata: Metadata = {
   alternates: {

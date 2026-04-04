@@ -11,7 +11,7 @@ import { defaultOpenGraphImages, twitterSummaryLarge } from "@/lib/social-metada
 
 const title = "Premium custom web development — US & International";
 const description =
-  "PhantomDev creates custom websites that convert. E-commerce, SaaS, landing pages. Free quote within 48h. Lighthouse 90+ performance. US, North America, worldwide.";
+  "PhantomDev creates custom websites that convert. E-commerce, SaaS, landing pages. Free quote within 24h. Lighthouse 90+ performance. US, North America, worldwide.";
 
 export const metadata: Metadata = {
   alternates: {

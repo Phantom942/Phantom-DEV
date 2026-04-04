@@ -89,59 +89,64 @@ export function SelectedWorks({
           </div>
         </ScrollReveal>
 
-        <ul className="grid w-full grid-cols-1 gap-8 md:grid-cols-2 xl:grid-cols-3">
-        {filteredProjects.map((project, index) => (
-          <ScrollReveal key={project.id} delay={index * 0.08}>
-            <li className="h-full">
-              <article className="group flex h-full flex-col transition-transform duration-300 hover:-translate-y-1">
-                <a
-                  href={project.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex h-full flex-col overflow-hidden rounded-lg border border-[#f5f5f0]/10 bg-[#2c2f31]/55 shadow-[0_20px_48px_rgba(0,0,0,0.28)] outline-none transition-[border-color,box-shadow] duration-300 hover:border-[#f5f5f0]/16 hover:shadow-[0_28px_64px_rgba(0,0,0,0.38)] focus-visible:ring-2 focus-visible:ring-[#d4af37]/40 focus-visible:ring-offset-2 focus-visible:ring-offset-[#353839]"
-                  aria-label={`Voir le projet ${project.title}, ${project.description} — réalisation PhantomDev développement web`}
+        <ul className="grid w-full auto-rows-fr grid-cols-1 gap-6 md:grid-cols-2 md:gap-7 xl:grid-cols-3 xl:gap-8">
+          {filteredProjects.map((project, index) => (
+            <ScrollReveal key={project.id} delay={index * 0.08} className="min-h-0 h-full">
+              <li className="flex h-full min-h-0">
+                <article
+                  className="group flex h-full w-full min-h-0 flex-col transition-transform duration-300 hover:-translate-y-0.5"
+                  style={{ fontFamily: "var(--font-source-sans), system-ui, sans-serif" }}
                 >
-                  <div className="relative aspect-video w-full shrink-0 overflow-hidden bg-[#1a1b1c]">
-                    <Image
-                      src={project.mockupImage}
-                      alt={`Aperçu du site ${project.title} — réalisation PhantomDev. ${project.description}`}
-                      fill
-                      sizes="(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 33vw"
-                      className="object-cover object-top transition-transform duration-500 group-hover:scale-[1.02]"
-                      priority={index === 0}
-                    />
-                    <div
-                      className="pointer-events-none absolute right-3 top-3 flex h-9 w-9 items-center justify-center rounded-md border border-[#f5f5f0]/15 bg-[#353839]/85 text-[#f5f5f0]/90 opacity-0 backdrop-blur-sm transition-opacity duration-300 group-hover:opacity-100"
-                      aria-hidden
-                    >
-                      <ArrowUpRight size={18} strokeWidth={1.5} />
+                  <a
+                    href={project.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex h-full min-h-[26rem] flex-col overflow-hidden rounded-xl border border-[#f5f5f0]/[0.07] bg-[#16181a] shadow-[0_20px_50px_rgba(0,0,0,0.35)] outline-none transition-[border-color,box-shadow] duration-300 hover:border-[#f5f5f0]/12 hover:shadow-[0_26px_60px_rgba(0,0,0,0.42)] focus-visible:ring-2 focus-visible:ring-[#d4af37]/45 focus-visible:ring-offset-2 focus-visible:ring-offset-[#353839] sm:min-h-[28rem] lg:min-h-[30rem]"
+                    aria-label={`Voir le projet ${project.title}, ${project.description} — réalisation PhantomDev développement web`}
+                  >
+                    {/* Aperçu : occupe tout l’espace restant (cartes alignées) — min-h élevé pour mieux voir le site */}
+                    <div className="relative min-h-[14rem] w-full flex-1 basis-0 overflow-hidden bg-[#0a0b0c] sm:min-h-[16rem] lg:min-h-[18rem]">
+                      <Image
+                        src={project.mockupImage}
+                        alt={`Aperçu du site ${project.title} — réalisation PhantomDev. ${project.description}`}
+                        fill
+                        sizes="(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 33vw"
+                        className="object-cover object-top transition-transform duration-500 group-hover:scale-[1.02]"
+                        priority={index === 0}
+                      />
+                      <div
+                        className="pointer-events-none absolute right-3 top-3 flex h-9 w-9 items-center justify-center rounded-md border border-[#f5f5f0]/12 bg-[#16181a]/90 text-[#f5f5f0]/90 opacity-0 backdrop-blur-sm transition-opacity duration-300 group-hover:opacity-100"
+                        aria-hidden
+                      >
+                        <ArrowUpRight size={18} strokeWidth={1.5} />
+                      </div>
                     </div>
-                  </div>
-                  <div className="flex flex-1 flex-col p-5 sm:p-6">
-                    <h3 className="text-lg font-medium tracking-normal text-[#f5f5f0] sm:text-xl">
-                      {project.title}
-                    </h3>
-                    <ul className="mt-3 flex flex-wrap gap-2" aria-label="Type de projet">
-                      {project.tags.map((tag) => (
-                        <li key={tag}>
-                          <span className="inline-block rounded-md border border-[#f5f5f0]/14 bg-[#353839] px-3 py-1.5 text-xs font-normal tracking-normal text-[#f5f5f0]/88">
-                            {tag}
-                          </span>
-                        </li>
-                      ))}
-                    </ul>
-                    <p className="mt-4 flex-1 text-base leading-relaxed tracking-normal text-[#f5f5f0]/78">
-                      {project.description}
-                    </p>
-                    <p className="mt-4 border-t border-[#f5f5f0]/10 pt-4 text-sm font-normal leading-snug tracking-normal text-[#e8e4d9]/90">
-                      {project.details.gain}
-                    </p>
-                  </div>
-                </a>
-              </article>
-            </li>
-          </ScrollReveal>
-        ))}
+                    {/* Texte : hauteur naturelle (shrink-0) pour ne jamais rogner le contenu */}
+                    <div className="flex shrink-0 flex-col bg-[#101214] px-5 pb-5 pt-4 sm:px-6 sm:pb-6 sm:pt-5">
+                      <h3 className="text-[0.8125rem] font-bold uppercase leading-snug tracking-[0.14em] text-[#f5f5f0] sm:text-sm md:text-[0.9375rem]">
+                        {project.title}
+                      </h3>
+                      <ul className="mt-2.5 flex flex-wrap gap-2 sm:mt-3" aria-label="Type de projet">
+                        {project.tags.map((tag) => (
+                          <li key={tag}>
+                            <span className="inline-block rounded-full bg-[#2c3035] px-3 py-1 text-[10px] font-medium tracking-wide text-[#f5f5f0]/88 sm:text-[11px]">
+                              {tag}
+                            </span>
+                          </li>
+                        ))}
+                      </ul>
+                      <p className="mt-2.5 text-sm leading-relaxed text-[#f5f5f0]/82 sm:mt-3 sm:text-[0.9375rem]">
+                        {project.description}
+                      </p>
+                      <p className="mt-3 text-[11px] font-light leading-normal tracking-wide text-[#f5f5f0]/50 sm:mt-3.5 sm:text-xs">
+                        {project.details.gain}
+                      </p>
+                    </div>
+                  </a>
+                </article>
+              </li>
+            </ScrollReveal>
+          ))}
         </ul>
       </div>
     </section>

@@ -51,7 +51,7 @@ export const metadata: Metadata = {
     template: "%s | PhantomDev",
   },
   description:
-    "Création de sites web premium sur-mesure. E-commerce, SaaS, vitrines. Devis gratuit sous 48h. Performance Lighthouse 90+. France, Europe, international.",
+    "Création de sites web premium sur-mesure. E-commerce, SaaS, vitrines. Devis gratuit sous 24h. Performance Lighthouse 90+. France, Europe, international.",
   keywords: [
     "création site web",
     "développeur web freelance",
@@ -86,9 +86,9 @@ export const metadata: Metadata = {
   },
   openGraph: {
     type: "website",
-    title: "PhantomDev — Création sites web premium | Devis gratuit 48h",
+    title: "PhantomDev — Création sites web premium | Devis gratuit 24h",
     description:
-      "Sites web sur-mesure qui convertissent. E-commerce, SaaS, vitrines. Devis gratuit sous 48h. Performance garantie. France, Europe, international.",
+      "Sites web sur-mesure qui convertissent. E-commerce, SaaS, vitrines. Devis gratuit sous 24h. Performance garantie. France, Europe, international.",
     url: "https://phantomdev.fr",
     siteName: "PhantomDev",
     locale: "fr_FR",
@@ -97,9 +97,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "PhantomDev — Création sites web premium | Devis gratuit 48h",
+    title: "PhantomDev — Création sites web premium | Devis gratuit 24h",
     description:
-      "Sites web sur-mesure. E-commerce, SaaS. Devis gratuit sous 48h. Performance garantie. International.",
+      "Sites web sur-mesure. E-commerce, SaaS. Devis gratuit sous 24h. Performance garantie. International.",
     images: [defaultOpenGraphImage.url],
   },
   other: {
@@ -121,7 +121,7 @@ export default function RootLayout({
     name: "PhantomDev",
     url: "https://phantomdev.fr",
     description:
-      "Création de sites web premium sur-mesure. Sites vitrines, e-commerce, SaaS. Next.js, React, Node.js. Devis gratuit sous 48h. Performance Lighthouse 90+. France, Europe, international.",
+      "Création de sites web premium sur-mesure. Sites vitrines, e-commerce, SaaS. Next.js, React, Node.js. Devis gratuit sous 24h. Performance Lighthouse 90+. France, Europe, international.",
     image: "https://phantomdev.fr/og-image.png",
     sameAs: ["https://github.com/Phantom942"],
     areaServed: [

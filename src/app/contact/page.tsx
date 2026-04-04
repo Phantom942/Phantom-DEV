@@ -10,12 +10,12 @@ import { getHreflangAlternates } from "@/lib/hreflang";
 import { getBreadcrumbForPath } from "@/lib/breadcrumb";
 import { defaultOpenGraphImages, twitterSummaryLarge } from "@/lib/social-metadata";
 
-const title = "Contact — Devis gratuit sous 48h | International";
+const title = "Contact — Devis gratuit sous 24h | International";
 const description =
-  "Demandez votre devis gratuit. Contact WhatsApp direct. Réponse sous 48h, sans engagement. France, Europe, international.";
-const ogTitle = "Contact | PhantomDev — Devis développement web sous 48h";
+  "Demandez votre devis gratuit. Contact WhatsApp direct. Réponse sous 24h, sans engagement. France, Europe, international.";
+const ogTitle = "Contact | PhantomDev — Devis développement web sous 24h";
 const ogDesc =
-  "Demandez un devis pour votre projet web : site vitrine, e-commerce, application SaaS. Réponse sous 48h via WhatsApp, sans engagement.";
+  "Demandez un devis pour votre projet web : site vitrine, e-commerce, application SaaS. Réponse sous 24h via WhatsApp, sans engagement.";
 
 export const metadata: Metadata = {
   alternates: {
@@ -73,7 +73,7 @@ export default function ContactPage() {
               </h1>
               <p className="mb-4 text-sm leading-[1.8] tracking-[0.02em] text-[#f5f5f0]/85 sm:text-base md:text-lg">
                 Un projet en tête ? Contactez-moi sur WhatsApp pour un devis gratuit
-                sous 48h, sans engagement.
+                sous 24h, sans engagement.
               </p>
               <p className="mb-10 text-xs font-light tracking-[0.08em] text-[#f5f5f0]/60">
                 Garantie performance : Lighthouse 90+ sur tous les sites livrés.
@@ -83,7 +83,7 @@ export default function ContactPage() {
                 <WhatsAppCtaButton />
               </div>
               <p className="mt-8 text-center text-xs font-light tracking-[0.08em] text-[#f5f5f0]/40">
-                Réponse sous 48h · Sans engagement
+                Réponse sous 24h · Sans engagement
               </p>
             </div>
           </div>

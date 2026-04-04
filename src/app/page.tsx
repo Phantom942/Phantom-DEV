@@ -11,7 +11,7 @@ import { defaultOpenGraphImages, twitterSummaryLarge } from "@/lib/social-metada
 
 const title = "Création de sites web premium sur-mesure — International";
 const description =
-  "PhantomDev crée des sites web sur-mesure qui convertissent. E-commerce, SaaS, vitrines. Devis gratuit sous 48h. Performance Lighthouse 90+. France, Europe, monde.";
+  "PhantomDev crée des sites web sur-mesure qui convertissent. E-commerce, SaaS, vitrines. Devis gratuit sous 24h. Performance Lighthouse 90+. France, Europe, monde.";
 
 export const metadata: Metadata = {
   alternates: {
