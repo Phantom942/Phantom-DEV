@@ -57,7 +57,7 @@ export function LanguageSelector() {
           aria-label="Sélectionner une langue"
         >
           {locales.map((locale) => (
-            <li key={locale} role="option">
+            <li key={locale} role="option" aria-selected={locale === currentLocale}>
               <Link
                 href={getLocalizedPath(locale)}
                 className={`flex items-center gap-2 px-4 py-2 text-sm transition-colors hover:bg-[#f5f5f0]/10 ${

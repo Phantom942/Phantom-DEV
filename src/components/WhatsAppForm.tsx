@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect, useCallback } from "react";
+import { useState, useEffect, useCallback, useRef } from "react";
 import { useSearchParams } from "next/navigation";
 import { getWhatsAppDevisUrl, WEB3FORMS_ACCESS_KEY, FORMSPREE_ID, HAS_EMAIL_SERVICE } from "@/data/contact";
 import { MessageCircle, AlertCircle, Mail, Loader2, CheckCircle } from "lucide-react";
@@ -119,6 +119,9 @@ export function WhatsAppForm() {
   const [touched, setTouched] = useState(false);
   const [emailStatus, setEmailStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
   const [emailErrorDetail, setEmailErrorDetail] = useState("");
+  const honeypotWeb3Ref = useRef<HTMLInputElement>(null);
+  const honeypotFormspreeRef = useRef<HTMLInputElement>(null);
+  const lastEmailSubmitAt = useRef(0);
 
   const projectTypes = [
     { value: "", label: cf.projectTypes.empty },
@@ -249,6 +252,15 @@ export function WhatsAppForm() {
     });
 
     if (!nameValid || !emailValid || !messageValid) return;
+    if (honeypotWeb3Ref.current?.value || honeypotFormspreeRef.current?.value) {
+      return;
+    }
+    const now = Date.now();
+    if (now - lastEmailSubmitAt.current < 8000) {
+      setEmailStatus("error");
+      setEmailErrorDetail(cf.submitTooFast);
+      return;
+    }
     if (!HAS_EMAIL_SERVICE) {
       setEmailStatus("error");
       return;
@@ -265,6 +277,7 @@ export function WhatsAppForm() {
       if (WEB3FORMS_ACCESS_KEY) {
         const body = new URLSearchParams({
           access_key: WEB3FORMS_ACCESS_KEY,
+          botcheck: honeypotWeb3Ref.current?.value ?? "",
           subject: `[PhantomDev] Nouvelle demande de devis — ${name.trim()}`,
           name: name.trim(),
           email: email.trim(),
@@ -299,6 +312,7 @@ export function WhatsAppForm() {
           urgency: urgencyLabel,
           needs: needsLabels.join(", ") || "—",
           message: message.trim(),
+          _gotcha: honeypotFormspreeRef.current?.value ?? "",
           _subject: `[PhantomDev] Nouvelle demande de devis — ${name.trim()}`,
         });
         const res = await fetch(`https://formspree.io/f/${FORMSPREE_ID}`, {
@@ -313,6 +327,7 @@ export function WhatsAppForm() {
       } else {
         throw new Error("No email service");
       }
+      lastEmailSubmitAt.current = Date.now();
       setEmailStatus("success");
       setName("");
       setEmail("");
@@ -362,6 +377,13 @@ export function WhatsAppForm() {
       noValidate
       aria-label="Formulaire de demande de devis : projet web, site vitrine, e-commerce ou SaaS"
     >
+      <div
+        className="pointer-events-none fixed left-0 top-0 -z-10 h-px w-px overflow-hidden opacity-0"
+        aria-hidden="true"
+      >
+        <input ref={honeypotWeb3Ref} type="text" name="botcheck" tabIndex={-1} autoComplete="off" />
+        <input ref={honeypotFormspreeRef} type="text" name="_gotcha" tabIndex={-1} autoComplete="off" />
+      </div>
       <div className="grid gap-4 sm:grid-cols-2">
         <div>
           <label htmlFor="wa-name" className={labelClass}>

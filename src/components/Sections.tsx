@@ -14,12 +14,11 @@ export function Sections() {
   return (
     <>
       <ScrollReveal>
-      <section
-        id="expertise"
-        className="w-full max-w-full overflow-x-clip bg-[#050505] px-4 py-16 sm:px-8 sm:py-20 md:px-16 md:py-24"
-        aria-labelledby="expertise-title"
-      >
-        <ScrollReveal>
+        <section
+          id="expertise"
+          className="w-full max-w-full overflow-x-clip bg-[#050505] px-4 py-16 sm:px-8 sm:py-20 md:px-16 md:py-24"
+          aria-labelledby="expertise-title"
+        >
           <h2
             id="expertise-title"
             className="mb-6 font-extralight tracking-[0.2em] text-[#f5f5f0]"
@@ -30,9 +29,8 @@ export function Sections() {
           <p className="mb-8 max-w-[95vw] text-sm leading-[1.8] tracking-[0.02em] text-[#f5f5f0]/85 sm:mb-12 sm:max-w-2xl sm:text-base md:mb-16 md:text-lg">
             {t.sections.expertiseDesc}
           </p>
-        </ScrollReveal>
-        <ExpertiseCards />
-      </section>
+          <ExpertiseCards />
+        </section>
       </ScrollReveal>
 
       <ScrollReveal delay={0.03}>
@@ -42,22 +40,21 @@ export function Sections() {
       </ScrollReveal>
 
       <ScrollReveal delay={0.05}>
-      <SelectedWorks />
+        <SelectedWorks />
       </ScrollReveal>
 
       <ScrollReveal delay={0.05}>
-      <div className="w-full bg-[#050505]">
-        <FAQ />
-      </div>
+        <div className="w-full bg-[#050505]">
+          <FAQ />
+        </div>
       </ScrollReveal>
 
       <ScrollReveal delay={0.05}>
-      <section
-        id="contact"
-        className="w-full max-w-full overflow-x-clip border-t border-[#f5f5f0]/5 bg-[#000000] px-4 py-16 sm:px-8 sm:py-24 md:px-16 md:py-28"
-        aria-labelledby="contact-title"
-      >
-        <ScrollReveal>
+        <section
+          id="contact"
+          className="w-full max-w-full overflow-x-clip border-t border-[#f5f5f0]/5 bg-[#000000] px-4 py-16 sm:px-8 sm:py-24 md:px-16 md:py-28"
+          aria-labelledby="contact-title"
+        >
           <h2
             id="contact-title"
             className="mb-8 font-extralight tracking-[0.2em] text-[#f5f5f0]"
@@ -85,8 +82,7 @@ export function Sections() {
           <p className="mt-8 text-center text-xs font-light tracking-[0.08em] text-[#f5f5f0]/40">
             {t.sections.response}
           </p>
-        </ScrollReveal>
-      </section>
+        </section>
       </ScrollReveal>
     </>
   );

@@ -8,24 +8,32 @@ import { WhatsAppCtaButton } from "@/components/WhatsAppButton";
 import { WhatsAppForm } from "@/components/WhatsAppForm";
 import { ArrowLeft } from "lucide-react";
 import { getHreflangAlternates } from "@/lib/hreflang";
+import { defaultOpenGraphImages, twitterSummaryLarge } from "@/lib/social-metadata";
+
+const title = "Contact — Free quote via WhatsApp";
+const description =
+  "Contact PhantomDev on WhatsApp for your web project. Websites, e-commerce, custom applications. Response within 48h, no commitment.";
+const ogTitle = "Contact | PhantomDev — Free web development quote within 48h";
+const ogDesc =
+  "Request a quote for your web project: website, e-commerce, SaaS application. Response within 48h via WhatsApp, no commitment.";
 
 export const metadata: Metadata = {
   alternates: {
     canonical: "https://phantomdev.fr/en-gb/contact",
     languages: getHreflangAlternates("/en-gb/contact"),
   },
-  title: "Contact — Free quote via WhatsApp",
-  description:
-    "Contact PhantomDev on WhatsApp for your web project. Websites, e-commerce, custom applications. Response within 48h, no commitment.",
+  title,
+  description,
   openGraph: {
     type: "website",
-    title: "Contact | PhantomDev — Free web development quote within 48h",
-    description:
-      "Request a quote for your web project: website, e-commerce, SaaS application. Response within 48h via WhatsApp, no commitment.",
+    title: ogTitle,
+    description: ogDesc,
     url: "https://phantomdev.fr/en-gb/contact",
     siteName: "PhantomDev",
     locale: "en_GB",
+    images: defaultOpenGraphImages,
   },
+  twitter: twitterSummaryLarge(ogTitle, ogDesc),
 };
 
 export default function EnGBContactPage() {

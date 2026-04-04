@@ -1,5 +1,3 @@
-import type { Locale } from "@/i18n";
-
 export const translations = {
   fr: {
     hero: {
@@ -116,6 +114,7 @@ export const translations = {
       submitSuccess: "Message envoyé ! Je vous recontacte sous 48h.",
       submitLoading: "Envoi en cours...",
       submitError: "Erreur d'envoi. Réessayez ou contactez-moi sur WhatsApp.",
+      submitTooFast: "Merci d'attendre quelques secondes avant un nouvel envoi.",
       backToHome: "Retour à l'accueil",
     },
     servicesList: {
@@ -304,6 +303,7 @@ export const translations = {
       submitSuccess: "Message sent! I'll get back to you within 48h.",
       submitLoading: "Sending...",
       submitError: "Send error. Please try again or contact me on WhatsApp.",
+      submitTooFast: "Please wait a few seconds before sending again.",
       backToHome: "Back to home",
     },
     servicesList: {
@@ -492,6 +492,7 @@ export const translations = {
       submitSuccess: "Message sent! I'll get back to you within 48h.",
       submitLoading: "Sending...",
       submitError: "Send error. Please try again or contact me on WhatsApp.",
+      submitTooFast: "Please wait a few seconds before sending again.",
       backToHome: "Back to home",
     },
     servicesList: {

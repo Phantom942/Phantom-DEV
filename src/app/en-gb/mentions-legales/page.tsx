@@ -6,14 +6,29 @@ import { CursorAndGlow } from "@/components/CursorAndGlow";
 import { ArrowLeft } from "lucide-react";
 
 import { getHreflangAlternates } from "@/lib/hreflang";
+import { defaultOpenGraphImages, twitterSummaryLarge } from "@/lib/social-metadata";
+
+const title = "Legal notice | PhantomDev";
+const description = "Legal information for PhantomDev — premium custom web development.";
 
 export const metadata: Metadata = {
   alternates: {
     canonical: "https://phantomdev.fr/en-gb/mentions-legales",
     languages: getHreflangAlternates("/en-gb/mentions-legales"),
   },
-  title: "Legal notice | PhantomDev",
+  title,
+  description,
   robots: "index, follow",
+  openGraph: {
+    type: "website",
+    title,
+    description,
+    url: "https://phantomdev.fr/en-gb/mentions-legales",
+    siteName: "PhantomDev",
+    locale: "en_GB",
+    images: defaultOpenGraphImages,
+  },
+  twitter: twitterSummaryLarge(title, description),
 };
 
 export default function EnGBMentionsLegalesPage() {

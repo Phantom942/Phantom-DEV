@@ -10,6 +10,7 @@ import { faqItems } from "@/data/faq";
 import { LangAttribute } from "@/components/LangAttribute";
 import { FloatingWhatsAppButton } from "@/components/FloatingWhatsAppButton";
 import { SkipToContent } from "@/components/SkipToContent";
+import { defaultOpenGraphImage } from "@/lib/social-metadata";
 
 const geist = Geist({
   variable: "--font-geist",
@@ -91,21 +92,14 @@ export const metadata: Metadata = {
     siteName: "PhantomDev",
     locale: "fr_FR",
     alternateLocale: ["en_GB", "en_US"],
-    images: [
-      {
-        url: "/og-image.png",
-        width: 1200,
-        height: 630,
-        alt: "PhantomDev — Solutions Web Haute Performance & Design Premium",
-      },
-    ],
+    images: [defaultOpenGraphImage],
   },
   twitter: {
     card: "summary_large_image",
     title: "PhantomDev — Création sites web premium | Devis gratuit 48h",
     description:
       "Sites web sur-mesure. E-commerce, SaaS. Devis gratuit sous 48h. Performance garantie. International.",
-    images: ["/og-image.png"],
+    images: [defaultOpenGraphImage.url],
   },
   other: {
     "geo.region": "EU",
@@ -204,6 +198,7 @@ export default function RootLayout({
   return (
     <html
       lang="fr"
+      suppressHydrationWarning
       className={`${geist.variable} ${geistMono.variable} ${cormorant.variable} ${sourceSans.variable} overflow-x-clip`}
     >
       <body className="overflow-x-clip font-sans antialiased">

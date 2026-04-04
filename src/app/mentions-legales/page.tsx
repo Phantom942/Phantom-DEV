@@ -6,23 +6,30 @@ import { CursorAndGlow } from "@/components/CursorAndGlow";
 import { ArrowLeft } from "lucide-react";
 
 import { getHreflangAlternates } from "@/lib/hreflang";
+import { defaultOpenGraphImages, twitterSummaryLarge } from "@/lib/social-metadata";
+
+const title = "Mentions légales";
+const description = "Mentions légales de PhantomDev — Création de sites web premium sur-mesure.";
+const ogTitle = "Mentions légales | PhantomDev";
 
 export const metadata: Metadata = {
   alternates: {
     canonical: "https://phantomdev.fr/mentions-legales",
     languages: getHreflangAlternates("/mentions-legales"),
   },
-  title: "Mentions légales",
-  description:
-    "Mentions légales de PhantomDev — Création de sites web premium sur-mesure.",
+  title,
+  description,
   robots: "index, follow",
   openGraph: {
     type: "website",
-    title: "Mentions légales | PhantomDev",
+    title: ogTitle,
+    description,
     url: "https://phantomdev.fr/mentions-legales",
     siteName: "PhantomDev",
     locale: "fr_FR",
+    images: defaultOpenGraphImages,
   },
+  twitter: twitterSummaryLarge(ogTitle, description),
 };
 
 export default function MentionsLegalesPage() {

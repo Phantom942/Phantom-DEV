@@ -8,15 +8,29 @@ import { getWhatsAppDevisUrl } from "@/data/contact";
 import { ArrowLeft, ArrowRight, MessageCircle } from "lucide-react";
 
 import { getHreflangAlternates } from "@/lib/hreflang";
+import { defaultOpenGraphImages, twitterSummaryLarge } from "@/lib/social-metadata";
+
+const title = "Services — PhantomDev";
+const description = "PhantomDev: custom web development, e-commerce, SaaS. Next.js, React.";
+const ogTitle = "Services | PhantomDev — UK";
 
 export const metadata: Metadata = {
   alternates: {
     canonical: "https://phantomdev.fr/en-gb/services",
     languages: getHreflangAlternates("/en-gb/services"),
   },
-  title: "Services — PhantomDev",
-  description: "PhantomDev: custom web development, e-commerce, SaaS. Next.js, React.",
-  openGraph: { type: "website", url: "https://phantomdev.fr/en-gb/services" },
+  title,
+  description,
+  openGraph: {
+    type: "website",
+    title: ogTitle,
+    description,
+    url: "https://phantomdev.fr/en-gb/services",
+    siteName: "PhantomDev",
+    locale: "en_GB",
+    images: defaultOpenGraphImages,
+  },
+  twitter: twitterSummaryLarge(ogTitle, description),
 };
 
 export default function EnGBServicesPage() {

@@ -10,24 +10,32 @@ import { Suspense } from "react";
 
 import { getHreflangAlternates } from "@/lib/hreflang";
 import { getBreadcrumbForPath } from "@/lib/breadcrumb";
+import { defaultOpenGraphImages, twitterSummaryLarge } from "@/lib/social-metadata";
+
+const title = "Contact — Devis gratuit sous 48h | International";
+const description =
+  "Demandez votre devis gratuit. Contact WhatsApp direct. Réponse sous 48h, sans engagement. France, Europe, international.";
+const ogTitle = "Contact | PhantomDev — Devis développement web sous 48h";
+const ogDesc =
+  "Demandez un devis pour votre projet web : site vitrine, e-commerce, application SaaS. Réponse sous 48h via WhatsApp, sans engagement.";
 
 export const metadata: Metadata = {
   alternates: {
     canonical: "https://phantomdev.fr/contact",
     languages: getHreflangAlternates("/contact"),
   },
-  title: "Contact — Devis gratuit sous 48h | International",
-  description:
-    "Demandez votre devis gratuit. Contact WhatsApp direct. Réponse sous 48h, sans engagement. France, Europe, international.",
+  title,
+  description,
   openGraph: {
     type: "website",
-    title: "Contact | PhantomDev — Devis développement web sous 48h",
-    description:
-      "Demandez un devis pour votre projet web : site vitrine, e-commerce, application SaaS. Réponse sous 48h via WhatsApp, sans engagement.",
+    title: ogTitle,
+    description: ogDesc,
     url: "https://phantomdev.fr/contact",
     siteName: "PhantomDev",
     locale: "fr_FR",
+    images: defaultOpenGraphImages,
   },
+  twitter: twitterSummaryLarge(ogTitle, ogDesc),
 };
 
 export default function ContactPage() {
