@@ -4,29 +4,18 @@ import { motion, useReducedMotion } from "framer-motion";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { ArrowDown, ArrowRight, MessageCircle, Zap, Shield, Truck, Handshake, ChevronDown } from "lucide-react";
+import { PhantomBrand } from "@/components/PhantomBrand";
 import { useWhatsAppDevisUrl } from "@/hooks/useWhatsAppDevisUrl";
 import { useTranslations } from "@/hooks/useTranslations";
 
-const titleLetters = "PHANTOM".split("");
-
-const containerVariants = {
-  hidden: { opacity: 0 },
-  visible: () => ({
-    opacity: 1,
-    transition: {
-      staggerChildren: 0.06,
-      delayChildren: 0.3,
-    },
-  }),
-};
-
-const letterVariants = {
-  hidden: { opacity: 0, y: 40 },
+const brandVariants = {
+  hidden: { opacity: 0, y: 32 },
   visible: {
     opacity: 1,
     y: 0,
     transition: {
-      duration: 0.6,
+      duration: 0.65,
+      delay: 0.25,
       ease: [0.22, 1, 0.36, 1] as const,
     },
   },
@@ -101,25 +90,17 @@ export function HeroSection() {
 
       <div className="relative z-10 flex w-full max-w-4xl flex-col items-center text-center">
         <motion.div
-          className="flex w-full max-w-full flex-wrap justify-center gap-0.5 overflow-hidden px-1 font-extralight leading-[1.05] tracking-tight text-white sm:gap-1 sm:tracking-[0.08em] md:gap-2 md:tracking-[0.15em]"
-          variants={prefersReducedMotion ? { hidden: {}, visible: {} } : containerVariants}
+          variants={
+            prefersReducedMotion
+              ? { hidden: { opacity: 1, y: 0 }, visible: { opacity: 1, y: 0 } }
+              : brandVariants
+          }
           initial="hidden"
           animate="visible"
+          className="flex justify-center"
           aria-hidden
         >
-          {titleLetters.map((letter, index) => (
-            <motion.span
-              key={`${letter}-${index}`}
-              variants={prefersReducedMotion ? { hidden: { opacity: 1, y: 0 }, visible: { opacity: 1, y: 0 } } : letterVariants}
-              className="phantom-letter font-extralight"
-              style={{
-                fontFamily: "var(--font-cormorant), Georgia, serif",
-                fontSize: "clamp(32px, 10vw, 128px)",
-              }}
-            >
-              {letter}
-            </motion.span>
-          ))}
+          <PhantomBrand size="hero" priority />
         </motion.div>
 
         <motion.p

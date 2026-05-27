@@ -7,7 +7,7 @@ import Link from "next/link";
 import { Menu, X } from "lucide-react";
 import { useWhatsAppDevisUrl } from "@/hooks/useWhatsAppDevisUrl";
 import { LanguageSelector } from "./LanguageSelector";
-import { PhantomLogo } from "./PhantomLogo";
+import { PhantomBrand } from "./PhantomBrand";
 import { useTranslations } from "@/hooks/useTranslations";
 
 function NavbarInner() {
@@ -81,14 +81,11 @@ function NavbarInner() {
         <div className="navbar-stealth-inner flex w-full flex-row items-center justify-between gap-2">
           <Link
             href={localePrefix || "/"}
-            className="flex min-w-0 shrink-0 items-center gap-2.5 overflow-hidden text-white transition-opacity hover:opacity-90"
+            className="text-white transition-opacity hover:opacity-90"
             aria-label={t.nav.homeLogoAria}
             onClick={closeMobileMenu}
           >
-            <PhantomLogo priority />
-            <span className="font-tech truncate text-xs font-semibold uppercase tracking-[0.2em] text-white md:text-sm md:tracking-[0.24em]">
-              PhantomDev
-            </span>
+            <PhantomBrand priority />
           </Link>
 
           <nav
