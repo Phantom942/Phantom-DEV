@@ -6,7 +6,7 @@ function hash(n) {
 }
 
 const stars = [];
-for (let i = 0; i < 200; i++) {
+for (let i = 0; i < 100; i++) {
   stars.push({
     x: Math.round(hash(i + 1) * 10000) / 100,
     y: Math.round(hash(i + 500) * 10000) / 100,

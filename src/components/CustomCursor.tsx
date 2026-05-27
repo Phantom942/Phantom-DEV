@@ -40,7 +40,7 @@ export function CustomCursor() {
     };
 
     rafRef.current = requestAnimationFrame(animate);
-    window.addEventListener("mousemove", handleMouseMove);
+    window.addEventListener("mousemove", handleMouseMove, { passive: true });
     document.documentElement.addEventListener("mouseleave", handleMouseLeave);
 
     return () => {

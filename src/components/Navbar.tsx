@@ -120,7 +120,7 @@ function NavbarInner() {
           <button
             type="button"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="flex h-10 w-10 shrink-0 items-center justify-center rounded-md text-zinc-300 transition-colors hover:bg-zinc-800/40 md:hidden"
+            className="flex h-11 w-11 shrink-0 touch-manipulation items-center justify-center rounded-md text-zinc-300 transition-colors hover:bg-zinc-800/40 md:hidden"
             aria-label={mobileMenuOpen ? t.nav.menuCloseAria : t.nav.menuOpenAria}
             aria-expanded={mobileMenuOpen}
           >

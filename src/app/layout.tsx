@@ -1,11 +1,5 @@
 import type { Metadata, Viewport } from "next";
-import {
-  Geist,
-  Geist_Mono,
-  Cormorant_Garamond,
-  Source_Sans_3,
-  Space_Grotesk,
-} from "next/font/google";
+import { Source_Sans_3, Space_Grotesk } from "next/font/google";
 import "./globals.css";
 import { LangAttribute } from "@/components/LangAttribute";
 import { FloatingWhatsAppButton } from "@/components/FloatingWhatsAppButton";
@@ -13,38 +7,23 @@ import { SkipToContent } from "@/components/SkipToContent";
 import { StealthAmbientBackground } from "@/components/StealthAmbientBackground";
 import JsonLd from "@/components/JsonLd";
 import { defaultOpenGraphImage } from "@/lib/social-metadata";
-
-const geist = Geist({
-  variable: "--font-geist",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
-
-const cormorant = Cormorant_Garamond({
-  variable: "--font-cormorant",
-  subsets: ["latin"],
-  weight: ["300", "400", "500", "600"],
-  style: ["normal", "italic"],
-  display: "swap",
-});
+import { TranslationsProvider } from "@/context/TranslationsContext";
+import { fr } from "@/data/translations/fr";
 
 const sourceSans = Source_Sans_3({
   variable: "--font-source-sans",
   subsets: ["latin"],
-  weight: ["300", "400", "500", "600", "700"],
-  style: ["normal", "italic"],
+  weight: ["400", "500", "600"],
   display: "swap",
+  preload: true,
 });
 
 const spaceGrotesk = Space_Grotesk({
   variable: "--font-space-grotesk",
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
+  weight: ["500", "600"],
   display: "swap",
+  preload: true,
 });
 
 export const viewport: Viewport = {
@@ -132,15 +111,17 @@ export default function RootLayout({
     <html
       lang="fr"
       suppressHydrationWarning
-      className={`${geist.variable} ${geistMono.variable} ${cormorant.variable} ${sourceSans.variable} ${spaceGrotesk.variable} overflow-x-clip`}
+      className={`${sourceSans.variable} ${spaceGrotesk.variable} overflow-x-clip`}
     >
       <body className="relative overflow-x-clip bg-zinc-950 font-sans antialiased">
-        <StealthAmbientBackground />
-        <SkipToContent />
-        <LangAttribute />
-        <JsonLd />
-        <div className="relative z-[1]">{children}</div>
-        <FloatingWhatsAppButton />
+        <TranslationsProvider value={fr}>
+          <StealthAmbientBackground />
+          <SkipToContent />
+          <LangAttribute />
+          <JsonLd />
+          <div className="relative z-[1]">{children}</div>
+          <FloatingWhatsAppButton />
+        </TranslationsProvider>
       </body>
     </html>
   );

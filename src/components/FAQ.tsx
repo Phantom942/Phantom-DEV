@@ -4,10 +4,12 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ScrollReveal } from "./ScrollReveal";
 import { useTranslations } from "@/hooks/useTranslations";
+import { useLightMotion } from "@/hooks/useLightMotion";
 import { ChevronDown } from "lucide-react";
 
 export function FAQ() {
   const { t } = useTranslations();
+  const lightMotion = useLightMotion();
   const [openIndex, setOpenIndex] = useState<number | null>(0);
 
   return (
@@ -34,7 +36,7 @@ export function FAQ() {
                     <button
                       type="button"
                       onClick={() => setOpenIndex(isOpen ? null : index)}
-                      className="flex w-full items-center justify-between gap-4 px-5 py-4 text-left text-sm font-light tracking-[0.06em] text-zinc-100 transition-colors hover:text-zinc-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-500/40 focus-visible:ring-inset"
+                      className="flex min-h-11 w-full touch-manipulation items-center justify-between gap-4 px-5 py-4 text-left text-sm font-light tracking-[0.06em] text-zinc-100 transition-colors hover:text-zinc-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-500/40 focus-visible:ring-inset sm:min-h-0"
                       aria-controls={`faq-answer-${index}`}
                       id={`faq-question-${index}`}
                       aria-expanded={isOpen}
@@ -49,21 +51,26 @@ export function FAQ() {
                     </button>
                   </dt>
                   <dd id={`faq-answer-${index}`} aria-labelledby={`faq-question-${index}`}>
-                    <AnimatePresence initial={false}>
-                      {isOpen && (
-                        <motion.div
-                          initial={{ height: 0, opacity: 0 }}
-                          animate={{ height: "auto", opacity: 1 }}
-                          exit={{ height: 0, opacity: 0 }}
-                          transition={{ duration: 0.25, ease: "easeInOut" }}
-                          className="overflow-hidden"
-                        >
-                          <p className="border-t border-zinc-800/80 px-5 py-4 text-base leading-relaxed tracking-normal text-zinc-300">
-                            {item.a}
-                          </p>
-                        </motion.div>
-                      )}
-                    </AnimatePresence>
+                    {isOpen &&
+                      (lightMotion ? (
+                        <p className="border-t border-zinc-800/80 px-5 py-4 text-base leading-relaxed tracking-normal text-zinc-300">
+                          {item.a}
+                        </p>
+                      ) : (
+                        <AnimatePresence initial={false}>
+                          <motion.div
+                            initial={{ height: 0, opacity: 0 }}
+                            animate={{ height: "auto", opacity: 1 }}
+                            exit={{ height: 0, opacity: 0 }}
+                            transition={{ duration: 0.25, ease: "easeInOut" }}
+                            className="overflow-hidden"
+                          >
+                            <p className="border-t border-zinc-800/80 px-5 py-4 text-base leading-relaxed tracking-normal text-zinc-300">
+                              {item.a}
+                            </p>
+                          </motion.div>
+                        </AnimatePresence>
+                      ))}
                   </dd>
                 </div>
               </ScrollReveal>

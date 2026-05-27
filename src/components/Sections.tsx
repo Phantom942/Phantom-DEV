@@ -15,7 +15,7 @@ export function Sections() {
       <ScrollReveal>
         <section
           id="expertise"
-          className="w-full max-w-full overflow-x-clip bg-transparent px-4 py-16 sm:px-8 sm:py-20 md:px-16 md:py-24"
+          className="section-deferred w-full max-w-full overflow-x-clip bg-transparent px-4 py-16 sm:px-8 sm:py-20 md:px-16 md:py-24"
           aria-labelledby="expertise-title"
         >
           <div className="mx-auto w-full max-w-7xl">
@@ -54,7 +54,7 @@ export function Sections() {
       <ScrollReveal delay={0.05}>
         <section
           id="contact"
-          className="w-full max-w-full overflow-x-clip border-t border-zinc-800/80 bg-transparent px-4 py-16 sm:px-8 sm:py-24 md:px-16 md:py-28"
+          className="section-deferred w-full max-w-full overflow-x-clip border-t border-zinc-800/80 bg-transparent px-4 py-16 sm:px-8 sm:py-24 md:px-16 md:py-28"
           aria-labelledby="contact-title"
         >
           <div className="mx-auto flex w-full max-w-7xl flex-col items-center">

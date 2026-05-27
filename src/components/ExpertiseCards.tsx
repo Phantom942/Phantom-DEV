@@ -1,7 +1,7 @@
 "use client";
 
-import { motion } from "framer-motion";
 import Link from "next/link";
+import { useLightMotion } from "@/hooks/useLightMotion";
 import { usePathname } from "next/navigation";
 import { Palette, Box, Search, Brain, ArrowRight } from "lucide-react";
 import { ScrollReveal } from "./ScrollReveal";
@@ -17,6 +17,7 @@ const icons = {
 
 export function ExpertiseCards() {
   const { t } = useTranslations();
+  const lightMotion = useLightMotion();
   const pathname = usePathname();
   const prefix = pathname.startsWith("/en-gb") ? "/en-gb" : pathname.startsWith("/en-us") ? "/en-us" : "";
   return (
@@ -38,10 +39,8 @@ export function ExpertiseCards() {
               className="flex h-full min-h-0 flex-col"
               aria-label={`${title} : ${desc}`}
             >
-              <motion.article
-                className="stealth-card group relative flex min-h-0 min-w-0 flex-1 flex-col overflow-hidden rounded-sm px-5 py-8 sm:px-8 sm:py-12"
-                whileHover={{ y: -3 }}
-                transition={{ duration: 0.3 }}
+              <article
+                className={`stealth-card group relative flex min-h-0 min-w-0 flex-1 flex-col overflow-hidden rounded-sm px-5 py-8 sm:px-8 sm:py-12 ${lightMotion ? "" : "md:transition-transform md:duration-300 md:hover:-translate-y-0.5"}`}
               >
                 <div
                   className="pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-500 group-hover:opacity-100"
@@ -68,7 +67,7 @@ export function ExpertiseCards() {
                     <ArrowRight size={14} strokeWidth={1.5} />
                   </span>
                 </div>
-              </motion.article>
+              </article>
             </Link>
           </ScrollReveal>
         );

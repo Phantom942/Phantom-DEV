@@ -1,6 +1,7 @@
 "use client";
 
-import { motion, useReducedMotion } from "framer-motion";
+import { motion } from "framer-motion";
+import { useLightMotion } from "@/hooks/useLightMotion";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { ArrowDown, ArrowRight, MessageCircle, Zap, Shield, Truck, Handshake, ChevronDown } from "lucide-react";
@@ -70,7 +71,8 @@ const badgeIcons = [
 export function HeroSection() {
   const { t } = useTranslations();
   const pathname = usePathname();
-  const prefersReducedMotion = useReducedMotion();
+  const lightMotion = useLightMotion();
+  const instant = { hidden: { opacity: 1, y: 0 }, visible: { opacity: 1, y: 0 } };
   const localePrefix = pathname.startsWith("/en-gb") ? "/en-gb" : pathname.startsWith("/en-us") ? "/en-us" : "";
   const badgeLabels = [t.hero.badge1, t.hero.badge2, t.hero.badge3, t.hero.badge4];
   const whatsappUrl = useWhatsAppDevisUrl();
@@ -90,11 +92,7 @@ export function HeroSection() {
 
       <div className="relative z-10 flex w-full max-w-4xl flex-col items-center text-center">
         <motion.div
-          variants={
-            prefersReducedMotion
-              ? { hidden: { opacity: 1, y: 0 }, visible: { opacity: 1, y: 0 } }
-              : brandVariants
-          }
+          variants={lightMotion ? instant : brandVariants}
           initial="hidden"
           animate="visible"
           className="flex justify-center"
@@ -104,7 +102,7 @@ export function HeroSection() {
         </motion.div>
 
         <motion.p
-          variants={prefersReducedMotion ? { hidden: { opacity: 1, y: 0 }, visible: { opacity: 1, y: 0 } } : subtitleVariants}
+          variants={lightMotion ? instant : subtitleVariants}
           initial="hidden"
           animate="visible"
           className="mt-6 max-w-[90vw] px-2 text-sm font-light leading-[1.75] tracking-wide text-zinc-300 sm:mt-8 sm:max-w-2xl sm:text-base md:mt-10 md:text-lg"
@@ -113,7 +111,7 @@ export function HeroSection() {
         </motion.p>
 
         <motion.p
-          variants={prefersReducedMotion ? { hidden: { opacity: 1, y: 0 }, visible: { opacity: 1, y: 0 } } : pricingVariants}
+          variants={lightMotion ? instant : pricingVariants}
           initial="hidden"
           animate="visible"
           className="mt-4 text-xs font-light tracking-[0.12em] text-zinc-400 sm:text-sm"
@@ -129,16 +127,16 @@ export function HeroSection() {
         </motion.p>
 
         <motion.div
-          variants={prefersReducedMotion ? { hidden: { opacity: 1, y: 0 }, visible: { opacity: 1, y: 0 } } : ctaVariants}
+          variants={lightMotion ? instant : ctaVariants}
           initial="hidden"
           animate="visible"
-          className="mt-10 flex w-full max-w-md flex-col-reverse items-stretch gap-3 sm:mt-12 sm:max-w-lg sm:flex-row sm:items-center sm:justify-center sm:gap-4"
+          className="mt-10 flex w-full max-w-md flex-col-reverse items-stretch gap-3 sm:mt-12 sm:max-w-lg sm:flex-row sm:items-center sm:justify-center sm:gap-4 touch-manipulation"
         >
           <a
             href={whatsappUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="btn-stealth-primary animate-cyber-cyan-pulse w-full sm:w-auto"
+            className="btn-stealth-primary w-full sm:w-auto md:animate-cyber-cyan-pulse"
             aria-label={t.hero.requestQuote}
           >
             {t.hero.requestQuote}
@@ -155,7 +153,7 @@ export function HeroSection() {
         </motion.div>
 
         <motion.ul
-          variants={prefersReducedMotion ? { hidden: { opacity: 1, y: 0 }, visible: { opacity: 1, y: 0 } } : ctaVariants}
+          variants={lightMotion ? instant : ctaVariants}
           initial="hidden"
           animate="visible"
           className="mt-12 grid w-full max-w-2xl grid-cols-1 gap-3 sm:mt-14 sm:grid-cols-2 lg:max-w-3xl lg:grid-cols-4 lg:gap-3"
@@ -182,7 +180,7 @@ export function HeroSection() {
         aria-label="Descendre vers l'expertise"
       >
         <span className="font-tech text-[9px] uppercase tracking-[0.3em]">Scroll</span>
-        <ChevronDown size={20} strokeWidth={1.25} className="motion-safe:animate-bounce" aria-hidden />
+        <ChevronDown size={20} strokeWidth={1.25} className="hidden motion-safe:animate-bounce sm:block" aria-hidden />
       </a>
     </section>
   );

@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { ArrowLeft, MessageCircle, Shield } from "lucide-react";
 import { getWhatsAppDevisUrl } from "@/data/contact";
-import { translations } from "@/data/translations";
+import { translations } from "@/data/translations/index";
 import type { Locale } from "@/i18n";
 
 const localePrefix: Record<Locale, string> = {

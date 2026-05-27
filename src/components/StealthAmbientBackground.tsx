@@ -1,8 +1,8 @@
-import { ShootingStarsCodePen } from "./ShootingStarsCodePen";
 import { StaticStarField } from "./StaticStarField";
+import { StealthShootingStarsLazy } from "./StealthShootingStarsLazy";
 
 /**
- * Fond Stealth — ciel étoilé fixe + filantes, puis lueurs Phantom (sans masquer les étoiles).
+ * Fond Stealth — ciel étoilé fixe + filantes (chargées après hydratation), lueurs Phantom.
  */
 export function StealthAmbientBackground() {
   return (
@@ -12,7 +12,7 @@ export function StealthAmbientBackground() {
     >
       <div className="stealth-sky-base absolute inset-0" />
       <StaticStarField />
-      <ShootingStarsCodePen />
+      <StealthShootingStarsLazy />
       <div className="stealth-ambient-halo stealth-ambient-overlay absolute inset-0" />
       <div className="stealth-ambient-horizon stealth-ambient-overlay absolute inset-0" />
       <div className="stealth-ambient-vignette stealth-ambient-overlay absolute inset-0" />

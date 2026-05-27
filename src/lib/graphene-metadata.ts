@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import type { Locale } from "@/i18n";
-import { translations } from "@/data/translations";
+import { translations } from "@/data/translations/index";
 import { getHreflangAlternates } from "@/lib/hreflang";
 import {
   SITE_URL,

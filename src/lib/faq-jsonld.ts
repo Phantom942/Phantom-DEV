@@ -1,4 +1,4 @@
-import { translations } from "@/data/translations";
+import { translations } from "@/data/translations/index";
 import type { Locale } from "@/i18n";
 
 /** FAQPage aligné sur le contenu visible (même langue que la page d’accueil). */

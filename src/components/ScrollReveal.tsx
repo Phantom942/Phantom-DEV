@@ -1,7 +1,8 @@
 "use client";
 
-import { motion, useInView, useReducedMotion } from "framer-motion";
+import { motion, useInView } from "framer-motion";
 import { useRef, type ReactNode } from "react";
+import { useLightMotion } from "@/hooks/useLightMotion";
 
 interface ScrollRevealProps {
   children: ReactNode;
@@ -17,25 +18,26 @@ export function ScrollReveal({
   once = true,
 }: ScrollRevealProps) {
   const ref = useRef<HTMLDivElement>(null);
-  const prefersReducedMotion = useReducedMotion();
+  const lightMotion = useLightMotion();
   const isInView = useInView(ref, {
     once,
-    margin: prefersReducedMotion ? "0px" : "-60px 0px -60px 0px",
-    amount: 0.15,
+    margin: lightMotion ? "0px" : "-60px 0px -60px 0px",
+    amount: lightMotion ? 0.05 : 0.15,
   });
 
+  const offsetY = lightMotion ? 0 : 28;
   const animateState = isInView
     ? { opacity: 1, y: 0 }
-    : { opacity: 0, y: prefersReducedMotion ? 0 : 48 };
+    : { opacity: lightMotion ? 1 : 0, y: offsetY };
 
   return (
     <motion.div
       ref={ref}
-      initial={{ opacity: 0, y: prefersReducedMotion ? 0 : 48 }}
+      initial={{ opacity: lightMotion ? 1 : 0, y: offsetY }}
       animate={animateState}
       transition={{
-        duration: prefersReducedMotion ? 0 : 0.5,
-        delay: prefersReducedMotion ? 0 : delay,
+        duration: lightMotion ? 0 : 0.45,
+        delay: lightMotion ? 0 : delay,
         ease: [0.22, 1, 0.36, 1],
       }}
       className={className}

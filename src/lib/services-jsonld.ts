@@ -1,5 +1,5 @@
 import { serviceConfigs } from "@/data/services";
-import { translations } from "@/data/translations";
+import { translations } from "@/data/translations/index";
 import type { Locale } from "@/i18n";
 import { PHANTOMDEV_SITE_URL } from "@/lib/json-ld";
 

@@ -3,12 +3,12 @@
 import { usePathname } from "next/navigation";
 import { useMemo } from "react";
 import { getLocaleFromPath } from "@/i18n";
-import { translations } from "@/data/translations";
+import { useTranslationPack } from "@/context/TranslationsContext";
 
 export function useTranslations() {
   const pathname = usePathname();
   const locale = useMemo(() => getLocaleFromPath(pathname), [pathname]);
-  const t = useMemo(() => translations[locale], [locale]);
+  const t = useTranslationPack();
 
   return { t, locale };
 }

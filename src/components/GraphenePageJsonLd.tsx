@@ -1,5 +1,5 @@
 import type { Locale } from "@/i18n";
-import { translations } from "@/data/translations";
+import { translations } from "@/data/translations/index";
 import { getBreadcrumbForPath } from "@/lib/breadcrumb";
 import { SITE_URL, grapheneOpenGraphImageBase } from "@/lib/social-metadata";
 

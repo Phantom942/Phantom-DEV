@@ -6,7 +6,7 @@ import { getWhatsAppDevisUrl } from "@/data/contact";
 import { useWhatsAppDevisUrl } from "@/hooks/useWhatsAppDevisUrl";
 
 const floatingBtnClass =
-  "fixed z-50 flex h-14 w-14 items-center justify-center rounded-full border border-cyan-500/50 bg-cyan-500/15 shadow-lg shadow-black/30 transition-all hover:scale-110 hover:border-cyan-400/70 hover:bg-cyan-500/25 hover:shadow-[0_0_24px_rgba(34,211,238,0.35)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-400 focus-visible:ring-offset-2 focus-visible:ring-offset-zinc-950 md:h-16 md:w-16";
+  "fixed z-50 flex h-14 w-14 touch-manipulation items-center justify-center rounded-full border border-cyan-500/50 bg-cyan-500/15 shadow-lg shadow-black/30 transition-colors hover:border-cyan-400/70 hover:bg-cyan-500/25 md:h-16 md:w-16 md:transition-all md:hover:scale-110 md:hover:shadow-[0_0_24px_rgba(34,211,238,0.35)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-400 focus-visible:ring-offset-2 focus-visible:ring-offset-zinc-950";
 
 function FloatingWhatsAppInner() {
   const href = useWhatsAppDevisUrl();
