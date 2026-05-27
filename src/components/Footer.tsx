@@ -13,19 +13,19 @@ export function Footer() {
 
   return (
     <footer
-      className="w-full max-w-full overflow-x-clip border-t border-[#f5f5f0]/10 px-4 py-12 sm:px-8 sm:py-16 md:px-16"
+      className="w-full max-w-full overflow-x-clip border-t border-zinc-800 px-4 py-12 sm:px-8 sm:py-16 md:px-16"
       role="contentinfo"
       aria-label={t.footer.contentinfoAria}
     >
-      <div className="mx-auto mb-12 flex max-w-4xl flex-col items-center justify-center rounded-lg border border-[#f5f5f0]/10 bg-[#2c2f31]/40 px-6 py-8 text-center sm:mb-16 sm:px-10 sm:py-12">
-        <p className="mb-4 text-sm font-light tracking-[0.08em] text-[#f5f5f0]/90 sm:text-base">
+      <div className="stealth-card mx-auto mb-12 flex max-w-4xl flex-col items-center justify-center rounded-lg px-6 py-8 text-center sm:mb-16 sm:px-10 sm:py-12">
+        <p className="mb-4 text-sm font-light tracking-[0.08em] text-zinc-200 sm:text-base">
           {t.footer.ctaTitle}
         </p>
         <a
           href={getWhatsAppDevisUrl()}
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-flex items-center gap-2 border border-[#25D366]/60 bg-[#25D366]/15 px-8 py-3 text-sm font-light tracking-[0.12em] text-[#f5f5f0] transition-all hover:scale-[1.02] hover:bg-[#25D366]/25"
+          className="btn-stealth-primary animate-cyber-emerald-pulse"
           aria-label={t.footer.ctaButton}
         >
           <MessageCircle size={18} strokeWidth={1.5} />
@@ -34,7 +34,7 @@ export function Footer() {
       </div>
       <div className="mx-auto flex max-w-4xl flex-col items-center justify-between gap-8 sm:flex-row sm:gap-12">
         <div className="flex flex-col items-center gap-4 sm:items-start">
-          <p className="text-sm font-light tracking-[0.06em] text-[#f5f5f0]/75">
+          <p className="text-sm font-light tracking-[0.06em] text-zinc-400">
             {t.footer.tagline}
           </p>
           <div className="flex flex-col items-center gap-4 sm:flex-row sm:flex-wrap sm:items-center sm:gap-x-10 sm:gap-y-3">
@@ -42,20 +42,20 @@ export function Footer() {
               href={getWhatsAppDevisUrl()}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-2 text-sm font-light tracking-normal text-[#f5f5f0]/85 transition-colors hover:text-[#f5f5f0]"
+              className="flex items-center gap-2 text-sm font-light tracking-normal text-zinc-300 transition-colors hover:text-zinc-100"
               aria-label={t.footer.privateLineAria}
             >
-              <MessageCircle size={16} strokeWidth={1.5} className="shrink-0 text-[#f5f5f0]/70" />
+              <MessageCircle size={16} strokeWidth={1.5} className="shrink-0 text-zinc-400" />
               {t.footer.privateLine}
             </a>
             <a
               href={getWhatsAppDevisUrl()}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-2 text-sm font-light tracking-normal text-[#f5f5f0]/85 transition-colors hover:text-[#f5f5f0]"
+              className="flex items-center gap-2 text-sm font-light tracking-normal text-zinc-300 transition-colors hover:text-zinc-100"
               aria-label={`${t.footer.mainLineAria} (${getWhatsAppDisplayHuman()})`}
             >
-              <MessageCircle size={16} strokeWidth={1.5} className="shrink-0 text-[#f5f5f0]/70" />
+              <MessageCircle size={16} strokeWidth={1.5} className="shrink-0 text-zinc-400" />
               {t.footer.mainLine}
             </a>
             <div className="flex items-center gap-6">
@@ -63,7 +63,7 @@ export function Footer() {
                 href="https://github.com/Phantom942"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-[#f5f5f0]/60 transition-colors hover:text-[#f5f5f0]"
+                className="text-zinc-500 transition-colors hover:text-zinc-100"
                 aria-label="GitHub"
               >
                 <Github size={20} strokeWidth={1.5} />
@@ -72,20 +72,20 @@ export function Footer() {
           </div>
         </div>
       </div>
-      <p className="mx-auto mt-8 max-w-4xl text-center text-xs font-light leading-relaxed tracking-normal text-[#f5f5f0]/62">
+      <p className="mx-auto mt-8 max-w-4xl text-center text-xs font-light leading-relaxed tracking-normal text-zinc-500">
         {t.footer.based}
       </p>
-      <div className="mx-auto mt-10 max-w-4xl border-t border-[#f5f5f0]/5 pt-8">
+      <div className="mx-auto mt-10 max-w-4xl border-t border-zinc-800/80 pt-8">
         <div className="flex flex-col items-center justify-center gap-4 sm:flex-row sm:flex-wrap sm:gap-8">
           <Link
             href={`${prefix || ""}/mentions-legales`}
-            className="text-xs font-light tracking-[0.1em] text-[#f5f5f0]/40 transition-colors hover:text-[#f5f5f0]/70 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#d4af37]/50 focus-visible:ring-offset-2 focus-visible:ring-offset-[#353839]"
+            className="text-xs font-light tracking-[0.1em] text-zinc-600 transition-colors hover:text-zinc-400 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-500/40 focus-visible:ring-offset-2 focus-visible:ring-offset-zinc-950"
           >
             Mentions légales
           </Link>
           <Link
             href={prefix || "/"}
-            className="inline-flex items-center gap-2 text-xs font-light tracking-[0.15em] uppercase text-[#f5f5f0]/40 transition-opacity hover:text-[#f5f5f0]/70 hover:opacity-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#d4af37]/50 focus-visible:ring-offset-2 focus-visible:ring-offset-[#353839]"
+            className="inline-flex items-center gap-2 text-xs font-light tracking-[0.15em] uppercase text-zinc-600 transition-opacity hover:text-zinc-400 hover:opacity-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-500/40 focus-visible:ring-offset-2 focus-visible:ring-offset-zinc-950"
             style={{ fontFamily: "var(--font-source-sans), sans-serif" }}
             aria-label="Design et développement par PhantomDev, expertise en interfaces haute performance"
           >
@@ -111,7 +111,7 @@ export function Footer() {
             </svg>
             {t.footer.designBy}
           </Link>
-          <p className="text-center text-xs font-light tracking-[0.1em] text-[#f5f5f0]/40">
+          <p className="text-center text-xs font-light tracking-[0.1em] text-zinc-600">
             © {new Date().getFullYear()} PhantomDev. {t.footer.rights}
           </p>
         </div>

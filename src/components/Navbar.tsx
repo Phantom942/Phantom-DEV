@@ -1,28 +1,51 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { usePathname } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
-import { Ghost, Menu, X } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { getWhatsAppDevisUrl } from "@/data/contact";
 import { LanguageSelector } from "./LanguageSelector";
+import { PhantomLogo } from "./PhantomLogo";
 import { useTranslations } from "@/hooks/useTranslations";
 
 export function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
   const pathname = usePathname();
   const { t } = useTranslations();
   const localePrefix = pathname.startsWith("/en-gb") ? "/en-gb" : pathname.startsWith("/en-us") ? "/en-us" : "";
 
   const closeMobileMenu = () => setMobileMenuOpen(false);
 
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 12);
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
+  useEffect(() => {
+    document.body.style.overflow = mobileMenuOpen ? "hidden" : "";
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [mobileMenuOpen]);
+
   const navLinksWithLocale = [
-    { href: `${localePrefix || ""}/#expertise`, label: t.nav.expertise },
-    { href: `${localePrefix || ""}/services`, label: t.nav.services },
-    { href: `${localePrefix || ""}/grapheneos`, label: t.nav.grapheneOS },
-    { href: `${localePrefix || ""}/realisations`, label: t.nav.projects },
-    { href: `${localePrefix || ""}/#contact`, label: t.nav.contact },
+    {
+      href: `${localePrefix || ""}/#expertise`,
+      label: t.nav.expertise,
+      match: (p: string) => {
+        const home = localePrefix || "/";
+        return p === home;
+      },
+    },
+    { href: `${localePrefix || ""}/services`, label: t.nav.services, match: (p: string) => p.includes("/services") },
+    { href: `${localePrefix || ""}/grapheneos`, label: t.nav.grapheneOS, match: (p: string) => p.includes("/grapheneos") },
+    { href: `${localePrefix || ""}/realisations`, label: t.nav.projects, match: (p: string) => p.includes("/realisations") },
+    { href: `${localePrefix || ""}/#contact`, label: t.nav.contact, match: () => false },
   ];
 
   function navLinkAriaLabel(label: string): string {
@@ -34,10 +57,14 @@ export function Navbar() {
     return label;
   }
 
+  function isActive(match: (p: string) => boolean): boolean {
+    return match(pathname);
+  }
+
   return (
     <>
       <header
-        className="fixed left-0 right-0 top-0 z-50 flex w-full max-w-full flex-row items-center justify-between gap-2 overflow-x-clip border-b border-[#f5f5f0]/5 bg-[#353839] px-4 py-3 md:px-16 md:py-6"
+        className={`fixed left-0 right-0 top-0 z-50 flex w-full max-w-full flex-row items-center justify-between gap-2 overflow-x-clip border-b border-zinc-800/80 bg-zinc-950/95 px-4 py-3 backdrop-blur-md transition-[box-shadow,background,border-color] duration-300 md:px-16 md:py-4 ${scrolled ? "header-scrolled" : ""}`}
         style={{
           paddingTop: "max(0.75rem, env(safe-area-inset-top))",
         }}
@@ -46,21 +73,18 @@ export function Navbar() {
       >
         <Link
           href={localePrefix || "/"}
-          className="flex min-w-0 shrink-0 items-center gap-1.5 overflow-hidden text-[#f5f5f0] transition-opacity hover:opacity-80"
+          className="flex min-w-0 shrink-0 items-center gap-2.5 overflow-hidden text-white transition-opacity hover:opacity-90"
           aria-label={t.nav.homeLogoAria}
           onClick={closeMobileMenu}
         >
-          <Ghost
-            className="h-4 w-4 shrink-0 md:h-5 md:w-5"
-            strokeWidth={1.5}
-          />
-          <span className="truncate text-xs font-light uppercase tracking-wide md:text-base md:tracking-[0.15em] lg:text-lg lg:tracking-[0.2em]">
+          <PhantomLogo priority />
+          <span className="font-tech truncate text-xs font-semibold uppercase tracking-[0.2em] text-white md:text-sm md:tracking-[0.24em]">
             PhantomDev
           </span>
         </Link>
 
         <nav
-          className="hidden shrink-0 items-center gap-4 md:flex md:gap-12"
+          className="hidden shrink-0 items-center gap-6 md:flex lg:gap-10"
           role="navigation"
           aria-label={t.nav.mainNavAria}
         >
@@ -69,8 +93,10 @@ export function Navbar() {
             <Link
               key={link.href}
               href={link.href}
-              className="whitespace-nowrap text-sm font-light tracking-[0.15em] leading-tight text-[#f5f5f0]/85 transition-colors hover:text-[#f5f5f0] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#d4af37]/50 focus-visible:ring-offset-2 focus-visible:ring-offset-[#353839]"
+              className="nav-link-stealth whitespace-nowrap focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-500/40 focus-visible:ring-offset-2 focus-visible:ring-offset-zinc-950"
+              data-active={isActive(link.match)}
               aria-label={navLinkAriaLabel(link.label)}
+              aria-current={isActive(link.match) ? "page" : undefined}
             >
               {link.label}
             </Link>
@@ -79,7 +105,7 @@ export function Navbar() {
             href={getWhatsAppDevisUrl()}
             target="_blank"
             rel="noopener noreferrer"
-            className="rounded-sm border border-[#25D366]/60 bg-[#25D366]/10 px-4 py-2 text-xs font-light tracking-[0.15em] text-[#f5f5f0] transition-all hover:scale-[1.02] hover:bg-[#25D366]/20"
+            className="btn-stealth-primary btn-stealth-primary-compact animate-none hover:shadow-[0_0_20px_rgba(16,185,129,0.35)]"
             aria-label={t.nav.whatsappQuoteAria}
           >
             {t.nav.freeQuote}
@@ -89,7 +115,7 @@ export function Navbar() {
         <button
           type="button"
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-          className="flex h-9 w-9 shrink-0 items-center justify-center rounded-md text-[#f5f5f0] transition-colors active:bg-[#f5f5f0]/10 md:hidden"
+          className="flex h-10 w-10 shrink-0 items-center justify-center rounded-md text-zinc-300 transition-colors hover:bg-zinc-800/50 md:hidden"
           aria-label={mobileMenuOpen ? t.nav.menuCloseAria : t.nav.menuOpenAria}
           aria-expanded={mobileMenuOpen}
         >
@@ -99,47 +125,58 @@ export function Navbar() {
 
       <AnimatePresence>
         {mobileMenuOpen && (
-          <motion.div
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: "auto" }}
-            exit={{ opacity: 0, height: 0 }}
-            transition={{ duration: 0.2 }}
-            className="fixed inset-x-0 z-40 overflow-hidden bg-[#2c2f31] md:hidden"
-            style={{
-              top: "calc(3rem + env(safe-area-inset-top))",
-            }}
-          >
-            <nav
-              className="flex flex-col border-t border-[#f5f5f0]/10 px-4 py-2"
-              role="navigation"
-              aria-label={t.nav.mobileNavAria}
+          <>
+            <motion.button
+              type="button"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              className="fixed inset-0 z-40 bg-black/60 backdrop-blur-sm md:hidden"
+              aria-label={t.nav.menuCloseAria}
+              onClick={closeMobileMenu}
+            />
+            <motion.div
+              initial={{ opacity: 0, y: -8 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -8 }}
+              transition={{ duration: 0.22, ease: [0.22, 1, 0.36, 1] }}
+              className="fixed inset-x-0 z-50 overflow-hidden border-b border-zinc-800 bg-zinc-950 shadow-2xl md:hidden"
+              style={{
+                top: "calc(3.25rem + env(safe-area-inset-top))",
+              }}
             >
-              <div className="border-b border-[#f5f5f0]/5 py-3">
-                <LanguageSelector variant="inline" />
-              </div>
-              {navLinksWithLocale.map((link) => (
-                <Link
-                  key={link.href}
-                  href={link.href}
-                  onClick={closeMobileMenu}
-                  className="border-b border-[#f5f5f0]/5 py-3 text-base font-light tracking-[0.1em] text-[#f5f5f0]/90 transition-colors last:border-0 active:text-[#f5f5f0] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-[#d4af37]/50"
-                  aria-label={navLinkAriaLabel(link.label)}
-                >
-                  {link.label}
-                </Link>
-              ))}
-              <a
-                href={getWhatsAppDevisUrl()}
-                target="_blank"
-                rel="noopener noreferrer"
-                onClick={closeMobileMenu}
-                className="mt-4 border border-[#25D366]/60 bg-[#25D366]/10 py-3 text-center text-base font-light tracking-[0.1em] text-[#f5f5f0] transition-colors"
-                aria-label={t.nav.whatsappQuoteAria}
+              <nav
+                className="flex max-h-[min(70dvh,520px)] flex-col overflow-y-auto border-t border-zinc-800 px-4 py-3"
+                role="navigation"
+                aria-label={t.nav.mobileNavAria}
               >
-                {t.nav.freeQuote}
-              </a>
-            </nav>
-          </motion.div>
+                <div className="border-b border-zinc-800/80 py-3">
+                  <LanguageSelector variant="inline" />
+                </div>
+                {navLinksWithLocale.map((link) => (
+                  <Link
+                    key={link.href}
+                    href={link.href}
+                    onClick={closeMobileMenu}
+                    className="font-tech border-b border-zinc-800/80 py-3.5 text-sm font-medium uppercase tracking-[0.12em] text-zinc-400 transition-colors last:border-0 hover:text-zinc-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-cyan-500/40"
+                    aria-label={navLinkAriaLabel(link.label)}
+                  >
+                    {link.label}
+                  </Link>
+                ))}
+                <a
+                  href={getWhatsAppDevisUrl()}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={closeMobileMenu}
+                  className="btn-stealth-primary mt-5 w-full animate-none"
+                  aria-label={t.nav.whatsappQuoteAria}
+                >
+                  {t.nav.freeQuote}
+                </a>
+              </nav>
+            </motion.div>
+          </>
         )}
       </AnimatePresence>
     </>

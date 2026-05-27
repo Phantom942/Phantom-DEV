@@ -32,7 +32,7 @@ export default function NotFound() {
   const homeHref = locale === "fr" ? "/" : `/${locale === "en-US" ? "en-us" : "en-gb"}`;
 
   return (
-    <div className="relative min-h-screen w-full bg-[#353839]">
+    <div className="relative min-h-screen w-full bg-transparent">
       <CursorAndGlow />
       <Navbar />
       <main
@@ -41,24 +41,18 @@ export default function NotFound() {
         className="flex min-h-[80vh] w-full flex-col items-center justify-center px-4 py-24"
         aria-label={t.title}
       >
-        <p
-          className="mb-4 font-extralight tracking-[0.2em] text-[#d4af37]/60"
-          style={{ fontFamily: "var(--font-cormorant), Georgia, serif" }}
-        >
+        <p className="font-tech mb-4 text-sm font-medium uppercase tracking-[0.28em] text-cyan-400/80">
           404
         </p>
-        <h1
-          className="mb-6 text-center font-extralight tracking-[0.15em] text-[#f5f5f0]"
-          style={{ fontFamily: "var(--font-cormorant), Georgia, serif" }}
-        >
-          <span className="text-2xl sm:text-4xl md:text-5xl">{t.title}</span>
+        <h1 className="font-tech mb-6 text-center text-2xl font-semibold uppercase tracking-[0.14em] text-zinc-100 sm:text-4xl md:text-5xl">
+          {t.title}
         </h1>
-        <p className="mb-12 max-w-md text-center text-sm leading-[1.8] tracking-[0.02em] text-[#f5f5f0]/70">
+        <p className="mb-12 max-w-md text-center text-sm leading-[1.8] tracking-[0.02em] text-zinc-400">
           {t.desc}
         </p>
         <Link
           href={homeHref}
-          className="inline-flex items-center gap-2 border border-[#d4af37]/40 bg-[#d4af37]/5 px-8 py-4 text-sm font-light tracking-[0.15em] text-[#f5f5f0] transition-all hover:border-[#d4af37]/60 hover:bg-[#d4af37]/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#d4af37]/50"
+          className="btn-stealth-secondary"
           aria-label={t.back}
         >
           <Home size={18} strokeWidth={1.5} />

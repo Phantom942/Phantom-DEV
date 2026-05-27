@@ -54,8 +54,8 @@ export function LanguageSelector({ variant = "dropdown" }: LanguageSelectorProps
               href={getLocalizedPath(locale)}
               className={`rounded-md border px-3 py-2 text-sm transition-colors ${
                 active
-                  ? "border-[#d4af37]/50 bg-[#d4af37]/10 text-[#f5f5f0]"
-                  : "border-[#f5f5f0]/15 text-[#f5f5f0]/80 hover:border-[#f5f5f0]/30 hover:text-[#f5f5f0]"
+                  ? "border-cyan-500/40 bg-cyan-500/10 text-zinc-100"
+                  : "border-zinc-700 text-zinc-400 hover:border-zinc-600 hover:text-zinc-200"
               }`}
             >
               <span className="mr-1.5 text-lg leading-none" aria-hidden>
@@ -74,7 +74,7 @@ export function LanguageSelector({ variant = "dropdown" }: LanguageSelectorProps
       <button
         type="button"
         onClick={() => setOpen(!open)}
-        className="flex items-center gap-1.5 rounded-md px-2 py-1.5 text-[#f5f5f0]/80 transition-colors hover:bg-[#f5f5f0]/10 hover:text-[#f5f5f0]"
+        className="font-tech flex items-center gap-1.5 rounded-md px-2 py-1.5 text-xs uppercase tracking-wider text-zinc-400 transition-colors hover:bg-zinc-800/60 hover:text-zinc-200"
         aria-label={`Langue actuelle : ${localeNames[currentLocale]}. Changer de langue`}
         aria-expanded={open}
         aria-haspopup="listbox"
@@ -92,17 +92,17 @@ export function LanguageSelector({ variant = "dropdown" }: LanguageSelectorProps
       {open && (
         <ul
           role="listbox"
-          className="absolute right-0 top-full z-[60] mt-2 min-w-[160px] rounded-md border border-[#f5f5f0]/10 bg-[#2c2f31] py-2 shadow-lg"
+          className="absolute right-0 top-full z-[60] mt-2 min-w-[160px] rounded-md border border-zinc-800 bg-zinc-900 py-2 shadow-lg"
           aria-label="Sélectionner une langue"
         >
           {locales.map((locale) => (
             <li key={locale} role="option" aria-selected={locale === currentLocale}>
               <Link
                 href={getLocalizedPath(locale)}
-                className={`flex items-center gap-2 px-4 py-2 text-sm transition-colors hover:bg-[#f5f5f0]/10 ${
+                className={`flex items-center gap-2 px-4 py-2 text-sm transition-colors hover:bg-zinc-800/60 ${
                   locale === currentLocale
-                    ? "bg-[#f5f5f0]/5 text-[#f5f5f0]"
-                    : "text-[#f5f5f0]/80"
+                    ? "bg-cyan-500/10 text-cyan-300"
+                    : "text-zinc-400"
                 }`}
                 onClick={() => setOpen(false)}
               >

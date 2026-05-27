@@ -63,8 +63,8 @@ export function CustomCursor() {
       aria-hidden
       style={{ willChange: "transform" }}
     >
-      <div className="absolute left-0 top-0 h-4 w-4 -translate-x-1/2 -translate-y-1/2 rounded-full border border-[#f5f5f0]/90 bg-transparent backdrop-blur-[1px]" />
-      <div className="absolute left-0 top-0 h-1 w-1 -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#f5f5f0]" />
+      <div className="absolute left-0 top-0 h-4 w-4 -translate-x-1/2 -translate-y-1/2 rounded-full border border-cyan-400/70 bg-transparent backdrop-blur-[1px]" />
+      <div className="absolute left-0 top-0 h-1 w-1 -translate-x-1/2 -translate-y-1/2 rounded-full bg-cyan-300" />
     </div>
   );
 }

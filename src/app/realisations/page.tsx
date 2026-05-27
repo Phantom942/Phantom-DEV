@@ -46,7 +46,7 @@ export default function RealisationsPage() {
   const breadcrumbSchema = getBreadcrumbForPath("/realisations", "Réalisations");
 
   return (
-    <div className="relative min-h-screen w-full bg-[#353839]">
+    <div className="relative min-h-screen w-full bg-transparent">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}

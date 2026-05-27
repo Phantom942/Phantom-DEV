@@ -39,7 +39,7 @@ export default function MentionsLegalesPage() {
   ]);
 
   return (
-    <div className="relative min-h-screen w-full bg-[#353839]">
+    <div className="relative min-h-screen w-full bg-transparent">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
@@ -55,23 +55,20 @@ export default function MentionsLegalesPage() {
         <div className="mx-auto max-w-3xl px-4 sm:px-8 md:px-16">
           <Link
             href="/"
-            className="mb-12 inline-flex items-center gap-2 text-sm font-light tracking-[0.1em] text-[#f5f5f0]/70 transition-colors hover:text-[#f5f5f0]"
+            className="mb-12 inline-flex items-center gap-2 text-sm font-light tracking-[0.1em] text-zinc-400 transition-colors hover:text-zinc-100"
             aria-label="Retour à l'accueil PhantomDev"
           >
             <ArrowLeft size={16} strokeWidth={1.5} />
             Retour à l&apos;accueil
           </Link>
 
-          <h1
-            className="mb-8 font-extralight tracking-[0.15em] text-[#f5f5f0]"
-            style={{ fontFamily: "var(--font-cormorant), Georgia, serif" }}
-          >
-            <span className="text-3xl sm:text-4xl">Mentions légales</span>
+          <h1 className="font-tech mb-8 text-3xl font-semibold uppercase tracking-[0.14em] text-zinc-100 sm:text-4xl">
+            Mentions légales
           </h1>
 
-          <div className="space-y-8 text-sm leading-[1.9] text-[#f5f5f0]/85">
+          <div className="space-y-8 text-sm leading-[1.9] text-zinc-300">
             <section>
-              <h2 className="mb-3 font-light tracking-[0.08em] text-[#f5f5f0]">
+              <h2 className="mb-3 font-light tracking-[0.08em] text-zinc-100">
                 1. Éditeur du site
               </h2>
               <p>
@@ -82,7 +79,7 @@ export default function MentionsLegalesPage() {
             </section>
 
             <section>
-              <h2 className="mb-3 font-light tracking-[0.08em] text-[#f5f5f0]">
+              <h2 className="mb-3 font-light tracking-[0.08em] text-zinc-100">
                 2. Hébergement
               </h2>
               <p>
@@ -92,7 +89,7 @@ export default function MentionsLegalesPage() {
                   href="https://pages.github.com"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-[#d4af37]/90 underline decoration-[#d4af37]/40 transition-colors hover:decoration-[#d4af37]/80"
+                  className="text-cyan-400/90 underline decoration-cyan-500/40 transition-colors hover:decoration-cyan-400/80"
                 >
                   pages.github.com
                 </a>
@@ -100,7 +97,7 @@ export default function MentionsLegalesPage() {
             </section>
 
             <section>
-              <h2 className="mb-3 font-light tracking-[0.08em] text-[#f5f5f0]">
+              <h2 className="mb-3 font-light tracking-[0.08em] text-zinc-100">
                 3. Propriété intellectuelle
               </h2>
               <p>
@@ -111,7 +108,7 @@ export default function MentionsLegalesPage() {
             </section>
 
             <section>
-              <h2 className="mb-3 font-light tracking-[0.08em] text-[#f5f5f0]">
+              <h2 className="mb-3 font-light tracking-[0.08em] text-zinc-100">
                 4. Données personnelles
               </h2>
               <p>
@@ -124,7 +121,7 @@ export default function MentionsLegalesPage() {
             </section>
 
             <section>
-              <h2 className="mb-3 font-light tracking-[0.08em] text-[#f5f5f0]">
+              <h2 className="mb-3 font-light tracking-[0.08em] text-zinc-100">
                 5. Cookies
               </h2>
               <p>
@@ -135,7 +132,7 @@ export default function MentionsLegalesPage() {
             </section>
 
             <section>
-              <h2 className="mb-3 font-light tracking-[0.08em] text-[#f5f5f0]">
+              <h2 className="mb-3 font-light tracking-[0.08em] text-zinc-100">
                 6. Limitation de responsabilité
               </h2>
               <p>
@@ -146,7 +143,7 @@ export default function MentionsLegalesPage() {
               </p>
             </section>
 
-            <p className="pt-4 text-xs text-[#f5f5f0]/50">
+            <p className="pt-4 text-xs text-zinc-500">
               Dernière mise à jour : février 2026
             </p>
           </div>

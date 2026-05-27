@@ -38,7 +38,7 @@ export default function EnGBMentionsLegalesPage() {
   ]);
 
   return (
-    <div className="relative min-h-screen w-full bg-[#353839]">
+    <div className="relative min-h-screen w-full bg-transparent">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
@@ -49,15 +49,15 @@ export default function EnGBMentionsLegalesPage() {
         <div className="mx-auto max-w-3xl px-4 sm:px-8 md:px-16">
           <Link
             href="/en-gb"
-            className="mb-12 inline-flex items-center gap-2 text-sm font-light tracking-[0.1em] text-[#f5f5f0]/70 transition-colors hover:text-[#f5f5f0]"
+            className="mb-12 inline-flex items-center gap-2 text-sm font-light tracking-[0.1em] text-zinc-400 transition-colors hover:text-zinc-100"
           >
             <ArrowLeft size={16} strokeWidth={1.5} />
             Back to home
           </Link>
-          <h1 className="mb-8 font-extralight tracking-[0.15em] text-[#f5f5f0]" style={{ fontFamily: "var(--font-cormorant), Georgia, serif" }}>
+          <h1 className="font-tech mb-8 text-3xl font-semibold uppercase tracking-[0.14em] text-zinc-100 sm:text-4xl">
             Legal notice
           </h1>
-          <p className="text-sm leading-[1.8] text-[#f5f5f0]/80">
+          <p className="text-sm leading-[1.8] text-zinc-400">
             PhantomDev — Premium custom web development. Based in France. International services.
           </p>
         </div>

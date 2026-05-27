@@ -32,7 +32,7 @@ export const metadata: Metadata = {
 
 export default function EnGBServicesPage() {
   return (
-    <div className="relative min-h-screen w-full bg-[#353839]">
+    <div className="relative min-h-screen w-full bg-transparent">
       <CursorAndGlow />
       <Navbar />
       <main id="main" role="main" className="w-full pt-24 pb-16 sm:pt-32 sm:pb-24">

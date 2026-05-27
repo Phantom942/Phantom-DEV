@@ -18,20 +18,17 @@ export function RealisationsPageContent() {
       <div className="mx-auto w-full max-w-7xl px-4 sm:px-8 md:px-16">
         <Link
           href={`${prefix || "/"}`}
-          className="mb-10 inline-flex items-center gap-2 text-sm font-light tracking-[0.1em] text-[#f5f5f0]/70 transition-colors hover:text-[#f5f5f0]"
+          className="mb-10 inline-flex items-center gap-2 text-sm font-light tracking-[0.1em] text-zinc-400 transition-colors hover:text-zinc-100"
         >
           <ArrowLeft size={16} strokeWidth={1.5} />
           {rp.backHome}
         </Link>
 
         <header className="mb-10 text-center sm:mb-14">
-          <h1
-            className="mb-4 font-extralight tracking-[0.12em] text-[#f5f5f0]"
-            style={{ fontFamily: "var(--font-cormorant), Georgia, serif" }}
-          >
-            <span className="text-3xl sm:text-4xl md:text-5xl">{rp.pageTitle}</span>
+          <h1 className="font-tech mb-4 text-3xl font-semibold uppercase tracking-[0.14em] text-zinc-100 sm:text-4xl md:text-5xl">
+            {rp.pageTitle}
           </h1>
-          <p className="mx-auto max-w-2xl text-sm leading-[1.85] tracking-[0.02em] text-[#f5f5f0]/80 sm:text-base">
+          <p className="mx-auto max-w-2xl text-sm leading-[1.85] tracking-[0.02em] text-zinc-400 sm:text-base">
             {rp.intro}
           </p>
         </header>

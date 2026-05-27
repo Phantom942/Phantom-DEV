@@ -18,7 +18,7 @@ export const projects = [
     techs: ["Next.js", "Tailwind", "Vercel"],
     lighthouseScore: 98,
     result: "Lighthouse 98%",
-    image: "/images/logos/phantom-art.png",
+    image: "/images/mockups/phantom-art.png",
     mockupImage: "/images/mockups/phantom-art.png",
     href: "https://www.phantomart.fr/",
     caseStudy: {
@@ -40,7 +40,7 @@ export const projects = [
     techs: ["Next.js", "Tailwind", "SEO local"],
     lighthouseScore: 95,
     result: "Lighthouse 95+",
-    image: "/images/logos/redk-motors.png",
+    image: "/images/mockups/redk-motors.png",
     mockupImage: "/images/mockups/redk-motors.png",
     href: "https://redk-motors.me/",
     caseStudy: {
@@ -62,7 +62,7 @@ export const projects = [
     techs: ["Site vitrine", "SEO", "Responsive"],
     lighthouseScore: 95,
     result: "Lighthouse 95+",
-    image: "/images/logos/kraken-metals.png",
+    image: "/images/mockups/kraken-metals.png",
     mockupImage: "/images/mockups/kraken-metals.png",
     href: "https://www.kraken-metals.fr/",
     caseStudy: {
@@ -84,7 +84,7 @@ export const projects = [
     techs: ["Next.js", "UX/UI", "Mobile-First"],
     lighthouseScore: 97,
     result: "Conversion +25%",
-    image: "/images/logos/moove-city.png",
+    image: "/images/mockups/moove-city.png",
     mockupImage: "/images/mockups/moove-city.png",
     href: "https://www.moovecity.fr/",
     caseStudy: {

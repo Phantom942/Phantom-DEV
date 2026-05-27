@@ -15,18 +15,15 @@ export function Sections() {
       <ScrollReveal>
         <section
           id="expertise"
-          className="w-full max-w-full overflow-x-clip bg-[#323538] px-4 py-16 sm:px-8 sm:py-20 md:px-16 md:py-24"
+          className="w-full max-w-full overflow-x-clip bg-transparent px-4 py-16 sm:px-8 sm:py-20 md:px-16 md:py-24"
           aria-labelledby="expertise-title"
         >
           <div className="mx-auto w-full max-w-7xl">
-            <h2
-              id="expertise-title"
-              className="mb-6 text-center font-extralight tracking-[0.2em] text-[#f5f5f0]"
-              style={{ fontFamily: "var(--font-cormorant), Georgia, serif" }}
-            >
+            <h2 id="expertise-title" className="heading-display mb-6 text-center">
               <span className="text-2xl sm:text-4xl md:text-5xl">{t.sections.expertise}</span>
             </h2>
-            <p className="mx-auto mb-8 max-w-2xl text-center text-base leading-relaxed tracking-normal text-[#f5f5f0]/88 sm:mb-12 sm:max-w-3xl sm:text-lg md:mb-16 md:text-xl md:leading-relaxed">
+            <div className="stealth-divider mx-auto mb-8 max-w-xs sm:mb-10" aria-hidden />
+            <p className="mx-auto mb-8 max-w-2xl text-center text-base leading-relaxed tracking-normal text-zinc-300 sm:mb-12 sm:max-w-3xl sm:text-lg md:mb-16 md:text-xl md:leading-relaxed">
               {t.sections.expertiseDesc}
             </p>
             <ExpertiseCards />
@@ -35,7 +32,7 @@ export function Sections() {
       </ScrollReveal>
 
       <ScrollReveal delay={0.03}>
-        <p className="mx-auto max-w-7xl px-4 py-8 text-center text-sm font-light italic tracking-[0.02em] text-[#f5f5f0]/50 sm:py-10 md:py-12">
+        <p className="mx-auto max-w-7xl px-4 py-8 text-center text-sm font-light italic tracking-[0.02em] text-zinc-500 sm:py-10 md:py-12">
           {t.sections.transition}
         </p>
       </ScrollReveal>
@@ -45,7 +42,7 @@ export function Sections() {
       </ScrollReveal>
 
       <ScrollReveal delay={0.05}>
-        <div className="w-full bg-[#323538]">
+        <div className="w-full bg-transparent">
           <FAQ />
         </div>
       </ScrollReveal>
@@ -57,28 +54,25 @@ export function Sections() {
       <ScrollReveal delay={0.05}>
         <section
           id="contact"
-          className="w-full max-w-full overflow-x-clip border-t border-[#f5f5f0]/5 bg-[#353839] px-4 py-16 sm:px-8 sm:py-24 md:px-16 md:py-28"
+          className="w-full max-w-full overflow-x-clip border-t border-zinc-800/80 bg-transparent px-4 py-16 sm:px-8 sm:py-24 md:px-16 md:py-28"
           aria-labelledby="contact-title"
         >
           <div className="mx-auto flex w-full max-w-7xl flex-col items-center">
-            <h2
-              id="contact-title"
-              className="mb-8 text-center font-extralight tracking-[0.2em] text-[#f5f5f0]"
-              style={{ fontFamily: "var(--font-cormorant), Georgia, serif" }}
-            >
+            <h2 id="contact-title" className="heading-display mb-8 text-center">
               <span className="text-2xl sm:text-4xl md:text-5xl">{t.sections.contact}</span>
             </h2>
-            <div className="w-full max-w-2xl rounded-lg border border-[#f5f5f0]/10 bg-[#2c2f31]/35 px-6 py-10 text-center sm:px-10 sm:py-12">
-              <p className="mb-6 text-sm leading-[1.8] tracking-[0.02em] text-[#f5f5f0]/85 sm:text-base md:mb-8 md:text-lg">
+            <div className="stealth-divider mx-auto mb-8 max-w-xs" aria-hidden />
+            <div className="stealth-card w-full max-w-2xl rounded-lg px-6 py-10 text-center sm:px-10 sm:py-12">
+              <p className="mb-6 text-sm leading-[1.8] tracking-[0.02em] text-zinc-300 sm:text-base md:mb-8 md:text-lg">
                 {t.sections.contactDesc}
               </p>
-              <p className="mb-10 text-xs font-light tracking-[0.08em] text-[#f5f5f0]/60 sm:mb-12">
+              <p className="mb-10 text-xs font-light tracking-[0.08em] text-zinc-500 sm:mb-12">
                 {t.sections.performance}
               </p>
               <div className="flex flex-col items-center">
                 <WhatsAppCtaButton />
               </div>
-              <p className="mt-8 text-center text-xs font-light tracking-[0.08em] text-[#f5f5f0]/40">
+              <p className="mt-8 text-center text-xs font-light tracking-[0.08em] text-zinc-600">
                 {t.sections.response}
               </p>
             </div>

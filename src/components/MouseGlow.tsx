@@ -46,9 +46,9 @@ export function MouseGlow() {
         style={{
           left: position.x,
           top: position.y,
-          opacity: isVisible ? 0.07 : 0,
+          opacity: isVisible ? 0.09 : 0,
           background:
-            "radial-gradient(circle, rgba(212, 175, 55, 0.12) 0%, rgba(59, 130, 246, 0.06) 40%, transparent 70%)",
+            "radial-gradient(circle, rgba(34, 211, 238, 0.1) 0%, rgba(16, 185, 129, 0.06) 35%, rgba(180, 140, 50, 0.04) 55%, transparent 70%)",
         }}
       />
     </div>

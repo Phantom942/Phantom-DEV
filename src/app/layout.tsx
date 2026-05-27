@@ -4,11 +4,13 @@ import {
   Geist_Mono,
   Cormorant_Garamond,
   Source_Sans_3,
+  Space_Grotesk,
 } from "next/font/google";
 import "./globals.css";
 import { LangAttribute } from "@/components/LangAttribute";
 import { FloatingWhatsAppButton } from "@/components/FloatingWhatsAppButton";
 import { SkipToContent } from "@/components/SkipToContent";
+import { StealthAmbientBackground } from "@/components/StealthAmbientBackground";
 import JsonLd from "@/components/JsonLd";
 import { defaultOpenGraphImage } from "@/lib/social-metadata";
 
@@ -35,6 +37,13 @@ const sourceSans = Source_Sans_3({
   subsets: ["latin"],
   weight: ["300", "400", "500", "600", "700"],
   style: ["normal", "italic"],
+  display: "swap",
+});
+
+const spaceGrotesk = Space_Grotesk({
+  variable: "--font-space-grotesk",
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
   display: "swap",
 });
 
@@ -108,6 +117,10 @@ export const metadata: Metadata = {
     "geo.placename": "Europe",
     "target": "global",
   },
+  icons: {
+    icon: [{ url: "/images/phantom-logo.png", type: "image/png" }],
+    apple: [{ url: "/images/phantom-logo.png", type: "image/png" }],
+  },
 };
 
 export default function RootLayout({
@@ -119,13 +132,14 @@ export default function RootLayout({
     <html
       lang="fr"
       suppressHydrationWarning
-      className={`${geist.variable} ${geistMono.variable} ${cormorant.variable} ${sourceSans.variable} overflow-x-clip`}
+      className={`${geist.variable} ${geistMono.variable} ${cormorant.variable} ${sourceSans.variable} ${spaceGrotesk.variable} overflow-x-clip`}
     >
-      <body className="overflow-x-clip font-sans antialiased">
+      <body className="relative overflow-x-clip bg-zinc-950 font-sans antialiased">
+        <StealthAmbientBackground />
         <SkipToContent />
         <LangAttribute />
         <JsonLd />
-        {children}
+        <div className="relative z-[1]">{children}</div>
         <FloatingWhatsAppButton />
       </body>
     </html>

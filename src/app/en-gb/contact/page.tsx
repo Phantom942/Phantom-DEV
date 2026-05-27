@@ -39,7 +39,7 @@ export default function EnGBContactPage() {
   const breadcrumbSchema = getBreadcrumbForPath("/en-gb/contact", "Contact");
 
   return (
-    <div className="relative min-h-screen w-full bg-[#353839]">
+    <div className="relative min-h-screen w-full bg-transparent">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
@@ -56,31 +56,30 @@ export default function EnGBContactPage() {
           <div className="mx-auto w-full max-w-2xl">
             <Link
               href="/en-gb"
-              className="mb-10 inline-flex items-center gap-2 text-sm font-light tracking-[0.1em] text-[#f5f5f0]/70 transition-colors hover:text-[#f5f5f0]"
+              className="mb-10 inline-flex items-center gap-2 text-sm font-light tracking-[0.1em] text-zinc-400 transition-colors hover:text-zinc-100"
               aria-label="Back to PhantomDev homepage"
             >
               <ArrowLeft size={16} strokeWidth={1.5} />
               Back to home
             </Link>
 
-            <div className="rounded-lg border border-[#f5f5f0]/10 bg-[#2c2f31]/35 px-6 py-10 text-center sm:px-10 sm:py-12">
+            <div className="stealth-card rounded-lg px-6 py-10 text-center sm:px-10 sm:py-12">
               <h1
-                className="mb-6 font-extralight tracking-[0.15em] text-[#f5f5f0]"
-                style={{ fontFamily: "var(--font-cormorant), Georgia, serif" }}
+                className="font-tech mb-6 text-3xl font-semibold uppercase tracking-[0.14em] text-zinc-100 sm:text-4xl md:text-5xl"
               >
-                <span className="text-3xl sm:text-4xl md:text-5xl">Contact</span>
+                Contact
               </h1>
-              <p className="mb-4 text-sm leading-[1.8] tracking-[0.02em] text-[#f5f5f0]/85 sm:text-base md:text-lg">
+              <p className="mb-4 text-sm leading-[1.8] tracking-[0.02em] text-zinc-300 sm:text-base md:text-lg">
                 Got a project in mind? Contact me on WhatsApp for a free quote within 24h, no commitment.
               </p>
-              <p className="mb-10 text-xs font-light tracking-[0.08em] text-[#f5f5f0]/60">
+              <p className="mb-10 text-xs font-light tracking-[0.08em] text-zinc-500">
                 Performance guarantee: Lighthouse 90+ on all delivered sites.
               </p>
 
               <div className="flex flex-col items-center">
                 <WhatsAppCtaButton />
               </div>
-              <p className="mt-8 text-center text-xs font-light tracking-[0.08em] text-[#f5f5f0]/40">
+              <p className="mt-8 text-center text-xs font-light tracking-[0.08em] text-zinc-600">
                 Response within 24h · No commitment
               </p>
             </div>

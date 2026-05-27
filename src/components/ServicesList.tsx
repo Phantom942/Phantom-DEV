@@ -1,181 +1,166 @@
 "use client";
 
+import { useMemo, useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { ScrollReveal } from "./ScrollReveal";
+import { ServiceFilters } from "./ServiceFilters";
 import { projects } from "@/data/projects";
-import { useTranslations } from "@/hooks/useTranslations";
 import {
-  Palette,
-  Box,
-  Search,
-  Brain,
-  Check,
-  Wrench,
-  ArrowRight,
-  ExternalLink,
-} from "lucide-react";
-
-const serviceConfigs = [
-  { id: "conception" as const, icon: Palette, typeParam: "vitrine", projectRef: "phantom-art" as const, projectLabel: null as string | null },
-  { id: "applications" as const, icon: Box, typeParam: "application", projectRef: "redk-motors" as const, projectLabel: null as string | null },
-  { id: "seo" as const, icon: Search, typeParam: "seo", projectRef: null as string | null, projectLabel: null as string | null },
-  { id: "ia" as const, icon: Brain, typeParam: "autre", projectRef: null as string | null, projectLabelKey: "projectLabel" as const },
-  { id: "maintenance" as const, icon: Wrench, typeParam: "maintenance", projectRef: null as string | null, projectLabel: null as string | null },
-] as const;
+  filterServices,
+  serviceConfigs,
+  type ServiceFilterValue,
+  type ServiceId,
+} from "@/data/services";
+import { useTranslations } from "@/hooks/useTranslations";
+import { Check, ArrowRight, ExternalLink } from "lucide-react";
 
 function getProjectByRef(ref: string) {
   return projects.find((p) => p.id === ref);
 }
+
+type ServiceCopy = {
+  title: string;
+  hook: string;
+  description: string;
+  benefits: readonly string[];
+  cta: string;
+  ctaButton: string;
+  badge?: string;
+  projectLabel?: string;
+};
 
 export function ServicesList() {
   const pathname = usePathname();
   const { t } = useTranslations();
   const sl = t.servicesList;
   const sp = t.servicesPage;
-  const localePrefix = pathname.startsWith("/en-gb") ? "/en-gb" : pathname.startsWith("/en-us") ? "/en-us" : "";
+  const [filter, setFilter] = useState<ServiceFilterValue>("all");
+  const localePrefix = pathname.startsWith("/en-gb")
+    ? "/en-gb"
+    : pathname.startsWith("/en-us")
+      ? "/en-us"
+      : "";
+
+  const filtered = useMemo(
+    () => filterServices(filter, serviceConfigs),
+    [filter]
+  );
 
   return (
-    <div className="space-y-16 md:space-y-24">
-      {serviceConfigs.map((config, index) => {
-        const Icon = config.icon;
-        const s = sl[config.id];
-        const project = config.projectRef ? getProjectByRef(config.projectRef) : null;
-        const projectLabel = "projectLabelKey" in config ? (s as { projectLabel?: string }).projectLabel : config.projectLabel;
-        const badge = "badge" in s ? (s as { badge?: string }).badge : undefined;
-        const isEven = index % 2 === 1;
+    <>
+      <ServiceFilters value={filter} onChange={setFilter} />
 
-        return (
-          <ScrollReveal key={config.id} delay={index * 0.08}>
-            <section
-              id={config.id}
-              className="group/Service scroll-mt-24"
-            >
-              <div
-                className={`relative overflow-hidden rounded-sm border border-[#f5f5f0]/10 bg-[#2c2f31]/30 px-6 py-8 transition-all duration-500 hover:border-[#d4af37]/25 hover:shadow-[0_0_40px_rgba(212,175,55,0.08)] sm:px-10 sm:py-12 md:flex md:items-start md:gap-12 md:px-12 ${
-                  isEven ? "md:flex-row-reverse" : ""
-                }`}
-                style={{
-                  background:
-                    "linear-gradient(135deg, rgba(212,175,55,0.02) 0%, transparent 50%)",
-                }}
-              >
-                <div className="absolute inset-0 rounded-sm bg-gradient-to-br from-[#d4af37]/5 via-transparent to-transparent opacity-0 transition-opacity duration-500 group-hover/Service:opacity-100" />
-                <div
-                  className={`relative flex flex-1 flex-col gap-6 ${
-                    isEven ? "md:text-right md:items-end" : ""
-                  }`}
-                >
-                  <div
-                    className={`flex items-start gap-6 ${
-                      isEven ? "md:flex-row-reverse" : ""
-                    }`}
+      {filtered.length === 0 ? (
+        <p className="py-12 text-center text-sm font-light tracking-[0.06em] text-zinc-500">
+          {sp.filters.empty}
+        </p>
+      ) : (
+        <ul className="grid grid-cols-1 gap-6 md:grid-cols-2 md:gap-7">
+          {filtered.map((config, index) => {
+            const Icon = config.icon;
+            const s = sl[config.id as ServiceId] as ServiceCopy;
+            const project = config.projectRef
+              ? getProjectByRef(config.projectRef)
+              : null;
+            const badge = config.hasBadge ? s.badge : undefined;
+            const projectLabel = config.hasProjectLabel
+              ? s.projectLabel
+              : undefined;
+
+            return (
+              <ScrollReveal key={config.id} delay={index * 0.05}>
+                <li>
+                  <article
+                    id={config.id}
+                    className="stealth-card group/service flex h-full scroll-mt-28 flex-col rounded-lg p-6 transition-transform duration-300 hover:-translate-y-0.5 sm:p-8"
                   >
-                    <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-sm border border-[#f5f5f0]/20 bg-[#2c2f31] transition-all duration-300 group-hover/Service:border-[#d4af37]/50 group-hover/Service:shadow-[0_0_24px_rgba(212,175,55,0.2)]">
-                      <Icon
-                        size={28}
-                        strokeWidth={1.25}
-                        className="text-[#d4af37]/90"
-                      />
-                    </div>
-                    <div className="min-w-0 flex-1">
-                      <div className="mb-2 flex flex-wrap items-center gap-2">
-                        <h2
-                          className="font-extralight tracking-[0.1em] text-[#f5f5f0]"
-                          style={{
-                            fontFamily:
-                              "var(--font-cormorant), Georgia, serif",
-                          }}
-                        >
-                          <span className="text-2xl sm:text-3xl">
-                            {s.title}
-                          </span>
-                        </h2>
-                        {badge && (
-                          <span className="rounded-sm border border-[#d4af37]/50 bg-[#d4af37]/10 px-2 py-0.5 text-[10px] font-light tracking-wider text-[#d4af37]">
-                            {badge}
-                          </span>
-                        )}
-                        {projectLabel && (
-                          <span className="rounded-sm border border-[#25D366]/40 bg-[#25D366]/10 px-2 py-0.5 text-[10px] font-light tracking-wider text-[#25D366]">
-                            {projectLabel}
-                          </span>
-                        )}
+                    <div className="mb-5 flex items-start gap-4">
+                      <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-md border border-zinc-700 bg-zinc-900 transition-colors group-hover/service:border-cyan-500/50 group-hover/service:shadow-[0_0_20px_rgba(34,211,238,0.15)]">
+                        <Icon
+                          size={24}
+                          strokeWidth={1.25}
+                          className="text-cyan-400/90"
+                        />
                       </div>
-                      <p
-                        className={`mb-5 max-w-2xl text-sm font-light leading-snug text-[#f5f5f0]/90 sm:text-base ${
-                          isEven ? "md:ml-auto" : ""
-                        }`}
-                      >
-                        {s.hook}
-                      </p>
-                      <p className="mb-8 max-w-2xl text-sm leading-[1.8] text-[#f5f5f0]/80 sm:text-base">
-                        {s.description}
-                      </p>
-                      <ul
-                        className={`mb-6 space-y-3 ${
-                          isEven ? "md:ml-auto md:max-w-2xl" : ""
-                        }`}
-                      >
-                        {s.benefits.map((benefit) => (
-                          <li
-                            key={benefit}
-                            className={`flex items-start gap-3 text-sm text-[#f5f5f0]/85 ${
-                              isEven ? "md:flex-row-reverse" : ""
-                            }`}
-                          >
-                            <Check
-                              size={18}
-                              strokeWidth={2}
-                              className="mt-0.5 shrink-0 text-[#d4af37]/80"
-                            />
-                            <span>{benefit}</span>
-                          </li>
-                        ))}
-                      </ul>
-                      <p className="text-xs font-light tracking-[0.1em] text-[#f5f5f0]/60">
-                        {s.cta}
-                      </p>
-                      {project && (
-                        <p
-                          className={`mt-6 flex items-center gap-2 text-xs tracking-[0.08em] text-[#f5f5f0]/50 ${
-                            isEven ? "md:justify-end" : ""
-                          }`}
-                        >
-                          <span>{sl.usedFor}</span>
-                          <Link
-                              href={project.href}
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              className="inline-flex items-center gap-1 text-[#d4af37]/80 transition-colors hover:text-[#d4af37]"
-                            >
-                            {project.title}
-                            <ExternalLink size={12} strokeWidth={1.5} />
-                          </Link>
+                      <div className="min-w-0 flex-1">
+                        <div className="mb-1 flex flex-wrap items-center gap-2">
+                          <h2 className="font-tech text-lg font-semibold uppercase tracking-[0.08em] text-zinc-100 sm:text-xl">
+                            {s.title}
+                          </h2>
+                          {badge && (
+                            <span className="rounded-sm border border-cyan-500/50 bg-cyan-500/10 px-2 py-0.5 text-[10px] font-light tracking-wider text-cyan-400">
+                              {badge}
+                            </span>
+                          )}
+                          {projectLabel && (
+                            <span className="rounded-sm border border-[#25D366]/40 bg-[#25D366]/10 px-2 py-0.5 text-[10px] font-light tracking-wider text-[#25D366]">
+                              {projectLabel}
+                            </span>
+                          )}
+                        </div>
+                        <p className="text-sm font-light leading-snug text-zinc-200">
+                          {s.hook}
                         </p>
-                      )}
-                      <Link
-                        href={`${localePrefix || "/"}?type=${config.typeParam}#contact`}
-                        className="mt-8 inline-flex items-center gap-2 border border-[#d4af37]/45 bg-[#d4af37]/10 px-6 py-3.5 text-xs font-light tracking-[0.15em] text-[#f5f5f0] transition-all hover:border-[#d4af37]/65 hover:bg-[#d4af37]/18"
-                      >
-                        {s.ctaButton}
-                        <ArrowRight size={14} strokeWidth={1.5} />
-                      </Link>
-                      <p
-                        className={`mt-3 text-[10px] font-light tracking-[0.08em] text-[#f5f5f0]/42 ${
-                          isEven ? "md:text-right" : ""
-                        }`}
-                      >
-                        {sp.cardReassurance}
-                      </p>
+                      </div>
                     </div>
-                  </div>
-                </div>
-              </div>
-            </section>
-          </ScrollReveal>
-        );
-      })}
-    </div>
+
+                    <p className="mb-5 flex-1 text-sm leading-[1.75] text-zinc-400">
+                      {s.description}
+                    </p>
+
+                    <ul className="mb-5 space-y-2 border-t border-zinc-800/80 pt-5">
+                      {s.benefits.slice(0, 4).map((benefit) => (
+                        <li
+                          key={benefit}
+                          className="flex items-start gap-2.5 text-xs text-zinc-300 sm:text-sm"
+                        >
+                          <Check
+                            size={16}
+                            strokeWidth={2}
+                            className="mt-0.5 shrink-0 text-cyan-400/80"
+                          />
+                          <span>{benefit}</span>
+                        </li>
+                      ))}
+                    </ul>
+
+                    <p className="mb-4 text-[10px] font-light tracking-[0.08em] text-zinc-500">
+                      {s.cta}
+                    </p>
+
+                    {project && (
+                      <p className="mb-4 flex items-center gap-2 text-[10px] tracking-[0.06em] text-zinc-500">
+                        <span>{sl.usedFor}</span>
+                        <Link
+                          href={project.href}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center gap-1 text-cyan-400/80 transition-colors hover:text-cyan-400"
+                        >
+                          {project.title}
+                          <ExternalLink size={12} strokeWidth={1.5} />
+                        </Link>
+                      </p>
+                    )}
+
+                    <Link
+                      href={`${localePrefix || "/"}?type=${config.typeParam}#contact`}
+                      className="mt-auto inline-flex w-full items-center justify-center gap-2 border border-cyan-500/40 bg-cyan-500/10 px-5 py-3 text-xs font-light tracking-[0.12em] text-zinc-100 transition-all hover:border-cyan-500/60 hover:bg-cyan-500/15 sm:w-auto"
+                    >
+                      {s.ctaButton}
+                      <ArrowRight size={14} strokeWidth={1.5} />
+                    </Link>
+                    <p className="mt-2 text-center text-[10px] font-light tracking-[0.06em] text-zinc-600 sm:text-left">
+                      {sp.cardReassurance}
+                    </p>
+                  </article>
+                </li>
+              </ScrollReveal>
+            );
+          })}
+        </ul>
+      )}
+    </>
   );
 }
