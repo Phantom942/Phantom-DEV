@@ -60,8 +60,6 @@ export const translations = {
       contentinfoAria:
         "Pied de page PhantomDev : création de sites web, contact WhatsApp, mentions légales",
       tagline: "PhantomDev — Création de sites web premium sur-mesure",
-      privateLine: "Ligne privée",
-      privateLineAria: "Ligne privée — contact WhatsApp PhantomDev",
       mainLine: "Ligne principale",
       mainLineAria: "Ligne principale — contact WhatsApp PhantomDev",
       ctaTitle: "Prêt à lancer votre projet ?",
@@ -592,8 +590,6 @@ export const translations = {
       contentinfoAria:
         "PhantomDev footer: web development, WhatsApp contact, legal notice",
       tagline: "PhantomDev — Premium custom web development",
-      privateLine: "Private line",
-      privateLineAria: "Private line — WhatsApp PhantomDev",
       mainLine: "Main line",
       mainLineAria: "Main line — WhatsApp PhantomDev",
       ctaTitle: "Ready to start your project?",
@@ -1122,8 +1118,6 @@ export const translations = {
       contentinfoAria:
         "PhantomDev footer: web development, WhatsApp contact, legal notice",
       tagline: "PhantomDev — Premium custom web development",
-      privateLine: "Private line",
-      privateLineAria: "Private line — WhatsApp PhantomDev",
       mainLine: "Main line",
       mainLineAria: "Main line — WhatsApp PhantomDev",
       ctaTitle: "Ready to start your project?",

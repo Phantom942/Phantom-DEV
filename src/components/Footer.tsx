@@ -47,16 +47,6 @@ function FooterInner() {
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-2 text-sm font-light tracking-normal text-zinc-300 transition-colors hover:text-zinc-100"
-              aria-label={t.footer.privateLineAria}
-            >
-              <MessageCircle size={16} strokeWidth={1.5} className="shrink-0 text-zinc-300" />
-              {t.footer.privateLine}
-            </a>
-            <a
-              href={whatsappUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center gap-2 text-sm font-light tracking-normal text-zinc-300 transition-colors hover:text-zinc-100"
               aria-label={`${t.footer.mainLineAria} (${getWhatsAppDisplayHuman()})`}
             >
               <MessageCircle size={16} strokeWidth={1.5} className="shrink-0 text-zinc-300" />
