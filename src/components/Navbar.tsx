@@ -65,63 +65,71 @@ function NavbarInner() {
   return (
     <>
       <header
-        className={`fixed left-0 right-0 top-0 z-50 flex w-full max-w-full flex-row items-center justify-between gap-2 overflow-x-clip border-b border-zinc-800/80 bg-zinc-950/95 px-4 py-3 backdrop-blur-md transition-[box-shadow,background,border-color] duration-300 md:px-16 md:py-4 ${scrolled ? "header-scrolled" : ""}`}
+        className={`navbar-stealth fixed left-0 right-0 top-0 z-50 w-full max-w-full overflow-x-clip px-4 py-3 md:px-16 md:py-4 ${scrolled ? "navbar-scrolled" : ""}`}
         style={{
           paddingTop: "max(0.75rem, env(safe-area-inset-top))",
         }}
         role="banner"
         aria-label={t.nav.bannerAria}
       >
-        <Link
-          href={localePrefix || "/"}
-          className="flex min-w-0 shrink-0 items-center gap-2.5 overflow-hidden text-white transition-opacity hover:opacity-90"
-          aria-label={t.nav.homeLogoAria}
-          onClick={closeMobileMenu}
-        >
-          <PhantomLogo priority />
-          <span className="font-tech truncate text-xs font-semibold uppercase tracking-[0.2em] text-white md:text-sm md:tracking-[0.24em]">
-            PhantomDev
-          </span>
-        </Link>
+        <div className="navbar-aurora" aria-hidden>
+          <span className="navbar-aurora__sheet navbar-aurora__sheet--a" />
+          <span className="navbar-aurora__sheet navbar-aurora__sheet--b" />
+          <span className="navbar-aurora__sheet navbar-aurora__sheet--c" />
+        </div>
 
-        <nav
-          className="hidden shrink-0 items-center gap-6 md:flex lg:gap-10"
-          role="navigation"
-          aria-label={t.nav.mainNavAria}
-        >
-          <LanguageSelector variant="dropdown" />
-          {navLinksWithLocale.map((link) => (
-            <Link
-              key={link.href}
-              href={link.href}
-              className="nav-link-stealth whitespace-nowrap focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-500/40 focus-visible:ring-offset-2 focus-visible:ring-offset-zinc-950"
-              data-active={isActive(link.match)}
-              aria-label={navLinkAriaLabel(link.label)}
-              aria-current={isActive(link.match) ? "page" : undefined}
-            >
-              {link.label}
-            </Link>
-          ))}
-          <a
-            href={whatsappUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="btn-stealth-primary btn-stealth-primary-compact animate-none hover:shadow-[0_0_20px_rgba(16,185,129,0.35)]"
-            aria-label={t.nav.whatsappQuoteAria}
+        <div className="navbar-stealth-inner flex w-full flex-row items-center justify-between gap-2">
+          <Link
+            href={localePrefix || "/"}
+            className="flex min-w-0 shrink-0 items-center gap-2.5 overflow-hidden text-white transition-opacity hover:opacity-90"
+            aria-label={t.nav.homeLogoAria}
+            onClick={closeMobileMenu}
           >
-            {t.nav.freeQuote}
-          </a>
-        </nav>
+            <PhantomLogo priority />
+            <span className="font-tech truncate text-xs font-semibold uppercase tracking-[0.2em] text-white md:text-sm md:tracking-[0.24em]">
+              PhantomDev
+            </span>
+          </Link>
 
-        <button
-          type="button"
-          onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-          className="flex h-10 w-10 shrink-0 items-center justify-center rounded-md text-zinc-300 transition-colors hover:bg-zinc-800/50 md:hidden"
-          aria-label={mobileMenuOpen ? t.nav.menuCloseAria : t.nav.menuOpenAria}
-          aria-expanded={mobileMenuOpen}
-        >
-          {mobileMenuOpen ? <X size={22} /> : <Menu size={22} />}
-        </button>
+          <nav
+            className="hidden shrink-0 items-center gap-6 md:flex lg:gap-10"
+            role="navigation"
+            aria-label={t.nav.mainNavAria}
+          >
+            <LanguageSelector variant="dropdown" />
+            {navLinksWithLocale.map((link) => (
+              <Link
+                key={link.href}
+                href={link.href}
+                className="nav-link-stealth whitespace-nowrap focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-500/40 focus-visible:ring-offset-2 focus-visible:ring-offset-zinc-950"
+                data-active={isActive(link.match)}
+                aria-label={navLinkAriaLabel(link.label)}
+                aria-current={isActive(link.match) ? "page" : undefined}
+              >
+                {link.label}
+              </Link>
+            ))}
+            <a
+              href={whatsappUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-stealth-primary btn-stealth-primary-compact animate-none hover:shadow-[0_0_20px_rgba(34,211,238,0.35)]"
+              aria-label={t.nav.whatsappQuoteAria}
+            >
+              {t.nav.freeQuote}
+            </a>
+          </nav>
+
+          <button
+            type="button"
+            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            className="flex h-10 w-10 shrink-0 items-center justify-center rounded-md text-zinc-300 transition-colors hover:bg-zinc-800/40 md:hidden"
+            aria-label={mobileMenuOpen ? t.nav.menuCloseAria : t.nav.menuOpenAria}
+            aria-expanded={mobileMenuOpen}
+          >
+            {mobileMenuOpen ? <X size={22} /> : <Menu size={22} />}
+          </button>
+        </div>
       </header>
 
       <AnimatePresence>
@@ -132,7 +140,7 @@ function NavbarInner() {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
-              className="fixed inset-0 z-40 bg-black/60 backdrop-blur-sm md:hidden"
+              className="fixed inset-0 z-40 bg-zinc-950/50 backdrop-blur-sm md:hidden"
               aria-label={t.nav.menuCloseAria}
               onClick={closeMobileMenu}
             />
@@ -141,7 +149,7 @@ function NavbarInner() {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -8 }}
               transition={{ duration: 0.22, ease: [0.22, 1, 0.36, 1] }}
-              className="fixed inset-x-0 z-50 overflow-hidden border-b border-zinc-800 bg-zinc-950 shadow-2xl md:hidden"
+              className="navbar-mobile-panel fixed inset-x-0 z-50 overflow-hidden border-b shadow-2xl md:hidden"
               style={{
                 top: "calc(3.25rem + env(safe-area-inset-top))",
               }}

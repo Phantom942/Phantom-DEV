@@ -72,10 +72,10 @@ const ctaVariants = {
 };
 
 const badgeIcons = [
-  { Icon: Zap, className: "text-emerald-400 drop-shadow-[0_0_8px_rgba(52,211,153,0.55)]" },
+  { Icon: Zap, className: "text-cyan-400 drop-shadow-[0_0_8px_rgba(34,211,238,0.55)]" },
   { Icon: Shield, className: "text-cyan-400 drop-shadow-[0_0_8px_rgba(34,211,238,0.55)]" },
-  { Icon: Truck, className: "text-amber-400/90 drop-shadow-[0_0_8px_rgba(251,191,36,0.4)]" },
-  { Icon: Handshake, className: "text-green-400 drop-shadow-[0_0_8px_rgba(74,222,128,0.5)]" },
+  { Icon: Truck, className: "text-cyan-300/90 drop-shadow-[0_0_8px_rgba(34,211,238,0.4)]" },
+  { Icon: Handshake, className: "text-cyan-400 drop-shadow-[0_0_8px_rgba(34,211,238,0.5)]" },
 ] as const;
 
 export function HeroSection() {
@@ -157,7 +157,7 @@ export function HeroSection() {
             href={whatsappUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="btn-stealth-primary animate-cyber-emerald-pulse w-full sm:w-auto"
+            className="btn-stealth-primary animate-cyber-cyan-pulse w-full sm:w-auto"
             aria-label={t.hero.requestQuote}
           >
             {t.hero.requestQuote}

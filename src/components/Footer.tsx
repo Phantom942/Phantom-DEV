@@ -29,7 +29,7 @@ function FooterInner() {
           href={whatsappUrl}
           target="_blank"
           rel="noopener noreferrer"
-          className="btn-stealth-primary animate-cyber-emerald-pulse"
+          className="btn-stealth-primary animate-cyber-cyan-pulse"
           aria-label={t.footer.ctaButton}
         >
           <MessageCircle size={18} strokeWidth={1.5} />

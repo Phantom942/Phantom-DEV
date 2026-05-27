@@ -185,7 +185,7 @@ export function GrapheneOSPageContent({ locale }: { locale: Locale }) {
             href={getWhatsAppDevisUrl(g.whatsappMessage)}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center justify-center gap-2 border border-[#25D366]/60 bg-[#25D366]/10 px-8 py-4 text-sm font-light tracking-[0.12em] text-zinc-100 transition-all hover:bg-[#25D366]/20"
+            className="btn-stealth-whatsapp"
           >
             <MessageCircle size={18} strokeWidth={1.5} />
             {g.ctaWhatsApp}

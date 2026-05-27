@@ -7,20 +7,24 @@ interface WhatsAppButtonProps {
   children: React.ReactNode;
   className?: string;
   message?: string;
+  href?: string;
 }
 
 export function WhatsAppButton({
   children,
   className,
   message,
+  href,
 }: WhatsAppButtonProps) {
+  const link = href ?? getWhatsAppDevisUrl(message);
+
   return (
     <a
-      href={getWhatsAppDevisUrl(message)}
+      href={link}
       target="_blank"
       rel="noopener noreferrer"
       className={className}
-      aria-label="Contacter PhantomDev sur WhatsApp pour un devis projet web, développement React ou Node.js"
+      aria-label="Contacter PhantomDev sur WhatsApp pour un devis projet web"
     >
       {children}
     </a>
@@ -35,13 +39,7 @@ export function WhatsAppCtaButton({
   className?: string;
 }) {
   return (
-    <WhatsAppButton
-      message={message}
-      className={
-        className ||
-        "inline-flex items-center gap-2 border border-[#25D366]/60 bg-[#25D366]/10 px-8 py-4 text-sm font-light tracking-[0.15em] text-zinc-100 transition-all hover:bg-[#25D366]/20 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#25D366]/50 focus-visible:ring-offset-2 focus-visible:ring-offset-zinc-950"
-      }
-    >
+    <WhatsAppButton message={message} className={className ?? "btn-stealth-whatsapp"}>
       <MessageCircle size={20} strokeWidth={1.5} />
       Contacter sur WhatsApp
     </WhatsAppButton>

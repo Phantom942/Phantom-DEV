@@ -5,6 +5,9 @@ import { MessageCircle } from "lucide-react";
 import { getWhatsAppDevisUrl } from "@/data/contact";
 import { useWhatsAppDevisUrl } from "@/hooks/useWhatsAppDevisUrl";
 
+const floatingBtnClass =
+  "fixed z-50 flex h-14 w-14 items-center justify-center rounded-full border border-cyan-500/50 bg-cyan-500/15 shadow-lg shadow-black/30 transition-all hover:scale-110 hover:border-cyan-400/70 hover:bg-cyan-500/25 hover:shadow-[0_0_24px_rgba(34,211,238,0.35)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-400 focus-visible:ring-offset-2 focus-visible:ring-offset-zinc-950 md:h-16 md:w-16";
+
 function FloatingWhatsAppInner() {
   const href = useWhatsAppDevisUrl();
   const label = "Demander un devis sur WhatsApp";
@@ -14,14 +17,14 @@ function FloatingWhatsAppInner() {
       href={href}
       target="_blank"
       rel="noopener noreferrer"
-      className="fixed z-50 flex h-14 w-14 items-center justify-center rounded-full border border-emerald-500/50 bg-emerald-500/20 shadow-lg shadow-black/30 transition-all hover:scale-110 hover:bg-emerald-500/30 hover:shadow-[0_0_24px_rgba(16,185,129,0.35)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-400 focus-visible:ring-offset-2 focus-visible:ring-offset-zinc-950 md:h-16 md:w-16"
+      className={floatingBtnClass}
       style={{
         bottom: "max(1.5rem, env(safe-area-inset-bottom))",
         right: "max(1.5rem, env(safe-area-inset-right))",
       }}
       aria-label={label}
     >
-      <MessageCircle size={24} className="text-emerald-400" strokeWidth={1.5} />
+      <MessageCircle size={24} className="text-zinc-100" strokeWidth={1.5} />
     </a>
   );
 }
@@ -32,14 +35,14 @@ function FloatingWhatsAppFallback() {
       href={getWhatsAppDevisUrl()}
       target="_blank"
       rel="noopener noreferrer"
-      className="fixed z-50 flex h-14 w-14 items-center justify-center rounded-full border border-emerald-500/50 bg-emerald-500/20 shadow-lg shadow-black/30 md:h-16 md:w-16"
+      className={floatingBtnClass}
       style={{
         bottom: "max(1.5rem, env(safe-area-inset-bottom))",
         right: "max(1.5rem, env(safe-area-inset-right))",
       }}
       aria-label="WhatsApp"
     >
-      <MessageCircle size={24} className="text-emerald-400" strokeWidth={1.5} />
+      <MessageCircle size={24} className="text-zinc-100" strokeWidth={1.5} />
     </a>
   );
 }

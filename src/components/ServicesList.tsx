@@ -109,7 +109,7 @@ export function ServicesList() {
                             </span>
                           )}
                           {projectLabel && (
-                            <span className="rounded-sm border border-[#25D366]/40 bg-[#25D366]/10 px-2 py-0.5 text-[10px] font-light tracking-wider text-[#25D366]">
+                            <span className="rounded-sm border border-cyan-500/40 bg-cyan-500/10 px-2 py-0.5 text-[10px] font-light tracking-wider text-cyan-400">
                               {projectLabel}
                             </span>
                           )}

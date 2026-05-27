@@ -150,7 +150,7 @@ export function SelectedWorks({
                         {CASE_KEYS.map((key) => (
                           <li key={key} className="flex gap-2.5 text-[11px] leading-snug sm:text-xs sm:leading-relaxed">
                             <span
-                              className="shrink-0 font-mono text-[10px] font-medium uppercase tracking-[0.14em] text-emerald-400/90 sm:text-[11px]"
+                              className="shrink-0 font-mono text-[10px] font-medium uppercase tracking-[0.14em] text-cyan-400/90 sm:text-[11px]"
                               aria-hidden
                             >
                               {caseLabels[key]}

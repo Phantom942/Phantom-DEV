@@ -47,7 +47,7 @@ export function ExpertiseCards() {
                   className="pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-500 group-hover:opacity-100"
                   style={{
                     background:
-                      "radial-gradient(circle at 50% 30%, rgba(34, 211, 238, 0.06) 0%, rgba(16, 185, 129, 0.03) 45%, transparent 70%)",
+                      "radial-gradient(circle at 50% 30%, rgba(34, 211, 238, 0.08) 0%, rgba(34, 211, 238, 0.03) 45%, transparent 70%)",
                   }}
                   aria-hidden
                 />
@@ -63,7 +63,7 @@ export function ExpertiseCards() {
                   <p className="mb-6 min-h-0 flex-1 text-sm leading-relaxed tracking-normal text-zinc-400 sm:text-base">
                     {desc}
                   </p>
-                  <span className="font-tech mt-auto inline-flex shrink-0 items-center gap-1.5 text-xs font-medium tracking-[0.1em] text-emerald-400/90 transition-all group-hover:gap-2 group-hover:text-emerald-300">
+                  <span className="font-tech mt-auto inline-flex shrink-0 items-center gap-1.5 text-xs font-medium tracking-[0.1em] text-cyan-400/90 transition-all group-hover:gap-2 group-hover:text-cyan-300">
                     {t.expertiseCards.learnMore}
                     <ArrowRight size={14} strokeWidth={1.5} />
                   </span>
