@@ -247,22 +247,6 @@ body {
 }
 
 @media (max-width: 767px) {
-  .static-star:nth-child(n + 46) {
-    display: none;
-  }
-
-  .static-star,
-  .static-star--glow {
-    animation: none !important;
-    opacity: var(--star-opacity, 0.75) !important;
-    transform: translate(-50%, -50%) !important;
-    box-shadow: 0 0 1px rgba(255, 255, 255, 0.55) !important;
-  }
-
-  .codepen-meteors {
-    display: none;
-  }
-
   .stealth-ambient-noise,
   .stealth-ambient-grid {
     display: none;
@@ -300,21 +284,6 @@ body {
 
   .stealth-card {
     transition: none;
-  }
-}
-
-@media (pointer: coarse) {
-  .static-star:nth-child(n + 46) {
-    display: none;
-  }
-
-  .static-star,
-  .static-star--glow {
-    animation: none !important;
-  }
-
-  .codepen-meteors {
-    display: none;
   }
 }
 
@@ -517,12 +486,6 @@ body {
   left: auto;
   animation-delay: 0.75s;
   animation-duration: 2.25s;
-}
-
-@media (max-width: 767px) {
-  .codepen-meteors span:nth-child(n + 4) {
-    display: none;
-  }
 }
 
 @media (prefers-reduced-motion: reduce) {
