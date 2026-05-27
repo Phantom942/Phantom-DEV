@@ -5,7 +5,7 @@ export const PHANTOMDEV_SITE_URL = "https://phantomdev.fr";
 
 const WEBSITE_ID = `${PHANTOMDEV_SITE_URL}/#website`;
 
-/** Numéro E.164 pour schema.org (ex. +33746325035). */
+/** Numéro E.164 pour schema.org (ex. +33669040754). */
 function getSchemaTelephone(): string {
   const d = WHATSAPP_NUMBER;
   return d.startsWith("+") ? d : `+${d}`;
