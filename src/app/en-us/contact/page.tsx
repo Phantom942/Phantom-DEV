@@ -72,14 +72,14 @@ export default function EnUSContactPage() {
               <p className="mb-4 text-sm leading-[1.8] tracking-[0.02em] text-zinc-300 sm:text-base md:text-lg">
                 Got a project in mind? Contact me on WhatsApp for a free quote within 24h, no commitment.
               </p>
-              <p className="mb-10 text-xs font-light tracking-[0.08em] text-zinc-500">
+              <p className="mb-10 text-xs font-light tracking-[0.08em] text-zinc-400">
                 Performance guarantee: Lighthouse 90+ on all delivered sites.
               </p>
 
               <div className="flex flex-col items-center">
                 <WhatsAppCtaButton />
               </div>
-              <p className="mt-8 text-center text-xs font-light tracking-[0.08em] text-zinc-600">
+              <p className="mt-8 text-center text-xs font-light tracking-[0.08em] text-zinc-400">
                 Response within 24h · No commitment
               </p>
             </div>

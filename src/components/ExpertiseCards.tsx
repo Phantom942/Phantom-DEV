@@ -53,7 +53,7 @@ export function ExpertiseCards() {
                 />
                 <div className="relative flex min-h-0 flex-1 flex-col">
                   <Icon
-                    className="mb-6 shrink-0 text-zinc-500 transition-colors duration-300 group-hover:text-cyan-400/90"
+                    className="mb-6 shrink-0 text-zinc-400 transition-colors duration-300 group-hover:text-cyan-400/90"
                     size={28}
                     strokeWidth={1.25}
                   />

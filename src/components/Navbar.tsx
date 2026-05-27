@@ -1,17 +1,18 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { Suspense, useState, useEffect } from "react";
 import { usePathname } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
 import { Menu, X } from "lucide-react";
-import { getWhatsAppDevisUrl } from "@/data/contact";
+import { useWhatsAppDevisUrl } from "@/hooks/useWhatsAppDevisUrl";
 import { LanguageSelector } from "./LanguageSelector";
 import { PhantomLogo } from "./PhantomLogo";
 import { useTranslations } from "@/hooks/useTranslations";
 
-export function Navbar() {
+function NavbarInner() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const whatsappUrl = useWhatsAppDevisUrl();
   const [scrolled, setScrolled] = useState(false);
   const pathname = usePathname();
   const { t } = useTranslations();
@@ -102,7 +103,7 @@ export function Navbar() {
             </Link>
           ))}
           <a
-            href={getWhatsAppDevisUrl()}
+            href={whatsappUrl}
             target="_blank"
             rel="noopener noreferrer"
             className="btn-stealth-primary btn-stealth-primary-compact animate-none hover:shadow-[0_0_20px_rgba(16,185,129,0.35)]"
@@ -165,7 +166,7 @@ export function Navbar() {
                   </Link>
                 ))}
                 <a
-                  href={getWhatsAppDevisUrl()}
+                  href={whatsappUrl}
                   target="_blank"
                   rel="noopener noreferrer"
                   onClick={closeMobileMenu}
@@ -180,5 +181,13 @@ export function Navbar() {
         )}
       </AnimatePresence>
     </>
+  );
+}
+
+export function Navbar() {
+  return (
+    <Suspense fallback={null}>
+      <NavbarInner />
+    </Suspense>
   );
 }

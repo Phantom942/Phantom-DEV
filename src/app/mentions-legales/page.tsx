@@ -143,7 +143,7 @@ export default function MentionsLegalesPage() {
               </p>
             </section>
 
-            <p className="pt-4 text-xs text-zinc-500">
+            <p className="pt-4 text-xs text-zinc-400">
               Dernière mise à jour : février 2026
             </p>
           </div>

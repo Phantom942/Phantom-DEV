@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Navbar } from "@/components/Navbar";
+import { Suspense } from "react";
 import { HeroSection } from "@/components/HeroSection";
+import { TrustProofBar } from "@/components/TrustProofBar";
 import { CursorAndGlow } from "@/components/CursorAndGlow";
 import { Sections } from "@/components/Sections";
 import { Footer } from "@/components/Footer";
@@ -52,7 +54,10 @@ export default function Home() {
         className="w-full overflow-x-clip"
         aria-label="Contenu principal : PhantomDev, développement web sur-mesure, React, Node.js, SaaS, sites vitrines et e-commerce"
       >
-        <HeroSection />
+        <Suspense fallback={null}>
+          <HeroSection />
+        </Suspense>
+        <TrustProofBar />
         <Sections />
       </main>
       <Footer />

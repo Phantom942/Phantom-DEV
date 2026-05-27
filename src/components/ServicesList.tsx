@@ -2,7 +2,6 @@
 
 import { useMemo, useState } from "react";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
 import { ScrollReveal } from "./ScrollReveal";
 import { ServiceFilters } from "./ServiceFilters";
 import { projects } from "@/data/projects";
@@ -12,11 +11,34 @@ import {
   type ServiceFilterValue,
   type ServiceId,
 } from "@/data/services";
+import { useWhatsAppDevisUrl } from "@/hooks/useWhatsAppDevisUrl";
 import { useTranslations } from "@/hooks/useTranslations";
 import { Check, ArrowRight, ExternalLink } from "lucide-react";
 
 function getProjectByRef(ref: string) {
   return projects.find((p) => p.id === ref);
+}
+
+function ServiceCtaLink({
+  typeParam,
+  className,
+  children,
+}: {
+  typeParam: string;
+  className: string;
+  children: React.ReactNode;
+}) {
+  const whatsappUrl = useWhatsAppDevisUrl(typeParam);
+  return (
+    <a
+      href={whatsappUrl}
+      target="_blank"
+      rel="noopener noreferrer"
+      className={className}
+    >
+      {children}
+    </a>
+  );
 }
 
 type ServiceCopy = {
@@ -31,17 +53,10 @@ type ServiceCopy = {
 };
 
 export function ServicesList() {
-  const pathname = usePathname();
   const { t } = useTranslations();
   const sl = t.servicesList;
   const sp = t.servicesPage;
   const [filter, setFilter] = useState<ServiceFilterValue>("all");
-  const localePrefix = pathname.startsWith("/en-gb")
-    ? "/en-gb"
-    : pathname.startsWith("/en-us")
-      ? "/en-us"
-      : "";
-
   const filtered = useMemo(
     () => filterServices(filter, serviceConfigs),
     [filter]
@@ -52,7 +67,7 @@ export function ServicesList() {
       <ServiceFilters value={filter} onChange={setFilter} />
 
       {filtered.length === 0 ? (
-        <p className="py-12 text-center text-sm font-light tracking-[0.06em] text-zinc-500">
+        <p className="py-12 text-center text-sm font-light tracking-[0.06em] text-zinc-400">
           {sp.filters.empty}
         </p>
       ) : (
@@ -125,12 +140,12 @@ export function ServicesList() {
                       ))}
                     </ul>
 
-                    <p className="mb-4 text-[10px] font-light tracking-[0.08em] text-zinc-500">
+                    <p className="mb-4 text-[10px] font-light tracking-[0.08em] text-zinc-400">
                       {s.cta}
                     </p>
 
                     {project && (
-                      <p className="mb-4 flex items-center gap-2 text-[10px] tracking-[0.06em] text-zinc-500">
+                      <p className="mb-4 flex items-center gap-2 text-[10px] tracking-[0.06em] text-zinc-400">
                         <span>{sl.usedFor}</span>
                         <Link
                           href={project.href}
@@ -144,14 +159,14 @@ export function ServicesList() {
                       </p>
                     )}
 
-                    <Link
-                      href={`${localePrefix || "/"}?type=${config.typeParam}#contact`}
+                    <ServiceCtaLink
+                      typeParam={config.typeParam}
                       className="mt-auto inline-flex w-full items-center justify-center gap-2 border border-cyan-500/40 bg-cyan-500/10 px-5 py-3 text-xs font-light tracking-[0.12em] text-zinc-100 transition-all hover:border-cyan-500/60 hover:bg-cyan-500/15 sm:w-auto"
                     >
                       {s.ctaButton}
                       <ArrowRight size={14} strokeWidth={1.5} />
-                    </Link>
-                    <p className="mt-2 text-center text-[10px] font-light tracking-[0.06em] text-zinc-600 sm:text-left">
+                    </ServiceCtaLink>
+                    <p className="mt-2 text-center text-[10px] font-light tracking-[0.06em] text-zinc-400 sm:text-left">
                       {sp.cardReassurance}
                     </p>
                   </article>

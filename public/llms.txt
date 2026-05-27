@@ -1,0 +1,38 @@
+# PhantomDev
+
+> Création de sites web et applications sur-mesure (Next.js, React). France, Europe, international. Devis gratuit sous 24h via WhatsApp.
+
+## Services principaux
+
+- Sites vitrines et landing pages premium (Lighthouse 90+)
+- E-commerce et applications sur-mesure (SaaS, API)
+- SEO, performance web et audit Core Web Vitals
+- Intégration IA (chatbots, RAG, automatisation)
+- Maintenance et support technique
+- Installation GrapheneOS sur Google Pixel (page dédiée)
+
+## Contact
+
+- Site : https://phantomdev.fr
+- Contact : https://phantomdev.fr/contact
+- Services : https://phantomdev.fr/services
+- Réalisations : https://phantomdev.fr/realisations
+- WhatsApp : ligne principale +33 7 46 32 50 35 (devis sous 24h, sans engagement)
+
+## Langues
+
+- Français (par défaut) : https://phantomdev.fr
+- English (UK) : https://phantomdev.fr/en-gb
+- English (US) : https://phantomdev.fr/en-us
+
+## Stack & garanties
+
+- Next.js, React, TypeScript, Tailwind CSS, déploiement Vercel / statique
+- Score Lighthouse 90+ garanti sur les sites livrés
+- Site vitrine simple : mise en ligne rapide possible (48h selon périmètre)
+- Basé en Île-de-France (Ivry-sur-Seine), projets remote internationaux
+
+## Pages utiles pour citation
+
+- FAQ : section #faq sur la page d'accueil
+- Mentions légales : https://phantomdev.fr/mentions-legales

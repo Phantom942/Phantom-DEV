@@ -1,10 +1,12 @@
 import type { Metadata } from "next";
+import { Suspense } from "react";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { CursorAndGlow } from "@/components/CursorAndGlow";
 import { ServicesPageContent } from "@/components/ServicesPageContent";
 
 import { getHreflangAlternates } from "@/lib/hreflang";
+import { buildServicesItemListSchema } from "@/lib/services-jsonld";
 import { defaultOpenGraphImages, twitterSummaryLarge } from "@/lib/social-metadata";
 
 const title = "Services — PhantomDev";
@@ -31,12 +33,20 @@ export const metadata: Metadata = {
 };
 
 export default function EnUSServicesPage() {
+  const servicesSchema = buildServicesItemListSchema("en-US");
+
   return (
     <div className="relative min-h-screen w-full bg-transparent">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(servicesSchema) }}
+      />
       <CursorAndGlow />
       <Navbar />
       <main id="main" role="main" className="w-full pt-24 pb-16 sm:pt-32 sm:pb-24">
-        <ServicesPageContent />
+        <Suspense fallback={null}>
+          <ServicesPageContent />
+        </Suspense>
       </main>
       <Footer />
     </div>

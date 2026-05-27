@@ -11,6 +11,7 @@ import { LangAttribute } from "@/components/LangAttribute";
 import { FloatingWhatsAppButton } from "@/components/FloatingWhatsAppButton";
 import { SkipToContent } from "@/components/SkipToContent";
 import { StealthAmbientBackground } from "@/components/StealthAmbientBackground";
+import { Analytics } from "@/components/Analytics";
 import JsonLd from "@/components/JsonLd";
 import { defaultOpenGraphImage } from "@/lib/social-metadata";
 
@@ -135,6 +136,7 @@ export default function RootLayout({
       className={`${geist.variable} ${geistMono.variable} ${cormorant.variable} ${sourceSans.variable} ${spaceGrotesk.variable} overflow-x-clip`}
     >
       <body className="relative overflow-x-clip bg-zinc-950 font-sans antialiased">
+        <Analytics />
         <StealthAmbientBackground />
         <SkipToContent />
         <LangAttribute />

@@ -48,7 +48,9 @@ export const translations = {
       items: [
         { q: "Qu'est-ce que PhantomDev ?", a: "PhantomDev est une agence de création de sites web sur-mesure basée en France. Spécialisée en Next.js, React et Node.js, elle conçoit des sites vitrines, e-commerce et applications SaaS avec des interfaces premium, des performances optimisées (Lighthouse 90+) et une livraison rapide." },
         { q: "Quels sont les délais de livraison ?", a: "Un site vitrine simple peut être livré en 48h. Pour les projets plus complexes (e-commerce, applications sur-mesure), les délais sont adaptés selon la portée. Un planning est établi dès la validation du devis." },
-        { q: "Quels services propose PhantomDev ?", a: "PhantomDev propose la conception web premium (interfaces sur-mesure, UX conversion), les applications sur-mesure (e-commerce, SaaS, plateformes métier) et l'intégration IA stratégique (chatbots, automatisation, recommandations)." },
+        { q: "Quels services propose PhantomDev ?", a: "PhantomDev propose plus de 14 offres : sites vitrines et landing pages, e-commerce, applications et SaaS, SEO et performance, intégration IA et automatisation, APIs, refonte Next.js, conseil technique et maintenance. Le détail est sur phantomdev.fr/services." },
+        { q: "Combien coûte un site web chez PhantomDev ?", a: "Chaque projet fait l'objet d'un devis sur-mesure sous 24h, sans engagement. Un site vitrine simple peut être livré rapidement (48h selon périmètre) ; e-commerce, SaaS et intégrations IA sont chiffrés selon la complexité. Contact via WhatsApp sur phantomdev.fr/contact." },
+        { q: "Quelle stack technique utilise PhantomDev ?", a: "PhantomDev développe principalement avec Next.js, React, TypeScript et Tailwind CSS, déployés sur Vercel ou en export statique. Score Lighthouse 90+ garanti sur les sites livrés." },
         { q: "Comment contacter PhantomDev pour un devis ?", a: "Contactez PhantomDev via WhatsApp pour un devis gratuit sous 24h, sans engagement. Le site phantomdev.fr propose un accès direct à la ligne WhatsApp depuis la page d’accueil et la page Contact." },
         { q: "PhantomDev travaille-t-elle à l'international ?", a: "Oui. PhantomDev est basée en France mais intervient à l'international. Les contrats de maintenance sont garantis." },
         { q: "Quelle garantie performance offre PhantomDev ?", a: "PhantomDev garantit un score Lighthouse 90+ sur tous les sites livrés, assurant des performances optimisées et une excellente expérience utilisateur." },
@@ -67,6 +69,11 @@ export const translations = {
       based: "France, Europe, international — Site vitrine livrable en 48h — Contrats de maintenance garantis",
       designBy: "Design by PhantomDev",
       rights: "Tous droits réservés.",
+    },
+    trustProof: {
+      aria: "Performances Lighthouse mesurées sur des projets livrés",
+      label: "Scores mesurés sur projets réels",
+      hint: "Garantie Lighthouse 90+ sur tous les sites livrés — audit avant / après sur demande.",
     },
     skipToContent: "Aller au contenu principal",
     nav: {
@@ -573,7 +580,9 @@ export const translations = {
       items: [
         { q: "What is PhantomDev?", a: "PhantomDev is a custom web development agency based in France. Specialised in Next.js, React and Node.js, it creates websites, e-commerce and SaaS applications with premium interfaces, optimised performance (Lighthouse 90+) and fast delivery." },
         { q: "What are the delivery times?", a: "A simple landing page can be delivered in 48 hours. For more complex projects (e-commerce, custom applications), timelines are adapted to the scope. A schedule is agreed once the quote is approved." },
-        { q: "What services does PhantomDev offer?", a: "PhantomDev offers premium web design (bespoke interfaces, conversion UX), custom applications (e-commerce, SaaS, business platforms) and strategic AI integration (chatbots, automation, recommendations)." },
+        { q: "What services does PhantomDev offer?", a: "PhantomDev offers 14+ services: showcase and landing pages, e-commerce, custom apps and SaaS, SEO and performance, AI integration and automation, APIs, Next.js redesigns, technical consulting and maintenance. See phantomdev.fr/services." },
+        { q: "How much does a website cost with PhantomDev?", a: "Every project gets a bespoke quote within 24h, no commitment. Simple showcase sites can go live quickly (48h depending on scope); e-commerce, SaaS and AI work are priced by complexity. Contact via WhatsApp at phantomdev.fr/contact." },
+        { q: "What tech stack does PhantomDev use?", a: "PhantomDev mainly builds with Next.js, React, TypeScript and Tailwind CSS, deployed on Vercel or static hosting. Lighthouse 90+ is guaranteed on delivered sites." },
         { q: "How to contact PhantomDev for a quote?", a: "Contact PhantomDev via WhatsApp for a free quote within 24h, no commitment. The phantomdev.fr site offers direct access to WhatsApp from the homepage and Contact page." },
         { q: "Does PhantomDev work internationally?", a: "Yes. PhantomDev is based in France but operates internationally. Maintenance contracts are guaranteed." },
         { q: "What performance guarantee does PhantomDev offer?", a: "PhantomDev guarantees a Lighthouse score of 90+ on all delivered sites, ensuring optimised performance and excellent user experience." },
@@ -592,6 +601,11 @@ export const translations = {
       based: "France, Europe, worldwide — Landing page deliverable in 48h — Guaranteed maintenance contracts",
       designBy: "Design by PhantomDev",
       rights: "All rights reserved.",
+    },
+    trustProof: {
+      aria: "Lighthouse scores measured on delivered projects",
+      label: "Measured on live projects",
+      hint: "Lighthouse 90+ guaranteed on all delivered sites — before/after audit on request.",
     },
     skipToContent: "Skip to main content",
     nav: {
@@ -1096,7 +1110,9 @@ export const translations = {
       items: [
         { q: "What is PhantomDev?", a: "PhantomDev is a custom web development agency based in France. Specialised in Next.js, React and Node.js, it creates websites, e-commerce and SaaS applications with premium interfaces, optimised performance (Lighthouse 90+) and fast delivery." },
         { q: "What are the delivery times?", a: "A simple landing page can be delivered in 48 hours. For more complex projects (e-commerce, custom applications), timelines are adapted to the scope. A schedule is agreed once the quote is approved." },
-        { q: "What services does PhantomDev offer?", a: "PhantomDev offers premium web design (bespoke interfaces, conversion UX), custom applications (e-commerce, SaaS, business platforms) and strategic AI integration (chatbots, automation, recommendations)." },
+        { q: "What services does PhantomDev offer?", a: "PhantomDev offers 14+ services: showcase and landing pages, e-commerce, custom apps and SaaS, SEO and performance, AI integration and automation, APIs, Next.js redesigns, technical consulting and maintenance. See phantomdev.fr/services." },
+        { q: "How much does a website cost with PhantomDev?", a: "Every project gets a bespoke quote within 24h, no commitment. Simple showcase sites can go live quickly (48h depending on scope); e-commerce, SaaS and AI work are priced by complexity. Contact via WhatsApp at phantomdev.fr/contact." },
+        { q: "What tech stack does PhantomDev use?", a: "PhantomDev mainly builds with Next.js, React, TypeScript and Tailwind CSS, deployed on Vercel or static hosting. Lighthouse 90+ is guaranteed on delivered sites." },
         { q: "How to contact PhantomDev for a quote?", a: "Contact PhantomDev via WhatsApp for a free quote within 24h, no commitment. The phantomdev.fr site offers direct access to WhatsApp from the homepage and Contact page." },
         { q: "Does PhantomDev work internationally?", a: "Yes. PhantomDev is based in France but operates internationally. Maintenance contracts are guaranteed." },
         { q: "What performance guarantee does PhantomDev offer?", a: "PhantomDev guarantees a Lighthouse score of 90+ on all delivered sites, ensuring optimised performance and excellent user experience." },
@@ -1115,6 +1131,11 @@ export const translations = {
       based: "France, Europe, worldwide — Landing page deliverable in 48h — Guaranteed maintenance contracts",
       designBy: "Design by PhantomDev",
       rights: "All rights reserved.",
+    },
+    trustProof: {
+      aria: "Lighthouse scores measured on delivered projects",
+      label: "Measured on live projects",
+      hint: "Lighthouse 90+ guaranteed on all delivered sites — before/after audit on request.",
     },
     skipToContent: "Skip to main content",
     nav: {

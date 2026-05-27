@@ -1,10 +1,11 @@
 "use client";
 
+import { Suspense } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { ArrowLeft, ArrowRight, MessageCircle } from "lucide-react";
 import { ServicesList } from "@/components/ServicesList";
-import { getWhatsAppDevisUrl } from "@/data/contact";
+import { useWhatsAppDevisUrl } from "@/hooks/useWhatsAppDevisUrl";
 import { useTranslations } from "@/hooks/useTranslations";
 
 export function ServicesPageContent() {
@@ -13,6 +14,7 @@ export function ServicesPageContent() {
   const sp = t.servicesPage;
   const prefix =
     pathname.startsWith("/en-gb") ? "/en-gb" : pathname.startsWith("/en-us") ? "/en-us" : "";
+  const whatsappUrl = useWhatsAppDevisUrl();
 
   return (
     <div className="mx-auto max-w-5xl px-4 sm:px-8 md:px-16">
@@ -48,7 +50,9 @@ export function ServicesPageContent() {
         ))}
       </ul>
 
-      <ServicesList />
+      <Suspense fallback={null}>
+        <ServicesList />
+      </Suspense>
 
       <div className="stealth-card mt-20 rounded-lg px-6 py-10 sm:px-12 sm:py-12">
         <h2 className="font-tech mb-3 text-center text-xl font-semibold uppercase tracking-[0.12em] text-zinc-100 sm:text-2xl md:text-3xl">
@@ -66,7 +70,7 @@ export function ServicesPageContent() {
             <ArrowRight size={16} strokeWidth={1.5} />
           </Link>
           <a
-            href={getWhatsAppDevisUrl()}
+            href={whatsappUrl}
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex w-full items-center justify-center gap-2 border border-[#25D366]/60 bg-[#25D366]/10 px-8 py-4 text-sm font-light tracking-[0.12em] text-zinc-100 transition-all hover:bg-[#25D366]/20 sm:w-auto"

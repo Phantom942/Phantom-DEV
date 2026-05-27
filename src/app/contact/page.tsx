@@ -74,14 +74,14 @@ export default function ContactPage() {
                 Un projet en tête ? Contactez-moi sur WhatsApp pour un devis gratuit
                 sous 24h, sans engagement.
               </p>
-              <p className="mb-10 text-xs font-light tracking-[0.08em] text-zinc-500">
+              <p className="mb-10 text-xs font-light tracking-[0.08em] text-zinc-400">
                 Garantie performance : Lighthouse 90+ sur tous les sites livrés.
               </p>
 
               <div className="flex flex-col items-center">
                 <WhatsAppCtaButton />
               </div>
-              <p className="mt-8 text-center text-xs font-light tracking-[0.08em] text-zinc-600">
+              <p className="mt-8 text-center text-xs font-light tracking-[0.08em] text-zinc-400">
                 Réponse sous 24h · Sans engagement
               </p>
             </div>

@@ -32,7 +32,7 @@ export function Sections() {
       </ScrollReveal>
 
       <ScrollReveal delay={0.03}>
-        <p className="mx-auto max-w-7xl px-4 py-8 text-center text-sm font-light italic tracking-[0.02em] text-zinc-500 sm:py-10 md:py-12">
+        <p className="mx-auto max-w-7xl px-4 py-8 text-center text-sm font-light italic tracking-[0.02em] text-zinc-400 sm:py-10 md:py-12">
           {t.sections.transition}
         </p>
       </ScrollReveal>
@@ -66,13 +66,13 @@ export function Sections() {
               <p className="mb-6 text-sm leading-[1.8] tracking-[0.02em] text-zinc-300 sm:text-base md:mb-8 md:text-lg">
                 {t.sections.contactDesc}
               </p>
-              <p className="mb-10 text-xs font-light tracking-[0.08em] text-zinc-500 sm:mb-12">
+              <p className="mb-10 text-xs font-light tracking-[0.08em] text-zinc-400 sm:mb-12">
                 {t.sections.performance}
               </p>
               <div className="flex flex-col items-center">
                 <WhatsAppCtaButton />
               </div>
-              <p className="mt-8 text-center text-xs font-light tracking-[0.08em] text-zinc-600">
+              <p className="mt-8 text-center text-xs font-light tracking-[0.08em] text-zinc-400">
                 {t.sections.response}
               </p>
             </div>

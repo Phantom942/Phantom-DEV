@@ -107,7 +107,7 @@ export function GrapheneOSPageContent({ locale }: { locale: Locale }) {
               </div>
             ))}
           </div>
-          <p className="mt-6 text-center text-[10px] font-light leading-relaxed tracking-[0.06em] text-zinc-500 sm:text-xs">
+          <p className="mt-6 text-center text-[10px] font-light leading-relaxed tracking-[0.06em] text-zinc-400 sm:text-xs">
             {g.logoCredit}
           </p>
         </section>
@@ -176,7 +176,7 @@ export function GrapheneOSPageContent({ locale }: { locale: Locale }) {
           </dl>
         </section>
 
-        <p className="mb-12 text-xs leading-relaxed tracking-[0.03em] text-zinc-500">
+        <p className="mb-12 text-xs leading-relaxed tracking-[0.03em] text-zinc-400">
           {g.disclaimer}
         </p>
 

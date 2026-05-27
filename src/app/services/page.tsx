@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { Suspense } from "react";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { CursorAndGlow } from "@/components/CursorAndGlow";
@@ -6,6 +7,7 @@ import { ServicesPageContent } from "@/components/ServicesPageContent";
 
 import { getHreflangAlternates } from "@/lib/hreflang";
 import { getBreadcrumbForPath } from "@/lib/breadcrumb";
+import { buildServicesItemListSchema } from "@/lib/services-jsonld";
 import { defaultOpenGraphImages, twitterSummaryLarge } from "@/lib/social-metadata";
 
 const title = "Services — Sites vitrines, e-commerce, SaaS | PhantomDev";
@@ -48,12 +50,17 @@ export const metadata: Metadata = {
 
 export default function ServicesPage() {
   const breadcrumbSchema = getBreadcrumbForPath("/services", "Services");
+  const servicesSchema = buildServicesItemListSchema("fr");
 
   return (
     <div className="relative min-h-screen w-full bg-transparent">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(servicesSchema) }}
       />
       <CursorAndGlow />
       <Navbar />
@@ -63,7 +70,9 @@ export default function ServicesPage() {
         className="w-full pt-24 pb-16 sm:pt-32 sm:pb-24"
         aria-label="Page services PhantomDev : développement web, React, Node.js, SaaS, SEO, sites vitrines et e-commerce"
       >
-        <ServicesPageContent />
+        <Suspense fallback={null}>
+          <ServicesPageContent />
+        </Suspense>
       </main>
       <Footer />
     </div>
