@@ -1,25 +1,32 @@
 export type ProjectType = "vitrine" | "application";
 
+export type ProjectCaseStudy = {
+  defi: string;
+  solution: string;
+  result: string;
+};
+
 export const projects = [
   {
     id: "phantom-art",
     type: "vitrine" as const,
     title: "Phantom Art",
     imageBg: "white" as const,
-    /** Pastilles type portfolio (style carte mockup). */
     tags: ["Site vitrine", "Design", "Art & culture"],
     description:
-      "Site pour collectionneurs d’art : présentation des services, image élégante et navigation simple.",
+      "Vitrine premium pour collectionneurs — expérience galerie, performance Lighthouse 98%.",
     techs: ["Next.js", "Tailwind", "Vercel"],
     lighthouseScore: 98,
     result: "Lighthouse 98%",
     image: "/images/logos/phantom-art.png",
     mockupImage: "/images/mockups/phantom-art.png",
     href: "https://www.phantomart.fr/",
-    details: {
-      enjeu: "Plateforme premium pour collectionneurs, expérience luxe sans compromis.",
-      solution: "Next.js App Router + Tailwind + Vercel Edge.",
-      gain: "Lighthouse 98% · Chargement <1s.",
+    caseStudy: {
+      defi: "Image de marque peu visible en ligne et parcours catalogue peu lisible sur mobile.",
+      solution:
+        "Site vitrine Next.js statique, mise en page type galerie et assets optimisés pour un rendu haut de gamme.",
+      result:
+        "Lighthouse 98+, chargement sous la seconde et navigation simplifiée pour les collectionneurs.",
     },
   },
   {
@@ -29,17 +36,19 @@ export const projects = [
     imageBg: "gray" as const,
     tags: ["Site vitrine", "Automobile", "Design"],
     description:
-      "Site pour garage et carrosserie : rendez-vous en ligne, services clairement listés, style automobile premium.",
-    techs: ["React", "Framer Motion", "Auto-Focus"],
+      "Garage premium — tunnel de réservation en 3 clics et performance mobile renforcée.",
+    techs: ["Next.js", "Tailwind", "SEO local"],
     lighthouseScore: 95,
-    result: "Lighthouse 95%",
+    result: "Lighthouse 95+",
     image: "/images/logos/redk-motors.png",
     mockupImage: "/images/mockups/redk-motors.png",
     href: "https://redk-motors.me/",
-    details: {
-      enjeu: "Site vitrine haut de gamme pour véhicules de prestige.",
-      solution: "React + Framer Motion + images optimisées.",
-      gain: "Lighthouse 95% · Animations fluides.",
+    caseStudy: {
+      defi: "Système de réservation obsolète et perte de trafic mobile local.",
+      solution:
+        "Architecture Next.js statique, tunnel fluide en 3 clics et design carbone premium.",
+      result:
+        "Score Performance Lighthouse 95+, chargement instantané et hausse des prises de RDV.",
     },
   },
   {
@@ -49,17 +58,19 @@ export const projects = [
     imageBg: "gray" as const,
     tags: ["Site vitrine", "Industrie", "SEO"],
     description:
-      "Site pour un atelier de soudure en Île-de-France : prestations, zone d’intervention et contact rapide mis en avant.",
+      "Atelier de soudure — visibilité locale et demandes de devis mieux qualifiées.",
     techs: ["Site vitrine", "SEO", "Responsive"],
     lighthouseScore: 95,
-    result: "Lighthouse 95%",
+    result: "Lighthouse 95+",
     image: "/images/logos/kraken-metals.png",
     mockupImage: "/images/mockups/kraken-metals.png",
     href: "https://www.kraken-metals.fr/",
-    details: {
-      enjeu: "Site vitrine pour atelier de soudage de précision, Paris & Val-de-Marne.",
-      solution: "Design industriel, mise en avant des services et de la zone d'intervention.",
-      gain: "Présence digitale · Intervention sous 24h.",
+    caseStudy: {
+      defi: "Faible visibilité locale : les prospects ne trouvaient ni les prestations ni la zone d’intervention.",
+      solution:
+        "Site vitrine orienté SEO local, pages services structurées et CTA contact immédiat.",
+      result:
+        "Lighthouse 95+, meilleure indexation locale et leads plus qualifiés sur Paris & Val-de-Marne.",
     },
   },
   {
@@ -69,17 +80,19 @@ export const projects = [
     imageBg: "white" as const,
     tags: ["Application", "Mobilité", "Conversion"],
     description:
-      "Réservation et devis pour transport avec chauffeur à Paris : formulaire simple, informations visibles d’un coup d’œil.",
+      "Transport avec chauffeur — réservation simplifiée, +25% de conversion.",
     techs: ["Next.js", "UX/UI", "Mobile-First"],
     lighthouseScore: 97,
     result: "Conversion +25%",
     image: "/images/logos/moove-city.png",
     mockupImage: "/images/mockups/moove-city.png",
     href: "https://www.moovecity.fr/",
-    details: {
-      enjeu: "Interface de mobilité urbaine claire et convertissante.",
-      solution: "Next.js + UX Mobile-First + parcours optimisé.",
-      gain: "Conversion +25% · Lighthouse 97%.",
+    caseStudy: {
+      defi: "Formulaire de réservation complexe réduisant les conversions.",
+      solution:
+        "Application sur-mesure ultra-rapide, UI minimaliste pensée mobile-first.",
+      result:
+        "Conversion en hausse de +25% et interface fluide sous la seconde.",
     },
   },
   {
@@ -89,26 +102,33 @@ export const projects = [
     imageBg: "white" as const,
     tags: ["Site vitrine", "Institut", "Réservation"],
     description:
-      "Site pour institut de beauté à Créteil : soins expliqués clairement et prise de rendez-vous en ligne.",
+      "Institut de beauté — prise de RDV en ligne et parcours mobile optimisé.",
     techs: ["Site vitrine", "SEO", "Responsive"],
     lighthouseScore: 95,
-    result: "Lighthouse 95%",
+    result: "Lighthouse 95+",
     image: "/images/logos/oriental-beauty.png",
     mockupImage: "/images/mockups/oriental-beauty.png",
     href: "https://www.orientalbeauty.fr/",
-    details: {
-      enjeu: "Site vitrine pour institut de beauté, Browlift et cire orientale à Créteil (94).",
-      solution: "Design élégant, mise en avant des services et prise de rendez-vous en ligne.",
-      gain: "Présence digitale · Calendrier intégré.",
+    caseStudy: {
+      defi: "Prise de rendez-vous fragmentée (appels uniquement) et faible conversion sur mobile.",
+      solution:
+        "Site vitrine responsive, fiches soins claires et réservation en ligne intégrée.",
+      result:
+        "Lighthouse 95+, calendrier en ligne actif et parcours RDV simplifié à Créteil.",
     },
   },
 ] as const;
+
+function buildCaseStudySummary(caseStudy: ProjectCaseStudy): string {
+  return `${caseStudy.defi} ${caseStudy.solution} ${caseStudy.result}`;
+}
 
 export const creativeWorkSchema = {
   "@context": "https://schema.org",
   "@type": "ItemList",
   name: "Réalisations PhantomDev",
-  description: "Projets web réalisés par PhantomDev : sites vitrines, e-commerce, applications sur-mesure. International.",
+  description:
+    "Études de cas PhantomDev : sites vitrines, e-commerce et applications sur-mesure orientées conversion et performance.",
   itemListElement: projects.map((p, i) => ({
     "@type": "ListItem",
     position: i + 1,
@@ -116,6 +136,7 @@ export const creativeWorkSchema = {
       "@type": "CreativeWork",
       name: p.title,
       description: p.description,
+      abstract: buildCaseStudySummary(p.caseStudy),
       url: p.href,
       author: {
         "@type": "Organization",

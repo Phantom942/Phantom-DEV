@@ -41,9 +41,10 @@ export function getWhatsAppDisplayHuman(): string {
   return `+${d}`;
 }
 
-const DEFAULT_MESSAGE =
-  "Bonjour, j'aimerais demander un devis pour un projet web.";
+export const WHATSAPP_DEFAULT_MESSAGE =
+  "Bonjour PhantomDev, je souhaite avoir des informations pour la création d'un site web premium.";
+
 export function getWhatsAppDevisUrl(text?: string): string {
-  const message = text || DEFAULT_MESSAGE;
+  const message = text ?? WHATSAPP_DEFAULT_MESSAGE;
   return `${WHATSAPP_URL}?text=${encodeURIComponent(message)}`;
 }

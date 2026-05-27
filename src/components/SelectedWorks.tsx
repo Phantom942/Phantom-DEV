@@ -13,6 +13,12 @@ const FILTERS: { value: ProjectType | "all"; labelKey: string }[] = [
   { value: "application", labelKey: "filterApplication" },
 ];
 
+const CASE_LABELS = [
+  { key: "defi" as const, label: "Défi" },
+  { key: "solution" as const, label: "Solution" },
+  { key: "result" as const, label: "Résultat" },
+];
+
 interface SelectedWorksProps {
   /** Ancre unique par page (accueil : #projets, page dédiée : #realisations). */
   sectionId?: string;
@@ -135,12 +141,25 @@ export function SelectedWorks({
                           </li>
                         ))}
                       </ul>
-                      <p className="mt-2.5 text-sm leading-relaxed text-[#f5f5f0]/82 sm:mt-3 sm:text-[0.9375rem]">
+                      <p className="mt-2.5 text-sm leading-relaxed text-[#f5f5f0]/75 sm:mt-3 sm:text-[0.9375rem]">
                         {project.description}
                       </p>
-                      <p className="mt-3 text-[11px] font-light leading-normal tracking-wide text-[#f5f5f0]/50 sm:mt-3.5 sm:text-xs">
-                        {project.details.gain}
-                      </p>
+                      <ul
+                        className="mt-3 space-y-2 border-t border-[#f5f5f0]/10 pt-3 sm:mt-3.5 sm:space-y-2.5 sm:pt-3.5"
+                        aria-label={`Étude de cas ${project.title}`}
+                      >
+                        {CASE_LABELS.map(({ key, label }) => (
+                          <li key={key} className="flex gap-2.5 text-[11px] leading-snug sm:text-xs sm:leading-relaxed">
+                            <span
+                              className="shrink-0 font-mono text-[10px] font-medium uppercase tracking-[0.14em] text-[#d4af37]/90 sm:text-[11px]"
+                              aria-hidden
+                            >
+                              {label}
+                            </span>
+                            <span className="min-w-0 text-[#f5f5f0]/82">{project.caseStudy[key]}</span>
+                          </li>
+                        ))}
+                      </ul>
                     </div>
                   </a>
                 </article>

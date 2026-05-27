@@ -187,20 +187,6 @@ export function HeroSection() {
           {t.hero.badge4}
         </span>
       </motion.div>
-      {"stats" in t && (
-        <motion.div
-          variants={prefersReducedMotion ? { hidden: { opacity: 1, y: 0 }, visible: { opacity: 1, y: 0 } } : ctaVariants}
-          initial="hidden"
-          animate="visible"
-          className="mt-8 flex w-full flex-wrap items-center justify-center gap-x-10 gap-y-2 border-t border-[#f5f5f0]/10 pt-8 sm:gap-x-14"
-          aria-label="Chiffres clés PhantomDev"
-        >
-          <span className="text-center">
-            <span className="block text-lg font-light tracking-[0.1em] text-[#d4af37]/90 sm:text-xl">5+</span>
-            <span className="text-[10px] font-light tracking-[0.15em] text-[#f5f5f0]/50 uppercase sm:text-xs">{t.stats.projects}</span>
-          </span>
-        </motion.div>
-      )}
     </section>
   );
 }

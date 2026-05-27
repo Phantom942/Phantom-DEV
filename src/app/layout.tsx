@@ -9,6 +9,7 @@ import "./globals.css";
 import { LangAttribute } from "@/components/LangAttribute";
 import { FloatingWhatsAppButton } from "@/components/FloatingWhatsAppButton";
 import { SkipToContent } from "@/components/SkipToContent";
+import JsonLd from "@/components/JsonLd";
 import { defaultOpenGraphImage } from "@/lib/social-metadata";
 
 const geist = Geist({
@@ -114,77 +115,6 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const schemaOrg = {
-    "@context": "https://schema.org",
-    "@type": ["ProfessionalService", "LocalBusiness"],
-    "@id": "https://phantomdev.fr/#organization",
-    name: "PhantomDev",
-    url: "https://phantomdev.fr",
-    description:
-      "Création de sites web premium sur-mesure. Sites vitrines, e-commerce, SaaS. Next.js, React, Node.js. Devis gratuit sous 24h. Performance Lighthouse 90+. France, Europe, international.",
-    image: "https://phantomdev.fr/og-image.png",
-    sameAs: ["https://github.com/Phantom942"],
-    areaServed: [
-      { "@type": "Country", name: "France" },
-      { "@type": "Country", name: "United Kingdom" },
-      { "@type": "Country", name: "United States" },
-      { "@type": "Country", name: "Canada" },
-      { "@type": "Country", name: "Switzerland" },
-      { "@type": "Country", name: "Belgium" },
-      { "@type": "Country", name: "Luxembourg" },
-      { "@type": "Country", name: "Germany" },
-    ],
-    priceRange: "€€",
-    serviceType: [
-      "Création de sites web",
-      "Développement web sur-mesure",
-      "Sites vitrines",
-      "E-commerce",
-      "Applications SaaS",
-      "Intégration IA",
-      "Installation GrapheneOS (Google Pixel)",
-    ],
-    knowsAbout: [
-      "Next.js",
-      "React",
-      "Node.js",
-      "TypeScript",
-      "SaaS",
-      "E-commerce",
-      "Développement web",
-      "GrapheneOS",
-    ],
-    slogan: "Des sites web premium qui convertissent.",
-    contactPoint: {
-      "@type": "ContactPoint",
-      contactType: "customer service",
-      availableLanguage: ["French", "English"],
-      areaServed: ["FR", "GB", "US", "CA", "CH", "BE", "LU", "DE"],
-      url: "https://phantomdev.fr/contact",
-    },
-    hasOfferCatalog: {
-      "@type": "OfferCatalog",
-      name: "Services PhantomDev",
-      itemListElement: [
-        { "@type": "Offer", itemOffered: { "@type": "Service", name: "Site vitrine sur-mesure", description: "Conception web premium, interfaces raffinées, UX conversion." } },
-        { "@type": "Offer", itemOffered: { "@type": "Service", name: "E-commerce et marketplace", description: "Plateformes e-commerce robustes, paiement, gestion stocks." } },
-        { "@type": "Offer", itemOffered: { "@type": "Service", name: "Application SaaS", description: "Applications métier sur-mesure, scalables, performantes." } },
-        { "@type": "Offer", itemOffered: { "@type": "Service", name: "Intégration IA", description: "Chatbots, recommandations, automatisation intelligente." } },
-      ],
-    },
-  };
-
-  const websiteSchema = {
-    "@context": "https://schema.org",
-    "@type": "WebSite",
-    "@id": "https://phantomdev.fr/#website",
-    url: "https://phantomdev.fr",
-    name: "PhantomDev",
-    description: "Création de sites web premium sur-mesure — France, Europe, international",
-    publisher: { "@id": "https://phantomdev.fr/#organization" },
-    inLanguage: ["fr", "en"],
-  };
-
   return (
     <html
       lang="fr"
@@ -194,14 +124,7 @@ export default function RootLayout({
       <body className="overflow-x-clip font-sans antialiased">
         <SkipToContent />
         <LangAttribute />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaOrg) }}
-        />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
-        />
+        <JsonLd />
         {children}
         <FloatingWhatsAppButton />
       </body>

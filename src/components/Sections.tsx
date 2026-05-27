@@ -6,6 +6,7 @@ import { ExpertiseCards } from "./ExpertiseCards";
 import { SelectedWorks } from "./SelectedWorks";
 import { FAQ } from "./FAQ";
 import { WhatsAppCtaButton } from "./WhatsAppButton";
+import { ProcessSection } from "./ProcessSection";
 
 export function Sections() {
   const { t } = useTranslations();
@@ -47,6 +48,10 @@ export function Sections() {
         <div className="w-full bg-[#323538]">
           <FAQ />
         </div>
+      </ScrollReveal>
+
+      <ScrollReveal delay={0.05}>
+        <ProcessSection />
       </ScrollReveal>
 
       <ScrollReveal delay={0.05}>
