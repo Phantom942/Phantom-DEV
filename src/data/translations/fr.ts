@@ -5,7 +5,7 @@ export const fr = {
         "PhantomDev — Sites web et systèmes digitaux qui vous amènent des clients",
       hook: "Moins de paperasse. Moins de tâches répétitives. Plus de clients.",
       subtitle:
-        "Je pack des sites et des outils sur-mesure pour TPE, PME, artisans et garages : capter des prospects, automatiser l'administratif et convertir vos visiteurs en rendez-vous ou en ventes — sans jargon, sans mauvaise surprise.",
+        "Je conçois des sites et des outils sur-mesure pour TPE, PME, artisans et garages : capter des prospects, automatiser l'administratif et convertir vos visiteurs en rendez-vous ou en ventes — sans jargon, sans mauvaise surprise.",
       seeServices: "Voir ce que je propose",
       seeProjects: "Voir les résultats clients",
       requestQuote: "Obtenir mon devis gratuit",
