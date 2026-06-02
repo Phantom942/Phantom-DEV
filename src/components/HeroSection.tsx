@@ -1,6 +1,6 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 import { useLightMotion } from "@/hooks/useLightMotion";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
@@ -91,7 +91,7 @@ export function HeroSection() {
       </h1>
 
       <div className="relative z-10 flex w-full max-w-4xl flex-col items-center text-center">
-        <motion.div
+        <m.div
           variants={lightMotion ? instant : brandVariants}
           initial="hidden"
           animate="visible"
@@ -99,18 +99,18 @@ export function HeroSection() {
           aria-hidden
         >
           <PhantomBrand size="hero" priority />
-        </motion.div>
+        </m.div>
 
-        <motion.p
+        <m.p
           variants={lightMotion ? instant : subtitleVariants}
           initial="hidden"
           animate="visible"
           className="mt-6 max-w-[90vw] px-2 text-sm font-light leading-[1.75] tracking-wide text-zinc-300 sm:mt-8 sm:max-w-2xl sm:text-base md:mt-10 md:text-lg"
         >
           {t.hero.subtitle}
-        </motion.p>
+        </m.p>
 
-        <motion.p
+        <m.p
           variants={lightMotion ? instant : pricingVariants}
           initial="hidden"
           animate="visible"
@@ -124,9 +124,9 @@ export function HeroSection() {
             {t.hero.seeServices}
             <ArrowRight size={12} strokeWidth={1.5} aria-hidden />
           </Link>
-        </motion.p>
+        </m.p>
 
-        <motion.div
+        <m.div
           variants={lightMotion ? instant : ctaVariants}
           initial="hidden"
           animate="visible"
@@ -150,9 +150,9 @@ export function HeroSection() {
             {t.hero.seeProjects}
             <ArrowDown size={16} className="rotate-[-90deg]" strokeWidth={1.5} />
           </Link>
-        </motion.div>
+        </m.div>
 
-        <motion.ul
+        <m.ul
           variants={lightMotion ? instant : ctaVariants}
           initial="hidden"
           animate="visible"
@@ -170,7 +170,7 @@ export function HeroSection() {
               </li>
             );
           })}
-        </motion.ul>
+        </m.ul>
       </div>
 
       <a

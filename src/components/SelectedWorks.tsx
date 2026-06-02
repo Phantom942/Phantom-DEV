@@ -96,8 +96,8 @@ export function SelectedWorks({
 
         <ul className="grid w-full auto-rows-fr grid-cols-1 gap-6 md:grid-cols-2 md:gap-7 xl:grid-cols-3 xl:gap-8">
           {filteredProjects.map((project, index) => (
-            <ScrollReveal key={project.id} delay={index * 0.08} className="min-h-0 h-full">
-              <li className="flex h-full min-h-0">
+            <li key={project.id} className="flex h-full min-h-0">
+              <ScrollReveal delay={index * 0.08} className="flex h-full min-h-0 w-full">
                 <article
                   className="group flex h-full w-full min-h-0 flex-col transition-transform duration-300 hover:-translate-y-0.5"
                   style={{ fontFamily: "var(--font-source-sans), system-ui, sans-serif" }}
@@ -162,8 +162,8 @@ export function SelectedWorks({
                     </div>
                   </a>
                 </article>
-              </li>
-            </ScrollReveal>
+              </ScrollReveal>
+            </li>
           ))}
         </ul>
       </div>

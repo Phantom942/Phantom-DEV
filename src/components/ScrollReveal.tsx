@@ -1,6 +1,6 @@
 "use client";
 
-import { motion, useInView } from "framer-motion";
+import { m, useInView } from "framer-motion";
 import { useRef, type ReactNode } from "react";
 import { useLightMotion } from "@/hooks/useLightMotion";
 
@@ -31,7 +31,7 @@ export function ScrollReveal({
     : { opacity: lightMotion ? 1 : 0, y: offsetY };
 
   return (
-    <motion.div
+    <m.div
       ref={ref}
       initial={{ opacity: lightMotion ? 1 : 0, y: offsetY }}
       animate={animateState}
@@ -43,6 +43,6 @@ export function ScrollReveal({
       className={className}
     >
       {children}
-    </motion.div>
+    </m.div>
   );
 }

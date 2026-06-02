@@ -8,6 +8,7 @@ import { StealthAmbientBackground } from "@/components/StealthAmbientBackground"
 import JsonLd from "@/components/JsonLd";
 import { defaultOpenGraphImage } from "@/lib/social-metadata";
 import { TranslationsProvider } from "@/context/TranslationsContext";
+import { MotionLazyRoot } from "@/components/MotionLazyRoot";
 import { fr } from "@/data/translations/fr";
 
 const sourceSans = Source_Sans_3({
@@ -113,12 +114,14 @@ export default function RootLayout({
     >
       <body className="relative overflow-x-clip bg-zinc-950 font-sans antialiased">
         <TranslationsProvider value={fr}>
-          <StealthAmbientBackground />
-          <SkipToContent />
-          <LangAttribute />
-          <JsonLd />
-          <div className="relative z-[1]">{children}</div>
-          <FloatingWhatsAppButton />
+          <MotionLazyRoot>
+            <StealthAmbientBackground />
+            <SkipToContent />
+            <LangAttribute />
+            <JsonLd />
+            <div className="relative z-[1]">{children}</div>
+            <FloatingWhatsAppButton />
+          </MotionLazyRoot>
         </TranslationsProvider>
       </body>
     </html>

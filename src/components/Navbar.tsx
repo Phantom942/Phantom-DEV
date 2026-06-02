@@ -2,7 +2,7 @@
 
 import { Suspense, useState, useEffect } from "react";
 import { usePathname } from "next/navigation";
-import { motion, AnimatePresence } from "framer-motion";
+import { m, AnimatePresence } from "framer-motion";
 import Link from "next/link";
 import { Menu, X } from "lucide-react";
 import { useWhatsAppDevisUrl } from "@/hooks/useWhatsAppDevisUrl";
@@ -132,7 +132,7 @@ function NavbarInner() {
       <AnimatePresence>
         {mobileMenuOpen && (
           <>
-            <motion.button
+            <m.button
               type="button"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
@@ -141,7 +141,7 @@ function NavbarInner() {
               aria-label={t.nav.menuCloseAria}
               onClick={closeMobileMenu}
             />
-            <motion.div
+            <m.div
               initial={{ opacity: 0, y: -8 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -8 }}
@@ -181,7 +181,7 @@ function NavbarInner() {
                   {t.nav.freeQuote}
                 </a>
               </nav>
-            </motion.div>
+            </m.div>
           </>
         )}
       </AnimatePresence>

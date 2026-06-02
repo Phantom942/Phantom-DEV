@@ -1,12 +1,28 @@
 "use client";
 
+import dynamic from "next/dynamic";
 import { ScrollReveal } from "./ScrollReveal";
 import { useTranslations } from "@/hooks/useTranslations";
-import { ExpertiseCards } from "./ExpertiseCards";
-import { SelectedWorks } from "./SelectedWorks";
-import { FAQ } from "./FAQ";
 import { WhatsAppCtaButton } from "./WhatsAppButton";
-import { ProcessSection } from "./ProcessSection";
+
+const ExpertiseCards = dynamic(
+  () => import("./ExpertiseCards").then((m) => ({ default: m.ExpertiseCards })),
+  { loading: () => <div className="min-h-[320px]" aria-hidden /> }
+);
+
+const SelectedWorks = dynamic(
+  () => import("./SelectedWorks").then((m) => ({ default: m.SelectedWorks })),
+  { loading: () => <div className="min-h-[480px]" aria-hidden /> }
+);
+
+const FAQ = dynamic(() => import("./FAQ").then((m) => ({ default: m.FAQ })), {
+  loading: () => <div className="min-h-[240px]" aria-hidden />,
+});
+
+const ProcessSection = dynamic(
+  () => import("./ProcessSection").then((m) => ({ default: m.ProcessSection })),
+  { loading: () => <div className="min-h-[200px]" aria-hidden /> }
+);
 
 export function Sections() {
   const { t } = useTranslations();

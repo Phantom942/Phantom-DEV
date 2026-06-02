@@ -252,6 +252,20 @@ body {
     display: none;
   }
 
+  /* Mobile : moins d’étoiles animées pour limiter le travail GPU */
+  .static-star:nth-child(n + 71) {
+    display: none;
+  }
+
+  .static-star:nth-child(even) {
+    animation: none;
+    opacity: var(--star-opacity, 0.8);
+  }
+
+  .codepen-meteors span:nth-child(n + 5) {
+    display: none;
+  }
+
   .stealth-ambient-halo,
   .stealth-ambient-horizon {
     opacity: 0.65;
@@ -304,6 +318,7 @@ body {
 
 @media (prefers-reduced-motion: no-preference) {
   .static-star {
+    will-change: opacity;
     animation: static-star-twinkle ease-in-out infinite;
   }
 }
@@ -311,32 +326,20 @@ body {
 @keyframes static-star-twinkle {
   0%,
   100% {
-    opacity: calc(var(--star-opacity, 0.8) * 0.4);
-    transform: translate(-50%, -50%) scale(0.92);
-    box-shadow: 0 0 1px rgba(255, 255, 255, 0.35);
+    opacity: calc(var(--star-opacity, 0.8) * 0.45);
   }
   50% {
     opacity: var(--star-opacity, 0.8);
-    transform: translate(-50%, -50%) scale(1.08);
-    box-shadow: 0 0 3px 1px rgba(255, 255, 255, 0.95);
   }
 }
 
 @keyframes static-star-twinkle-glow {
   0%,
   100% {
-    opacity: calc(var(--star-opacity, 0.8) * 0.45);
-    transform: translate(-50%, -50%) scale(0.94);
-    box-shadow:
-      0 0 2px rgba(255, 255, 255, 0.4),
-      0 0 6px 1px rgba(186, 245, 255, 0.2);
+    opacity: calc(var(--star-opacity, 0.8) * 0.5);
   }
   50% {
-    opacity: min(1, calc(var(--star-opacity, 0.8) * 1.12));
-    transform: translate(-50%, -50%) scale(1.12);
-    box-shadow:
-      0 0 6px 2px rgba(255, 255, 255, 0.95),
-      0 0 14px 3px rgba(186, 245, 255, 0.55);
+    opacity: min(1, calc(var(--star-opacity, 0.8) * 1.08));
   }
 }
 
@@ -381,6 +384,7 @@ body {
     0 0 0 4px rgba(255, 255, 255, 0.1),
     0 0 0 8px rgba(255, 255, 255, 0.1),
     0 0 20px rgba(255, 255, 255, 0.1);
+  will-change: transform, opacity;
   animation: codepen-shooting-animate 3s linear infinite;
 }
 

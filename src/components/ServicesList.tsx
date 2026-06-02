@@ -84,8 +84,8 @@ export function ServicesList() {
               : undefined;
 
             return (
-              <ScrollReveal key={config.id} delay={index * 0.05}>
-                <li>
+              <li key={config.id}>
+                <ScrollReveal delay={index * 0.05} className="h-full">
                   <article
                     id={config.id}
                     className="stealth-card group/service flex h-full scroll-mt-28 flex-col rounded-lg p-6 transition-transform duration-300 hover:-translate-y-0.5 sm:p-8"
@@ -170,8 +170,8 @@ export function ServicesList() {
                       {sp.cardReassurance}
                     </p>
                   </article>
-                </li>
-              </ScrollReveal>
+                </ScrollReveal>
+              </li>
             );
           })}
         </ul>
