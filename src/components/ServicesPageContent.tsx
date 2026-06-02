@@ -63,7 +63,7 @@ export function ServicesPageContent() {
         </p>
         <div className="flex flex-col items-center justify-center gap-4 sm:flex-row sm:gap-6">
           <Link
-            href={`${prefix || ""}/?type=vitrine#contact`}
+            href={`${prefix || ""}/#contact`}
             className="btn-stealth-secondary w-full sm:w-auto"
           >
             {sp.closingQuoteCta}

@@ -48,6 +48,9 @@ jobs:
           echo "---"
           ls -la out/contact 2>/dev/null || true
 
+      - name: Ensure .nojekyll for GitHub Pages (_next/ assets)
+        run: touch out/.nojekyll
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:

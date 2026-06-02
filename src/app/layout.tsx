@@ -56,9 +56,6 @@ export const metadata: Metadata = {
     "installation GrapheneOS",
     "Google Pixel",
   ],
-  alternates: {
-    canonical: "https://phantomdev.fr",
-  },
   robots: {
     index: true,
     follow: true,
