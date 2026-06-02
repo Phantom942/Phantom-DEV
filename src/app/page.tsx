@@ -29,6 +29,9 @@ export const metadata: Metadata = {
     "site vitrine professionnel",
     "site web artisan",
     "site web garage automobile",
+    "automatisation garage",
+    "gain de temps artisan",
+    "CRM PME local",
     "prise de rendez-vous en ligne",
     "boutique en ligne sur-mesure",
     "automatisation entreprise",
@@ -79,7 +82,7 @@ export default function Home() {
         id="main"
         role="main"
         className="w-full overflow-x-clip"
-        aria-label="Contenu principal : PhantomDev, développement web sur-mesure, React, Node.js, SaaS, sites vitrines et e-commerce"
+        aria-label="Contenu principal : PhantomDev, sites web, automatisation garage, gain de temps artisan, CRM PME local, réservation en ligne"
       >
         <Suspense fallback={null}>
           <HeroSection />

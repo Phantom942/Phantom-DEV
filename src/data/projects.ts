@@ -15,9 +15,9 @@ export const projects = [
     tags: ["Site vitrine", "Design", "Art & culture"],
     description:
       "Galerie en ligne pour collectionneurs — image premium, navigation simple, chargement instantané.",
-    techs: ["Next.js", "Tailwind", "Vercel"],
+    techs: ["Site vitrine", "Galerie en ligne", "Mobile"],
     lighthouseScore: 98,
-    result: "Lighthouse 98%",
+    result: "Image pro, chargement instantané",
     image: "/images/mockups/phantom-art.png",
     mockupImage: "/images/mockups/phantom-art.png",
     href: "https://www.phantomart.fr/",
@@ -61,7 +61,7 @@ export const projects = [
       "Atelier de soudure — plus visible sur Google, demandes de devis mieux ciblées.",
     techs: ["Site vitrine", "SEO", "Responsive"],
     lighthouseScore: 95,
-    result: "Lighthouse 95+",
+    result: "Plus de devis qualifiés via Google",
     image: "/images/mockups/kraken-metals.png",
     mockupImage: "/images/mockups/kraken-metals.png",
     href: "https://www.kraken-metals.fr/",
@@ -81,7 +81,7 @@ export const projects = [
     tags: ["Application", "Mobilité", "Conversion"],
     description:
       "Transport avec chauffeur — réservation simplifiée, +25% de conversion.",
-    techs: ["Next.js", "UX/UI", "Mobile-First"],
+    techs: ["Réservation en ligne", "Mobile", "Conversion"],
     lighthouseScore: 97,
     result: "Conversion +25%",
     image: "/images/mockups/moove-city.png",
@@ -105,7 +105,7 @@ export const projects = [
       "Institut de beauté — prise de RDV en ligne et parcours mobile optimisé.",
     techs: ["Site vitrine", "SEO", "Responsive"],
     lighthouseScore: 95,
-    result: "Lighthouse 95+",
+    result: "RDV en ligne sans passer par le téléphone",
     image: "/images/logos/oriental-beauty.png",
     mockupImage: "/images/mockups/oriental-beauty.png",
     href: "https://www.orientalbeauty.fr/",
@@ -114,7 +114,7 @@ export const projects = [
       solution:
         "Site vitrine responsive, fiches soins claires et réservation en ligne intégrée.",
       result:
-        "Lighthouse 95+, calendrier en ligne actif et parcours RDV simplifié à Créteil.",
+        "Calendrier en ligne actif, parcours RDV simplifié et moins d'appels au standard à Créteil.",
     },
   },
 ] as const;

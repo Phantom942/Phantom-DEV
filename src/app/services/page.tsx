@@ -14,9 +14,9 @@ import { defaultOpenGraphImages, twitterSummaryLarge } from "@/lib/social-metada
 const title = "Services — Sites web, e-commerce & automatisation PME";
 const description =
   "Offres PhantomDev : site vitrine, boutique en ligne, prise de RDV, visibilité Google, automatisation et IA. Devis clair sous 24h pour TPE, PME et artisans.";
-const ogTitle = "Services | PhantomDev — Développement web sur-mesure";
+const ogTitle = "Services | PhantomDev — Site vitrine, RDV en ligne & automatisation PME";
 const ogDesc =
-  "Offres PhantomDev : conception web, e-commerce, SaaS, intégration IA, maintenance. Devis clair sous 24h.";
+  "Offres PhantomDev : site vitrine, boutique en ligne, prise de RDV, visibilité Google, automatisation garage et CRM PME. Devis clair sous 24h.";
 
 export const metadata: Metadata = {
   alternates: {
@@ -26,15 +26,16 @@ export const metadata: Metadata = {
   title,
   description,
   keywords: [
-    "création site web",
-    "développement web sur-mesure",
-    "site vitrine",
-    "e-commerce",
-    "SaaS",
-    "SEO",
-    "référencement naturel",
-    "intégration IA",
-    "Next.js",
+    "site vitrine professionnel",
+    "site web artisan",
+    "site web garage",
+    "automatisation garage",
+    "gain de temps artisan",
+    "CRM PME local",
+    "prise de rendez-vous en ligne",
+    "boutique en ligne",
+    "visibilité Google entreprise",
+    "automatisation PME",
     "PhantomDev",
   ],
   openGraph: {
@@ -78,7 +79,7 @@ export default function ServicesPage() {
         id="main"
         role="main"
         className="w-full pt-24 pb-16 sm:pt-32 sm:pb-24"
-        aria-label="Page services PhantomDev : développement web, React, Node.js, SaaS, SEO, sites vitrines et e-commerce"
+        aria-label="Page services PhantomDev : site vitrine, RDV en ligne, automatisation garage, CRM PME, visibilité Google"
       >
         <Suspense fallback={null}>
           <ServicesPageContent />

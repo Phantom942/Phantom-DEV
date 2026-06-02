@@ -1,19 +1,14 @@
 "use client";
 
 import { Gauge } from "lucide-react";
-import { projects } from "@/data/projects";
 import { useTranslations } from "@/hooks/useTranslations";
 
-/** Bandeau preuve — scores Lighthouse réels (sans compteur « X projets »). */
+/** Bandeau preuve — résultats business mesurés sur projets livrés. */
 export function TrustProofBar() {
   const { t } = useTranslations();
   const tp = t.trustProof;
 
-  const scores = [
-    ...new Set(projects.map((p) => p.lighthouseScore).filter((s) => s > 0)),
-  ].sort((a, b) => b - a);
-
-  if (scores.length === 0) return null;
+  if (!tp.badges?.length) return null;
 
   return (
     <section
@@ -26,10 +21,10 @@ export function TrustProofBar() {
           {tp.label}
         </p>
         <ul className="flex flex-wrap items-center justify-center gap-2 sm:gap-3" role="list">
-          {scores.map((score) => (
-            <li key={score} role="listitem">
+          {tp.badges.map((badge) => (
+            <li key={badge} role="listitem">
               <span className="rounded-md border border-cyan-500/35 bg-cyan-500/10 px-3 py-1.5 font-tech text-xs font-semibold tracking-wide text-cyan-300">
-                Lighthouse {score}+
+                {badge}
               </span>
             </li>
           ))}

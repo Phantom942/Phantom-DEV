@@ -74,9 +74,14 @@ export const fr = {
       rights: "Tous droits réservés.",
     },
     trustProof: {
-      aria: "Résultats mesurés sur des projets livrés",
+      aria: "Résultats business mesurés sur des projets livrés pour TPE, PME et artisans",
       label: "Des résultats, pas des promesses",
-      hint: "Sites livrés rapides et performants — la vitesse qui convertit, mesurée avant mise en ligne.",
+      badges: [
+        "RDV en ligne · moins d'appels",
+        "+25 % de réservations",
+        "Devis sous 24 h",
+      ],
+      hint: "Garages, artisans, instituts, transport — automatisation, gain de temps et CRM pour PME locales. Des sites qui remplissent l'agenda.",
     },
     skipToContent: "Aller au contenu principal",
     nav: {
@@ -88,16 +93,16 @@ export const fr = {
       projects: "Réalisations",
       contact: "Contact",
       freeQuote: "Devis gratuit",
-      ariaExpertise: "Expertise en développement d'interfaces haute performance",
-      ariaServices: "Services : sites vitrines, e-commerce, SaaS, SEO",
-      ariaProjects: "Réalisations et projets web",
-      ariaContact: "Contact et devis",
+      ariaExpertise: "Expertise : site vitrine, réservation en ligne, automatisation garage et artisan",
+      ariaServices: "Services : site vitrine, boutique en ligne, RDV en ligne, visibilité Google, CRM PME",
+      ariaProjects: "Résultats clients : garages, artisans, PME",
+      ariaContact: "Contact et devis gratuit sous 24 h",
       bannerAria:
-        "En-tête : PhantomDev, création de sites web, développement React et Node.js, SaaS sur-mesure",
+        "En-tête : PhantomDev, sites web et automatisation pour TPE, PME, artisans et garages",
       mainNavAria:
         "Navigation principale : expertise, services, GrapheneOS, réalisations, contact et devis",
       homeLogoAria:
-        "PhantomDev, accueil — création de sites web premium et développement sur-mesure",
+        "PhantomDev, accueil — sites web et automatisation pour TPE, PME, artisans et garages",
       whatsappQuoteAria: "Demander un devis gratuit sur WhatsApp pour votre projet web",
       menuOpenAria: "Ouvrir le menu",
       menuCloseAria: "Fermer le menu",
@@ -216,7 +221,7 @@ export const fr = {
         empty: "Type de projet",
         vitrine: "Site vitrine",
         ecommerce: "E-commerce",
-        application: "Application / SaaS",
+        application: "Outil métier en ligne",
         seo: "Pack SEO / référencement",
         maintenance: "Maintenance",
         autre: "Autre",

@@ -13,7 +13,7 @@ export function buildServicesItemListSchema(locale: Locale) {
     "@type": "ItemList",
     name:
       locale === "fr"
-        ? "Services PhantomDev — développement web sur-mesure"
+        ? "Services PhantomDev — site vitrine, RDV en ligne, automatisation garage, CRM PME"
         : "PhantomDev services — custom web development",
     url: `${PHANTOMDEV_SITE_URL}${prefix}/services`,
     numberOfItems: serviceConfigs.length,

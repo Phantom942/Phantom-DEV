@@ -12,9 +12,9 @@ import { defaultOpenGraphImages, twitterSummaryLarge } from "@/lib/social-metada
 const title = "Résultats clients — Sites web & RDV en ligne";
 const description =
   "Études de cas PhantomDev : garages, artisans et PME. Plus de rendez-vous, moins d'appels, plus de devis qualifiés grâce à des sites sur-mesure.";
-const ogTitle = "Réalisations | PhantomDev — Portfolio web premium";
+const ogTitle = "Résultats clients | PhantomDev — Garages, artisans, PME";
 const ogDesc =
-  "Projets livrés : vitrines, apps et interfaces orientées conversion. Stack moderne, performances optimisées.";
+  "Études de cas PhantomDev : plus de RDV, moins d'appels, plus de devis qualifiés. Garages, artisans et PME locales.";
 
 export const metadata: Metadata = {
   alternates: {
@@ -24,12 +24,13 @@ export const metadata: Metadata = {
   title,
   description,
   keywords: [
-    "portfolio développeur web",
-    "réalisations site web",
-    "Next.js",
+    "résultats site web",
+    "site web garage",
+    "site web artisan",
+    "prise de rendez-vous en ligne",
+    "automatisation garage",
+    "études de cas PME",
     "PhantomDev",
-    "sites vitrines",
-    "applications web",
   ],
   openGraph: {
     type: "website",
@@ -71,7 +72,7 @@ export default function RealisationsPage() {
         id="main"
         role="main"
         className="w-full pt-24 pb-16 sm:pt-32 sm:pb-24"
-        aria-label="Réalisations PhantomDev : portfolio projets web"
+        aria-label="Résultats clients PhantomDev : garages, artisans, PME, RDV en ligne"
       >
         <RealisationsPageContent />
       </main>

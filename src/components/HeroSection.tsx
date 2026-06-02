@@ -193,17 +193,21 @@ export function HeroSection() {
             );
           })}
         </m.ul>
-      </div>
 
-      <a
-        href={`${localePrefix || ""}/#expertise`}
-        className="absolute left-1/2 z-10 flex -translate-x-1/2 flex-col items-center gap-1 text-zinc-400 transition-colors hover:text-zinc-400 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-500/40 focus-visible:ring-offset-2 focus-visible:ring-offset-zinc-950"
-        style={{ bottom: "max(5.5rem, calc(3.5rem + env(safe-area-inset-bottom)))" }}
-        aria-label="Descendre vers l'expertise"
-      >
-        <span className="font-tech text-[9px] uppercase tracking-[0.3em]">Scroll</span>
-        <ChevronDown size={20} strokeWidth={1.25} className="hidden motion-safe:animate-bounce sm:block" aria-hidden />
-      </a>
+        <a
+          href={`${localePrefix || ""}/#expertise`}
+          className="mt-10 flex flex-col items-center gap-1 text-zinc-400 transition-colors hover:text-zinc-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-500/40 focus-visible:ring-offset-2 focus-visible:ring-offset-zinc-950 sm:mt-12"
+          aria-label="Descendre vers l'expertise"
+        >
+          <span className="font-tech text-[9px] uppercase tracking-[0.3em]">Scroll</span>
+          <ChevronDown
+            size={20}
+            strokeWidth={1.25}
+            className="hidden motion-safe:animate-bounce sm:block"
+            aria-hidden
+          />
+        </a>
+      </div>
     </section>
   );
 }

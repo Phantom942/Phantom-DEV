@@ -15,9 +15,9 @@ import { defaultOpenGraphImages, twitterSummaryLarge } from "@/lib/social-metada
 const title = "Contact — Devis site internet gratuit sous 24h";
 const description =
   "Contactez PhantomDev sur WhatsApp : devis gratuit pour site vitrine, e-commerce, réservation en ligne ou automatisation. Réponse sous 24h, sans engagement.";
-const ogTitle = "Contact | PhantomDev — Devis développement web sous 24h";
+const ogTitle = "Contact | PhantomDev — Devis site internet gratuit sous 24h";
 const ogDesc =
-  "Demandez un devis pour votre projet web : site vitrine, e-commerce, application SaaS. Réponse sous 24h via WhatsApp, sans engagement.";
+  "Demandez un devis sur WhatsApp : site vitrine, RDV en ligne, automatisation garage ou CRM PME. Réponse sous 24h, sans engagement.";
 
 export const metadata: Metadata = {
   alternates: {
@@ -67,7 +67,7 @@ export default function ContactPage() {
         id="main"
         role="main"
         className="w-full pt-24 pb-16 sm:pt-32 sm:pb-24"
-        aria-label="Page contact PhantomDev : demande de devis développement web, sites vitrines et SaaS"
+        aria-label="Page contact PhantomDev : devis site vitrine, RDV en ligne, automatisation garage, CRM PME"
       >
         <div className="mx-auto w-full max-w-7xl px-4 sm:px-8 md:px-16">
           <div className="mx-auto w-full max-w-2xl">
@@ -91,7 +91,7 @@ export default function ContactPage() {
                 sous 24h, sans engagement.
               </p>
               <p className="mb-10 text-xs font-light tracking-[0.08em] text-zinc-400">
-                Garantie performance : Lighthouse 90+ sur tous les sites livrés.
+                Site rapide et fluide garanti — livré prêt à recevoir du trafic et des clients.
               </p>
 
               <div className="flex flex-col items-center">

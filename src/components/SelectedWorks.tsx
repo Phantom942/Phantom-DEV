@@ -107,7 +107,7 @@ export function SelectedWorks({
                     target="_blank"
                     rel="noopener noreferrer"
                     className="stealth-card flex h-full min-h-[26rem] flex-col overflow-hidden rounded-xl shadow-[0_20px_50px_rgba(0,0,0,0.35)] outline-none transition-[border-color,box-shadow,transform] duration-300 hover:shadow-[0_26px_60px_rgba(0,0,0,0.42)] focus-visible:ring-2 focus-visible:ring-cyan-500/45 focus-visible:ring-offset-2 focus-visible:ring-offset-zinc-950 sm:min-h-[28rem] lg:min-h-[30rem]"
-                    aria-label={`Voir le projet ${project.title}, ${project.description} — réalisation PhantomDev développement web`}
+                    aria-label={`Voir le projet ${project.title}, ${project.description} — résultat client PhantomDev`}
                   >
                     {/* Aperçu : occupe tout l’espace restant (cartes alignées) — min-h élevé pour mieux voir le site */}
                     <div className="relative min-h-[14rem] w-full flex-1 basis-0 overflow-hidden bg-zinc-950 sm:min-h-[16rem] lg:min-h-[18rem]">

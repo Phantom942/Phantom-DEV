@@ -74,9 +74,14 @@ export const enGb = {
       rights: "All rights reserved.",
     },
     trustProof: {
-      aria: "Lighthouse scores measured on delivered projects",
+      aria: "Business results measured on delivered client projects",
       label: "Proof, not promises",
-      hint: "Real Lighthouse scores on live sites — 90+ guaranteed before go-live.",
+      badges: [
+        "Online booking · fewer calls",
+        "+25% bookings",
+        "Quote within 24h",
+      ],
+      hint: "Garages, trades, beauty, transport — automation, time saved and local CRM for SMEs. Sites that fill your calendar.",
     },
     skipToContent: "Skip to main content",
     nav: {
