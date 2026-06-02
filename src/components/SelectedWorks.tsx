@@ -1,9 +1,9 @@
 "use client";
 
 import { useState, useMemo } from "react";
-import Image from "next/image";
 import { ArrowUpRight } from "lucide-react";
 import { ScrollReveal } from "./ScrollReveal";
+import { ProjectMockupImage } from "./ProjectMockupImage";
 import { projects, type ProjectType } from "@/data/projects";
 import { useTranslations } from "@/hooks/useTranslations";
 
@@ -111,13 +111,11 @@ export function SelectedWorks({
                   >
                     {/* Aperçu : occupe tout l’espace restant (cartes alignées) — min-h élevé pour mieux voir le site */}
                     <div className="relative min-h-[14rem] w-full flex-1 basis-0 overflow-hidden bg-zinc-950 sm:min-h-[16rem] lg:min-h-[18rem]">
-                      <Image
+                      <ProjectMockupImage
                         src={project.mockupImage}
                         alt={`Aperçu du site ${project.title} — réalisation PhantomDev. ${project.description}`}
-                        fill
-                        sizes="(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 33vw"
-                        className="object-cover object-top transition-transform duration-500 group-hover:scale-[1.02]"
                         priority={index === 0}
+                        className="object-cover object-top transition-transform duration-500 group-hover:scale-[1.02]"
                       />
                       <div
                         className="pointer-events-none absolute right-3 top-3 flex h-9 w-9 items-center justify-center rounded-md border border-zinc-800 bg-zinc-900/90 text-zinc-200 opacity-0 backdrop-blur-sm transition-opacity duration-300 group-hover:opacity-100"
