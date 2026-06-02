@@ -38,24 +38,23 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://phantomdev.fr"),
   title: {
     default:
-      "PhantomDev | Développement web sur-mesure — Next.js, SaaS & e-commerce",
+      "PhantomDev | Sites web & automatisation pour TPE et PME",
     template: "%s | PhantomDev",
   },
   description:
-    "Développement web sur-mesure : Next.js, React, TypeScript. Sites vitrines, e-commerce, SaaS et intégration IA. Lighthouse 90+ garanti · Devis gratuit sous 24h · Projets remote worldwide.",
+    "Sites vitrines, e-commerce, réservation en ligne et automatisation pour TPE, PME et artisans. Plus de clients, moins de tâches répétitives. Devis gratuit sous 24h.",
   keywords: [
-    "développement web sur-mesure",
     "création site internet",
-    "développeur Next.js freelance",
-    "application SaaS sur-mesure",
-    "e-commerce Next.js",
-    "site vitrine premium",
-    "React TypeScript",
-    "intégration IA",
-    "Core Web Vitals",
+    "site vitrine professionnel",
+    "site web artisan",
+    "site web garage",
+    "prise de rendez-vous en ligne",
+    "boutique en ligne",
+    "automatisation PME",
+    "intelligence artificielle entreprise",
+    "visibilité Google",
     "refonte site web",
-    "automatisation web",
-    "freelance développeur React",
+    "développement web sur-mesure",
     "installation GrapheneOS",
   ],
   robots: {
@@ -74,9 +73,9 @@ export const metadata: Metadata = {
   },
   openGraph: {
     type: "website",
-    title: "PhantomDev — Développement web Next.js & SaaS | Devis gratuit 24h",
+    title: "PhantomDev — Sites web qui convertissent | Devis gratuit 24h",
     description:
-      "Sites vitrines, e-commerce et applications SaaS en Next.js · React · TypeScript. Performance Lighthouse 90+ garantie. Devis gratuit sous 24h · Remote worldwide.",
+      "Sites vitrines, e-commerce et réservation en ligne pour TPE et PME. Automatisation et IA sur demande. Devis gratuit sous 24h sur WhatsApp.",
     url: "https://phantomdev.fr",
     siteName: "PhantomDev",
     locale: "fr_FR",
@@ -85,9 +84,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "PhantomDev — Développement web Next.js & SaaS | Devis gratuit 24h",
+    title: "PhantomDev — Sites web qui convertissent | Devis gratuit 24h",
     description:
-      "Développement web sur-mesure Next.js, SaaS et e-commerce. Lighthouse 90+ garanti · Devis gratuit sous 24h · Remote worldwide.",
+      "Sites vitrines, e-commerce et automatisation pour TPE et PME. Devis gratuit sous 24h · Remote worldwide.",
     images: [defaultOpenGraphImage.url],
   },
   other: {

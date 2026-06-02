@@ -14,7 +14,7 @@ export const projects = [
     imageBg: "white" as const,
     tags: ["Site vitrine", "Design", "Art & culture"],
     description:
-      "Vitrine premium pour collectionneurs — expérience galerie, performance Lighthouse 98%.",
+      "Galerie en ligne pour collectionneurs — image premium, navigation simple, chargement instantané.",
     techs: ["Next.js", "Tailwind", "Vercel"],
     lighthouseScore: 98,
     result: "Lighthouse 98%",
@@ -22,11 +22,11 @@ export const projects = [
     mockupImage: "/images/mockups/phantom-art.png",
     href: "https://www.phantomart.fr/",
     caseStudy: {
-      defi: "Image de marque peu visible en ligne et parcours catalogue peu lisible sur mobile.",
+      defi: "Peu visible en ligne et catalogue illisible sur téléphone — les collectionneurs partaient ailleurs.",
       solution:
-        "Site vitrine Next.js statique, mise en page type galerie et assets optimisés pour un rendu haut de gamme.",
+        "Vitrine type galerie, navigation claire et site ultra-rapide sur mobile comme sur desktop.",
       result:
-        "Lighthouse 98+, chargement sous la seconde et navigation simplifiée pour les collectionneurs.",
+        "Image renforcée, parcours simplifié et site qui s'affiche en moins d'une seconde.",
     },
   },
   {
@@ -34,21 +34,21 @@ export const projects = [
     type: "vitrine" as const,
     title: "REDK Motors",
     imageBg: "gray" as const,
-    tags: ["Site vitrine", "Automobile", "Design"],
+    tags: ["Site vitrine", "Automobile", "Réservation"],
     description:
-      "Garage premium — tunnel de réservation en 3 clics et performance mobile renforcée.",
-    techs: ["Next.js", "Tailwind", "SEO local"],
+      "Garage automobile — prise de rendez-vous en 3 clics, moins d'appels à gérer au comptoir.",
+    techs: ["Site vitrine", "Réservation en ligne", "Mobile"],
     lighthouseScore: 95,
-    result: "Lighthouse 95+",
+    result: "Plus de RDV, moins d'appels",
     image: "/images/mockups/redk-motors.png",
     mockupImage: "/images/mockups/redk-motors.png",
     href: "https://redk-motors.me/",
     caseStudy: {
-      defi: "Système de réservation obsolète et perte de trafic mobile local.",
+      defi: "Trop d'appels pour des créneaux simples, réservations perdues et équipe saturée au téléphone.",
       solution:
-        "Architecture Next.js statique, tunnel fluide en 3 clics et design carbone premium.",
+        "Tunnel de réservation en ligne fluide : le client choisit son créneau en 3 clics, sans passer par le standard.",
       result:
-        "Score Performance Lighthouse 95+, chargement instantané et hausse des prises de RDV.",
+        "Plus de rendez-vous confirmés automatiquement, moins de temps au téléphone, agenda du garage mieux rempli.",
     },
   },
   {
@@ -58,7 +58,7 @@ export const projects = [
     imageBg: "gray" as const,
     tags: ["Site vitrine", "Industrie", "SEO"],
     description:
-      "Atelier de soudure — visibilité locale et demandes de devis mieux qualifiées.",
+      "Atelier de soudure — plus visible sur Google, demandes de devis mieux ciblées.",
     techs: ["Site vitrine", "SEO", "Responsive"],
     lighthouseScore: 95,
     result: "Lighthouse 95+",
@@ -66,11 +66,11 @@ export const projects = [
     mockupImage: "/images/mockups/kraken-metals.png",
     href: "https://www.kraken-metals.fr/",
     caseStudy: {
-      defi: "Faible visibilité locale : les prospects ne trouvaient ni les prestations ni la zone d’intervention.",
+      defi: "Les prospects ne trouvaient ni les prestations ni la zone d'intervention — appels manqués et devis perdus.",
       solution:
-        "Site vitrine orienté SEO local, pages services structurées et CTA contact immédiat.",
+        "Site structuré par services, visible sur Google, avec bouton contact et devis immédiat.",
       result:
-        "Lighthouse 95+, meilleure visibilité SEO et leads plus qualifiés sur les requêtes métier.",
+        "Plus de demandes entrantes qualifiées sur les recherches métier — moins de temps perdu au téléphone.",
     },
   },
   {
@@ -88,11 +88,11 @@ export const projects = [
     mockupImage: "/images/mockups/moove-city.png",
     href: "https://www.moovecity.fr/",
     caseStudy: {
-      defi: "Formulaire de réservation complexe réduisant les conversions.",
+      defi: "Réservation trop compliquée : les clients abandonnaient avant de confirmer.",
       solution:
-        "Application sur-mesure ultra-rapide, UI minimaliste pensée mobile-first.",
+        "Parcours de réservation simplifié, pensé mobile en priorité — 3 étapes, pas de friction.",
       result:
-        "Conversion en hausse de +25% et interface fluide sous la seconde.",
+        "Conversion en hausse de +25 % et réservations validées plus vite.",
     },
   },
   {
@@ -128,7 +128,7 @@ export const creativeWorkSchema = {
   "@type": "ItemList",
   name: "Réalisations PhantomDev",
   description:
-    "Études de cas PhantomDev : sites vitrines, e-commerce et applications sur-mesure orientées conversion et performance.",
+    "Études de cas PhantomDev : plus de clients, de RDV et de ventes grâce à des sites et outils sur-mesure.",
   itemListElement: projects.map((p, i) => ({
     "@type": "ListItem",
     position: i + 1,

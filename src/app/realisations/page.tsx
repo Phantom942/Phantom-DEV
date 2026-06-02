@@ -9,9 +9,9 @@ import { getBreadcrumbForPath } from "@/lib/breadcrumb";
 import { buildWebPageSchema } from "@/lib/webpage-jsonld";
 import { defaultOpenGraphImages, twitterSummaryLarge } from "@/lib/social-metadata";
 
-const title = "Réalisations — Portfolio sites web & apps Next.js";
+const title = "Résultats clients — Sites web & RDV en ligne";
 const description =
-  "Portfolio PhantomDev : sites vitrines, e-commerce et applications Next.js · React · TypeScript. Design sur-mesure, Lighthouse 90+, projets remote worldwide.";
+  "Études de cas PhantomDev : garages, artisans et PME. Plus de rendez-vous, moins d'appels, plus de devis qualifiés grâce à des sites sur-mesure.";
 const ogTitle = "Réalisations | PhantomDev — Portfolio web premium";
 const ogDesc =
   "Projets livrés : vitrines, apps et interfaces orientées conversion. Stack moderne, performances optimisées.";

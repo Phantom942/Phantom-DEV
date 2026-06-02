@@ -13,9 +13,9 @@ import { buildWebPageSchema } from "@/lib/webpage-jsonld";
 import { defaultOpenGraphImages, twitterSummaryLarge } from "@/lib/social-metadata";
 
 const title =
-  "Développement web sur-mesure — Next.js, SaaS & e-commerce premium";
+  "Sites web & outils digitaux qui vous amènent des clients";
 const description =
-  "PhantomDev : développement web sur-mesure en Next.js, React et TypeScript. Sites vitrines, e-commerce, applications SaaS et intégration IA. Lighthouse 90+ garanti · Devis gratuit sous 24h.";
+  "PhantomDev : sites vitrines, e-commerce, réservation en ligne et automatisation pour TPE et PME. Plus de clients, moins de paperasse. Devis gratuit sous 24h sur WhatsApp.";
 
 export const metadata: Metadata = {
   alternates: {
@@ -25,16 +25,16 @@ export const metadata: Metadata = {
   title: { absolute: `${title} | PhantomDev` },
   description,
   keywords: [
-    "développement web sur-mesure",
-    "création site internet premium",
-    "développeur Next.js",
-    "application SaaS sur-mesure",
-    "e-commerce Next.js",
-    "site vitrine haute performance",
-    "React TypeScript",
-    "intégration IA web",
-    "Core Web Vitals",
-    "refonte site web performant",
+    "création site internet",
+    "site vitrine professionnel",
+    "site web artisan",
+    "site web garage automobile",
+    "prise de rendez-vous en ligne",
+    "boutique en ligne sur-mesure",
+    "automatisation entreprise",
+    "intelligence artificielle PME",
+    "visibilité Google entreprise",
+    "refonte site web",
     "PhantomDev",
   ],
   openGraph: {

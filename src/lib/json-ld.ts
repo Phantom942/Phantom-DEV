@@ -28,8 +28,8 @@ export function buildProfessionalServiceSchema() {
     image: `${PHANTOMDEV_SITE_URL}/og-image.png`,
     logo: LOGO_URL,
     description:
-      "PhantomDev conçoit des sites web premium et applications sur-mesure en Next.js, React et TypeScript : vitrines, e-commerce, SaaS, intégration IA et APIs. Performance Lighthouse 90+ garantie · projets remote worldwide.",
-    slogan: "Next.js · React · TypeScript — sites qui convertissent",
+      "PhantomDev accompagne TPE, PME, artisans et garages : sites vitrines, e-commerce, prise de rendez-vous en ligne, visibilité Google, automatisation et IA. Plus de clients, moins de paperasse.",
+    slogan: "Plus de clients. Moins de paperasse. Moins de tâches répétitives.",
     serviceType: [
       "Création de site web",
       "Développement e-commerce",
@@ -91,7 +91,7 @@ export function buildWebsiteSchema() {
     url: PHANTOMDEV_SITE_URL,
     name: "PhantomDev",
     description:
-      "PhantomDev — développement web sur-mesure Next.js, React et TypeScript. Vitrines, e-commerce, SaaS et intégration IA. Devis gratuit sous 24h.",
+      "PhantomDev — sites web et outils digitaux pour TPE et PME : vitrines, e-commerce, réservation en ligne, automatisation. Devis gratuit sous 24h.",
     publisher: { "@id": PHANTOMDEV_SITE_URL },
     inLanguage: ["fr-FR", "en-GB", "en-US"],
     potentialAction: {

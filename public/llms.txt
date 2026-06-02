@@ -1,25 +1,22 @@
 # PhantomDev
 
-> Studio de développement web sur-mesure — Next.js, React, TypeScript. Sites vitrines, e-commerce, SaaS et intégration IA. Performance Lighthouse 90+ garantie. Devis gratuit sous 24h via WhatsApp · projets remote worldwide.
+> Sites web et outils digitaux pour TPE, PME, artisans et garages — plus de clients, moins de paperasse. Vitrines, e-commerce, réservation en ligne, automatisation et IA. Devis gratuit sous 24h via WhatsApp.
 
 ## Positionnement
 
-PhantomDev développe des expériences web premium avec une stack moderne (Next.js, React, TypeScript) : conversion, performance mesurée, design soigné. Vitrine livrable en 48h selon périmètre · accompagnement direct sur WhatsApp.
+PhantomDev pack des systèmes digitaux orientés ROI : capter des prospects, automatiser l'administratif, convertir les visiteurs en rendez-vous ou ventes. Interlocuteur direct sur WhatsApp, livraison rapide possible (vitrine en 48h selon périmètre).
 
 ## Services principaux
 
-- Sites vitrines et landing pages premium (Lighthouse 90+)
-- E-commerce et applications sur-mesure (SaaS, API REST)
-- SEO, performance web et audit Core Web Vitals
-- Intégration IA (chatbots, RAG, automatisation)
-- Maintenance et support technique
+- Sites vitrines et pages de vente (conversion, image pro)
+- Boutiques en ligne sur-mesure
+- Prise de rendez-vous en ligne (garages, artisans, services)
+- Visibilité Google (SEO)
+- Connexion de vos outils (CRM, facturation, agenda)
+- Automatisation des tâches répétitives
+- Intelligence artificielle utile (qualification, réponses prospects)
+- Maintenance et support
 - Installation GrapheneOS sur Google Pixel (page dédiée)
-
-## Stack
-
-- Next.js · React · TypeScript · Tailwind CSS
-- Déploiement Vercel / export statique
-- Intégration API · automatisation · IA
 
 ## Contact
 
@@ -27,7 +24,7 @@ PhantomDev développe des expériences web premium avec une stack moderne (Next.
 - Sitemap : https://phantomdev.fr/sitemap.xml
 - Contact : https://phantomdev.fr/contact
 - Services : https://phantomdev.fr/services
-- Réalisations : https://phantomdev.fr/realisations
+- Résultats clients : https://phantomdev.fr/realisations
 - GrapheneOS : https://phantomdev.fr/grapheneos
 - WhatsApp : +33 6 69 04 07 54 (devis sous 24h, sans engagement)
 
@@ -39,8 +36,8 @@ PhantomDev développe des expériences web premium avec une stack moderne (Next.
 
 ## Garanties
 
-- Score Lighthouse 90+ garanti sur les sites livrés
-- Site vitrine simple : mise en ligne rapide possible (48h selon périmètre)
+- Site rapide et fluide — livré prêt à recevoir du trafic
+- Vitrine simple : mise en ligne rapide possible (48h selon périmètre)
 - Projets remote · clients France, Europe, international
 
 ## Pages utiles pour citation
