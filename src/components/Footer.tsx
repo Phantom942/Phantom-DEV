@@ -69,6 +69,35 @@ function FooterInner() {
       <p className="mx-auto mt-8 max-w-4xl text-center text-xs font-light leading-relaxed tracking-normal text-zinc-300">
         {t.footer.based}
       </p>
+      <nav
+        className="mx-auto mt-8 flex max-w-4xl flex-wrap items-center justify-center gap-x-6 gap-y-2 px-4"
+        aria-label={t.nav.mainNavAria}
+      >
+        <Link
+          href={`${prefix || ""}/services`}
+          className="text-xs font-light tracking-[0.08em] text-zinc-400 transition-colors hover:text-zinc-200"
+        >
+          {t.nav.services}
+        </Link>
+        <Link
+          href={`${prefix || ""}/realisations`}
+          className="text-xs font-light tracking-[0.08em] text-zinc-400 transition-colors hover:text-zinc-200"
+        >
+          {t.nav.projects}
+        </Link>
+        <Link
+          href={`${prefix || ""}/grapheneos`}
+          className="text-xs font-light tracking-[0.08em] text-zinc-400 transition-colors hover:text-zinc-200"
+        >
+          {t.nav.grapheneOS}
+        </Link>
+        <Link
+          href={`${prefix || ""}/contact`}
+          className="text-xs font-light tracking-[0.08em] text-zinc-400 transition-colors hover:text-zinc-200"
+        >
+          {t.nav.contact}
+        </Link>
+      </nav>
       <div className="mx-auto mt-10 max-w-4xl border-t border-zinc-800/80 pt-8">
         <div className="flex flex-col items-center justify-center gap-4 sm:flex-row sm:flex-wrap sm:gap-8">
           <Link

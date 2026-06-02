@@ -6,11 +6,12 @@ import { RealisationsPageContent } from "@/components/RealisationsPageContent";
 import { creativeWorkSchema } from "@/data/projects";
 import { getHreflangAlternates } from "@/lib/hreflang";
 import { getBreadcrumbForPath } from "@/lib/breadcrumb";
+import { buildWebPageSchema } from "@/lib/webpage-jsonld";
 import { defaultOpenGraphImages, twitterSummaryLarge } from "@/lib/social-metadata";
 
-const title = "Réalisations — Sites web & applications premium | PhantomDev";
+const title = "Réalisations — Portfolio sites web & apps Next.js";
 const description =
-  "Portfolio PhantomDev : sites vitrines, e-commerce, applications Next.js et React. Performance Lighthouse 90+, design sur-mesure. France, Europe, international.";
+  "Portfolio PhantomDev : sites vitrines, e-commerce et applications Next.js livrés en France et à l'international. Design sur-mesure, Lighthouse 90+.";
 const ogTitle = "Réalisations | PhantomDev — Portfolio web premium";
 const ogDesc =
   "Projets livrés : vitrines, apps et interfaces orientées conversion. Stack moderne, performances optimisées.";
@@ -44,9 +45,18 @@ export const metadata: Metadata = {
 
 export default function RealisationsPage() {
   const breadcrumbSchema = getBreadcrumbForPath("/realisations", "Réalisations");
+  const webPageSchema = buildWebPageSchema({
+    path: "/realisations",
+    name: title,
+    description,
+  });
 
   return (
     <div className="relative min-h-screen w-full bg-transparent">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageSchema) }}
+      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}

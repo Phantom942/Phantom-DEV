@@ -8,11 +8,12 @@ import { ServicesPageContent } from "@/components/ServicesPageContent";
 import { getHreflangAlternates } from "@/lib/hreflang";
 import { getBreadcrumbForPath } from "@/lib/breadcrumb";
 import { buildServicesItemListSchema } from "@/lib/services-jsonld";
+import { buildWebPageSchema } from "@/lib/webpage-jsonld";
 import { defaultOpenGraphImages, twitterSummaryLarge } from "@/lib/social-metadata";
 
-const title = "Services — Sites vitrines, e-commerce, SaaS | PhantomDev";
+const title = "Services — Création site web, e-commerce & SaaS | Paris";
 const description =
-  "Création de sites web sur-mesure : vitrines premium, e-commerce, applications et maintenance. Devis gratuit sous 24h. France, Europe, international.";
+  "Offres PhantomDev : site vitrine premium, e-commerce, application SaaS, SEO et maintenance. Devis gratuit sous 24h. Paris, Île-de-France, international.";
 const ogTitle = "Services | PhantomDev — Développement web sur-mesure";
 const ogDesc =
   "Offres PhantomDev : conception web, e-commerce, SaaS, intégration IA, maintenance. Devis clair sous 24h.";
@@ -51,9 +52,18 @@ export const metadata: Metadata = {
 export default function ServicesPage() {
   const breadcrumbSchema = getBreadcrumbForPath("/services", "Services");
   const servicesSchema = buildServicesItemListSchema("fr");
+  const webPageSchema = buildWebPageSchema({
+    path: "/services",
+    name: title,
+    description,
+  });
 
   return (
     <div className="relative min-h-screen w-full bg-transparent">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageSchema) }}
+      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}

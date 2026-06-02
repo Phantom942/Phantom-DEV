@@ -14,9 +14,11 @@
 ## Contact
 
 - Site : https://phantomdev.fr
+- Sitemap : https://phantomdev.fr/sitemap.xml
 - Contact : https://phantomdev.fr/contact
 - Services : https://phantomdev.fr/services
 - Réalisations : https://phantomdev.fr/realisations
+- GrapheneOS : https://phantomdev.fr/grapheneos
 - WhatsApp : ligne principale +33 6 69 04 07 54 (devis sous 24h, sans engagement)
 
 ## Langues

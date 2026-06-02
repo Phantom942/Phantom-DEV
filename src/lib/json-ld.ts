@@ -3,7 +3,10 @@ import { WHATSAPP_NUMBER } from "@/data/contact";
 /** URL canonique et identifiant Schema.org de l'agence. */
 export const PHANTOMDEV_SITE_URL = "https://phantomdev.fr";
 
-const WEBSITE_ID = `${PHANTOMDEV_SITE_URL}/#website`;
+/** Identifiant Schema.org du site (WebSite). */
+export const WEBSITE_ID = `${PHANTOMDEV_SITE_URL}/#website`;
+
+const LOGO_URL = `${PHANTOMDEV_SITE_URL}/images/phantom-logo.png`;
 
 /** Numéro E.164 pour schema.org (ex. +33669040754). */
 function getSchemaTelephone(): string {
@@ -23,8 +26,17 @@ export function buildProfessionalServiceSchema() {
     name: "PhantomDev",
     url: PHANTOMDEV_SITE_URL,
     image: `${PHANTOMDEV_SITE_URL}/og-image.png`,
+    logo: LOGO_URL,
     description:
-      "PhantomDev est une agence de création de sites web premium et d'applications sur-mesure basée en Île-de-France, spécialisée dans les architectures Next.js ultra-performantes.",
+      "PhantomDev conçoit des sites web premium et applications sur-mesure (Next.js, React) en Île-de-France et à l'international : vitrines, e-commerce, SaaS, SEO et performance Lighthouse 90+.",
+    slogan: "Sites web sur-mesure qui convertissent",
+    serviceType: [
+      "Création de site web",
+      "Développement e-commerce",
+      "Application web sur-mesure",
+      "Référencement naturel (SEO)",
+      "Maintenance de site web",
+    ],
     priceRange: "$$$",
     telephone: getSchemaTelephone(),
     address: {
@@ -39,18 +51,11 @@ export function buildProfessionalServiceSchema() {
       longitude: 2.395,
     },
     areaServed: [
-      {
-        "@type": "City",
-        name: "Ivry-sur-Seine",
-      },
-      {
-        "@type": "AdministrativeArea",
-        name: "Île-de-France",
-      },
-      {
-        "@type": "Country",
-        name: "France",
-      },
+      { "@type": "City", name: "Ivry-sur-Seine" },
+      { "@type": "City", name: "Paris" },
+      { "@type": "AdministrativeArea", name: "Île-de-France" },
+      { "@type": "Country", name: "France" },
+      { "@type": "Place", name: "Europe" },
     ],
     knowsAbout: [
       "Web Development",
@@ -88,8 +93,13 @@ export function buildWebsiteSchema() {
     url: PHANTOMDEV_SITE_URL,
     name: "PhantomDev",
     description:
-      "PhantomDev est une agence de création de sites web premium et d'applications sur-mesure basée en Île-de-France, spécialisée dans les architectures Next.js ultra-performantes.",
+      "PhantomDev — création de sites web premium, e-commerce et applications Next.js. Devis gratuit sous 24h. Paris, Île-de-France, international.",
     publisher: { "@id": PHANTOMDEV_SITE_URL },
-    inLanguage: ["fr", "en"],
+    inLanguage: ["fr-FR", "en-GB", "en-US"],
+    potentialAction: {
+      "@type": "CommunicateAction",
+      target: `${PHANTOMDEV_SITE_URL}/contact`,
+      name: "Demander un devis",
+    },
   };
 }
