@@ -1,15 +1,25 @@
 # PhantomDev
 
-> Création de sites web et applications sur-mesure (Next.js, React). France, Europe, international. Devis gratuit sous 24h via WhatsApp.
+> Studio de développement web sur-mesure — Next.js, React, TypeScript. Sites vitrines, e-commerce, SaaS et intégration IA. Performance Lighthouse 90+ garantie. Devis gratuit sous 24h via WhatsApp · projets remote worldwide.
+
+## Positionnement
+
+PhantomDev développe des expériences web premium avec une stack moderne (Next.js, React, TypeScript) : conversion, performance mesurée, design soigné. Vitrine livrable en 48h selon périmètre · accompagnement direct sur WhatsApp.
 
 ## Services principaux
 
 - Sites vitrines et landing pages premium (Lighthouse 90+)
-- E-commerce et applications sur-mesure (SaaS, API)
+- E-commerce et applications sur-mesure (SaaS, API REST)
 - SEO, performance web et audit Core Web Vitals
 - Intégration IA (chatbots, RAG, automatisation)
 - Maintenance et support technique
 - Installation GrapheneOS sur Google Pixel (page dédiée)
+
+## Stack
+
+- Next.js · React · TypeScript · Tailwind CSS
+- Déploiement Vercel / export statique
+- Intégration API · automatisation · IA
 
 ## Contact
 
@@ -19,7 +29,7 @@
 - Services : https://phantomdev.fr/services
 - Réalisations : https://phantomdev.fr/realisations
 - GrapheneOS : https://phantomdev.fr/grapheneos
-- WhatsApp : ligne principale +33 6 69 04 07 54 (devis sous 24h, sans engagement)
+- WhatsApp : +33 6 69 04 07 54 (devis sous 24h, sans engagement)
 
 ## Langues
 
@@ -27,12 +37,11 @@
 - English (UK) : https://phantomdev.fr/en-gb
 - English (US) : https://phantomdev.fr/en-us
 
-## Stack & garanties
+## Garanties
 
-- Next.js, React, TypeScript, Tailwind CSS, déploiement Vercel / statique
 - Score Lighthouse 90+ garanti sur les sites livrés
 - Site vitrine simple : mise en ligne rapide possible (48h selon périmètre)
-- Basé en Île-de-France (Ivry-sur-Seine), projets remote internationaux
+- Projets remote · clients France, Europe, international
 
 ## Pages utiles pour citation
 

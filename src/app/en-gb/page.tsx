@@ -11,9 +11,9 @@ import { buildFaqPageJsonLd } from "@/lib/faq-jsonld";
 import { getHreflangAlternates } from "@/lib/hreflang";
 import { defaultOpenGraphImages, twitterSummaryLarge } from "@/lib/social-metadata";
 
-const title = "Premium custom web development — UK & International";
+const title = "Custom web development — Next.js, SaaS & premium e-commerce";
 const description =
-  "PhantomDev creates custom websites that convert. E-commerce, SaaS, landing pages. Free quote within 24h. Lighthouse 90+ performance. UK, Europe, worldwide.";
+  "PhantomDev: bespoke web development with Next.js, React and TypeScript. Landing pages, e-commerce, SaaS apps and AI integration. Lighthouse 90+ guaranteed · Free quote within 24h · Remote worldwide.";
 
 export const metadata: Metadata = {
   alternates: {

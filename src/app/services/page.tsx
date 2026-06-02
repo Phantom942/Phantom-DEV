@@ -11,9 +11,9 @@ import { buildServicesItemListSchema } from "@/lib/services-jsonld";
 import { buildWebPageSchema } from "@/lib/webpage-jsonld";
 import { defaultOpenGraphImages, twitterSummaryLarge } from "@/lib/social-metadata";
 
-const title = "Services — Création site web, e-commerce & SaaS | Paris";
+const title = "Services — Développement web, e-commerce & SaaS Next.js";
 const description =
-  "Offres PhantomDev : site vitrine premium, e-commerce, application SaaS, SEO et maintenance. Devis gratuit sous 24h. Paris, Île-de-France, international.";
+  "Offres PhantomDev : site vitrine premium, e-commerce, application SaaS, SEO, intégration IA et maintenance. Stack Next.js · React · TypeScript. Devis gratuit sous 24h.";
 const ogTitle = "Services | PhantomDev — Développement web sur-mesure";
 const ogDesc =
   "Offres PhantomDev : conception web, e-commerce, SaaS, intégration IA, maintenance. Devis clair sous 24h.";

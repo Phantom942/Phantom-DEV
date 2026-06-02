@@ -70,7 +70,7 @@ export const projects = [
       solution:
         "Site vitrine orienté SEO local, pages services structurées et CTA contact immédiat.",
       result:
-        "Lighthouse 95+, meilleure indexation locale et leads plus qualifiés sur Paris & Val-de-Marne.",
+        "Lighthouse 95+, meilleure visibilité SEO et leads plus qualifiés sur les requêtes métier.",
     },
   },
   {

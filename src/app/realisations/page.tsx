@@ -11,7 +11,7 @@ import { defaultOpenGraphImages, twitterSummaryLarge } from "@/lib/social-metada
 
 const title = "Réalisations — Portfolio sites web & apps Next.js";
 const description =
-  "Portfolio PhantomDev : sites vitrines, e-commerce et applications Next.js livrés en France et à l'international. Design sur-mesure, Lighthouse 90+.";
+  "Portfolio PhantomDev : sites vitrines, e-commerce et applications Next.js · React · TypeScript. Design sur-mesure, Lighthouse 90+, projets remote worldwide.";
 const ogTitle = "Réalisations | PhantomDev — Portfolio web premium";
 const ogDesc =
   "Projets livrés : vitrines, apps et interfaces orientées conversion. Stack moderne, performances optimisées.";

@@ -13,9 +13,9 @@ import { buildWebPageSchema } from "@/lib/webpage-jsonld";
 import { defaultOpenGraphImages, twitterSummaryLarge } from "@/lib/social-metadata";
 
 const title =
-  "Création site web Paris & Île-de-France — Sites premium sur-mesure";
+  "Développement web sur-mesure — Next.js, SaaS & e-commerce premium";
 const description =
-  "PhantomDev : création de sites web sur-mesure à Paris et en Île-de-France. Vitrines, e-commerce, SaaS Next.js. Devis gratuit sous 24h. Lighthouse 90+. France & international.";
+  "PhantomDev : développement web sur-mesure en Next.js, React et TypeScript. Sites vitrines, e-commerce, applications SaaS et intégration IA. Lighthouse 90+ garanti · Devis gratuit sous 24h.";
 
 export const metadata: Metadata = {
   alternates: {
@@ -25,15 +25,16 @@ export const metadata: Metadata = {
   title: { absolute: `${title} | PhantomDev` },
   description,
   keywords: [
-    "création site web Paris",
-    "création site web Île-de-France",
-    "développeur web Ivry-sur-Seine",
-    "agence web sur-mesure",
-    "site vitrine premium",
-    "développement Next.js",
-    "e-commerce sur-mesure",
-    "refonte site web",
-    "SEO performance",
+    "développement web sur-mesure",
+    "création site internet premium",
+    "développeur Next.js",
+    "application SaaS sur-mesure",
+    "e-commerce Next.js",
+    "site vitrine haute performance",
+    "React TypeScript",
+    "intégration IA web",
+    "Core Web Vitals",
+    "refonte site web performant",
     "PhantomDev",
   ],
   openGraph: {

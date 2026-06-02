@@ -1,22 +1,24 @@
 /** Traductions enUs */
 export const enUs = {
     hero: {
-      title: "PhantomDev — Premium custom web development",
+      title:
+        "PhantomDev — Custom web development · Next.js, SaaS & premium e-commerce",
+      hook: "Modern stack. Measured performance. Premium results.",
       subtitle:
-        "Custom websites that convert. E-commerce, landing pages, premium applications. Performance & design at the service of your brand.",
-      seeServices: "View services",
-      seeProjects: "View my work",
-      requestQuote: "Request a quote",
-      badge1: "Ultra-fast performance",
-      badge2: "Maximum security",
-      badge3: "Landing page deliverable in 48h",
-      badge4: "Complex apps: custom quote",
+        "Next.js, React and TypeScript for your web projects — landing pages, e-commerce, SaaS applications and AI integration. Fast, elegant sites built to convert from the first visit.",
+      seeServices: "Explore services",
+      seeProjects: "View portfolio",
+      requestQuote: "Start my project",
+      badge1: "Next.js · React · TypeScript",
+      badge2: "Lighthouse 90+ guaranteed",
+      badge3: "Live landing page in 48h",
+      badge4: "SaaS · API · AI integration",
     },
     sections: {
       expertise: "Expertise",
       expertiseDesc:
-        "Premium web architecture, refined interfaces. Custom solutions that convert and strengthen your image.",
-      transition: "— Interfaces that leave a mark —",
+        "Next.js, React, TypeScript — premium web architecture and interfaces that convert. From landing pages to SaaS apps, a modern stack built for growth.",
+      transition: "— From clean code to experiences that make people want to buy —",
       processTitle: "How it works",
       processSteps: [
         {
@@ -33,10 +35,13 @@ export const enUs = {
         },
       ],
       realisations: "Portfolio",
-      realisationsDesc: "Technical excellence in the service of elegance.",
+      realisationsDesc:
+        "Projects where engineering fades behind emotion — and measurable results.",
       contact: "Contact",
-      contactDesc: "Got a project in mind? Contact me on WhatsApp for a free quote within 24h, no commitment.",
-      performance: "Performance guarantee: Lighthouse 90+ on all delivered sites. Landing page deliverable in 48h.",
+      contactDesc:
+        "Got a project close to your heart? Let's talk on WhatsApp — free quote within 24h, no commitment, just a clear vision of what your site can become.",
+      performance:
+        "Lighthouse 90+ guaranteed · Landing page in 48h · A human reply, not a buried form",
       or: "or",
       response: "Response within 24h · Landing page deliverable in 48h · No commitment",
       projectsSectionAria:
@@ -62,16 +67,16 @@ export const enUs = {
       tagline: "PhantomDev — Premium custom web development",
       mainLine: "Main line",
       mainLineAria: "Main line — WhatsApp PhantomDev",
-      ctaTitle: "Ready to start your project?",
-      ctaButton: "Request a free quote",
-      based: "France, Europe, worldwide — Landing page deliverable in 48h — Guaranteed maintenance contracts",
+      ctaTitle: "Ready to take your brand to the next level?",
+      ctaButton: "Start my project — free quote",
+      based: "Next.js · React · TypeScript · Remote worldwide · 48h landing pages · Guaranteed maintenance",
       designBy: "Design by PhantomDev",
       rights: "All rights reserved.",
     },
     trustProof: {
       aria: "Lighthouse scores measured on delivered projects",
-      label: "Measured on live projects",
-      hint: "Lighthouse 90+ guaranteed on all delivered sites — before/after audit on request.",
+      label: "Proof, not promises",
+      hint: "Real Lighthouse scores on live sites — 90+ guaranteed before go-live.",
     },
     skipToContent: "Skip to main content",
     nav: {
@@ -190,14 +195,17 @@ export const enUs = {
     },
     expertiseCards: {
       conception: "Premium Web Design",
-      conceptionDesc: "Refined interfaces, UX designed for conversion. Custom design that strengthens your brand image.",
+      conceptionDesc:
+        "Bespoke design, UX crafted to captivate and convert. A first impression that lasts.",
       applications: "Custom Applications",
-      applicationsDesc: "E-commerce, SaaS, business platforms. Solid architecture, scalability and optimized performance.",
+      applicationsDesc:
+        "E-commerce, SaaS, business platforms — solid architecture to scale with confidence.",
       seo: "SEO program & visibility",
       seoDesc:
-        "Technical audit, keywords, on-page SEO and reporting — more qualified traffic without empty promises.",
+        "Google visibility, qualified traffic: be found by people searching for exactly what you offer.",
       ia: "Strategic AI Integration",
-      iaDesc: "Chatbots, recommendations, automation. Artificial intelligence at the service of your processes.",
+      iaDesc:
+        "Chatbots, recommendations, automation — AI serving your processes, not as a gimmick.",
       learnMore: "Learn more",
     },
     contactForm: {
@@ -487,7 +495,7 @@ export const enUs = {
       introLead:
         "Each offer maps to a business goal: build trust, sell online, grow organic visibility (SEO), ship a serious product, or integrate AI without duct tape. Every project gets a quote tailored to scope — always clear within 24h.",
       introSub:
-        "Reply within 24h · No commitment · France, Europe & worldwide · Lighthouse 90+ on delivered sites",
+        "Reply within 24h · No commitment · Next.js · React · TypeScript · Lighthouse 90+ guaranteed · Remote worldwide",
       trustPoints: [
         "Lighthouse 90+ guarantee",
         "Simple sites: fast go-live possible",

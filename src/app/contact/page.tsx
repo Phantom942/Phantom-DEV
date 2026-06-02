@@ -12,9 +12,9 @@ import { buildContactPageSchema } from "@/lib/contact-jsonld";
 import { buildWebPageSchema } from "@/lib/webpage-jsonld";
 import { defaultOpenGraphImages, twitterSummaryLarge } from "@/lib/social-metadata";
 
-const title = "Contact — Devis site web gratuit sous 24h | Paris";
+const title = "Contact — Devis dev web & site internet gratuit sous 24h";
 const description =
-  "Contactez PhantomDev pour un devis gratuit : site vitrine, e-commerce ou application. Réponse sous 24h via WhatsApp. Paris, Île-de-France, international.";
+  "Contactez PhantomDev pour un devis gratuit : site vitrine, e-commerce, SaaS ou intégration IA. Réponse sous 24h via WhatsApp · Next.js · React · TypeScript.";
 const ogTitle = "Contact | PhantomDev — Devis développement web sous 24h";
 const ogDesc =
   "Demandez un devis pour votre projet web : site vitrine, e-commerce, application SaaS. Réponse sous 24h via WhatsApp, sans engagement.";

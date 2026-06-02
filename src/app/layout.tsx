@@ -37,23 +37,25 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
   metadataBase: new URL("https://phantomdev.fr"),
   title: {
-    default: "PhantomDev | Création de sites web premium sur-mesure — International",
+    default:
+      "PhantomDev | Développement web sur-mesure — Next.js, SaaS & e-commerce",
     template: "%s | PhantomDev",
   },
   description:
-    "Création de sites web premium sur-mesure. E-commerce, SaaS, vitrines. Devis gratuit sous 24h. Performance Lighthouse 90+. France, Europe, international.",
+    "Développement web sur-mesure : Next.js, React, TypeScript. Sites vitrines, e-commerce, SaaS et intégration IA. Lighthouse 90+ garanti · Devis gratuit sous 24h · Projets remote worldwide.",
   keywords: [
-    "création site web Paris",
-    "création site web Île-de-France",
-    "développeur web Ivry-sur-Seine",
-    "développeur web freelance",
-    "agence web sur-mesure",
-    "site vitrine sur-mesure",
-    "développement e-commerce",
+    "développement web sur-mesure",
+    "création site internet",
+    "développeur Next.js freelance",
+    "application SaaS sur-mesure",
+    "e-commerce Next.js",
+    "site vitrine premium",
+    "React TypeScript",
+    "intégration IA",
+    "Core Web Vitals",
     "refonte site web",
-    "Next.js",
-    "référencement naturel SEO",
-    "freelance web international",
+    "automatisation web",
+    "freelance développeur React",
     "installation GrapheneOS",
   ],
   robots: {
@@ -72,9 +74,9 @@ export const metadata: Metadata = {
   },
   openGraph: {
     type: "website",
-    title: "PhantomDev — Création sites web premium | Devis gratuit 24h",
+    title: "PhantomDev — Développement web Next.js & SaaS | Devis gratuit 24h",
     description:
-      "Sites web sur-mesure qui convertissent. E-commerce, SaaS, vitrines. Devis gratuit sous 24h. Performance garantie. France, Europe, international.",
+      "Sites vitrines, e-commerce et applications SaaS en Next.js · React · TypeScript. Performance Lighthouse 90+ garantie. Devis gratuit sous 24h · Remote worldwide.",
     url: "https://phantomdev.fr",
     siteName: "PhantomDev",
     locale: "fr_FR",
@@ -83,14 +85,14 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "PhantomDev — Création sites web premium | Devis gratuit 24h",
+    title: "PhantomDev — Développement web Next.js & SaaS | Devis gratuit 24h",
     description:
-      "Sites web sur-mesure. E-commerce, SaaS. Devis gratuit sous 24h. Performance garantie. International.",
+      "Développement web sur-mesure Next.js, SaaS et e-commerce. Lighthouse 90+ garanti · Devis gratuit sous 24h · Remote worldwide.",
     images: [defaultOpenGraphImage.url],
   },
   other: {
-    "geo.region": "FR-IDF",
-    "geo.placename": "Ivry-sur-Seine, Paris, Île-de-France",
+    "geo.region": "FR",
+    "geo.placename": "France",
     "geo.position": "48.812;2.395",
     "ICBM": "48.812, 2.395",
     target: "global",

@@ -22,6 +22,19 @@ const brandVariants = {
   },
 };
 
+const hookVariants = {
+  hidden: { opacity: 0, y: 20 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.55,
+      delay: 0.55,
+      ease: [0.22, 1, 0.36, 1] as const,
+    },
+  },
+};
+
 const subtitleVariants = {
   hidden: { opacity: 0, y: 24 },
   visible: {
@@ -102,10 +115,19 @@ export function HeroSection() {
         </m.div>
 
         <m.p
+          variants={lightMotion ? instant : hookVariants}
+          initial="hidden"
+          animate="visible"
+          className="font-tech mt-8 text-xs font-medium uppercase tracking-[0.28em] text-cyan-400/90 sm:mt-10 sm:text-sm sm:tracking-[0.32em]"
+        >
+          {t.hero.hook}
+        </m.p>
+
+        <m.p
           variants={lightMotion ? instant : subtitleVariants}
           initial="hidden"
           animate="visible"
-          className="mt-6 max-w-[90vw] px-2 text-sm font-light leading-[1.75] tracking-wide text-zinc-300 sm:mt-8 sm:max-w-2xl sm:text-base md:mt-10 md:text-lg"
+          className="mt-4 max-w-[90vw] px-2 text-sm font-light leading-[1.75] tracking-wide text-zinc-300 sm:mt-5 sm:max-w-2xl sm:text-base md:text-lg"
         >
           {t.hero.subtitle}
         </m.p>

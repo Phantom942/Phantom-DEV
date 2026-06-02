@@ -1,22 +1,24 @@
 /** Traductions fr */
 export const fr = {
     hero: {
-      title: "PhantomDev — Création de sites web premium sur-mesure",
+      title:
+        "PhantomDev — Développement web sur-mesure · Next.js, SaaS & e-commerce premium",
+      hook: "Stack moderne. Performance mesurée. Résultat premium.",
       subtitle:
-        "Sites web sur-mesure qui convertissent. E-commerce, vitrines, applications premium. Performance & design au service de votre marque.",
-      seeServices: "Voir les services",
-      seeProjects: "Voir mes réalisations",
-      requestQuote: "Demander un devis",
-      badge1: "Performance ultra-rapide",
-      badge2: "Sécurité maximale",
-      badge3: "Site vitrine livrable en 48h",
-      badge4: "Applications complexes sur devis",
+        "Next.js, React et TypeScript pour vos projets web — vitrines, e-commerce, applications SaaS et intégration IA. Un site rapide, élégant et pensé pour convertir dès la première visite.",
+      seeServices: "Découvrir les services",
+      seeProjects: "Voir les réalisations",
+      requestQuote: "Lancer mon projet",
+      badge1: "Next.js · React · TypeScript",
+      badge2: "Lighthouse 90+ garanti",
+      badge3: "Vitrine live en 48h",
+      badge4: "SaaS · API · intégration IA",
     },
     sections: {
       expertise: "Expertise",
       expertiseDesc:
-        "Architecture web premium, interfaces raffinées. Des solutions sur-mesure qui convertissent et renforcent votre image.",
-      transition: "— Des interfaces qui marquent les esprits —",
+        "Next.js, React, TypeScript — architecture web premium et interfaces qui convertissent. Du site vitrine à l'application SaaS, une stack moderne au service de votre croissance.",
+      transition: "— Du code propre à l'expérience qui donne envie d'acheter —",
       processTitle: "Comment ça se passe ?",
       processSteps: [
         {
@@ -33,10 +35,13 @@ export const fr = {
         },
       ],
       realisations: "Réalisations",
-      realisationsDesc: "L'excellence technique au service de l'élégance.",
+      realisationsDesc:
+        "Des projets où la technique disparaît au profit de l'émotion — et des résultats mesurables.",
       contact: "Contact",
-      contactDesc: "Un projet en tête ? Contactez-moi sur WhatsApp pour un devis gratuit sous 24h, sans engagement.",
-      performance: "Garantie performance : Lighthouse 90+ sur tous les sites livrés. Site vitrine livrable en 48h.",
+      contactDesc:
+        "Un projet qui vous tient à cœur ? Parlons-en sur WhatsApp : devis gratuit sous 24h, sans engagement — une vision claire de ce que votre site peut devenir.",
+      performance:
+        "Performance garantie Lighthouse 90+ · Vitrine livrable en 48h · Réponse humaine, pas un formulaire noyé",
       or: "ou",
       response: "Réponse sous 24h · Site vitrine livrable en 48h · Sans engagement",
       projectsSectionAria:
@@ -46,7 +51,7 @@ export const fr = {
     faq: {
       title: "Questions fréquentes",
       items: [
-        { q: "Qu'est-ce que PhantomDev ?", a: "PhantomDev est une agence de création de sites web sur-mesure basée en France. Spécialisée en Next.js, React et Node.js, elle conçoit des sites vitrines, e-commerce et applications SaaS avec des interfaces premium, des performances optimisées (Lighthouse 90+) et une livraison rapide." },
+        { q: "Qu'est-ce que PhantomDev ?", a: "PhantomDev est un studio de développement web sur-mesure spécialisé Next.js, React et TypeScript. Sites vitrines, e-commerce, applications SaaS, intégration IA et APIs — avec des performances Lighthouse 90+ garanties et une livraison rapide." },
         { q: "Quels sont les délais de livraison ?", a: "Un site vitrine simple peut être livré en 48h. Pour les projets plus complexes (e-commerce, applications sur-mesure), les délais sont adaptés selon la portée. Un planning est établi dès la validation du devis." },
         { q: "Quels services propose PhantomDev ?", a: "PhantomDev propose plus de 14 offres : sites vitrines et landing pages, e-commerce, applications et SaaS, SEO et performance, intégration IA et automatisation, APIs, refonte Next.js, conseil technique et maintenance. Le détail est sur phantomdev.fr/services." },
         { q: "Combien coûte un site web chez PhantomDev ?", a: "Chaque projet fait l'objet d'un devis sur-mesure sous 24h, sans engagement. Un site vitrine simple peut être livré rapidement (48h selon périmètre) ; e-commerce, SaaS et intégrations IA sont chiffrés selon la complexité. Contact via WhatsApp sur phantomdev.fr/contact." },
@@ -62,16 +67,16 @@ export const fr = {
       tagline: "PhantomDev — Création de sites web premium sur-mesure",
       mainLine: "Ligne principale",
       mainLineAria: "Ligne principale — contact WhatsApp PhantomDev",
-      ctaTitle: "Prêt à lancer votre projet ?",
-      ctaButton: "Demander un devis gratuit",
-      based: "France, Europe, international — Site vitrine livrable en 48h — Contrats de maintenance garantis",
+      ctaTitle: "Prêt à faire passer votre marque au niveau supérieur ?",
+      ctaButton: "Lancer mon projet — devis gratuit",
+      based: "Next.js · React · TypeScript · Projets remote worldwide · Vitrine en 48h · Maintenance garantie",
       designBy: "Design by PhantomDev",
       rights: "Tous droits réservés.",
     },
     trustProof: {
       aria: "Performances Lighthouse mesurées sur des projets livrés",
-      label: "Scores mesurés sur projets réels",
-      hint: "Garantie Lighthouse 90+ sur tous les sites livrés — audit avant / après sur demande.",
+      label: "La preuve, pas la promesse",
+      hint: "Scores Lighthouse réels sur des sites livrés — garantie 90+ avant mise en ligne.",
     },
     skipToContent: "Aller au contenu principal",
     nav: {
@@ -192,14 +197,17 @@ export const fr = {
     },
     expertiseCards: {
       conception: "Conception Web Premium",
-      conceptionDesc: "Interfaces raffinées, UX pensée pour la conversion. Design sur-mesure qui renforce votre image de marque.",
+      conceptionDesc:
+        "Design sur-mesure, UX pensée pour séduire et convertir. Une première impression qui reste.",
       applications: "Applications Sur-Mesure",
-      applicationsDesc: "E-commerce, SaaS, plateformes métier. Architecture solide, scalabilité et performances optimisées.",
+      applicationsDesc:
+        "E-commerce, SaaS, plateformes métier — architecture solide pour scaler sereinement.",
       seo: "Programme SEO & visibilité",
       seoDesc:
-        "Audit technique, mots-clés, on-page et suivi : plus de trafic qualifié sans promesses creuses.",
+        "Visibilité Google, trafic qualifié : être trouvé par ceux qui cherchent exactement ce que vous proposez.",
       ia: "Intégration IA Stratégique",
-      iaDesc: "Chatbots, recommandations, automatisation. L'intelligence artificielle au service de vos processus.",
+      iaDesc:
+        "Chatbots, recommandations, automatisation — l'IA au service de vos processus, pas comme gadget.",
       learnMore: "En savoir plus",
     },
     contactForm: {
@@ -489,7 +497,7 @@ export const fr = {
       introLead:
         "Chaque ligne ci-dessous répond à une intention business : être crédible, vendre en ligne, gagner en visibilité (SEO), industrialiser un outil, ou intégrer l’IA sans bricolage. Chaque projet fait l’objet d’un devis adapté au périmètre — toujours clair, sous 24h.",
       introSub:
-        "Réponse sous 24h · Sans engagement · France, Europe & international · Lighthouse 90+ sur les sites livrés",
+        "Réponse sous 24h · Sans engagement · Next.js · React · TypeScript · Lighthouse 90+ garanti · Remote worldwide",
       trustPoints: [
         "Lighthouse 90+ garanti",
         "Vitrine simple : mise en ligne rapide possible",

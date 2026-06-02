@@ -28,8 +28,8 @@ export function buildProfessionalServiceSchema() {
     image: `${PHANTOMDEV_SITE_URL}/og-image.png`,
     logo: LOGO_URL,
     description:
-      "PhantomDev conçoit des sites web premium et applications sur-mesure (Next.js, React) en Île-de-France et à l'international : vitrines, e-commerce, SaaS, SEO et performance Lighthouse 90+.",
-    slogan: "Sites web sur-mesure qui convertissent",
+      "PhantomDev conçoit des sites web premium et applications sur-mesure en Next.js, React et TypeScript : vitrines, e-commerce, SaaS, intégration IA et APIs. Performance Lighthouse 90+ garantie · projets remote worldwide.",
+    slogan: "Next.js · React · TypeScript — sites qui convertissent",
     serviceType: [
       "Création de site web",
       "Développement e-commerce",
@@ -51,11 +51,9 @@ export function buildProfessionalServiceSchema() {
       longitude: 2.395,
     },
     areaServed: [
-      { "@type": "City", name: "Ivry-sur-Seine" },
-      { "@type": "City", name: "Paris" },
-      { "@type": "AdministrativeArea", name: "Île-de-France" },
-      { "@type": "Country", name: "France" },
+      { "@type": "Place", name: "Worldwide" },
       { "@type": "Place", name: "Europe" },
+      { "@type": "Country", name: "France" },
     ],
     knowsAbout: [
       "Web Development",
@@ -93,7 +91,7 @@ export function buildWebsiteSchema() {
     url: PHANTOMDEV_SITE_URL,
     name: "PhantomDev",
     description:
-      "PhantomDev — création de sites web premium, e-commerce et applications Next.js. Devis gratuit sous 24h. Paris, Île-de-France, international.",
+      "PhantomDev — développement web sur-mesure Next.js, React et TypeScript. Vitrines, e-commerce, SaaS et intégration IA. Devis gratuit sous 24h.",
     publisher: { "@id": PHANTOMDEV_SITE_URL },
     inLanguage: ["fr-FR", "en-GB", "en-US"],
     potentialAction: {
