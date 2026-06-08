@@ -1,13 +1,12 @@
 {
-  "name": "phantom-dev-portfolio",
+  "name": "phantom-dev",
   "version": "0.1.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint",
-    "optimize:mockups": "node scripts/optimize-mockups.mjs"
+    "lint": "eslint"
   },
   "browserslist": [
     "chrome >= 111",
@@ -30,7 +29,6 @@
     "@types/react-dom": "^19",
     "eslint": "^9",
     "eslint-config-next": "16.1.6",
-    "sharp": "^0.34.5",
     "tailwindcss": "^4",
     "typescript": "^5"
   },
