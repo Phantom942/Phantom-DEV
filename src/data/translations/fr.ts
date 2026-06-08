@@ -2,17 +2,17 @@
 export const fr = {
     hero: {
       title:
-        "PhantomDev — Sites web et systèmes digitaux qui vous amènent des clients",
-      hook: "Moins de paperasse. Moins de tâches répétitives. Plus de clients.",
+        "PhantomDev — Développeur freelance, sites web et outils pour TPE et artisans",
+      hook: "Un site pensé pour votre métier.",
       subtitle:
-        "Je conçois des sites et des outils sur-mesure pour TPE, PME, artisans et garages : capter des prospects, automatiser l'administratif et convertir vos visiteurs en rendez-vous ou en ventes — sans jargon, sans mauvaise surprise.",
-      seeServices: "Voir ce que je propose",
-      seeProjects: "Voir les résultats clients",
-      requestQuote: "Obtenir mon devis gratuit",
-      badge1: "Plus de clients, pas juste du trafic",
-      badge2: "Site rapide = confiance dès la 1re seconde",
-      badge3: "Mise en ligne possible en 48h",
-      badge4: "Automatisation & IA selon vos besoins",
+        "Je conçois vitrines web, prise de rendez-vous et petits outils admin pour garages, artisans et PME. Un seul interlocuteur, un périmètre clair avant de coder, devis sous 24 h.",
+      seeServices: "Voir les prestations",
+      seeProjects: "Voir les réalisations",
+      requestQuote: "Demander un devis",
+      badge1: "RDV et devis en ligne",
+      badge2: "Pensé mobile d'abord",
+      badge3: "Devis sous 24 h",
+      badge4: "Contact direct WhatsApp",
     },
     sections: {
       expertise: "Ce que je fais pour vous",

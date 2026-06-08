@@ -13,9 +13,9 @@ import { buildWebPageSchema } from "@/lib/webpage-jsonld";
 import { defaultOpenGraphImages, twitterSummaryLarge } from "@/lib/social-metadata";
 
 const title =
-  "Sites web & outils digitaux qui vous amènent des clients";
+  "Sites web et outils digitaux pour TPE, artisans et garages";
 const description =
-  "PhantomDev : sites vitrines, e-commerce, réservation en ligne et automatisation pour TPE et PME. Plus de clients, moins de paperasse. Devis gratuit sous 24h sur WhatsApp.";
+  "PhantomDev — développeur freelance. Sites vitrines, RDV en ligne et automatisation ciblée pour PME locales. Devis sous 24 h sur WhatsApp.";
 
 export const metadata: Metadata = {
   alternates: {
