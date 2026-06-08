@@ -1,0 +1,21 @@
+---
+description: Stack PhantomDev, conventions projet et comportement agent
+alwaysApply: true
+---
+
+# PhantomDev — règles projet
+
+## Stack
+- Next.js 16 App Router · export statique (`output: "export"`) · déployé GitHub Pages → phantomdev.fr
+- React 19 · Tailwind CSS 4 · Framer Motion · Lucide React
+- i18n : FR (racine), `/en-gb`, `/en-us` — copy FR = ton B2B TPE/PME ; EN peut rester plus tech
+
+## Code
+- TypeScript strict, pas de `any`
+- Composants dans `@/components`, traductions dans `@/data/translations/`
+- Diff minimal : ne pas toucher aux fichiers hors scope de la demande
+- Pas de commit / push sauf demande explicite
+
+## Communication
+- Répondre en français si l'utilisateur écrit en français
+- Copy client FR : bénéfices métier (RDV, devis, gain de temps), pas de jargon Next.js/Lighthouse dans le texte visible ou indexé

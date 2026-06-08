@@ -1,0 +1,21 @@
+---
+description: Copywriting FR et SEO indexable (humain = robots)
+globs: src/data/translations/fr.ts,src/app/**/page.tsx,src/app/layout.tsx,src/lib/json-ld.ts,src/lib/social-metadata.ts,public/llms.txt
+alwaysApply: false
+---
+
+# Copy & SEO FR
+
+## Ton
+- Cible : TPE, PME, artisans, garages
+- Promesses : plus de clients, moins de paperasse, RDV en ligne, devis sous 24h
+- Éviter : Next.js, React, Headless, Lighthouse, stack technique dans meta/FAQ/JSON-LD FR
+
+## Mots-clés métier à privilégier
+- automatisation garage · gain de temps artisan · CRM PME local
+- site web garage · site vitrine artisan · prise de rendez-vous en ligne
+- visibilité Google entreprise · boutique en ligne sur-mesure
+
+## Cohérence
+- Même message dans : traductions FR, `metadata`, Open Graph, `json-ld.ts`, `llms.txt`
+- Études de cas : résultats business (RDV, appels, conversion), pas scores Lighthouse

@@ -1,0 +1,32 @@
+---
+description: Workflows git, i18n 3 locales et déploiement GitHub Pages
+globs: src/data/translations/**,src/app/**/page.tsx,.github/**
+alwaysApply: false
+---
+
+# Workflows PhantomDev
+
+## i18n — 3 locales
+- FR : routes racine (`/`, `/services`, `/contact`…)
+- EN-GB : préfixe `/en-gb`
+- EN-US : préfixe `/en-us`
+- Copy visible FR → `src/data/translations/fr.ts` (ton B2B TPE/PME)
+- Nouvelle clé de traduction : ajouter dans **fr**, **en-gb**, **en-us**
+
+## Ajouter / modifier une page
+1. Page dans `src/app/` (+ miroir `en-gb/` et `en-us/` si nécessaire)
+2. `metadata` : title, description, keywords, hreflang via `getHreflangAlternates`
+3. JSON-LD si page stratégique (`buildWebPageSchema`, breadcrumb)
+4. `npm run build` avant de considérer terminé
+
+## Git & déploiement
+- Repo : GitHub → GitHub Pages → https://phantomdev.fr
+- Export statique : pas de API routes, pas de SSR dynamique
+- Commit / push **uniquement si l'utilisateur le demande**
+- Messages de commit en français, orientés « pourquoi »
+
+## Fichiers SEO sensibles (toujours alignés)
+- `src/data/translations/fr.ts`
+- `src/lib/json-ld.ts`
+- `public/llms.txt`
+- Meta des pages dans `src/app/**/page.tsx`

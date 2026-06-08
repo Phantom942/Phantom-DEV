@@ -1,0 +1,22 @@
+---
+description: UI stealth dark, perf mobile et accessibilité
+globs: src/**/*.tsx,src/app/globals.css
+alwaysApply: false
+---
+
+# UI PhantomDev
+
+## Design system actuel
+- Fond sombre (zinc-950), texte zinc-100/300/400
+- Accents **cyan** (`cyan-400`, `cyan-500/35`) — pas de thème gold/luxury
+- Classes existantes : `stealth-card`, `btn-stealth-primary`, `font-tech`
+- Réutiliser les composants existants avant d'en créer
+
+## UX
+- Mobile-first : pas de chevauchement (éviter `absolute` en bas de hero si contenu long)
+- HTML sémantique : `main`, `nav`, `section`, listes pour FAQ/services
+- Animations Framer Motion avec parcimonie ; respecter `prefers-reduced-motion`
+
+## Perf
+- `dynamic import` pour sections lourdes ; images WebP/mockups optimisés
+- Ne pas réintroduire polices ou effets coûteux sans raison
