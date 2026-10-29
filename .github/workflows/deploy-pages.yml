@@ -1,10 +1,11 @@
-# Déploiement : l'audit automatique requiert Vercel (API routes Stripe + crawl).
-# GitHub Pages ne supporte plus le build statique seul — connectez le repo à Vercel.
-# Doc : https://vercel.com/docs/frameworks/nextjs
+# Site vitrine : export statique GitHub Pages (domaine phantomdev.fr).
+# L'audit Stripe (/api/audit) n'est pas inclus dans cet export.
 
 name: Deploy to GitHub Pages
 
 on:
+  push:
+    branches: [main]
   workflow_dispatch:
 
 permissions:
@@ -33,22 +34,22 @@ jobs:
 
       - name: Build (static export)
         env:
+          GITHUB_PAGES: "true"
           NODE_OPTIONS: "--max-old-space-size=4096"
           NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY: ${{ secrets.WEB3FORMS_ACCESS_KEY }}
           NEXT_PUBLIC_FORMSPREE_ID: xjgalddw
         run: |
-          rm -rf .next out
+          rm -rf .next out src/app/api
           npm run build
+          cp CNAME out/CNAME
+          touch out/.nojekyll
 
       - name: List deployed files
         run: |
           echo "Contenu de out/ déployé :"
           ls -la out/
-          echo "---"
-          ls -la out/contact 2>/dev/null || true
-
-      - name: Ensure .nojekyll for GitHub Pages (_next/ assets)
-        run: touch out/.nojekyll
+          test -f out/index.html
+          test -f out/CNAME
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
