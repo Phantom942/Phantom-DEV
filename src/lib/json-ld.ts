@@ -8,7 +8,7 @@ export const WEBSITE_ID = `${PHANTOMDEV_SITE_URL}/#website`;
 
 const LOGO_URL = `${PHANTOMDEV_SITE_URL}/images/phantom-logo.png`;
 
-/** Numéro E.164 pour schema.org (ex. +33669040754). */
+/** Numéro E.164 pour schema.org (ex. +33609878170). */
 function getSchemaTelephone(): string {
   const d = WHATSAPP_NUMBER;
   return d.startsWith("+") ? d : `+${d}`;

@@ -50,7 +50,7 @@ function FooterInner() {
               aria-label={`${t.footer.mainLineAria} (${getWhatsAppDisplayHuman()})`}
             >
               <MessageCircle size={16} strokeWidth={1.5} className="shrink-0 text-zinc-300" />
-              {t.footer.mainLine}
+              <span>{getWhatsAppDisplayHuman()}</span>
             </a>
           </div>
         </div>
