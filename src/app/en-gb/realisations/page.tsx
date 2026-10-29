@@ -8,10 +8,10 @@ import { getHreflangAlternates } from "@/lib/hreflang";
 import { getBreadcrumbForPath } from "@/lib/breadcrumb";
 import { defaultOpenGraphImages, twitterSummaryLarge } from "@/lib/social-metadata";
 
-const title = "Portfolio — Premium web projects | NADER ASSEL DEV WEB";
+const title = "Portfolio — Premium web projects | NADER DEV WEB";
 const description =
-  "NADER ASSEL DEV WEB portfolio: landing pages, e-commerce, Next.js and React applications. Lighthouse 90+ performance, bespoke UI. UK, EU, worldwide.";
-const ogTitle = "Portfolio | NADER ASSEL DEV WEB — Web development work";
+  "NADER DEV WEB portfolio: landing pages, e-commerce, Next.js and React applications. Lighthouse 90+ performance, bespoke UI. UK, EU, worldwide.";
+const ogTitle = "Portfolio | NADER DEV WEB — Web development work";
 
 export const metadata: Metadata = {
   alternates: {
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     title: ogTitle,
     description,
     url: "https://phantomdev.fr/en-gb/realisations",
-    siteName: "NADER ASSEL DEV WEB",
+    siteName: "NADER DEV WEB",
     locale: "en_GB",
     images: defaultOpenGraphImages,
   },
@@ -51,7 +51,7 @@ export default function EnGBRealisationsPage() {
         id="main"
         role="main"
         className="w-full pt-24 pb-16 sm:pt-32 sm:pb-24"
-        aria-label="NADER ASSEL DEV WEB portfolio: web projects"
+        aria-label="NADER DEV WEB portfolio: web projects"
       >
         <RealisationsPageContent />
       </main>

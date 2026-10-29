@@ -10,8 +10,8 @@ import { getBreadcrumbTrail } from "@/lib/breadcrumb";
 import { defaultOpenGraphImages, twitterSummaryLarge } from "@/lib/social-metadata";
 
 const title = "Mentions légales";
-const description = "Mentions légales de NADER ASSEL DEV WEB — Création de sites web premium sur-mesure.";
-const ogTitle = "Mentions légales | NADER ASSEL DEV WEB";
+const description = "Mentions légales de NADER DEV WEB — Création de sites web premium sur-mesure.";
+const ogTitle = "Mentions légales | NADER DEV WEB";
 
 export const metadata: Metadata = {
   alternates: {
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     title: ogTitle,
     description,
     url: "https://phantomdev.fr/mentions-legales",
-    siteName: "NADER ASSEL DEV WEB",
+    siteName: "NADER DEV WEB",
     locale: "fr_FR",
     images: defaultOpenGraphImages,
   },
@@ -50,13 +50,13 @@ export default function MentionsLegalesPage() {
         id="main"
         role="main"
         className="w-full pt-24 pb-16 sm:pt-32 sm:pb-24"
-        aria-label="Mentions légales NADER ASSEL DEV WEB, création de sites web"
+        aria-label="Mentions légales NADER DEV WEB, création de sites web"
       >
         <div className="mx-auto max-w-3xl px-4 sm:px-8 md:px-16">
           <Link
             href="/"
             className="mb-12 inline-flex items-center gap-2 text-sm font-light tracking-[0.1em] text-zinc-400 transition-colors hover:text-zinc-100"
-            aria-label="Retour à l'accueil NADER ASSEL DEV WEB"
+            aria-label="Retour à l'accueil NADER DEV WEB"
           >
             <ArrowLeft size={16} strokeWidth={1.5} />
             Retour à l&apos;accueil
@@ -72,7 +72,7 @@ export default function MentionsLegalesPage() {
                 1. Éditeur du site
               </h2>
               <p>
-                Le site phantomdev.fr est édité par NADER ASSEL DEV WEB. Pour toute
+                Le site phantomdev.fr est édité par NADER DEV WEB. Pour toute
                 question concernant ce site ou les services proposés, vous pouvez
                 nous contacter à l&apos;adresse : contact@phantomdev.fr
               </p>
@@ -128,8 +128,8 @@ export default function MentionsLegalesPage() {
                 6. Limitation de responsabilité
               </h2>
               <p>
-                NADER ASSEL DEV WEB s&apos;efforce d&apos;assurer l&apos;exactitude des
-                informations publiées sur ce site. Toutefois, NADER ASSEL DEV WEB ne peut
+                NADER DEV WEB s&apos;efforce d&apos;assurer l&apos;exactitude des
+                informations publiées sur ce site. Toutefois, NADER DEV WEB ne peut
                 être tenu responsable des erreurs, omissions ou des dommages
                 résultant de l&apos;utilisation des informations fournies.
               </p>
@@ -142,7 +142,7 @@ export default function MentionsLegalesPage() {
               <div className="space-y-3">
                 <p>
                   <strong>Objet.</strong> L&apos;audit site internet est un service numérique
-                  automatisé : après paiement de 39 € TTC via Stripe, NADER ASSEL DEV WEB analyse
+                  automatisé : après paiement de 39 € TTC via Stripe, NADER DEV WEB analyse
                   l&apos;URL fournie (jusqu&apos;à 8 pages) et affiche un rapport en ligne
                   (scores, constats, plan d&apos;action).
                 </p>

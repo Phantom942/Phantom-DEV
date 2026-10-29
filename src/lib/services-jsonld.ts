@@ -13,8 +13,8 @@ export function buildServicesItemListSchema(locale: Locale) {
     "@type": "ItemList",
     name:
       locale === "fr"
-        ? "Services NADER ASSEL DEV WEB — site vitrine, RDV en ligne, automatisation garage, CRM PME"
-        : "NADER ASSEL DEV WEB services — custom web development",
+        ? "Services NADER DEV WEB — site vitrine, RDV en ligne, automatisation garage, CRM PME"
+        : "NADER DEV WEB services — custom web development",
     url: `${PHANTOMDEV_SITE_URL}${prefix}/services`,
     numberOfItems: serviceConfigs.length,
     itemListElement: serviceConfigs.map((config, index) => {
@@ -28,7 +28,7 @@ export function buildServicesItemListSchema(locale: Locale) {
           description: copy.description,
           provider: {
             "@type": "ProfessionalService",
-            name: "NADER ASSEL DEV WEB",
+            name: "NADER DEV WEB",
             url: PHANTOMDEV_SITE_URL,
           },
           areaServed: "FR",

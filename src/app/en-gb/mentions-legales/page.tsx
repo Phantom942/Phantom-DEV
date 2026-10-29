@@ -9,8 +9,8 @@ import { getHreflangAlternates } from "@/lib/hreflang";
 import { getBreadcrumbTrail } from "@/lib/breadcrumb";
 import { defaultOpenGraphImages, twitterSummaryLarge } from "@/lib/social-metadata";
 
-const title = "Legal notice | NADER ASSEL DEV WEB";
-const description = "Legal information for NADER ASSEL DEV WEB — premium custom web development.";
+const title = "Legal notice | NADER DEV WEB";
+const description = "Legal information for NADER DEV WEB — premium custom web development.";
 
 export const metadata: Metadata = {
   alternates: {
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     title,
     description,
     url: "https://phantomdev.fr/en-gb/mentions-legales",
-    siteName: "NADER ASSEL DEV WEB",
+    siteName: "NADER DEV WEB",
     locale: "en_GB",
     images: defaultOpenGraphImages,
   },
@@ -58,7 +58,7 @@ export default function EnGBMentionsLegalesPage() {
             Legal notice
           </h1>
           <p className="text-sm leading-[1.8] text-zinc-400">
-            NADER ASSEL DEV WEB — Premium custom web development. Based in France. International services.
+            NADER DEV WEB — Premium custom web development. Based in France. International services.
           </p>
         </div>
       </main>

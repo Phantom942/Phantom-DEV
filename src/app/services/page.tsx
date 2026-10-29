@@ -13,10 +13,10 @@ import { defaultOpenGraphImages, twitterSummaryLarge } from "@/lib/social-metada
 
 const title = "Services — Sites web, e-commerce & automatisation PME";
 const description =
-  "Offres NADER ASSEL DEV WEB : site vitrine, boutique en ligne, prise de RDV, visibilité Google, automatisation et IA. Devis clair sous 24h pour TPE, PME et artisans.";
-const ogTitle = "Services | NADER ASSEL DEV WEB — Site vitrine, RDV en ligne & automatisation PME";
+  "Offres NADER DEV WEB : site vitrine, boutique en ligne, prise de RDV, visibilité Google, automatisation et IA. Devis clair sous 24h pour TPE, PME et artisans.";
+const ogTitle = "Services | NADER DEV WEB — Site vitrine, RDV en ligne & automatisation PME";
 const ogDesc =
-  "Offres NADER ASSEL DEV WEB : site vitrine, boutique en ligne, prise de RDV, visibilité Google, automatisation garage et CRM PME. Devis clair sous 24h.";
+  "Offres NADER DEV WEB : site vitrine, boutique en ligne, prise de RDV, visibilité Google, automatisation garage et CRM PME. Devis clair sous 24h.";
 
 export const metadata: Metadata = {
   alternates: {
@@ -36,14 +36,14 @@ export const metadata: Metadata = {
     "boutique en ligne",
     "visibilité Google entreprise",
     "automatisation PME",
-    "NADER ASSEL DEV WEB",
+    "NADER DEV WEB",
   ],
   openGraph: {
     type: "website",
     title: ogTitle,
     description: ogDesc,
     url: "https://phantomdev.fr/services",
-    siteName: "NADER ASSEL DEV WEB",
+    siteName: "NADER DEV WEB",
     locale: "fr_FR",
     images: defaultOpenGraphImages,
   },
@@ -79,7 +79,7 @@ export default function ServicesPage() {
         id="main"
         role="main"
         className="w-full pt-24 pb-16 sm:pt-32 sm:pb-24"
-        aria-label="Page services NADER ASSEL DEV WEB : site vitrine, RDV en ligne, automatisation garage, CRM PME, visibilité Google"
+        aria-label="Page services NADER DEV WEB : site vitrine, RDV en ligne, automatisation garage, CRM PME, visibilité Google"
       >
         <Suspense fallback={null}>
           <ServicesPageContent />

@@ -13,8 +13,8 @@ export function buildContactPageSchema(locale: "fr" | "en-GB" | "en-US" = "fr") 
 
   const name =
     locale === "fr"
-      ? "Contact NADER ASSEL DEV WEB — Devis site web gratuit sous 24h"
-      : "Contact NADER ASSEL DEV WEB — Free web project quote within 24h";
+      ? "Contact NADER DEV WEB — Devis site web gratuit sous 24h"
+      : "Contact NADER DEV WEB — Free web project quote within 24h";
   const description =
     locale === "fr"
       ? "Demandez un devis gratuit pour votre site vitrine, e-commerce ou application. Réponse sous 24h via WhatsApp."
@@ -31,7 +31,7 @@ export function buildContactPageSchema(locale: "fr" | "en-GB" | "en-US" = "fr") 
     mainEntity: {
       "@type": "ProfessionalService",
       "@id": PHANTOMDEV_SITE_URL,
-      name: "NADER ASSEL DEV WEB",
+      name: "NADER DEV WEB",
       url: PHANTOMDEV_SITE_URL,
       telephone: schemaTelephone(),
       contactPoint: {

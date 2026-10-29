@@ -9,9 +9,9 @@ import { getHreflangAlternates } from "@/lib/hreflang";
 import { buildServicesItemListSchema } from "@/lib/services-jsonld";
 import { defaultOpenGraphImages, twitterSummaryLarge } from "@/lib/social-metadata";
 
-const title = "Services — NADER ASSEL DEV WEB";
-const description = "NADER ASSEL DEV WEB: custom web development, e-commerce, SaaS. Next.js, React.";
-const ogTitle = "Services | NADER ASSEL DEV WEB — US";
+const title = "Services — NADER DEV WEB";
+const description = "NADER DEV WEB: custom web development, e-commerce, SaaS. Next.js, React.";
+const ogTitle = "Services | NADER DEV WEB — US";
 
 export const metadata: Metadata = {
   alternates: {
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     title: ogTitle,
     description,
     url: "https://phantomdev.fr/en-us/services",
-    siteName: "NADER ASSEL DEV WEB",
+    siteName: "NADER DEV WEB",
     locale: "en_US",
     images: defaultOpenGraphImages,
   },

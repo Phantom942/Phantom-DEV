@@ -24,7 +24,7 @@ export function WhatsAppButton({
       target="_blank"
       rel="noopener noreferrer"
       className={className}
-      aria-label="Contacter NADER ASSEL DEV WEB sur WhatsApp pour un devis projet web"
+      aria-label="Contacter NADER DEV WEB sur WhatsApp pour un devis projet web"
     >
       {children}
     </a>

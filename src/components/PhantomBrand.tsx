@@ -6,7 +6,7 @@ type PhantomBrandProps = {
   className?: string;
 };
 
-/** Logo capuche + wordmark NADER ASSEL DEV WEB (navbar et hero). */
+/** Logo capuche + wordmark NADER DEV WEB (navbar et hero). */
 export function PhantomBrand({
   size = "nav",
   priority = false,
@@ -26,7 +26,7 @@ export function PhantomBrand({
       className={`flex min-w-0 shrink-0 items-center gap-2.5 ${className}`}
     >
       <PhantomLogo priority={priority} className={logoClass} />
-      <span className={textClass}>NADER ASSEL DEV WEB</span>
+      <span className={textClass}>NADER DEV WEB</span>
     </span>
   );
 }

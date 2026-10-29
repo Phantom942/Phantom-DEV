@@ -31,7 +31,7 @@ export function GraphenePageJsonLd({ locale }: { locale: Locale }) {
     {
       "@type": "Organization",
       "@id": organizationId,
-      name: "NADER ASSEL DEV WEB",
+      name: "NADER DEV WEB",
       url: SITE_URL,
       logo: {
         "@type": "ImageObject",
@@ -42,7 +42,7 @@ export function GraphenePageJsonLd({ locale }: { locale: Locale }) {
       "@type": "WebSite",
       "@id": websiteId,
       url: SITE_URL,
-      name: "NADER ASSEL DEV WEB",
+      name: "NADER DEV WEB",
       publisher: { "@id": organizationId },
       inLanguage: [IN_LANGUAGE[locale], "fr-FR", "en-GB", "en-US"],
     },

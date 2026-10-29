@@ -38,8 +38,8 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://phantomdev.fr"),
   title: {
     default:
-      "NADER ASSEL DEV WEB | Sites web & automatisation pour TPE et PME",
-    template: "%s | NADER ASSEL DEV WEB",
+      "NADER DEV WEB | Sites web & automatisation pour TPE et PME",
+    template: "%s | NADER DEV WEB",
   },
   description:
     "Sites vitrines, e-commerce, réservation en ligne et automatisation pour TPE, PME et artisans. Plus de clients, moins de tâches répétitives. Devis gratuit sous 24h.",
@@ -75,18 +75,18 @@ export const metadata: Metadata = {
   },
   openGraph: {
     type: "website",
-    title: "NADER ASSEL DEV WEB — Sites web qui convertissent | Devis gratuit 24h",
+    title: "NADER DEV WEB — Sites web qui convertissent | Devis gratuit 24h",
     description:
       "Sites vitrines, e-commerce et réservation en ligne pour TPE et PME. Automatisation et IA sur demande. Devis gratuit sous 24h sur WhatsApp.",
     url: "https://phantomdev.fr",
-    siteName: "NADER ASSEL DEV WEB",
+    siteName: "NADER DEV WEB",
     locale: "fr_FR",
     alternateLocale: ["en_GB", "en_US"],
     images: [defaultOpenGraphImage],
   },
   twitter: {
     card: "summary_large_image",
-    title: "NADER ASSEL DEV WEB — Sites web qui convertissent | Devis gratuit 24h",
+    title: "NADER DEV WEB — Sites web qui convertissent | Devis gratuit 24h",
     description:
       "Sites vitrines, e-commerce et automatisation pour TPE et PME. Devis gratuit sous 24h · Remote worldwide.",
     images: [defaultOpenGraphImage.url],

@@ -23,12 +23,12 @@ export function buildProfessionalServiceSchema() {
     "@context": "https://schema.org",
     "@type": "ProfessionalService",
     "@id": PHANTOMDEV_SITE_URL,
-    name: "NADER ASSEL DEV WEB",
+    name: "NADER DEV WEB",
     url: PHANTOMDEV_SITE_URL,
     image: `${PHANTOMDEV_SITE_URL}/og-image.png`,
     logo: LOGO_URL,
     description:
-      "NADER ASSEL DEV WEB accompagne TPE, PME, artisans et garages : sites vitrines, e-commerce, prise de rendez-vous en ligne, visibilité Google, automatisation et IA. Plus de clients, moins de paperasse.",
+      "NADER DEV WEB accompagne TPE, PME, artisans et garages : sites vitrines, e-commerce, prise de rendez-vous en ligne, visibilité Google, automatisation et IA. Plus de clients, moins de paperasse.",
     slogan: "Plus de clients. Moins de paperasse. Moins de tâches répétitives.",
     serviceType: [
       "Création de site web",
@@ -90,9 +90,9 @@ export function buildWebsiteSchema() {
     "@type": "WebSite",
     "@id": WEBSITE_ID,
     url: PHANTOMDEV_SITE_URL,
-    name: "NADER ASSEL DEV WEB",
+    name: "NADER DEV WEB",
     description:
-      "NADER ASSEL DEV WEB — sites web et outils digitaux pour TPE et PME : vitrines, e-commerce, réservation en ligne, automatisation. Devis gratuit sous 24h.",
+      "NADER DEV WEB — sites web et outils digitaux pour TPE et PME : vitrines, e-commerce, réservation en ligne, automatisation. Devis gratuit sous 24h.",
     publisher: { "@id": PHANTOMDEV_SITE_URL },
     inLanguage: ["fr-FR", "en-GB", "en-US"],
     potentialAction: {
