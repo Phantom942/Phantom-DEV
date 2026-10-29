@@ -13,7 +13,7 @@ import { defaultOpenGraphImages, twitterSummaryLarge } from "@/lib/social-metada
 const title = "Audit site internet — diagnostic automatique 39 €";
 const description =
   "Audit site web instantané : entrez votre URL, payez 39 €, recevez le diagnostic complet (SEO, vitesse, technique, plan d'action).";
-const ogTitle = "Audit site internet | PhantomDev — 39 €";
+const ogTitle = "Audit site internet | NADER ASSEL DEV WEB — 39 €";
 const ogDesc =
   "Audit automatique après paiement — 8 axes analysés + plan d'action, résultat immédiat.";
 
@@ -31,14 +31,14 @@ export const metadata: Metadata = {
     "analyse site internet",
     "audit performance site",
     "audit référencement",
-    "PhantomDev",
+    "NADER ASSEL DEV WEB",
   ],
   openGraph: {
     type: "website",
     title: ogTitle,
     description: ogDesc,
     url: "https://phantomdev.fr/audit",
-    siteName: "PhantomDev",
+    siteName: "NADER ASSEL DEV WEB",
     locale: "fr_FR",
     images: defaultOpenGraphImages,
   },
@@ -74,7 +74,7 @@ export default function AuditPage() {
         id="main"
         role="main"
         className="w-full pt-24 pb-16 sm:pt-32 sm:pb-24"
-        aria-label="Audit site internet PhantomDev — diagnostic technique, SEO, performance et plan d'action"
+        aria-label="Audit site internet NADER ASSEL DEV WEB — diagnostic technique, SEO, performance et plan d'action"
       >
         <Suspense fallback={null}>
           <AuditPageContent />

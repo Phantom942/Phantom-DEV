@@ -13,7 +13,7 @@ import { defaultOpenGraphImages, twitterSummaryLarge } from "@/lib/social-metada
 
 const title = "Custom web development — Next.js, SaaS & premium e-commerce";
 const description =
-  "PhantomDev: bespoke web development with Next.js, React and TypeScript. Landing pages, e-commerce, SaaS apps and AI integration. Lighthouse 90+ guaranteed · Free quote within 24h · Remote worldwide.";
+  "NADER ASSEL DEV WEB: bespoke web development with Next.js, React and TypeScript. Landing pages, e-commerce, SaaS apps and AI integration. Lighthouse 90+ guaranteed · Free quote within 24h · Remote worldwide.";
 
 export const metadata: Metadata = {
   alternates: {
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     locale: "en_GB",
     images: defaultOpenGraphImages,
   },
-  twitter: twitterSummaryLarge(`${title} | PhantomDev`, description),
+  twitter: twitterSummaryLarge(`${title} | NADER ASSEL DEV WEB`, description),
 };
 
 export default function EnGBHome() {
@@ -52,7 +52,7 @@ export default function EnGBHome() {
         id="main"
         role="main"
         className="w-full overflow-x-clip"
-        aria-label="PhantomDev — Premium custom web development, React, Node.js, SaaS"
+        aria-label="NADER ASSEL DEV WEB — Premium custom web development, React, Node.js, SaaS"
       >
         <Suspense fallback={null}>
           <HeroSection />

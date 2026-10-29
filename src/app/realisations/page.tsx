@@ -11,10 +11,10 @@ import { defaultOpenGraphImages, twitterSummaryLarge } from "@/lib/social-metada
 
 const title = "Résultats clients — Sites web & RDV en ligne";
 const description =
-  "Études de cas PhantomDev : garages, artisans et PME. Plus de rendez-vous, moins d'appels, plus de devis qualifiés grâce à des sites sur-mesure.";
-const ogTitle = "Résultats clients | PhantomDev — Garages, artisans, PME";
+  "Études de cas NADER ASSEL DEV WEB : garages, artisans et PME. Plus de rendez-vous, moins d'appels, plus de devis qualifiés grâce à des sites sur-mesure.";
+const ogTitle = "Résultats clients | NADER ASSEL DEV WEB — Garages, artisans, PME";
 const ogDesc =
-  "Études de cas PhantomDev : plus de RDV, moins d'appels, plus de devis qualifiés. Garages, artisans et PME locales.";
+  "Études de cas NADER ASSEL DEV WEB : plus de RDV, moins d'appels, plus de devis qualifiés. Garages, artisans et PME locales.";
 
 export const metadata: Metadata = {
   alternates: {
@@ -30,14 +30,14 @@ export const metadata: Metadata = {
     "prise de rendez-vous en ligne",
     "automatisation garage",
     "études de cas PME",
-    "PhantomDev",
+    "NADER ASSEL DEV WEB",
   ],
   openGraph: {
     type: "website",
     title: ogTitle,
     description: ogDesc,
     url: "https://phantomdev.fr/realisations",
-    siteName: "PhantomDev",
+    siteName: "NADER ASSEL DEV WEB",
     locale: "fr_FR",
     images: defaultOpenGraphImages,
   },
@@ -72,7 +72,7 @@ export default function RealisationsPage() {
         id="main"
         role="main"
         className="w-full pt-24 pb-16 sm:pt-32 sm:pb-24"
-        aria-label="Résultats clients PhantomDev : garages, artisans, PME, RDV en ligne"
+        aria-label="Résultats clients NADER ASSEL DEV WEB : garages, artisans, PME, RDV en ligne"
       >
         <RealisationsPageContent />
       </main>

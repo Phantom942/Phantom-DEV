@@ -63,7 +63,7 @@ export async function POST(request: Request) {
             currency: "eur",
             unit_amount: AUDIT_PRICE_EUR * 100,
             product_data: {
-              name: "Audit site internet PhantomDev",
+              name: "Audit site internet NADER ASSEL DEV WEB",
               description: `Diagnostic automatique en ligne — ${siteUrl}`,
             },
           },

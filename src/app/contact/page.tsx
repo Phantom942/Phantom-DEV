@@ -14,8 +14,8 @@ import { defaultOpenGraphImages, twitterSummaryLarge } from "@/lib/social-metada
 
 const title = "Contact — Devis site internet gratuit sous 24h";
 const description =
-  "Contactez PhantomDev sur WhatsApp : devis gratuit pour site vitrine, e-commerce, réservation en ligne ou automatisation. Réponse sous 24h, sans engagement.";
-const ogTitle = "Contact | PhantomDev — Devis site internet gratuit sous 24h";
+  "Contactez NADER ASSEL DEV WEB sur WhatsApp : devis gratuit pour site vitrine, e-commerce, réservation en ligne ou automatisation. Réponse sous 24h, sans engagement.";
+const ogTitle = "Contact | NADER ASSEL DEV WEB — Devis site internet gratuit sous 24h";
 const ogDesc =
   "Demandez un devis sur WhatsApp : site vitrine, RDV en ligne, automatisation garage ou CRM PME. Réponse sous 24h, sans engagement.";
 
@@ -31,7 +31,7 @@ export const metadata: Metadata = {
     title: ogTitle,
     description: ogDesc,
     url: "https://phantomdev.fr/contact",
-    siteName: "PhantomDev",
+    siteName: "NADER ASSEL DEV WEB",
     locale: "fr_FR",
     images: defaultOpenGraphImages,
   },
@@ -67,14 +67,14 @@ export default function ContactPage() {
         id="main"
         role="main"
         className="w-full pt-24 pb-16 sm:pt-32 sm:pb-24"
-        aria-label="Page contact PhantomDev : devis site vitrine, RDV en ligne, automatisation garage, CRM PME"
+        aria-label="Page contact NADER ASSEL DEV WEB : devis site vitrine, RDV en ligne, automatisation garage, CRM PME"
       >
         <div className="mx-auto w-full max-w-7xl px-4 sm:px-8 md:px-16">
           <div className="mx-auto w-full max-w-2xl">
             <Link
               href="/#contact"
               className="mb-10 inline-flex items-center gap-2 text-sm font-light tracking-[0.1em] text-zinc-400 transition-colors hover:text-zinc-100"
-              aria-label="Retour à l'accueil PhantomDev, création de sites web"
+              aria-label="Retour à l'accueil NADER ASSEL DEV WEB, création de sites web"
             >
               <ArrowLeft size={16} strokeWidth={1.5} />
               Retour à l&apos;accueil

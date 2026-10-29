@@ -10,7 +10,7 @@ import { defaultOpenGraphImages, twitterSummaryLarge } from "@/lib/social-metada
 
 const title = "Website audit — instant diagnostic €39";
 const description =
-  "PhantomDev website audit: instant automated diagnostic after payment — technical, SEO, conversion, multi-page crawl and action plan. €39.";
+  "NADER ASSEL DEV WEB website audit: instant automated diagnostic after payment — technical, SEO, conversion, multi-page crawl and action plan. €39.";
 
 export const metadata: Metadata = {
   alternates: {
@@ -20,13 +20,13 @@ export const metadata: Metadata = {
   title,
   description,
   openGraph: {
-    title: "Website audit | PhantomDev",
+    title: "Website audit | NADER ASSEL DEV WEB",
     description,
     url: "https://phantomdev.fr/en-gb/audit",
     locale: "en_GB",
     images: defaultOpenGraphImages,
   },
-  twitter: twitterSummaryLarge("Website audit | PhantomDev", description),
+  twitter: twitterSummaryLarge("Website audit | NADER ASSEL DEV WEB", description),
 };
 
 export default function AuditPageEnGb() {

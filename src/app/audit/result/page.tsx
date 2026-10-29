@@ -6,7 +6,7 @@ import { CursorAndGlow } from "@/components/CursorAndGlow";
 import { AuditResultClient } from "@/components/AuditResultClient";
 
 export const metadata: Metadata = {
-  title: "Résultat audit site | PhantomDev",
+  title: "Résultat audit site | NADER ASSEL DEV WEB",
   robots: { index: false, follow: false },
 };
 

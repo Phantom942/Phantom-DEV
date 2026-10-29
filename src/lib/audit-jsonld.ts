@@ -13,7 +13,7 @@ export function buildAuditServiceSchema(locale: "fr" | "en" = "fr") {
       : "Full website audit: technical health, Google SEO, performance, content, competitors, AI visibility and prioritized action plan.",
     provider: {
       "@type": "Organization",
-      name: "PhantomDev",
+      name: "NADER ASSEL DEV WEB",
       url: BASE,
     },
     areaServed: isFr ? "FR" : "Worldwide",

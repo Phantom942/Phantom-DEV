@@ -2,7 +2,7 @@
 export const fr = {
     hero: {
       title:
-        "PhantomDev — Développeur freelance, sites web et outils pour TPE et artisans",
+        "NADER ASSEL DEV WEB — Développeur freelance, sites web et outils pour TPE et artisans",
       hook: "Un site pensé pour votre métier.",
       subtitle:
         "Je conçois vitrines web, prise de rendez-vous et petits outils admin pour garages, artisans et PME. Un seul interlocuteur, un périmètre clair avant de coder, devis sous 24 h.",
@@ -45,33 +45,33 @@ export const fr = {
       or: "ou",
       response: "Réponse sous 24h · Devis clair · Sans engagement",
       projectsSectionAria:
-        "Résultats clients PhantomDev : plus de RDV, devis et ventes grâce au digital",
+        "Résultats clients NADER ASSEL DEV WEB : plus de RDV, devis et ventes grâce au digital",
       filterTablistAria: "Filtrer les projets par type",
     },
     faq: {
       title: "Questions fréquentes",
       items: [
-        { q: "Qu'est-ce que PhantomDev ?", a: "PhantomDev accompagne les TPE, PME, artisans et professionnels qui veulent un site ou un outil digital rentable : plus de clients, moins de paperasse, moins de temps perdu au téléphone ou en saisie manuelle. Sites vitrines, e-commerce, réservation en ligne, automatisation et IA — avec un interlocuteur direct sur WhatsApp." },
+        { q: "Qu'est-ce que NADER ASSEL DEV WEB ?", a: "NADER ASSEL DEV WEB accompagne les TPE, PME, artisans et professionnels qui veulent un site ou un outil digital rentable : plus de clients, moins de paperasse, moins de temps perdu au téléphone ou en saisie manuelle. Sites vitrines, e-commerce, réservation en ligne, automatisation et IA — avec un interlocuteur direct sur WhatsApp." },
         { q: "Quels sont les délais de livraison ?", a: "Un site vitrine simple peut être en ligne en 48h selon le périmètre. Pour un e-commerce, un outil de réservation ou une automatisation plus complète, on fixe un calendrier clair dès la validation du devis — sans flou." },
-        { q: "Quels services propose PhantomDev ?", a: "Sites vitrines et pages de vente, boutiques en ligne, prise de rendez-vous, visibilité Google (SEO), connexion de vos outils (CRM, facturation, agenda), automatisation des tâches répétitives et assistants IA pour qualifier vos prospects ou alléger l'administratif. Détail sur phantomdev.fr/services." },
-        { q: "Combien coûte un site web chez PhantomDev ?", a: "Chaque projet est chiffré sur mesure sous 24h, sans engagement. Le prix dépend de votre objectif (vitrine, vente en ligne, réservation, automatisation). Vous savez ce que vous payez et ce que vous gagnez avant de signer." },
-        { q: "Quelle stack technique utilise PhantomDev ?", a: "Peu importe pour vous : ce qui compte, c'est un site ultra-rapide, stable, sécurisé et facile à retrouver sur Google — sans bug ni lenteur qui fait fuir vos clients. Je m'occupe de la technique ; vous vous concentrez sur votre activité." },
-        { q: "Comment contacter PhantomDev pour un devis ?", a: "Directement sur WhatsApp depuis phantomdev.fr ou la page Contact. Devis gratuit sous 24h, sans engagement — on échange en français clair, pas en jargon dev." },
+        { q: "Quels services propose NADER ASSEL DEV WEB ?", a: "Sites vitrines et pages de vente, boutiques en ligne, prise de rendez-vous, visibilité Google (SEO), connexion de vos outils (CRM, facturation, agenda), automatisation des tâches répétitives et assistants IA pour qualifier vos prospects ou alléger l'administratif. Détail sur phantomdev.fr/services." },
+        { q: "Combien coûte un site web chez NADER ASSEL DEV WEB ?", a: "Chaque projet est chiffré sur mesure sous 24h, sans engagement. Le prix dépend de votre objectif (vitrine, vente en ligne, réservation, automatisation). Vous savez ce que vous payez et ce que vous gagnez avant de signer." },
+        { q: "Quelle stack technique utilise NADER ASSEL DEV WEB ?", a: "Peu importe pour vous : ce qui compte, c'est un site ultra-rapide, stable, sécurisé et facile à retrouver sur Google — sans bug ni lenteur qui fait fuir vos clients. Je m'occupe de la technique ; vous vous concentrez sur votre activité." },
+        { q: "Comment contacter NADER ASSEL DEV WEB pour un devis ?", a: "Directement sur WhatsApp depuis phantomdev.fr ou la page Contact. Devis gratuit sous 24h, sans engagement — on échange en français clair, pas en jargon dev." },
         { q: "Proposez-vous un audit de site internet ?", a: "Oui — audit automatique à 39 € : vous entrez votre URL, payez en ligne, et le rapport s'affiche immédiatement (8 axes + plan d'action). phantomdev.fr/audit" },
-        { q: "PhantomDev travaille-t-elle à l'international ?", a: "Oui. Distance ou pas : brief, livraison et suivi à distance. Contrats de maintenance disponibles pour garder votre site fiable dans la durée." },
-        { q: "Quelle garantie performance offre PhantomDev ?", a: "Votre site est livré rapide et fluide — le genre de vitesse qui rassure un client et améliore votre visibilité Google. Si ce n'est pas au niveau promis, on corrige avant la mise en ligne." },
+        { q: "NADER ASSEL DEV WEB travaille-t-il à l'international ?", a: "Oui. Distance ou pas : brief, livraison et suivi à distance. Contrats de maintenance disponibles pour garder votre site fiable dans la durée." },
+        { q: "Quelle garantie performance offre NADER ASSEL DEV WEB ?", a: "Votre site est livré rapide et fluide — le genre de vitesse qui rassure un client et améliore votre visibilité Google. Si ce n'est pas au niveau promis, on corrige avant la mise en ligne." },
       ],
     },
     footer: {
       contentinfoAria:
-        "Pied de page PhantomDev : création de sites web, contact WhatsApp, mentions légales",
-      tagline: "PhantomDev — Sites et outils digitaux qui rapportent",
+        "Pied de page NADER ASSEL DEV WEB : création de sites web, contact WhatsApp, mentions légales",
+      tagline: "NADER ASSEL DEV WEB — Sites et outils digitaux qui rapportent",
       mainLine: "Ligne principale",
-      mainLineAria: "Ligne principale — contact WhatsApp PhantomDev",
+      mainLineAria: "Ligne principale — contact WhatsApp NADER ASSEL DEV WEB",
       ctaTitle: "Prêt à gagner du temps et attirer plus de clients ?",
       ctaButton: "Obtenir mon devis gratuit",
       based: "Sites rapides · Réservation en ligne · Automatisation · Devis sous 24h · Maintenance garantie",
-      designBy: "Design by PhantomDev",
+      designBy: "Design by NADER ASSEL",
       rights: "Tous droits réservés.",
     },
     trustProof: {
@@ -101,11 +101,11 @@ export const fr = {
       ariaAudit: "Audit site web complet — diagnostic technique, SEO et plan d'action",
       ariaContact: "Contact et devis gratuit sous 24 h",
       bannerAria:
-        "En-tête : PhantomDev, sites web et automatisation pour TPE, PME, artisans et garages",
+        "En-tête : NADER ASSEL DEV WEB, sites web et automatisation pour TPE, PME, artisans et garages",
       mainNavAria:
         "Navigation principale : expertise, services, GrapheneOS, réalisations, contact et devis",
       homeLogoAria:
-        "PhantomDev, accueil — sites web et automatisation pour TPE, PME, artisans et garages",
+        "NADER ASSEL DEV WEB, accueil — sites web et automatisation pour TPE, PME, artisans et garages",
       whatsappQuoteAria: "Demander un devis gratuit sur WhatsApp pour votre projet web",
       menuOpenAria: "Ouvrir le menu",
       menuCloseAria: "Fermer le menu",
@@ -143,7 +143,7 @@ export const fr = {
         "Remise du téléphone prêt à l’emploi et rappels des bonnes pratiques.",
       ],
       disclaimer:
-        "PhantomDev n’est pas affilié au projet GrapheneOS. GrapheneOS est un logiciel open source indépendant. Une installation professionnelle n’engage pas la responsabilité du projet GrapheneOS et ne dispense pas du respect des lois en vigueur ni d’un usage responsable de l’appareil.",
+        "NADER ASSEL DEV WEB n’est pas affilié au projet GrapheneOS. GrapheneOS est un logiciel open source indépendant. Une installation professionnelle n’engage pas la responsabilité du projet GrapheneOS et ne dispense pas du respect des lois en vigueur ni d’un usage responsable de l’appareil.",
       ctaWhatsApp: "Demander une installation sur WhatsApp",
       whatsappMessage:
         "Bonjour, je souhaite une installation GrapheneOS. Modèle de Pixel : ",
@@ -153,9 +153,9 @@ export const fr = {
         documentTitle:
           "Installation GrapheneOS sur Google Pixel — flash sécurisé, confidentialité",
         description:
-          "Installation professionnelle de GrapheneOS sur Pixel compatibles : flash sécurisé, déverrouillage bootloader, configuration confidentialité. France & Europe. Demande via WhatsApp — PhantomDev.",
+          "Installation professionnelle de GrapheneOS sur Pixel compatibles : flash sécurisé, déverrouillage bootloader, configuration confidentialité. France & Europe. Demande via WhatsApp — NADER ASSEL DEV WEB.",
         ogTitle:
-          "Installation GrapheneOS sur Pixel | PhantomDev — Android sécurisé",
+          "Installation GrapheneOS sur Pixel | NADER ASSEL DEV WEB — Android sécurisé",
         ogDescription:
           "Service d’installation GrapheneOS : smartphones Google Pixel, flash officiel, vie privée. Réponse rapide sur WhatsApp.",
         ogImageAlt:
@@ -171,7 +171,7 @@ export const fr = {
           "bootloader Pixel",
           "OS mobile open source",
           "dégoogler téléphone",
-          "PhantomDev GrapheneOS",
+          "NADER ASSEL DEV WEB GrapheneOS",
           "installation GrapheneOS France",
         ],
       },
@@ -179,9 +179,9 @@ export const fr = {
       visualSectionAria:
         "Visuels : cadres de smartphones avec le logo GrapheneOS sur l’écran",
       phoneScreenAlt:
-        "Logo GrapheneOS affiché sur l’écran d’un smartphone Google Pixel — illustration PhantomDev",
+        "Logo GrapheneOS affiché sur l’écran d’un smartphone Google Pixel — illustration NADER ASSEL DEV WEB",
       logoCredit:
-        "Logo GrapheneOS : projet open source indépendant (grapheneos.org). PhantomDev n’est pas affilié à GrapheneOS.",
+        "Logo GrapheneOS : projet open source indépendant (grapheneos.org). NADER ASSEL DEV WEB n’est pas affilié à GrapheneOS.",
       officialLinkLabel: "Site officiel GrapheneOS — documentation et releases",
       faqSectionTitle: "Questions fréquentes — GrapheneOS",
       faqSchema: [
@@ -198,8 +198,8 @@ export const fr = {
           a: "Le déverrouillage du bootloader et le flash effacent en général les données du téléphone. Une sauvegarde préalable est indispensable. Les étapes précises dépendent de votre appareil et seront expliquées avant intervention.",
         },
         {
-          q: "PhantomDev est-il affilié au projet GrapheneOS ?",
-          a: "Non. PhantomDev propose un accompagnement à l’installation ; GrapheneOS est un projet indépendant. Pour le support officiel et les instructions à jour, consultez grapheneos.org.",
+          q: "NADER ASSEL DEV WEB est-il affilié au projet GrapheneOS ?",
+          a: "Non. NADER ASSEL DEV WEB propose un accompagnement à l’installation ; GrapheneOS est un projet indépendant. Pour le support officiel et les instructions à jour, consultez grapheneos.org.",
         },
       ],
     },
@@ -497,10 +497,10 @@ export const fr = {
       intro:
         "Garages, artisans, commerces : ce qu'ils ont gagné en temps, en RDV et en demandes — pas la liste de leurs technologies.",
       mainAria:
-        "Page résultats PhantomDev : études de cas et retours business",
+        "Page résultats NADER ASSEL DEV WEB : études de cas et retours business",
     },
     servicesPage: {
-      eyebrow: "Offres PhantomDev",
+      eyebrow: "Offres NADER ASSEL DEV WEB",
       pageTitle: "Services",
       introLead:
         "Chaque offre répond à un problème concret : manquer de clients, perdre du temps en admin, ne pas être visible sur Google, ou vendre en ligne sans friction. Devis clair sous 24h — on parle résultats, pas jargon.",
@@ -538,7 +538,7 @@ export const fr = {
       introSub:
         "8 axes regroupés · crawl jusqu'à 8 pages (sitemap ou liens internes) · rapport sauvegardé 30 jours. Résultat immédiat après paiement Stripe.",
       delivery: "Résultat en ~2 min après paiement",
-      humanReview: "Analyse automatisée + contrôles métier PhantomDev",
+      humanReview: "Analyse automatisée + contrôles métier NADER ASSEL DEV WEB",
       processTitle: "Comment ça marche",
       processSteps: [
         {
@@ -614,7 +614,7 @@ export const fr = {
         "Plan d'action P0, P1, P2",
         "Comparaison concurrents (si renseignés)",
         "Recommandations SEO et technique",
-        "Bouton contact pour corriger avec PhantomDev",
+        "Bouton contact pour corriger avec NADER ASSEL DEV WEB",
       ],
       form: {
         title: "Lancer l'audit",
@@ -637,8 +637,8 @@ export const fr = {
           { value: "restaurant", label: "Restauration / hôtellerie" },
           { value: "autre", label: "Autre" },
         ],
-        whatsappIntro: "Bonjour PhantomDev, je commande l'audit site web (39 €).",
-        emailSubject: "Commande audit site web 39€ — PhantomDev",
+        whatsappIntro: "Bonjour NADER ASSEL DEV WEB, je commande l'audit site web (39 €).",
+        emailSubject: "Commande audit site web 39€ — NADER ASSEL DEV WEB",
         priceLine: "Tarif",
         urlOk: "URL retenue",
         payAndRunCta: "Payer 39 € et lancer l'audit",
@@ -683,7 +683,7 @@ export const fr = {
         savedUntil: "Rapport accessible jusqu'au {date}",
         noSession: "Session de paiement invalide.",
         back: "Retour à l'audit",
-        fixCta: "Corriger avec PhantomDev",
+        fixCta: "Corriger avec NADER ASSEL DEV WEB",
       },
       report: {
         overall: "Score global",

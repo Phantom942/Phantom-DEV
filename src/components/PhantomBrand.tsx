@@ -6,7 +6,7 @@ type PhantomBrandProps = {
   className?: string;
 };
 
-/** Logo capuche + wordmark PhantomDev (navbar et hero). */
+/** Logo capuche + wordmark NADER ASSEL DEV WEB (navbar et hero). */
 export function PhantomBrand({
   size = "nav",
   priority = false,
@@ -18,15 +18,15 @@ export function PhantomBrand({
       : undefined;
   const textClass =
     size === "hero"
-      ? "font-tech text-2xl font-semibold uppercase tracking-[0.2em] text-white sm:text-3xl md:text-4xl md:tracking-[0.24em]"
-      : "font-tech truncate text-xs font-semibold uppercase tracking-[0.2em] text-white md:text-sm md:tracking-[0.24em]";
+      ? "font-tech text-lg font-semibold uppercase leading-tight tracking-[0.12em] text-white sm:text-2xl md:text-3xl md:tracking-[0.14em]"
+      : "font-tech text-[0.65rem] font-semibold uppercase leading-none tracking-[0.08em] text-white sm:text-xs md:text-sm md:tracking-[0.1em]";
 
   return (
     <span
-      className={`flex min-w-0 shrink-0 items-center gap-2.5 overflow-hidden ${className}`}
+      className={`flex min-w-0 shrink-0 items-center gap-2.5 ${className}`}
     >
       <PhantomLogo priority={priority} className={logoClass} />
-      <span className={textClass}>PhantomDev</span>
+      <span className={textClass}>NADER ASSEL DEV WEB</span>
     </span>
   );
 }

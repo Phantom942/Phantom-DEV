@@ -8,7 +8,7 @@ export const defaultOpenGraphImage = {
   url: OG_IMAGE_PATH,
   width: 1200,
   height: 630,
-  alt: "PhantomDev — Sites web et automatisation pour TPE, PME, artisans et garages",
+  alt: "NADER ASSEL DEV WEB — Sites web et automatisation pour TPE, PME, artisans et garages",
 } as const;
 
 export const defaultOpenGraphImages: NonNullable<Metadata["openGraph"]>["images"] = [
@@ -18,7 +18,7 @@ export const defaultOpenGraphImages: NonNullable<Metadata["openGraph"]>["images"
 export function twitterSummaryLarge(
   title: string,
   description: string,
-  /** URL absolue de l’image (carte Twitter / réseaux). Par défaut : OG PhantomDev. */
+  /** URL absolue de l’image (carte Twitter / réseaux). Par défaut : OG NADER ASSEL DEV WEB. */
   twitterImageAbsoluteUrl?: string
 ): NonNullable<Metadata["twitter"]> {
   const image =

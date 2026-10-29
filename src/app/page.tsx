@@ -15,14 +15,14 @@ import { defaultOpenGraphImages, twitterSummaryLarge } from "@/lib/social-metada
 const title =
   "Sites web et outils digitaux pour TPE, artisans et garages";
 const description =
-  "PhantomDev — développeur freelance. Sites vitrines, RDV en ligne et automatisation ciblée pour PME locales. Devis sous 24 h sur WhatsApp.";
+  "NADER ASSEL DEV WEB — développeur freelance. Sites vitrines, RDV en ligne et automatisation ciblée pour PME locales. Devis sous 24 h sur WhatsApp.";
 
 export const metadata: Metadata = {
   alternates: {
     canonical: "https://phantomdev.fr",
     languages: getHreflangAlternates("/"),
   },
-  title: { absolute: `${title} | PhantomDev` },
+  title: { absolute: `${title} | NADER ASSEL DEV WEB` },
   description,
   keywords: [
     "création site internet",
@@ -38,16 +38,16 @@ export const metadata: Metadata = {
     "intelligence artificielle PME",
     "visibilité Google entreprise",
     "refonte site web",
-    "PhantomDev",
+    "NADER ASSEL DEV WEB",
   ],
   openGraph: {
-    title: `${title} | PhantomDev`,
+    title: `${title} | NADER ASSEL DEV WEB`,
     description,
     url: "https://phantomdev.fr",
     locale: "fr_FR",
     images: defaultOpenGraphImages,
   },
-  twitter: twitterSummaryLarge(`${title} | PhantomDev`, description),
+  twitter: twitterSummaryLarge(`${title} | NADER ASSEL DEV WEB`, description),
 };
 
 export default function Home() {
@@ -82,7 +82,7 @@ export default function Home() {
         id="main"
         role="main"
         className="w-full overflow-x-clip"
-        aria-label="Contenu principal : PhantomDev, sites web, automatisation garage, gain de temps artisan, CRM PME local, réservation en ligne"
+        aria-label="Contenu principal : NADER ASSEL DEV WEB, sites web, automatisation garage, gain de temps artisan, CRM PME local, réservation en ligne"
       >
         <Suspense fallback={null}>
           <HeroSection />

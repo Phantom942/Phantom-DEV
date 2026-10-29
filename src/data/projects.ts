@@ -126,9 +126,9 @@ function buildCaseStudySummary(caseStudy: ProjectCaseStudy): string {
 export const creativeWorkSchema = {
   "@context": "https://schema.org",
   "@type": "ItemList",
-  name: "Réalisations PhantomDev",
+  name: "Réalisations NADER ASSEL DEV WEB",
   description:
-    "Études de cas PhantomDev : plus de clients, de RDV et de ventes grâce à des sites et outils sur-mesure.",
+    "Études de cas NADER ASSEL DEV WEB : plus de clients, de RDV et de ventes grâce à des sites et outils sur-mesure.",
   itemListElement: projects.map((p, i) => ({
     "@type": "ListItem",
     position: i + 1,
@@ -140,7 +140,7 @@ export const creativeWorkSchema = {
       url: p.href,
       author: {
         "@type": "Organization",
-        name: "PhantomDev",
+        name: "NADER ASSEL DEV WEB",
         url: "https://phantomdev.fr",
       },
       keywords: [...p.techs, ...p.tags].join(", "),

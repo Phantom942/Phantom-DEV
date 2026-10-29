@@ -10,42 +10,42 @@ export type WhatsAppProjectType =
 const MESSAGES: Record<Locale, Record<WhatsAppProjectType | "default", string>> = {
   fr: {
     default:
-      "Bonjour PhantomDev, je souhaite des informations pour un projet web sur-mesure.",
+      "Bonjour NADER ASSEL DEV WEB, je souhaite des informations pour un projet web sur-mesure.",
     vitrine:
-      "Bonjour PhantomDev, je souhaite un devis pour un site vitrine / landing page premium.",
+      "Bonjour NADER ASSEL DEV WEB, je souhaite un devis pour un site vitrine / landing page premium.",
     application:
-      "Bonjour PhantomDev, je souhaite un devis pour une application ou un e-commerce sur-mesure.",
-    seo: "Bonjour PhantomDev, je souhaite un devis pour un accompagnement SEO / visibilité.",
+      "Bonjour NADER ASSEL DEV WEB, je souhaite un devis pour une application ou un e-commerce sur-mesure.",
+    seo: "Bonjour NADER ASSEL DEV WEB, je souhaite un devis pour un accompagnement SEO / visibilité.",
     maintenance:
-      "Bonjour PhantomDev, je souhaite un devis pour la maintenance de mon site.",
+      "Bonjour NADER ASSEL DEV WEB, je souhaite un devis pour la maintenance de mon site.",
     autre:
-      "Bonjour PhantomDev, je souhaite un devis (intégration IA, API ou conseil technique).",
+      "Bonjour NADER ASSEL DEV WEB, je souhaite un devis (intégration IA, API ou conseil technique).",
   },
   "en-GB": {
     default:
-      "Hello PhantomDev, I'd like information about a bespoke web project.",
+      "Hello NADER ASSEL DEV WEB, I'd like information about a bespoke web project.",
     vitrine:
-      "Hello PhantomDev, I'd like a quote for a premium showcase / landing page.",
+      "Hello NADER ASSEL DEV WEB, I'd like a quote for a premium showcase / landing page.",
     application:
-      "Hello PhantomDev, I'd like a quote for a custom app or e-commerce build.",
-    seo: "Hello PhantomDev, I'd like a quote for SEO / visibility support.",
+      "Hello NADER ASSEL DEV WEB, I'd like a quote for a custom app or e-commerce build.",
+    seo: "Hello NADER ASSEL DEV WEB, I'd like a quote for SEO / visibility support.",
     maintenance:
-      "Hello PhantomDev, I'd like a quote for website maintenance.",
+      "Hello NADER ASSEL DEV WEB, I'd like a quote for website maintenance.",
     autre:
-      "Hello PhantomDev, I'd like a quote (AI integration, APIs or technical consulting).",
+      "Hello NADER ASSEL DEV WEB, I'd like a quote (AI integration, APIs or technical consulting).",
   },
   "en-US": {
     default:
-      "Hello PhantomDev, I'd like information about a custom web project.",
+      "Hello NADER ASSEL DEV WEB, I'd like information about a custom web project.",
     vitrine:
-      "Hello PhantomDev, I'd like a quote for a premium showcase / landing page.",
+      "Hello NADER ASSEL DEV WEB, I'd like a quote for a premium showcase / landing page.",
     application:
-      "Hello PhantomDev, I'd like a quote for a custom app or e-commerce build.",
-    seo: "Hello PhantomDev, I'd like a quote for SEO / visibility support.",
+      "Hello NADER ASSEL DEV WEB, I'd like a quote for a custom app or e-commerce build.",
+    seo: "Hello NADER ASSEL DEV WEB, I'd like a quote for SEO / visibility support.",
     maintenance:
-      "Hello PhantomDev, I'd like a quote for website maintenance.",
+      "Hello NADER ASSEL DEV WEB, I'd like a quote for website maintenance.",
     autre:
-      "Hello PhantomDev, I'd like a quote (AI integration, APIs or technical consulting).",
+      "Hello NADER ASSEL DEV WEB, I'd like a quote (AI integration, APIs or technical consulting).",
   },
 };
 

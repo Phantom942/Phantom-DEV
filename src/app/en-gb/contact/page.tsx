@@ -11,8 +11,8 @@ import { defaultOpenGraphImages, twitterSummaryLarge } from "@/lib/social-metada
 
 const title = "Contact — Free quote via WhatsApp";
 const description =
-  "Contact PhantomDev on WhatsApp for your web project. Websites, e-commerce, custom applications. Response within 24h, no commitment.";
-const ogTitle = "Contact | PhantomDev — Free web development quote within 24h";
+  "Contact NADER ASSEL DEV WEB on WhatsApp for your web project. Websites, e-commerce, custom applications. Response within 24h, no commitment.";
+const ogTitle = "Contact | NADER ASSEL DEV WEB — Free web development quote within 24h";
 const ogDesc =
   "Request a quote for your web project: website, e-commerce, SaaS application. Response within 24h via WhatsApp, no commitment.";
 
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     title: ogTitle,
     description: ogDesc,
     url: "https://phantomdev.fr/en-gb/contact",
-    siteName: "PhantomDev",
+    siteName: "NADER ASSEL DEV WEB",
     locale: "en_GB",
     images: defaultOpenGraphImages,
   },
@@ -50,14 +50,14 @@ export default function EnGBContactPage() {
         id="main"
         role="main"
         className="w-full pt-24 pb-16 sm:pt-32 sm:pb-24"
-        aria-label="PhantomDev contact page: request a quote for web development, websites and SaaS"
+        aria-label="NADER ASSEL DEV WEB contact page: request a quote for web development, websites and SaaS"
       >
         <div className="mx-auto w-full max-w-7xl px-4 sm:px-8 md:px-16">
           <div className="mx-auto w-full max-w-2xl">
             <Link
               href="/en-gb"
               className="mb-10 inline-flex items-center gap-2 text-sm font-light tracking-[0.1em] text-zinc-400 transition-colors hover:text-zinc-100"
-              aria-label="Back to PhantomDev homepage"
+              aria-label="Back to NADER ASSEL DEV WEB homepage"
             >
               <ArrowLeft size={16} strokeWidth={1.5} />
               Back to home

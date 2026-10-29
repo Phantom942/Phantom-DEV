@@ -35,7 +35,7 @@ export function getGraphenePageMetadata(locale: Locale): Metadata {
     title: seo.documentTitle,
     description: seo.description,
     keywords: [...seo.keywords],
-    authors: [{ name: "PhantomDev", url: SITE_URL }],
+    authors: [{ name: "NADER ASSEL DEV WEB", url: SITE_URL }],
     robots: {
       index: true,
       follow: true,
@@ -52,7 +52,7 @@ export function getGraphenePageMetadata(locale: Locale): Metadata {
       title: seo.ogTitle,
       description: seo.ogDescription,
       url: canonical,
-      siteName: "PhantomDev",
+      siteName: "NADER ASSEL DEV WEB",
       locale: OG_LOCALE[locale],
       images: [
         {

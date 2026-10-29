@@ -42,7 +42,7 @@ export function getWhatsAppDisplayHuman(): string {
 }
 
 export const WHATSAPP_DEFAULT_MESSAGE =
-  "Bonjour PhantomDev, je souhaite avoir des informations pour la création d'un site web premium.";
+  "Bonjour NADER ASSEL DEV WEB, je souhaite avoir des informations pour la création d'un site web premium.";
 
 export function getWhatsAppDevisUrl(text?: string): string {
   const message = text ?? WHATSAPP_DEFAULT_MESSAGE;

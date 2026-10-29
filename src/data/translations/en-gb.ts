@@ -4,7 +4,7 @@ import { auditPageEn } from "./audit-page-en";
 export const enGb = {
     hero: {
       title:
-        "PhantomDev — Custom web development · Next.js, SaaS & premium e-commerce",
+        "NADER ASSEL DEV WEB — Custom web development · Next.js, SaaS & premium e-commerce",
       hook: "Modern stack. Measured performance. Premium results.",
       subtitle:
         "Next.js, React and TypeScript for your web projects — landing pages, e-commerce, SaaS applications and AI integration. Fast, elegant sites built to convert from the first visit.",
@@ -47,32 +47,32 @@ export const enGb = {
       or: "or",
       response: "Response within 24h · Landing page deliverable in 48h · No commitment",
       projectsSectionAria:
-        "PhantomDev portfolio: web projects, high-performance interfaces and e-commerce",
+        "NADER ASSEL DEV WEB portfolio: web projects, high-performance interfaces and e-commerce",
       filterTablistAria: "Filter projects by type",
     },
     faq: {
       title: "Frequently asked questions",
       items: [
-        { q: "What is PhantomDev?", a: "PhantomDev is a custom web development agency based in France. Specialised in Next.js, React and Node.js, it creates websites, e-commerce and SaaS applications with premium interfaces, optimised performance (Lighthouse 90+) and fast delivery." },
+        { q: "What is NADER ASSEL DEV WEB?", a: "NADER ASSEL DEV WEB is a custom web development agency based in France. Specialised in Next.js, React and Node.js, it creates websites, e-commerce and SaaS applications with premium interfaces, optimised performance (Lighthouse 90+) and fast delivery." },
         { q: "What are the delivery times?", a: "A simple landing page can be delivered in 48 hours. For more complex projects (e-commerce, custom applications), timelines are adapted to the scope. A schedule is agreed once the quote is approved." },
-        { q: "What services does PhantomDev offer?", a: "PhantomDev offers 14+ services: showcase and landing pages, e-commerce, custom apps and SaaS, SEO and performance, AI integration and automation, APIs, Next.js redesigns, technical consulting and maintenance. See phantomdev.fr/services." },
-        { q: "How much does a website cost with PhantomDev?", a: "Every project gets a bespoke quote within 24h, no commitment. Simple showcase sites can go live quickly (48h depending on scope); e-commerce, SaaS and AI work are priced by complexity. Contact via WhatsApp at phantomdev.fr/contact." },
-        { q: "What tech stack does PhantomDev use?", a: "PhantomDev mainly builds with Next.js, React, TypeScript and Tailwind CSS, deployed on Vercel or static hosting. Lighthouse 90+ is guaranteed on delivered sites." },
-        { q: "How to contact PhantomDev for a quote?", a: "Contact PhantomDev via WhatsApp for a free quote within 24h, no commitment. The phantomdev.fr site offers direct access to WhatsApp from the homepage and Contact page." },
-        { q: "Does PhantomDev work internationally?", a: "Yes. PhantomDev is based in France but operates internationally. Maintenance contracts are guaranteed." },
-        { q: "What performance guarantee does PhantomDev offer?", a: "PhantomDev guarantees a Lighthouse score of 90+ on all delivered sites, ensuring optimised performance and excellent user experience." },
+        { q: "What services does NADER ASSEL DEV WEB offer?", a: "NADER ASSEL DEV WEB offers 14+ services: showcase and landing pages, e-commerce, custom apps and SaaS, SEO and performance, AI integration and automation, APIs, Next.js redesigns, technical consulting and maintenance. See phantomdev.fr/services." },
+        { q: "How much does a website cost with NADER ASSEL DEV WEB?", a: "Every project gets a bespoke quote within 24h, no commitment. Simple showcase sites can go live quickly (48h depending on scope); e-commerce, SaaS and AI work are priced by complexity. Contact via WhatsApp at phantomdev.fr/contact." },
+        { q: "What tech stack does NADER ASSEL DEV WEB use?", a: "NADER ASSEL DEV WEB mainly builds with Next.js, React, TypeScript and Tailwind CSS, deployed on Vercel or static hosting. Lighthouse 90+ is guaranteed on delivered sites." },
+        { q: "How to contact NADER ASSEL DEV WEB for a quote?", a: "Contact NADER ASSEL DEV WEB via WhatsApp for a free quote within 24h, no commitment. The phantomdev.fr site offers direct access to WhatsApp from the homepage and Contact page." },
+        { q: "Does NADER ASSEL DEV WEB work internationally?", a: "Yes. NADER ASSEL DEV WEB is based in France but operates internationally. Maintenance contracts are guaranteed." },
+        { q: "What performance guarantee does NADER ASSEL DEV WEB offer?", a: "NADER ASSEL DEV WEB guarantees a Lighthouse score of 90+ on all delivered sites, ensuring optimised performance and excellent user experience." },
       ],
     },
     footer: {
       contentinfoAria:
-        "PhantomDev footer: web development, WhatsApp contact, legal notice",
-      tagline: "PhantomDev — Premium custom web development",
+        "NADER ASSEL DEV WEB footer: web development, WhatsApp contact, legal notice",
+      tagline: "NADER ASSEL DEV WEB — Premium custom web development",
       mainLine: "Main line",
-      mainLineAria: "Main line — WhatsApp PhantomDev",
+      mainLineAria: "Main line — WhatsApp NADER ASSEL DEV WEB",
       ctaTitle: "Ready to take your brand to the next level?",
       ctaButton: "Start my project — free quote",
       based: "Next.js · React · TypeScript · Remote worldwide · 48h landing pages · Guaranteed maintenance",
-      designBy: "Design by PhantomDev",
+      designBy: "Design by NADER ASSEL",
       rights: "All rights reserved.",
     },
     trustProof: {
@@ -102,11 +102,11 @@ export const enGb = {
       ariaAudit: "Full website audit — technical, SEO and action plan",
       ariaContact: "Contact and quote request",
       bannerAria:
-        "Header: PhantomDev, premium web development, React and Node.js, custom SaaS",
+        "Header: NADER ASSEL DEV WEB, premium web development, React and Node.js, custom SaaS",
       mainNavAria:
         "Main navigation: expertise, services, GrapheneOS, portfolio, contact and quotes",
       homeLogoAria:
-        "PhantomDev, home — premium custom web development",
+        "NADER ASSEL DEV WEB, home — premium custom web development",
       whatsappQuoteAria: "Request a free quote on WhatsApp for your web project",
       menuOpenAria: "Open menu",
       menuCloseAria: "Close menu",
@@ -144,7 +144,7 @@ export const enGb = {
         "Handover with the phone ready to use and a short recap of best practices.",
       ],
       disclaimer:
-        "PhantomDev is not affiliated with the GrapheneOS project. GrapheneOS is independent open-source software. A professional install does not shift liability to GrapheneOS and does not replace compliance with applicable law or responsible device use.",
+        "NADER ASSEL DEV WEB is not affiliated with the GrapheneOS project. GrapheneOS is independent open-source software. A professional install does not shift liability to GrapheneOS and does not replace compliance with applicable law or responsible device use.",
       ctaWhatsApp: "Request installation on WhatsApp",
       whatsappMessage: "Hello, I'd like a GrapheneOS install. Pixel model: ",
       mainAria:
@@ -153,8 +153,8 @@ export const enGb = {
         documentTitle:
           "GrapheneOS installation on Google Pixel — secure flashing, privacy",
         description:
-          "Professional GrapheneOS installation for supported Pixel phones: secure flashing, bootloader unlock guidance, privacy-focused setup. UK, EU & worldwide by arrangement. WhatsApp PhantomDev.",
-        ogTitle: "GrapheneOS Pixel install | PhantomDev — private Android",
+          "Professional GrapheneOS installation for supported Pixel phones: secure flashing, bootloader unlock guidance, privacy-focused setup. UK, EU & worldwide by arrangement. WhatsApp NADER ASSEL DEV WEB.",
+        ogTitle: "GrapheneOS Pixel install | NADER ASSEL DEV WEB — private Android",
         ogDescription:
           "Hands-on GrapheneOS installs for compatible Google Pixel devices. Official install path, privacy-first setup. Message on WhatsApp.",
         ogImageAlt:
@@ -170,7 +170,7 @@ export const enGb = {
           "Pixel bootloader",
           "open source mobile OS",
           "deGoogle phone",
-          "PhantomDev GrapheneOS",
+          "NADER ASSEL DEV WEB GrapheneOS",
           "GrapheneOS UK Europe",
         ],
       },
@@ -178,9 +178,9 @@ export const enGb = {
       visualSectionAria:
         "Illustrations: smartphone frames showing the GrapheneOS logo on screen",
       phoneScreenAlt:
-        "GrapheneOS logo on a Google Pixel phone screen — PhantomDev illustration",
+        "GrapheneOS logo on a Google Pixel phone screen — NADER ASSEL DEV WEB illustration",
       logoCredit:
-        "GrapheneOS logo: independent open-source project (grapheneos.org). PhantomDev is not affiliated with GrapheneOS.",
+        "GrapheneOS logo: independent open-source project (grapheneos.org). NADER ASSEL DEV WEB is not affiliated with GrapheneOS.",
       officialLinkLabel: "Official GrapheneOS site — docs and releases",
       faqSectionTitle: "FAQ — GrapheneOS",
       faqSchema: [
@@ -197,8 +197,8 @@ export const enGb = {
           a: "Unlocking the bootloader and flashing typically wipe the device. Back up first. Exact steps depend on your hardware and are explained before any work begins.",
         },
         {
-          q: "Is PhantomDev affiliated with GrapheneOS?",
-          a: "No. PhantomDev offers installation assistance; GrapheneOS is an independent project. For official support and up-to-date instructions, see grapheneos.org.",
+          q: "Is NADER ASSEL DEV WEB affiliated with GrapheneOS?",
+          a: "No. NADER ASSEL DEV WEB offers installation assistance; GrapheneOS is an independent project. For official support and up-to-date instructions, see grapheneos.org.",
         },
       ],
     },
@@ -496,10 +496,10 @@ export const enGb = {
       intro:
         "Landing pages, applications and premium interfaces — performance, design and conversion for your brand.",
       mainAria:
-        "PhantomDev portfolio page: web projects and custom development",
+        "NADER ASSEL DEV WEB portfolio page: web projects and custom development",
     },
     servicesPage: {
-      eyebrow: "PhantomDev offers",
+      eyebrow: "NADER ASSEL DEV WEB offers",
       pageTitle: "Services",
       introLead:
         "Each offer maps to a business goal: build trust, sell online, grow organic visibility (SEO), ship a serious product, or integrate AI without duct tape. Every project gets a quote tailored to scope — always clear within 24h.",

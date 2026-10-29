@@ -82,7 +82,7 @@ export const auditPageEn = {
     "P0, P1, P2 action plan",
     "Competitor comparison (if provided)",
     "SEO and technical recommendations",
-    "Contact CTA to fix with PhantomDev",
+    "Contact CTA to fix with NADER ASSEL DEV WEB",
   ],
   form: {
     title: "Run audit",
@@ -105,8 +105,8 @@ export const auditPageEn = {
       { value: "restaurant", label: "Hospitality" },
       { value: "autre", label: "Other" },
     ],
-    whatsappIntro: "Hi PhantomDev, I'd like to order the website audit (€39).",
-    emailSubject: "Website audit order €39 — PhantomDev",
+    whatsappIntro: "Hi NADER ASSEL DEV WEB, I'd like to order the website audit (€39).",
+    emailSubject: "Website audit order €39 — NADER ASSEL DEV WEB",
     priceLine: "Price",
     urlOk: "URL accepted",
     payAndRunCta: "Pay €39 and run audit",
@@ -151,7 +151,7 @@ export const auditPageEn = {
     savedUntil: "Report available until {date}",
     noSession: "Invalid payment session.",
     back: "Back to audit",
-    fixCta: "Fix with PhantomDev",
+    fixCta: "Fix with NADER ASSEL DEV WEB",
   },
   report: {
     overall: "Overall score",

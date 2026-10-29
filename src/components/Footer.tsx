@@ -110,13 +110,13 @@ function FooterInner() {
             href={prefix || "/"}
             className="inline-flex items-center gap-2 text-xs font-light tracking-[0.15em] uppercase text-zinc-300 transition-colors hover:text-zinc-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-500/40 focus-visible:ring-offset-2 focus-visible:ring-offset-zinc-950"
             style={{ fontFamily: "var(--font-source-sans), sans-serif" }}
-            aria-label="Design et développement par PhantomDev, expertise en interfaces haute performance"
+            aria-label="Design et développement par NADER ASSEL, expertise en interfaces haute performance"
           >
             <PhantomLogo className="h-5 w-5" />
             {t.footer.designBy}
           </Link>
           <p className="text-center text-xs font-light tracking-[0.1em] text-zinc-300">
-            © {new Date().getFullYear()} PhantomDev. {t.footer.rights}
+            © {new Date().getFullYear()} NADER ASSEL DEV WEB. {t.footer.rights}
           </p>
         </div>
       </div>
