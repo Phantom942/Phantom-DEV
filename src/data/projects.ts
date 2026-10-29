@@ -20,7 +20,7 @@ export const projects = [
     result: "Image pro, chargement instantané",
     image: "/images/mockups/phantom-art.png",
     mockupImage: "/images/mockups/phantom-art.png",
-    href: "https://www.phantomart.fr/",
+    href: "/realisations",
     caseStudy: {
       defi: "Peu visible en ligne et catalogue illisible sur téléphone — les collectionneurs partaient ailleurs.",
       solution:
@@ -64,7 +64,7 @@ export const projects = [
     result: "Plus de devis qualifiés via Google",
     image: "/images/mockups/kraken-metals.png",
     mockupImage: "/images/mockups/kraken-metals.png",
-    href: "https://www.kraken-metals.fr/",
+    href: "https://phantom942.github.io/KRAKEN-METALS/",
     caseStudy: {
       defi: "Les prospects ne trouvaient ni les prestations ni la zone d'intervention — appels manqués et devis perdus.",
       solution:

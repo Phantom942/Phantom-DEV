@@ -67,7 +67,7 @@ function NavbarInner() {
   return (
     <>
       <header
-        className={`navbar-stealth fixed left-0 right-0 top-0 z-50 w-full max-w-full overflow-x-clip px-4 py-3 md:px-16 md:py-4 ${scrolled ? "navbar-scrolled" : ""}`}
+        className={`navbar-stealth fixed left-0 right-0 top-0 z-50 w-full max-w-full overflow-x-clip px-4 py-3 md:px-8 md:py-4 xl:px-12 ${scrolled ? "navbar-scrolled" : ""}`}
         style={{
           paddingTop: "max(0.75rem, env(safe-area-inset-top))",
         }}
@@ -91,7 +91,7 @@ function NavbarInner() {
           </Link>
 
           <nav
-            className="hidden shrink-0 items-center gap-6 md:flex lg:gap-10"
+            className="hidden min-w-0 items-center gap-4 xl:flex 2xl:gap-7"
             role="navigation"
             aria-label={t.nav.mainNavAria}
           >
@@ -112,7 +112,7 @@ function NavbarInner() {
               href={whatsappUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="btn-stealth-primary btn-stealth-primary-compact animate-none hover:shadow-[0_0_20px_rgba(34,211,238,0.35)]"
+              className="btn-stealth-primary btn-stealth-primary-compact shrink-0 whitespace-nowrap animate-none hover:shadow-[0_0_20px_rgba(34,211,238,0.35)]"
               aria-label={t.nav.whatsappQuoteAria}
             >
               {t.nav.freeQuote}
@@ -122,7 +122,7 @@ function NavbarInner() {
           <button
             type="button"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="flex h-11 w-11 shrink-0 touch-manipulation items-center justify-center rounded-md text-zinc-300 transition-colors hover:bg-zinc-800/40 md:hidden"
+            className="flex h-11 w-11 shrink-0 touch-manipulation items-center justify-center rounded-md text-zinc-300 transition-colors hover:bg-zinc-800/40 xl:hidden"
             aria-label={mobileMenuOpen ? t.nav.menuCloseAria : t.nav.menuOpenAria}
             aria-expanded={mobileMenuOpen}
           >
@@ -139,7 +139,7 @@ function NavbarInner() {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
-              className="fixed inset-0 z-40 bg-zinc-950/50 backdrop-blur-sm md:hidden"
+              className="fixed inset-0 z-40 bg-zinc-950/50 backdrop-blur-sm xl:hidden"
               aria-label={t.nav.menuCloseAria}
               onClick={closeMobileMenu}
             />
@@ -148,7 +148,7 @@ function NavbarInner() {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -8 }}
               transition={{ duration: 0.22, ease: [0.22, 1, 0.36, 1] }}
-              className="navbar-mobile-panel fixed inset-x-0 z-50 overflow-hidden border-b shadow-2xl md:hidden"
+              className="navbar-mobile-panel fixed inset-x-0 z-50 overflow-hidden border-b shadow-2xl xl:hidden"
               style={{
                 top: "calc(3.25rem + env(safe-area-inset-top))",
               }}

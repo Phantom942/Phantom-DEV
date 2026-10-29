@@ -104,8 +104,8 @@ export function SelectedWorks({
                 >
                   <a
                     href={project.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
+                    target={project.href.startsWith("http") ? "_blank" : undefined}
+                    rel={project.href.startsWith("http") ? "noopener noreferrer" : undefined}
                     className="stealth-card flex h-full min-h-[26rem] flex-col overflow-hidden rounded-xl shadow-[0_20px_50px_rgba(0,0,0,0.35)] outline-none transition-[border-color,box-shadow,transform] duration-300 hover:shadow-[0_26px_60px_rgba(0,0,0,0.42)] focus-visible:ring-2 focus-visible:ring-cyan-500/45 focus-visible:ring-offset-2 focus-visible:ring-offset-zinc-950 sm:min-h-[28rem] lg:min-h-[30rem]"
                     aria-label={`Voir le projet ${project.title}, ${project.description} — résultat client NADER DEV WEB`}
                   >
