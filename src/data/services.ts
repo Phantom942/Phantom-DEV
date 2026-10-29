@@ -68,7 +68,6 @@ export const serviceConfigs: ServiceConfig[] = [
     categories: ["vitrine", "dev"],
     icon: Palette,
     typeParam: "vitrine",
-    projectRef: "phantom-art",
   },
   {
     id: "landing",
@@ -81,14 +80,12 @@ export const serviceConfigs: ServiceConfig[] = [
     categories: ["application", "vitrine"],
     icon: ShoppingCart,
     typeParam: "application",
-    projectRef: "redk-motors",
   },
   {
     id: "applications",
     categories: ["application", "dev"],
     icon: Box,
     typeParam: "application",
-    projectRef: "redk-motors",
     hasBadge: true,
   },
   {

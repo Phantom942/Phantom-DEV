@@ -8,50 +8,6 @@ export type ProjectCaseStudy = {
 
 export const projects = [
   {
-    id: "phantom-art",
-    type: "vitrine" as const,
-    title: "Phantom Art",
-    imageBg: "white" as const,
-    tags: ["Site vitrine", "Design", "Art & culture"],
-    description:
-      "Galerie en ligne pour collectionneurs — image premium, navigation simple, chargement instantané.",
-    techs: ["Site vitrine", "Galerie en ligne", "Mobile"],
-    lighthouseScore: 98,
-    result: "Image pro, chargement instantané",
-    image: "/images/mockups/phantom-art.png",
-    mockupImage: "/images/mockups/phantom-art.png",
-    href: "/realisations",
-    caseStudy: {
-      defi: "Peu visible en ligne et catalogue illisible sur téléphone — les collectionneurs partaient ailleurs.",
-      solution:
-        "Vitrine type galerie, navigation claire et site ultra-rapide sur mobile comme sur desktop.",
-      result:
-        "Image renforcée, parcours simplifié et site qui s'affiche en moins d'une seconde.",
-    },
-  },
-  {
-    id: "redk-motors",
-    type: "vitrine" as const,
-    title: "REDK Motors",
-    imageBg: "gray" as const,
-    tags: ["Site vitrine", "Automobile", "Réservation"],
-    description:
-      "Garage automobile — prise de rendez-vous en 3 clics, moins d'appels à gérer au comptoir.",
-    techs: ["Site vitrine", "Réservation en ligne", "Mobile"],
-    lighthouseScore: 95,
-    result: "Plus de RDV, moins d'appels",
-    image: "/images/mockups/redk-motors.png",
-    mockupImage: "/images/mockups/redk-motors.png",
-    href: "https://redk-motors.me/",
-    caseStudy: {
-      defi: "Trop d'appels pour des créneaux simples, réservations perdues et équipe saturée au téléphone.",
-      solution:
-        "Tunnel de réservation en ligne fluide : le client choisit son créneau en 3 clics, sans passer par le standard.",
-      result:
-        "Plus de rendez-vous confirmés automatiquement, moins de temps au téléphone, agenda du garage mieux rempli.",
-    },
-  },
-  {
     id: "kraken-metals",
     type: "vitrine" as const,
     title: "Kraken Metals",
@@ -71,28 +27,6 @@ export const projects = [
         "Site structuré par services, visible sur Google, avec bouton contact et devis immédiat.",
       result:
         "Plus de demandes entrantes qualifiées sur les recherches métier — moins de temps perdu au téléphone.",
-    },
-  },
-  {
-    id: "moove-city",
-    type: "application" as const,
-    title: "Moove City",
-    imageBg: "white" as const,
-    tags: ["Application", "Mobilité", "Conversion"],
-    description:
-      "Transport avec chauffeur — réservation simplifiée, +25% de conversion.",
-    techs: ["Réservation en ligne", "Mobile", "Conversion"],
-    lighthouseScore: 97,
-    result: "Conversion +25%",
-    image: "/images/mockups/moove-city.png",
-    mockupImage: "/images/mockups/moove-city.png",
-    href: "https://www.moovecity.fr/",
-    caseStudy: {
-      defi: "Réservation trop compliquée : les clients abandonnaient avant de confirmer.",
-      solution:
-        "Parcours de réservation simplifié, pensé mobile en priorité — 3 étapes, pas de friction.",
-      result:
-        "Conversion en hausse de +25 % et réservations validées plus vite.",
     },
   },
   {
