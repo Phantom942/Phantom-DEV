@@ -3,7 +3,7 @@
 import { Suspense } from "react";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
-import { MessageCircle, Github } from "lucide-react";
+import { MessageCircle } from "lucide-react";
 import { getWhatsAppDisplayHuman } from "@/data/contact";
 import { useWhatsAppDevisUrl } from "@/hooks/useWhatsAppDevisUrl";
 import { useTranslations } from "@/hooks/useTranslations";
@@ -52,17 +52,6 @@ function FooterInner() {
               <MessageCircle size={16} strokeWidth={1.5} className="shrink-0 text-zinc-300" />
               {t.footer.mainLine}
             </a>
-            <div className="flex items-center gap-6">
-              <a
-                href="https://github.com/Phantom942"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-zinc-300 transition-colors hover:text-zinc-100"
-                aria-label="GitHub"
-              >
-                <Github size={20} strokeWidth={1.5} />
-              </a>
-            </div>
           </div>
         </div>
       </div>
@@ -108,9 +97,9 @@ function FooterInner() {
           </Link>
           <Link
             href={prefix || "/"}
-            className="inline-flex items-center gap-2 text-xs font-light tracking-[0.15em] uppercase text-zinc-300 transition-colors hover:text-zinc-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-500/40 focus-visible:ring-offset-2 focus-visible:ring-offset-zinc-950"
+            className="inline-flex items-center gap-2 text-xs font-light tracking-[0.08em] text-zinc-300 transition-colors hover:text-zinc-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-500/40 focus-visible:ring-offset-2 focus-visible:ring-offset-zinc-950"
             style={{ fontFamily: "var(--font-source-sans), sans-serif" }}
-            aria-label="Design et développement par NADER ASSEL, expertise en interfaces haute performance"
+            aria-label="Production signée par NADER ASSEL a.k.a. NADER ASSEL DEV WEB"
           >
             <PhantomLogo className="h-5 w-5" />
             {t.footer.designBy}

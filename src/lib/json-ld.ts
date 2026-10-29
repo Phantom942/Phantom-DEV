@@ -72,7 +72,6 @@ export function buildProfessionalServiceSchema() {
       "Maintenance de site web",
       "GrapheneOS Installation",
     ],
-    sameAs: ["https://github.com/Phantom942"],
     contactPoint: {
       "@type": "ContactPoint",
       contactType: "customer service",

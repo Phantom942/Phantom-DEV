@@ -72,7 +72,7 @@ export const enUs = {
       ctaTitle: "Ready to take your brand to the next level?",
       ctaButton: "Start my project — free quote",
       based: "Next.js · React · TypeScript · Remote worldwide · 48h landing pages · Guaranteed maintenance",
-      designBy: "Design by NADER ASSEL",
+      designBy: "NADER ASSEL a.k.a. NADER ASSEL DEV WEB",
       rights: "All rights reserved.",
     },
     trustProof: {
