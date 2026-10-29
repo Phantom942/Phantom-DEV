@@ -99,7 +99,7 @@ function FooterInner() {
             href={prefix || "/"}
             className="inline-flex items-center gap-2 text-xs font-light tracking-[0.08em] text-zinc-300 transition-colors hover:text-zinc-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-500/40 focus-visible:ring-offset-2 focus-visible:ring-offset-zinc-950"
             style={{ fontFamily: "var(--font-source-sans), sans-serif" }}
-            aria-label="Production signée par NADER ASSEL a.k.a. NADER ASSEL DEV WEB"
+            aria-label="Production signée par NADER ASSEL DEV WEB"
           >
             <PhantomLogo className="h-5 w-5" />
             {t.footer.designBy}

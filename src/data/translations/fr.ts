@@ -71,7 +71,7 @@ export const fr = {
       ctaTitle: "Prêt à gagner du temps et attirer plus de clients ?",
       ctaButton: "Obtenir mon devis gratuit",
       based: "Sites rapides · Réservation en ligne · Automatisation · Devis sous 24h · Maintenance garantie",
-      designBy: "NADER ASSEL a.k.a. NADER ASSEL DEV WEB",
+      designBy: "NADER ASSEL DEV WEB",
       rights: "Tous droits réservés.",
     },
     trustProof: {
