@@ -31,6 +31,9 @@ PhantomDev-Footer-Credit-*/
 .env*
 !.env.example
 
+# audit reports (local dev fallback)
+.audit-reports/
+
 # typescript
 *.tsbuildinfo
 next-env.d.ts

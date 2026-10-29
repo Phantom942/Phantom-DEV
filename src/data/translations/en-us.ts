@@ -1,4 +1,6 @@
 /** Traductions enUs */
+import { auditPageEn } from "./audit-page-en";
+
 export const enUs = {
     hero: {
       title:
@@ -91,11 +93,13 @@ export const enUs = {
       grapheneAria:
         "GrapheneOS installation service — privacy-focused Android on supported Pixel devices",
       projects: "Portfolio",
+      audit: "Site audit",
       contact: "Contact",
       freeQuote: "Free quote",
       ariaExpertise: "Expertise in high-performance interface development",
       ariaServices: "Services: landing pages, e-commerce, SaaS, SEO",
       ariaProjects: "Portfolio and web projects",
+      ariaAudit: "Full website audit — technical, SEO and action plan",
       ariaContact: "Contact and quote request",
       bannerAria:
         "Header: PhantomDev, premium web development, React and Node.js, custom SaaS",
@@ -525,6 +529,7 @@ export const enUs = {
       closingWhatsAppCta: "Message on WhatsApp",
       cardReassurance: "No commitment · Reply within 24h",
     },
+    auditPage: auditPageEn,
     stats: {
       projects: "projects delivered",
       years: "years of experience",

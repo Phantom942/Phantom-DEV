@@ -1,7 +1,7 @@
 import type { NextConfig } from "next";
 
+/** Export statique désactivé : l'audit automatique requiert des API routes (déployer sur Vercel). */
 const nextConfig: NextConfig = {
-  output: "export",
   images: {
     unoptimized: true,
     remotePatterns: [

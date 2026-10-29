@@ -83,16 +83,8 @@ export default function MentionsLegalesPage() {
                 2. Hébergement
               </h2>
               <p>
-                Ce site est hébergé par GitHub, Inc., 88 Colin P Kelly Jr St,
-                San Francisco, CA 94107, États-Unis. Pages :{" "}
-                <a
-                  href="https://pages.github.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-cyan-400/90 underline decoration-cyan-500/40 transition-colors hover:decoration-cyan-400/80"
-                >
-                  pages.github.com
-                </a>
+                Le site vitrine est diffusé via GitHub Pages (GitHub, Inc.). Les services
+                interactifs (audit automatique, paiement) sont hébergés sur Vercel Inc.
               </p>
             </section>
 
@@ -143,8 +135,62 @@ export default function MentionsLegalesPage() {
               </p>
             </section>
 
+            <section id="audit-cgv">
+              <h2 className="mb-3 font-light tracking-[0.08em] text-zinc-100">
+                7. Conditions de vente — Audit site internet (39 €)
+              </h2>
+              <div className="space-y-3">
+                <p>
+                  <strong>Objet.</strong> L&apos;audit site internet est un service numérique
+                  automatisé : après paiement de 39 € TTC via Stripe, PhantomDev analyse
+                  l&apos;URL fournie (jusqu&apos;à 8 pages) et affiche un rapport en ligne
+                  (scores, constats, plan d&apos;action).
+                </p>
+                <p>
+                  <strong>Livraison.</strong> Le service est exécuté immédiatement après
+                  paiement confirmé. Le rapport reste accessible via le lien de résultat
+                  pendant <strong>30 jours</strong>, puis est supprimé automatiquement.
+                </p>
+                <p>
+                  <strong>Droit de rétractation.</strong> Conformément à l&apos;article L221-28
+                  du Code de la consommation, le droit de rétractation ne s&apos;applique pas
+                  aux contenus numériques exécutés avant la fin du délai de rétractation avec
+                  votre accord exprès au moment de la commande.
+                </p>
+                <p>
+                  <strong>Limites.</strong> L&apos;audit repose sur l&apos;analyse automatisée
+                  de pages accessibles publiquement. Il ne remplace pas un audit manuel complet
+                  (Search Console, backlinks payants, sites entièrement JavaScript sans HTML
+                  serveur). Les scores PageSpeed nécessitent une clé API Google côté serveur.
+                </p>
+                <p>
+                  <strong>Remboursement.</strong> Si le site est injoignable ou si le rapport
+                  ne peut pas être généré après paiement, contactez{" "}
+                  <a href="mailto:contact@phantomdev.fr" className="text-cyan-400/90 underline">
+                    contact@phantomdev.fr
+                  </a>{" "}
+                  avec votre référence Stripe : relance gratuite ou remboursement si le service
+                  n&apos;a pas pu être délivré.
+                </p>
+                <p>
+                  <strong>Données.</strong> L&apos;URL auditée, le rapport JSON et
+                  l&apos;identifiant de session Stripe sont conservés le temps nécessaire à la
+                  prestation (30 jours pour le rapport). Paiement traité par Stripe (voir{" "}
+                  <a
+                    href="https://stripe.com/fr/privacy"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-cyan-400/90 underline"
+                  >
+                    politique Stripe
+                  </a>
+                  ).
+                </p>
+              </div>
+            </section>
+
             <p className="pt-4 text-xs text-zinc-400">
-              Dernière mise à jour : février 2026
+              Dernière mise à jour : mai 2026
             </p>
           </div>
         </div>

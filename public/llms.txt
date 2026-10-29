@@ -16,6 +16,7 @@ PhantomDev pack des systèmes digitaux orientés ROI : capter des prospects, aut
 - Automatisation des tâches répétitives
 - Intelligence artificielle utile (qualification, réponses prospects)
 - Maintenance et support
+- **Audit site internet** (39 €) : diagnostic technique, SEO, performance, contenu, concurrence, visibilité IA — https://phantomdev.fr/audit
 - Installation GrapheneOS sur Google Pixel (page dédiée)
 
 ## Contact
@@ -24,6 +25,7 @@ PhantomDev pack des systèmes digitaux orientés ROI : capter des prospects, aut
 - Sitemap : https://phantomdev.fr/sitemap.xml
 - Contact : https://phantomdev.fr/contact
 - Services : https://phantomdev.fr/services
+- Audit site (39 €) : https://phantomdev.fr/audit
 - Résultats clients : https://phantomdev.fr/realisations
 - GrapheneOS : https://phantomdev.fr/grapheneos
 - WhatsApp : +33 6 69 04 07 54 (devis sous 24h, sans engagement)

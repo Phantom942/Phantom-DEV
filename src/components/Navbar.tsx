@@ -44,6 +44,7 @@ function NavbarInner() {
       },
     },
     { href: `${localePrefix || ""}/services`, label: t.nav.services, match: (p: string) => p.includes("/services") },
+    { href: `${localePrefix || ""}/audit`, label: t.nav.audit, match: (p: string) => p.includes("/audit") },
     { href: `${localePrefix || ""}/grapheneos`, label: t.nav.grapheneOS, match: (p: string) => p.includes("/grapheneos") },
     { href: `${localePrefix || ""}/realisations`, label: t.nav.projects, match: (p: string) => p.includes("/realisations") },
     { href: `${localePrefix || ""}/#contact`, label: t.nav.contact, match: () => false },
@@ -53,6 +54,7 @@ function NavbarInner() {
     if (label === t.nav.grapheneOS) return t.nav.grapheneAria;
     if (label === t.nav.expertise) return t.nav.ariaExpertise;
     if (label === t.nav.services) return t.nav.ariaServices;
+    if (label === t.nav.audit) return t.nav.ariaAudit;
     if (label === t.nav.projects) return t.nav.ariaProjects;
     if (label === t.nav.contact) return t.nav.ariaContact;
     return label;

@@ -1,11 +1,10 @@
-# Déploiement du site sur GitHub Pages (export statique Next.js)
-# À activer : Settings → Pages → Source = "GitHub Actions"
+# Déploiement : l'audit automatique requiert Vercel (API routes Stripe + crawl).
+# GitHub Pages ne supporte plus le build statique seul — connectez le repo à Vercel.
+# Doc : https://vercel.com/docs/frameworks/nextjs
 
 name: Deploy to GitHub Pages
 
 on:
-  push:
-    branches: ["main"]
   workflow_dispatch:
 
 permissions:
